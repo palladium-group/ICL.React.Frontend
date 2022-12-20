@@ -119,7 +119,7 @@
   "scripts": {
     "prestart": "node aspnetcore-https && node aspnetcore-react",
     "start": "rimraf ./build && craco start",
-    "build": "craco build",
+    "build": "CI=false && craco build",
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "craco eject",
     "lint": "eslint src --ext .js,.jsx --fix"
