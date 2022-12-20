@@ -41,7 +41,7 @@ const IncomingOrdersData = () => {
   const bookingLink = (params) => {
     const uri = params.row.scmid ? `https://opsuat.freightintime.com/Booking/home/viewbooking?itemid=${params.row.scmid}` : "";
     return (
-      <span>{params.row.scmid ? <a target="_blank" rel="noreferrer" href={uri}>SCM Booking</a> : ""}</span>
+      <span>{params.row.scmid ? <a target="_blank" rel="noreferrer" href={uri}>View</a> : ""}</span>
     );
   };
   return (
@@ -74,7 +74,7 @@ const IncomingOrdersData = () => {
               },
               {
                 field: "scmid&id",
-                headerName: "Link",
+                headerName: "Booking",
                 editable: false,
                 flex: 1,
                 renderCell: (params) => {
