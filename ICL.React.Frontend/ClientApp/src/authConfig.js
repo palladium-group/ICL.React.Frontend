@@ -8,7 +8,7 @@ export const msalConfig = {
   auth: {
     clientId: "1bfb1ccb-01a0-4f67-bea9-553f550d8439",
     authority: "https://login.microsoftonline.com/f61c917a-efca-425a-bb2f-84a637f867f4", // This is a URL (e.g. https://login.microsoftonline.com/{your tenant ID})
-    redirectUri: "https://localhost:3000",
+        redirectUri: "https://icl-central.azurewebsites.net",
     postLogoutRedirectUri: "/",
   },
   cache: {
