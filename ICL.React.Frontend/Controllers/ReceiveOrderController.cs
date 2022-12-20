@@ -32,8 +32,8 @@ namespace ICL.React.Frontend.Controllers
                         asn.AppendLine(reader.ReadLine());
                 }
 
-                ServiceBusClient client = new ServiceBusClient("Endpoint=sb://ghscicldemo.servicebus.windows.net/;SharedAccessKeyName=send_bookings;SharedAccessKey=MvxGIHGYljXCC5ZyyOXap2LN7u4On3WNdBn33Ixm1BM=");
-                ServiceBusSender sender = client.CreateSender("booking-demo");
+                ServiceBusClient client = new ServiceBusClient("Endpoint=sb://ghsc-icl.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=T6Rv/GTQAb2p+UYm/yJL92EIvfQ4OcfRy3kY9xV+5/E=");
+                ServiceBusSender sender = client.CreateSender("asn");
 
                 using (ServiceBusMessageBatch message = await sender.CreateMessageBatchAsync())
                 {
