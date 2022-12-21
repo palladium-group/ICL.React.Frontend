@@ -23,8 +23,12 @@ const pagesSection = [
     title: "Data Warehouse",
     children: [
       {
-        href: "/dashboard/default",
+        href: "/dashboard/home",
         title: "Shipment",
+      },
+      {
+        href: "/dashboard/default",
+        title: "Incoming Orders",
       },
       {
         href: "/dashboard/analytics",
