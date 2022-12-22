@@ -108,7 +108,7 @@ const Navbar = ({ onDrawerToggle }) => {
               {/*<NavbarMessagesDropdown />*/}
               {/*<NavbarNotificationsDropdown />*/}
               {/*<NavbarUSAIDIcon />*/}
-              <NavbarLanguagesDropdown />
+              {/*<NavbarLanguagesDropdown />*/}
               <NavbarUserDropdown />
             </Grid>
           </Grid>
