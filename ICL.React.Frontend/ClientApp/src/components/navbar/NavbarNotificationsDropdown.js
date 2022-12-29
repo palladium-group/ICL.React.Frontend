@@ -1,21 +1,21 @@
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 import {
-  Avatar as MuiAvatar,
+  // Avatar as MuiAvatar,
   Badge,
-  Box,
+  // Box,
   Button as MuiButton,
-  Divider as MuiDivider,
+  // Divider as MuiDivider,
   Grid,
   IconButton,
   // List,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
+  // ListItem,
+  // ListItemAvatar,
+  // ListItemText,
   Popover as MuiPopover,
-  SvgIcon,
+  // SvgIcon,
   Tooltip,
   Typography as MuiTypography,
 } from "@mui/material";
@@ -50,9 +50,9 @@ const Indicator = styled(Badge)`
   }
 `;
 
-const Avatar = styled(MuiAvatar)`
-  background: ${(props) => props.theme.palette.primary.main};
-`;
+// const Avatar = styled(MuiAvatar)`
+//   background: ${(props) => props.theme.palette.primary.main};
+// `;
 
 // const NotificationHeader = styled(Box)`
 //   text-align: center;
@@ -95,7 +95,7 @@ function NavbarNotificationsDropdown() {
 
   return (
     <React.Fragment>
-      <Tooltip title="Notifications">
+      <Tooltip title="Apps">
         <IconButton color="inherit" ref={ref} onClick={handleOpen} size="large">
           <Indicator>
             <AppsIcon />
