@@ -6,18 +6,34 @@ import {
   Avatar as MuiAvatar,
   Badge,
   Box,
-  Button,
+  Button as MuiButton,
+  Divider as MuiDivider,
+  Grid,
   IconButton,
-  List,
+  // List,
   ListItem,
   ListItemAvatar,
   ListItemText,
   Popover as MuiPopover,
   SvgIcon,
   Tooltip,
-  Typography,
+  Typography as MuiTypography,
 } from "@mui/material";
-import { Bell, Home, UserPlus, Server } from "react-feather";
+import AppsIcon from '@mui/icons-material/Apps';
+// import { Bell, Home, UserPlus, Server } from "react-feather";
+import {spacing} from "@mui/system";
+import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
+import AcUnitOutlinedIcon from "@mui/icons-material/AcUnitOutlined";
+import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
+import AirplanemodeActiveOutlinedIcon from "@mui/icons-material/AirplanemodeActiveOutlined";
+
+const Typography = styled(MuiTypography)(spacing);
+// const Divider = styled(MuiDivider)(spacing);
+const Button = styled(MuiButton)(spacing);
+
+const Centered = styled.div`
+  text-align: center;
+`;
 
 const Popover = styled(MuiPopover)`
   .MuiPaper-root {
@@ -38,32 +54,32 @@ const Avatar = styled(MuiAvatar)`
   background: ${(props) => props.theme.palette.primary.main};
 `;
 
-const NotificationHeader = styled(Box)`
-  text-align: center;
-  border-bottom: 1px solid ${(props) => props.theme.palette.divider};
-`;
+// const NotificationHeader = styled(Box)`
+//   text-align: center;
+//   border-bottom: 1px solid ${(props) => props.theme.palette.divider};
+// `;
 
-function Notification({ title, description, Icon }) {
-  return (
-    <ListItem divider component={Link} to="#">
-      <ListItemAvatar>
-        <Avatar>
-          <SvgIcon fontSize="small">
-            <Icon />
-          </SvgIcon>
-        </Avatar>
-      </ListItemAvatar>
-      <ListItemText
-        primary={title}
-        primaryTypographyProps={{
-          variant: "subtitle2",
-          color: "textPrimary",
-        }}
-        secondary={description}
-      />
-    </ListItem>
-  );
-}
+// function Notification({ title, description, Icon }) {
+//   return (
+//     <ListItem divider component={Link} to="#">
+//       <ListItemAvatar>
+//         <Avatar>
+//           <SvgIcon fontSize="small">
+//             <Icon />
+//           </SvgIcon>
+//         </Avatar>
+//       </ListItemAvatar>
+//       <ListItemText
+//         primary={title}
+//         primaryTypographyProps={{
+//           variant: "subtitle2",
+//           color: "textPrimary",
+//         }}
+//         secondary={description}
+//       />
+//     </ListItem>
+//   );
+// }
 
 function NavbarNotificationsDropdown() {
   const ref = useRef(null);
@@ -81,8 +97,8 @@ function NavbarNotificationsDropdown() {
     <React.Fragment>
       <Tooltip title="Notifications">
         <IconButton color="inherit" ref={ref} onClick={handleOpen} size="large">
-          <Indicator badgeContent={7}>
-            <Bell />
+          <Indicator>
+            <AppsIcon />
           </Indicator>
         </IconButton>
       </Tooltip>
@@ -95,39 +111,59 @@ function NavbarNotificationsDropdown() {
         onClose={handleClose}
         open={isOpen}
       >
-        <NotificationHeader p={2}>
-          <Typography variant="subtitle1" color="textPrimary">
-            7 New Notifications
-          </Typography>
-        </NotificationHeader>
         <React.Fragment>
-          <List disablePadding>
-            <Notification
-              title="Update complete"
-              description="Restart server to complete update."
-              Icon={Server}
-            />
-            <Notification
-              title="New connection"
-              description="Anna accepted your request."
-              Icon={UserPlus}
-            />
-            <Notification
-              title="Lorem ipsum"
-              description="Aliquam ex eros, imperdiet vulputate hendrerit et"
-              Icon={Bell}
-            />
-            <Notification
-              title="New login"
-              description="Login from 192.186.1.1."
-              Icon={Home}
-            />
-          </List>
-          <Box p={1} display="flex" justifyContent="center">
-            <Button size="small" component={Link} to="#">
-              Show all notifications
-            </Button>
-          </Box>
+          <Grid container spacing={1} justifyContent="center">
+            <Grid item md={6}>
+              <Centered>
+                <Typography sx={{ p: 2 }}>
+                  <a href="https://opsuat.freightintime.com" target="_blank" rel="noopener noreferrer">
+                    <Button mr={1} variant="contained">
+                      <LocalShippingOutlinedIcon />
+                    </Button>
+                    <Grid item>
+                      SCM Profit
+                    </Grid>
+                  </a>
+                </Typography>
+              </Centered>
+            </Grid>
+            <Grid item md={6}>
+              <Centered>
+                <Typography sx={{ p: 2 }}>
+                  <Button mr={1} variant="contained">
+                    <AcUnitOutlinedIcon />
+                  </Button>
+                  <Grid item>
+                    Sourcing(i+)
+                  </Grid>
+                </Typography>
+              </Centered>
+            </Grid>
+            <Grid item md={6}>
+              <Centered>
+                <Typography sx={{ p: 2 }}>
+                  <Button mr={1} variant="contained">
+                    <AttachMoneyOutlinedIcon />
+                  </Button>
+                  <Grid item>
+                    Finance(CostPoint)
+                  </Grid>
+                </Typography>
+              </Centered>
+            </Grid>
+            <Grid item md={6}>
+              <Centered>
+                <Typography sx={{ p: 2 }}>
+                  <Button mr={1} variant="contained">
+                    <AirplanemodeActiveOutlinedIcon />
+                  </Button>
+                  <Grid item>
+                    Logistics
+                  </Grid>
+                </Typography>
+              </Centered>
+            </Grid>
+          </Grid>
         </React.Fragment>
       </Popover>
     </React.Fragment>
