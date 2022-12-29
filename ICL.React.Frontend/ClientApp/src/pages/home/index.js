@@ -1,14 +1,15 @@
 import React from "react";
 // import {Helmet} from "react-helmet-async";
 import {
-    // Box,
-    // Button as MuiButton,
-    // Card,
-    // CardContent,
-    // Divider as MuiDivider,
-    // Grid,
-    // Link,
-    // Typography as MuiTypography
+  Grid
+  // Box,
+  // Button as MuiButton,
+  // Card,
+  // CardContent,
+  // Divider as MuiDivider,
+  // Grid,
+  // Link,
+  // Typography as MuiTypography
 } from "@mui/material";
 // import styled from "@emotion/styled";
 // import {spacing} from "@mui/system";
@@ -33,9 +34,13 @@ import {
 
 const Home = () => {
   return (
-    <iframe title="LIT ICL Dashboards - Overall Dashboard" width="100%" height="100%"
+    <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
+      <Grid item md={12} zeroMinWidth>
+        <iframe title="LIT ICL Dashboards - Overall Dashboard" width="100%" height="100%"
             src="https://app.powerbi.com/view?r=eyJrIjoiOWU3M2I1ZDMtMzBlYS00NDBhLWJmZjYtZTI1Njk5YjFkZmRkIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
-            frameBorder="0" allowFullScreen="true"></iframe>
+            frameBorder="0" allowFullScreen={true}></iframe>
+      </Grid>
+    </Grid>
   );
   // return (
   //   <React.Fragment>
