@@ -14,30 +14,31 @@ import {
   Sliders,
   Users,
   Server,
+  Home,
 } from "react-feather";
 
 const pagesSection = [
   {
     href: "/dashboard",
     icon: Sliders,
-    title: "Data Warehouse",
+    title: "Warehouse",
     children: [
       {
-        href: "/dashboard/home",
-        title: "Shipment",
+        href: "/dashboard/inbound",
+        title: "Inbound",
       },
       {
-        href: "/dashboard/default",
-        title: "Incoming Orders",
+        href: "/dashboard/outbound",
+        title: "Outbound",
       },
       {
-        href: "/dashboard/analytics",
-        title: "Distribution Planning",
+        href: "/dashboard/monitoring",
+        title: "Monitoring",
       },
-      {
-        href: "/dashboard/analytics",
-        title: "Order Fulfilment",
-      },
+      // {
+      //   href: "/dashboard/analytics",
+      //   title: "Order Fulfilment",
+      // },
       // {
       //   href: "/dashboard/saas",
       //   title: "SaaS",
@@ -50,15 +51,15 @@ const transportationPlanning = [
   {
     href: "/transportation",
     icon: Briefcase,
-    title: "Transportation Planning",
+    title: "Transportation And Planning",
     children: [
       {
-        href: "/dashboard/default",
-        title: "Vendor Selection & Management"
+        href: "/dashboard/costing",
+        title: "Costing",
       },
       {
-        href: "/dashboard/default",
-        title: "Freight"
+        href: "/dashboard/tendering-contracting",
+        title: "Tendering Contracting",
       },
     ],
   },
@@ -68,12 +69,16 @@ const deliveryStatus = [
   {
     href: "/dashboard",
     icon: Grid,
-    title: "Delivery Status",
+    title: "Delivery",
     children: [
       {
-        href: "/dashboard/default",
-        title: "Track & Trace"
+        href: "/dashboard/ePOD",
+        title: "ePOD"
       },
+      {
+        href: "",
+        title: "Returns",
+      }
     ],
   },
 ];
@@ -85,12 +90,12 @@ const inventoryAnalysisAndPlanning = [
     title: "Inventory Analysis And Planning",
     children: [
       {
-        href: "/dashboard/default",
-        title: "Visibility"
+        href: "/dashboard/",
+        title: "Consumption Prediction"
       },
       {
-        href: "/dashboard/default",
-        title: "Reports"
+        href: "/dashboard/",
+        title: "Allocation Prediction"
       },
     ],
   },
@@ -107,7 +112,30 @@ const controlTower = [
 
 const navItems = [
   {
-    title: "Data Warehouse",
+    title: "",
+    pages: [
+      {
+        title: "Home",
+        href: "/",
+        icon: Home,
+      }
+    ],
+  },
+  {
+    title: "Clearing",
+    pages: [
+      {
+        title: "Shipment",
+        href: "/shipment/",
+      },
+      {
+        title: "Pos/ASN",
+        href: "/shipment/pos",
+      }
+    ]
+  },
+  {
+    title: "Warehouse",
     pages: pagesSection,
   },
   {
@@ -115,7 +143,7 @@ const navItems = [
     pages: transportationPlanning,
   },
   {
-    title: "Delivery Status",
+    title: "Delivery",
     pages: deliveryStatus,
   },
   {
