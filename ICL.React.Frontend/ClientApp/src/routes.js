@@ -48,6 +48,23 @@ const routes = [
     ]
   },
   {
+    path: "shipment",
+    element: (
+      <AuthGuard>
+        <DashboardLayout />
+      </AuthGuard>
+    ),
+    children: [
+      {
+        path: "",
+      },
+      {
+        path: "pos",
+        element: <Default />,
+      }
+    ]
+  },
+  {
     path: "dashboard",
     element: (
       <AuthGuard>
@@ -77,7 +94,6 @@ const routes = [
       },
       {
         path: "ePOD",
-        element: <Default />,
       },
     ],
   },

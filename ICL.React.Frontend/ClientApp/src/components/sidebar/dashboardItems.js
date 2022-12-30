@@ -69,7 +69,7 @@ const deliveryStatus = [
   {
     href: "/dashboard",
     icon: Grid,
-    title: "Delivery Status",
+    title: "Delivery",
     children: [
       {
         href: "/dashboard/ePOD",
@@ -122,6 +122,19 @@ const navItems = [
     ],
   },
   {
+    title: "Clearing",
+    pages: [
+      {
+        title: "Shipment",
+        href: "/shipment/",
+      },
+      {
+        title: "Pos/ASN",
+        href: "/shipment/pos",
+      }
+    ]
+  },
+  {
     title: "Warehouse",
     pages: pagesSection,
   },
@@ -130,7 +143,7 @@ const navItems = [
     pages: transportationPlanning,
   },
   {
-    title: "Delivery Status",
+    title: "Delivery",
     pages: deliveryStatus,
   },
   {
