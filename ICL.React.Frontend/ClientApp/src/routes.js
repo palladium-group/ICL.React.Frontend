@@ -26,6 +26,11 @@ const SaaS = async(() => import("./pages/dashboards/SaaS"));
 const Home = async(() => import("./pages/home"));
 const ControlTower = async (() => import("./pages/control-tower"));
 const HomeAnalytics = async(() => import("./pages/analytics/HomeAnalytics"));
+const Inbound = async(() => import("./pages/dashboards/dwh/Inbound"));
+const Outbound = async(() => import("./pages/dashboards/dwh/Outbound"));
+const Monitoring = async(() => import("./pages/dashboards/dwh/Monitoring"));
+const Costing = async(() => import("./pages/dashboards/dwh/Costing"));
+const TenderingAndContracting = async(() => import("./pages/dashboards/dwh/TenderingAndContracting"));
 
 const routes = [
   {
@@ -51,20 +56,28 @@ const routes = [
     ),
     children: [
       {
-        path: "home",
-        element: <HomeAnalytics />,
+        path: "inbound",
+        element: <Inbound />,
       },
       {
-        path: "default",
+        path: "outbound",
+        element: <Outbound />,
+      },
+      {
+        path: "monitoring",
+        element: <Monitoring />,
+      },
+      {
+        path: "costing",
+        element: <Costing />,
+      },
+      {
+        path: "tendering-contracting",
+        element: <TenderingAndContracting />,
+      },
+      {
+        path: "ePOD",
         element: <Default />,
-      },
-      {
-        path: "analytics",
-        element: <Analytics />,
-      },
-      {
-        path: "saas",
-        element: <SaaS />,
       },
     ],
   },
