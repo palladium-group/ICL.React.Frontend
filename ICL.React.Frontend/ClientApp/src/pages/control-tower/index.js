@@ -9,6 +9,7 @@ import { TextField as MuiTextField } from "@mui/material";
 import {Formik} from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 const Card = styled(MuiCard)(spacing);
 const Alert = styled(MuiAlert)(spacing);
@@ -25,7 +26,7 @@ const validationSchema = Yup.object().shape({
 const timeOut = (time) => new Promise((res) => setTimeout(res, time));
 
 const NewASNFormUpload = () => {
-  const [files, setFiles] = React.useState([]);
+  const navigate = useNavigate();
   
   const handleSubmit = async (
     values, { resetForm, setErrors, setStatus, setSubmitting }
@@ -33,11 +34,12 @@ const NewASNFormUpload = () => {
     try {
       const formData = new FormData();
       formData.append("file", values.file);
-        await axios.post(`/api/ReceiveOrder`, formData);
+      await axios.post(`/api/ReceiveOrder`, formData);
       await timeOut(1500);
       resetForm();
       setStatus({ sent: true });
       setSubmitting(false);
+      navigate("/shipment/pos");
     } catch (e) {
       setStatus({ sent: false });
       if (e.response.data) {

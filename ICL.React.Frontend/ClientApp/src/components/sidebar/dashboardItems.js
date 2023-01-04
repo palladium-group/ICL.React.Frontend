@@ -15,7 +15,26 @@ import {
   Users,
   Server,
   Home,
+  Move,
 } from "react-feather";
+
+const clearingSection = [
+  {
+    href: "",
+    icon: Move,
+    title: "Clearing",
+    children: [
+      {
+        title: "Shipment",
+        href: "/control-tower",
+      },
+      {
+        title: "Pos/ASN",
+        href: "/shipment/pos",
+      }
+    ],
+  },
+];
 
 const pagesSection = [
   {
@@ -35,14 +54,6 @@ const pagesSection = [
         href: "/dashboard/monitoring",
         title: "Monitoring",
       },
-      // {
-      //   href: "/dashboard/analytics",
-      //   title: "Order Fulfilment",
-      // },
-      // {
-      //   href: "/dashboard/saas",
-      //   title: "SaaS",
-      // },
     ],
   },
 ];
@@ -123,16 +134,7 @@ const navItems = [
   },
   {
     title: "Clearing",
-    pages: [
-      {
-        title: "Shipment",
-        href: "/shipment/",
-      },
-      {
-        title: "Pos/ASN",
-        href: "/shipment/pos",
-      }
-    ]
+    pages: clearingSection,
   },
   {
     title: "Warehouse",
@@ -150,10 +152,10 @@ const navItems = [
     title: "Inventory Analysis and Planning",
     pages: inventoryAnalysisAndPlanning,
   },
-  {
-    title: "Control Tower",
-    pages: controlTower,
-  },
+  // {
+  //   title: "Control Tower",
+  //   pages: controlTower,
+  // },
 ];
 
 export default navItems;
