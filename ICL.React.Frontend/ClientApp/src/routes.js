@@ -56,9 +56,6 @@ const routes = [
     ),
     children: [
       {
-        path: "",
-      },
-      {
         path: "pos",
         element: <Default />,
       }
