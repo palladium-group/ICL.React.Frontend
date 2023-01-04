@@ -19,6 +19,7 @@ import {getPurchaseOrders} from "../../../api/purchase-orders";
 import {format} from "date-fns";
 import DoneIcon from '@mui/icons-material/Done';
 import CancelIcon from '@mui/icons-material/Cancel';
+import Pending from "@mui/icons-material/Pending";
 
 const Divider = styled(MuiDivider)(spacing);
 const Typography = styled(MuiTypography)(spacing);
@@ -34,9 +35,17 @@ const IncomingOrdersData = () => {
     ["incomingOrders"], getPurchaseOrders
   );
   const priorityFormater = (cell) => {
-    return (
-      <span>{cell ? <DoneIcon color="success" /> : <CancelIcon color="error" />}</span>
-    );
+    if (cell === 0) {
+      return (<span> <Pending color="secondary" /> </span>);
+    } else if (cell === 1) {
+      return (
+        <span><DoneIcon color="success" /></span>
+      );
+    } else if (cell === 2) {
+      return (
+        <span><CancelIcon color="error" /></span>
+      );
+    }
   };
   const bookingLink = (params) => {
     const uri = params.row.scmid ? `https://opsuat.freightintime.com/Booking/home/viewbooking?itemid=${params.row.scmid}` : "";
@@ -64,7 +73,7 @@ const IncomingOrdersData = () => {
                 valueFormatter: params => format(new Date(params?.value), 'dd-MMM-yyyy')
               },
               {
-                field: "scmid",
+                field: "status",
                 headerName: "Delivery Status",
                 editable: false,
                 flex: 1,
