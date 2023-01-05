@@ -31,6 +31,7 @@ const Outbound = async(() => import("./pages/dashboards/dwh/Outbound"));
 const Monitoring = async(() => import("./pages/dashboards/dwh/Monitoring"));
 const Costing = async(() => import("./pages/dashboards/dwh/Costing"));
 const TenderingAndContracting = async(() => import("./pages/dashboards/dwh/TenderingAndContracting"));
+const TransportationAndDistribution = async(() => import("./pages/dashboards/dwh/TransportationAndDistribution"));
 
 const routes = [
   {
@@ -91,6 +92,10 @@ const routes = [
       },
       {
         path: "ePOD",
+      },
+      {
+        path: "transportation-distribution",
+        element: <TransportationAndDistribution />,
       },
     ],
   },
