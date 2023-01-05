@@ -76,6 +76,10 @@ const transportationPlanning = [
         href: "/dashboard/transportation-distribution",
         title: "Transportation And Distribution",
       },
+      {
+        href: "/dashboard/chain-of-custody",
+        title: "Chain of Custody",
+      },
     ],
   },
 ];
