@@ -103,7 +103,7 @@ const IncomingOrdersData = () => {
   );
 };
 
-function Default() {
+function Products() {
   return (
     <React.Fragment>
       <Helmet title="Incoming Orders" />
@@ -121,4 +121,4 @@ function Default() {
   );
 }
 
-export default Default;
+export default Products;
