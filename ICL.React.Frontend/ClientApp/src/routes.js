@@ -24,6 +24,7 @@ const Default = async(() => import("./pages/dashboards/Default"));
 const Analytics = async(() => import("./pages/dashboards/Analytics"));
 const SaaS = async(() => import("./pages/dashboards/SaaS"));
 const Home = async(() => import("./pages/home"));
+const HomePage = async(() => import("./pages/home/Home"));
 const ControlTower = async (() => import("./pages/control-tower"));
 const HomeAnalytics = async(() => import("./pages/analytics/HomeAnalytics"));
 const Inbound = async(() => import("./pages/dashboards/dwh/Inbound"));
@@ -45,7 +46,7 @@ const routes = [
     children: [
       {
         path: "",
-        element: <Home />,
+        element: <HomePage />,
       }
     ]
   },

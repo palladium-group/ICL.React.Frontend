@@ -14,6 +14,7 @@ import {PublicClientApplication} from "@azure/msal-browser";
 import {msalConfig} from "./authConfig";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 const msalInstance = new PublicClientApplication(msalConfig);
 
 const container = document.getElementById("root");

@@ -4,12 +4,12 @@ import styled from "@emotion/styled";
 
 import {
   // Avatar as MuiAvatar,
-  Badge,
+  Badge, Box,
   // Box,
-  Button as MuiButton,
+  Button as MuiButton, Divider, Drawer,
   // Divider as MuiDivider,
   Grid,
-  IconButton,
+  IconButton, ListItemButton,
   // List,
   // ListItem,
   // ListItemAvatar,
@@ -50,36 +50,93 @@ const Indicator = styled(Badge)`
   }
 `;
 
-// const Avatar = styled(MuiAvatar)`
-//   background: ${(props) => props.theme.palette.primary.main};
-// `;
+const Wrapper = styled.div`
+  width: 386px;
+  overflow-x: hidden;
+`;
 
-// const NotificationHeader = styled(Box)`
-//   text-align: center;
-//   border-bottom: 1px solid ${(props) => props.theme.palette.divider};
-// `;
+const Heading = styled(ListItemButton)`
+  font-size: ${(props) => props.theme.typography.h5.fontSize};
+  font-weight: ${(props) => props.theme.typography.fontWeightMedium};
+  font-family: ${(props) => props.theme.typography.fontFamily};
+  min-height: 56px;
 
-// function Notification({ title, description, Icon }) {
-//   return (
-//     <ListItem divider component={Link} to="#">
-//       <ListItemAvatar>
-//         <Avatar>
-//           <SvgIcon fontSize="small">
-//             <Icon />
-//           </SvgIcon>
-//         </Avatar>
-//       </ListItemAvatar>
-//       <ListItemText
-//         primary={title}
-//         primaryTypographyProps={{
-//           variant: "subtitle2",
-//           color: "textPrimary",
-//         }}
-//         secondary={description}
-//       />
-//     </ListItem>
-//   );
-// }
+  ${(props) => props.theme.breakpoints.up("sm")} {
+    min-height: 64px;
+  }
+`;
+
+function Demos() {
+  return (
+    <Wrapper>
+      <Heading>
+        <Box sx={{ fontWeight: 'bold' }}>
+          EXECUTION APPS
+        </Box>
+      </Heading>
+
+      <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+        <Grid container spacing={6}>
+          <Grid item md={12}>
+            SCM Profit: Store and Deliver
+            <Divider />
+          </Grid>
+          <Grid item md={12}>
+            Mercell: Source
+            <Divider />
+          </Grid>
+          <Grid item md={12}>
+            MacroEyes: Plan
+            <Divider />
+          </Grid>
+          <Grid item md={12}>
+            Comcare: Third Party Monitoring
+            <Divider />
+          </Grid>
+        </Grid>
+      </Box>
+
+      <Heading>
+        <Box sx={{ fontWeight: 'bold' }}>
+          ANALYTICS APPS
+        </Box>
+      </Heading>
+
+      <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+        <Grid container spacing={6}>
+          <Grid item md={12}>
+            ChainLockR: Risk Management
+            <Divider />
+          </Grid>
+          <Grid item md={12}>
+            JIRA/Confluence: Quality Management
+            <Divider />
+          </Grid>
+          <Grid item md={12}>
+            Greenhouse: Greenhouse GasMonitoring
+            <Divider />
+          </Grid>
+          <Grid item md={12}>
+            Parsyl: Temperature Monitoring
+            <Divider />
+          </Grid>
+          <Grid item md={12}>
+            KPMG: Digital Twin
+            <Divider />
+          </Grid>
+          <Grid item md={12}>
+            Quetica: Freight Bill Audit
+            <Divider />
+          </Grid>
+          <Grid item md={12}>
+            PowerBI: Custom Reporting
+            <Divider />
+          </Grid>
+        </Grid>
+      </Box>
+    </Wrapper>
+  );
+}
 
 function NavbarNotificationsDropdown() {
   const ref = useRef(null);
@@ -102,70 +159,9 @@ function NavbarNotificationsDropdown() {
           </Indicator>
         </IconButton>
       </Tooltip>
-      <Popover
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "center",
-        }}
-        anchorEl={ref.current}
-        onClose={handleClose}
-        open={isOpen}
-      >
-        <React.Fragment>
-          <Grid container spacing={1} justifyContent="center">
-            <Grid item md={6}>
-              <Centered>
-                <Typography sx={{ p: 2 }}>
-                  <a href="https://opsuat.freightintime.com" target="_blank" rel="noopener noreferrer">
-                    <Button mr={1} variant="contained">
-                      <LocalShippingOutlinedIcon />
-                    </Button>
-                    <Grid item>
-                      SCM Profit
-                    </Grid>
-                  </a>
-                </Typography>
-              </Centered>
-            </Grid>
-            <Grid item md={6}>
-              <Centered>
-                <Typography sx={{ p: 2 }}>
-                  <Button mr={1} variant="contained">
-                    <AcUnitOutlinedIcon />
-                  </Button>
-                  <Grid item>
-                    Sourcing(i+)
-                  </Grid>
-                </Typography>
-              </Centered>
-            </Grid>
-            <Grid item md={6}>
-              <Centered>
-                <Typography sx={{ p: 2 }}>
-                  <Button mr={1} variant="contained">
-                    <AttachMoneyOutlinedIcon />
-                  </Button>
-                  <Grid item>
-                    Finance(CostPoint)
-                  </Grid>
-                </Typography>
-              </Centered>
-            </Grid>
-            <Grid item md={6}>
-              <Centered>
-                <Typography sx={{ p: 2 }}>
-                  <Button mr={1} variant="contained">
-                    <AirplanemodeActiveOutlinedIcon />
-                  </Button>
-                  <Grid item>
-                    Logistics
-                  </Grid>
-                </Typography>
-              </Centered>
-            </Grid>
-          </Grid>
-        </React.Fragment>
-      </Popover>
+      <Drawer anchor="right" open={isOpen} onClose={handleClose}>
+        <Demos />
+      </Drawer>
     </React.Fragment>
   );
 }
