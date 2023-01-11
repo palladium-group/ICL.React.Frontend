@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
+import Chip from '@mui/material/Chip';
 import { Menu as MenuIcon } from "@mui/icons-material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -53,6 +54,17 @@ const outerTheme = createTheme({
   },
 });
 
+const options = {
+  shouldForwardProp: (prop) => prop !== 'bgcolor',
+};
+const StyledChip = styled(
+  Chip,
+  options,
+)(({ }) => ({
+  color: 'white',
+  backgroundColor: "#000",
+}));
+
 const Navbar = ({ onDrawerToggle }) => {
   // const { t } = useTranslation();
   return (
@@ -76,15 +88,15 @@ const Navbar = ({ onDrawerToggle }) => {
                 <Box
                   sx={{
                     '& > :not(style) + :not(style)': {
-                      ml: 10,
+                      ml: 4,
                     },
                   }}
                 >
-                  <Link>Report an Incident</Link>
-                  <Link href="#">HQ Office</Link>
-                  <Link href="#" variant="body2">Country Offices</Link>
-                  <Link href="#" variant="body2">Custom Reports</Link>
-                  <Link href="#" variant="body2">Standard Reports</Link>
+                  <StyledChip label="Report an Incident" component="a" href="#" clickable />
+                  <StyledChip label="HQ Office" component="a" href="#" clickable />
+                  <StyledChip label="Country Offices" component="a" href="#" clickable />
+                  <StyledChip label="Custom Reports" component="a" href="#" clickable />
+                  <StyledChip label="Standard Reports" component="a" href="#" clickable />
                 </Box>
               </ThemeProvider>
             </Grid>

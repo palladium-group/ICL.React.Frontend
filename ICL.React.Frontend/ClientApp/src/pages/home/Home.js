@@ -16,9 +16,9 @@ import {
   MDBCarousel,
   MDBCarouselItem,
 } from 'mdb-react-ui-kit';
-import FirstImg from "../../../src/vendor/Cambodia_USAID_original.jpg";
-import SecondImg from "../../../src/vendor/Set B 030.jpg";
-import ThirdImg from "../../../src/vendor/Set B 019.jpg";
+import FirstImg from "../../../src/vendor/illustration-1.png";
+import SecondImg from "../../../src/vendor/illustration-2.png";
+import ThirdImg from "../../../src/vendor/illustration-3.png";
 
 const Card = styled(MuiCard)(spacing);
 
@@ -37,7 +37,7 @@ const Home = () => {
     <React.Fragment>
       <Helmet title="Home" />
       <Grid container spacing={2}>
-        <Grid item md={8}>
+        <Grid item md={12}>
           <Grid container spacing={2}>
             <Grid item md={12}>
               <MDBCarousel showIndicators showControls fade>
@@ -46,10 +46,7 @@ const Home = () => {
                   itemId={1}
                   src={FirstImg}
                   alt='...'
-                  height={400}
                 >
-                  <h5>First slide label</h5>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </MDBCarouselItem>
 
                 <MDBCarouselItem
@@ -57,10 +54,7 @@ const Home = () => {
                   itemId={2}
                   src={SecondImg}
                   alt='...'
-                  height={400}
                 >
-                  <h5>Second slide label</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </MDBCarouselItem>
 
                 <MDBCarouselItem
@@ -68,10 +62,7 @@ const Home = () => {
                   itemId={3}
                   src={ThirdImg}
                   alt='...'
-                  height={400}
                 >
-                  <h5>Third slide label</h5>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                 </MDBCarouselItem>
               </MDBCarousel>
             </Grid>
@@ -208,7 +199,7 @@ const Home = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item md={4}>
+        <Grid item md={12}>
           <Grid container spacing={2}>
             <Grid item md={12}>
               <Card
