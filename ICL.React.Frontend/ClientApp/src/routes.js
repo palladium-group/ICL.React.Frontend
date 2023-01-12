@@ -51,6 +51,26 @@ const routes = [
     ]
   },
   {
+    path: "/manage",
+    element: (<DashboardLayout />),
+    children: [
+      {
+        path: "",
+        // element:
+      }
+    ]
+  },
+  {
+    path: "/plan",
+    element: (<DashboardLayout />),
+    children: [
+      {
+        path: "",
+        // element:
+      }
+    ]
+  },
+  {
     path: "shipment",
     element: (
       <AuthGuard>
