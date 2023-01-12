@@ -28,8 +28,8 @@ const Spacer = styled.div(spacing);
 
 const Avatar = styled(MuiAvatar)`
   display: inline-block;
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
 `;
 
 const Home = () => {
