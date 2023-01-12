@@ -62,7 +62,10 @@ namespace ICL.React.Frontend.Controllers
                     po.BookingDate = DateTime.ParseExact(booking.BasicDetails.BookingDate.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
                     po.AsnFile = asn.ToString();
                     po.ProcessType = booking.Services.Service.ProcessType;
-                    po.Status = 0;
+                    po.PlaceOfReceipt = booking.BasicDetails.Movement.PlaceOfReceipt.Code;
+                    po.PlaceOfDelivery = booking.BasicDetails.Movement.PlaceOfDelivery.Code;
+                    po.DeliveryStatus = 0;
+                    po.SubmitStatus = "Available";
 
                     foreach (var prod in booking.Products)
                     {

@@ -9,9 +9,12 @@
         public DateTime BookingDate { get; set; }
         public Guid? SCMID { get; set; }
         public string? AsnFile { get; set; }
-        public int? Status { get; set; }
+        public int? DeliveryStatus { get; set; }
         public string? ErrorMessage { get; set; }
         public string? ProcessType { get; set; }
+        public string? PlaceOfReceipt { get; set; }
+        public string? PlaceOfDelivery { get; set; }
+        public string? SubmitStatus { get; set; }
         public List<Product>? products { get; set; }
     }
 }
