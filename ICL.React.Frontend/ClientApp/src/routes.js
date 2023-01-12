@@ -68,6 +68,10 @@ const routes = [
       {
         path: "",
         element: <Manage />
+      },
+      {
+        path: "hq-start-up-status",
+        element: <HqStartUpstatus />,
       }
     ]
   },
