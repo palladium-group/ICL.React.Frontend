@@ -185,7 +185,7 @@ const EventContent=({value,handleChange})=>{
                           <PlaceIcon />
                         </ListItemIcon>
                         <ListItemButton>
-                          <ListItemText primary="location: Microsoft Teams"></ListItemText>
+                          <ListItemText primary="Microsoft Teams"></ListItemText>
                         </ListItemButton>
                       </ListItem>
                       <ListItem disablePadding>
