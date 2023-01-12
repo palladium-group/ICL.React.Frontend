@@ -9,7 +9,7 @@ import {
   Grid,
   Link,
   Paper,
-  Typography,
+  Typography, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Box, Tab, TextField
 } from "@mui/material";
 import styled from "@emotion/styled";
 import {spacing} from "@mui/system";
@@ -20,6 +20,13 @@ import {
 import FirstImg from "../../../src/vendor/illustration-1.png";
 import SecondImg from "../../../src/vendor/illustration-2.png";
 import ThirdImg from "../../../src/vendor/illustration-3.png";
+import PlaceIcon from '@mui/icons-material/Place';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
+import SearchIcon from '@mui/icons-material/Search';
 
 const Card = styled(MuiCard)(spacing);
 const CardContent = styled(MuiCardContent)(spacing);
@@ -33,6 +40,12 @@ const Avatar = styled(MuiAvatar)`
 `;
 
 const Home = () => {
+
+  const [value, setValue] = React.useState('1');
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <React.Fragment>
       <Helmet title="Home" />
@@ -130,6 +143,9 @@ const Home = () => {
             <Grid item md={4}>
               <Card
                 mb={6}
+                sx={{
+                  maxHeight: 500,
+                }}
               >
                 <CardActionArea>
                   <CardContent>
@@ -137,23 +153,78 @@ const Home = () => {
                       Events
                     </Typography>
                     <Divider />
-                    <Typography component="p" sx={{ fontSize: 10 }}>
-                      Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem
-                      quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam
-                      quam nunc, blandit vel, luctus pulvinar.
-                    </Typography>
+                    <Box sx={{ width: '100%', typography: 'body1' }}>
+                      <TabContext value={value}>
+                        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                          <TabList  onChange={handleChange}  aria-label="lab API tabs example">
+                            <Tab label="Upcoming" value="1" />
+                            <Tab label="Past" value="2" />
+                          </TabList>
+                        </Box>
+                        <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+                          <SearchIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
+                          <TextField id="input-with-sx" label="Search" variant="standard" />
+                        </Box>
+                        <TabPanel value="1">
+                          <List>
+                            <ListItem disablePadding>
+                              <ListItemButton>
+                                <ListItemText primary="NextGen IP Working Group (ICL + PSAs)"></ListItemText>
+                              </ListItemButton>
+                            </ListItem>
+                            <ListItem disablePadding>
+                              <ListItemIcon>
+                                <PlaceIcon />
+                              </ListItemIcon>
+                              <ListItemButton>
+                                <ListItemText primary="location: Microsoft Teams"></ListItemText>
+                              </ListItemButton>
+                            </ListItem>
+                            <ListItem disablePadding>
+                              <ListItemIcon>
+                                <CalendarMonthIcon/>
+                              </ListItemIcon>
+                              <ListItemButton>
+                                <ListItemText primary="Feb 6, 2023"></ListItemText>
+                              </ListItemButton>
+                            </ListItem>
+                            <ListItem disablePadding>
+                              <ListItemIcon>
+                                <AccessTimeIcon/>
+                              </ListItemIcon>
+                              <ListItemButton>
+                                <ListItemText primary="0900 EST"></ListItemText>
+                              </ListItemButton>
+                            </ListItem>
+                          </List>
+                        </TabPanel>
+                        <TabPanel value="2">No Events</TabPanel>
+                      </TabContext>
+                    </Box>
 
-                    <Typography component="p" sx={{ fontSize: 10 }}>
-                      Sit illum aperiam et aliquam maiores aut nulla autem ab ratione sunt.
-                      In assumenda dolorem ut autem vitae et eveniet eveniet ad maxime laudantium.
-                      Est ipsa dolores sit minus numquam qui doloremque voluptatem.
-                    </Typography>
 
-                    <Typography component="p" sx={{ fontSize: 10 }}>
-                      33 distinctio nisi est tempore perspiciatis est assumenda galisum id
-                      fugit alias ut nulla distinctio est voluptas dolorem et doloribus internos.
-                      Et quasi impedit sed nemo quidem qui harum ullam sit quia iure.
-                    </Typography>
+
+                    {/*Sample Event 1:*/}
+                    {/*Event name: NextGen IP Working Group (ICL + PSAs)*/}
+                    {/*Event location: Microsoft Teams*/}
+                    {/*(Optional) Event description: Quarterly Supply Meeting*/}
+                    {/*Date: Jan 27, 2023*/}
+                    {/*Time: 0900 EST*/}
+
+                    {/*Sample Event 2:*/}
+                    {/*Event name: Monthly MIS Systems Maintenance and Review Meeting*/}
+                    {/*Event location: NextGen ICL HQ Office*/}
+                    {/*(Optional) Event description: HQ + Country Office MIS Leads*/}
+                    {/*Date: Feb 6, 2023*/}
+                    {/*Time: 1100 EST*/}
+
+                    {/*Sample Event 3:*/}
+                    {/*Event name: Quarterly Progress Report Inputs*/}
+                    {/*Event location: N/A- Via Email*/}
+                    {/*(Optional) Event description: All Team Leaders to review and finalize QPR reviews*/}
+                    {/*Date: Mar 10, 2023*/}
+                    {/*Time: 1700 EST*/}
+
                   </CardContent>
                 </CardActionArea>
               </Card>
@@ -162,7 +233,7 @@ const Home = () => {
               <Card
                 mb={6}
                 sx={{
-                  maxHeight: 210,
+                  maxHeight: 500,
                 }}
               >
                 <CardActionArea>
@@ -181,6 +252,9 @@ const Home = () => {
             <Grid item md={4}>
               <Card
                 mb={6}
+                sx={{
+                  maxHeight: 500,
+                }}
               >
                 <CardActionArea>
                   <CardContent>
