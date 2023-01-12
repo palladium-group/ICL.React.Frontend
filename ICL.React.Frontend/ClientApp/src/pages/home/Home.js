@@ -8,7 +8,7 @@ import {
   Divider as MuiDivider,
   Grid,
   Link,
-  Paper,
+  Paper, Stack,
   Typography,
 } from "@mui/material";
 import styled from "@emotion/styled";
@@ -20,6 +20,7 @@ import {
 import FirstImg from "../../../src/vendor/illustration-1.png";
 import SecondImg from "../../../src/vendor/illustration-2.png";
 import ThirdImg from "../../../src/vendor/illustration-3.png";
+import Chip from "@mui/material/Chip";
 
 const Card = styled(MuiCard)(spacing);
 const CardContent = styled(MuiCardContent)(spacing);
@@ -187,15 +188,22 @@ const Home = () => {
                     <Typography gutterBottom variant="h5" component="h2">
                       Quick Links
                     </Typography>
-                    <Divider />
-                    <ul>
-                      <li><Link href="#">Timesheet</Link></li>
-                      <li><Link href="#">Expense Reports</Link></li>
-                      <li><Link href="#">Travel Reports</Link></li>
-                      <li><Link href="#">HR Portal</Link></li>
-                      <li><Link href="#">Training</Link></li>
-                      <li><Link href="#">Learning Compass</Link></li>
-                    </ul>
+                    <Divider sx={{ marginBottom: 2 }} />
+                    <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
+                      <Chip label="Timesheet" component="a" target="_blank" href="https://thepalladiumgroup-cp.deltekenterprise.com/cpweb/" clickable />
+                      <Chip label="Expense Reports" component="a" target="_blank" href="https://delegationofauthority.thepalladiumgroup.com/" clickable />
+                    </Stack>
+                    <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
+                      <Chip label="Travel Reports" component="a" target="_blank" href="https://delegationofauthority.thepalladiumgroup.com/" clickable />
+                      <Chip label="HR Portal" component="a" target="_blank" href="https://hrcompass.thepalladiumgroup.com/" clickable />
+                    </Stack>
+                    <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
+                      <Chip label="Compliance" component="a" target="_blank" href="https://thepalladiumgroup-cp.deltekenterprise.com/cpweb/" clickable />
+                      <Chip label="Training" component="a" />
+                    </Stack>
+                    <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
+                      <Chip label="Learning Compass" component="a" target="_blank" href="https://palladium.blackboard.com/" clickable />
+                    </Stack>
                   </CardContent>
                 </CardActionArea>
               </Card>

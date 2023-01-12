@@ -17,8 +17,8 @@ const MarketResearch = () => {
           <Typography>Market Research</Typography>
         </Breadcrumbs>
         <iframe title="Market Research" width="100%" height="100%"
-                src="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2118090754/Market+Conditions+-+Research"
-                frameBorder="0" allowFullScreen="true"></iframe>
+                src="https://thepalladiumgroup.atlassian.net/l/cp/1U2Y9HNy"
+                frameBorder="0" allowFullScreen="true" frame-ancestors="self"></iframe>
       </Grid>
     </Grid>
   );
