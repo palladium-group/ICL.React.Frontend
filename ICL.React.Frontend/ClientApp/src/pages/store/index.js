@@ -8,15 +8,14 @@ import {
   Grid, Paper, Typography,
 } from "@mui/material";
 import {spacing} from "@mui/system";
-import FirstImg from "../../vendor/illustration-source.png";
-import {NavLink} from "react-router-dom";
+import FirstImg from "../../vendor/illustration-store.png";
 
 const Card = styled(MuiCard)(spacing);
 const CardContent = styled(MuiCardContent)(spacing);
 const Divider = styled(MuiDivider)(spacing);
 const Spacer = styled.div(spacing);
 
-const Source = () => {
+const Store = () => {
   return (
     <React.Fragment>
       <Card sx={{ width: "100%" }}>
@@ -28,22 +27,18 @@ const Source = () => {
       <br />
       <Grid container spacing={2} alignItems="stretch">
         <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#8D6E97" }} elevation={8}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Market Conditions
+                  Inventory Monitoring
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      <NavLink to={""}>Primary and Secondary Data</NavLink>
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      <NavLink to={`/source/market-research`}>Market Research</NavLink>
+                      Per Location
                       <Divider />
                     </Grid>
                   </Grid>
@@ -53,34 +48,18 @@ const Source = () => {
           </Paper>
         </Grid>
         <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#8D6E97" }} elevation={8}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Logistics Category Profiles
+                  Temperature Monitoring
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Customs Clearance
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Storage
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Delivery
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Products
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Network Design
+                      Per Location
                       <Divider />
                     </Grid>
                   </Grid>
@@ -90,38 +69,44 @@ const Source = () => {
           </Paper>
         </Grid>
         <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#8D6E97" }} elevation={8}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Procurement
+                  Insurance
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Vendor Registry
+                      Per Location
+                      <Divider />
+                    </Grid>
+                  </Grid>
+                </Box>
+              </CardContent>
+            </Card>
+          </Paper>
+        </Grid>
+
+        <Grid item md={4} style={{display: 'flex'}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
+            <Card>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  3PL Performance
+                </Typography>
+                <Divider />
+                <Spacer mb={4} />
+                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+                  <Grid container spacing={6}>
+                    <Grid item md={12}>
+                      Vender Score
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Underqualified Bidder Action Plans
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Request for Proposals(Annual)
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Request for Proposals(Spot Market)
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Service Level Agreements
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Purchase Orders
+                      Corrective Action Reports
                       <Divider />
                     </Grid>
                   </Grid>
@@ -134,4 +119,4 @@ const Source = () => {
     </React.Fragment>
   );
 };
-export default Source;
+export default Store;

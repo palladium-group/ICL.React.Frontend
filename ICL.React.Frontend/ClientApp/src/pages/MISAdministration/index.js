@@ -4,11 +4,10 @@ import {
   Box,
   Card as MuiCard,
   CardContent as MuiCardContent, CardMedia,
-  Divider as MuiDivider,
-  Grid, Paper, Typography,
+  Divider as MuiDivider, Grid, Paper, Typography,
 } from "@mui/material";
 import {spacing} from "@mui/system";
-import FirstImg from "../../vendor/illustration-source.png";
+import FirstImg from "../../vendor/illustration-deliver.png";
 import {NavLink} from "react-router-dom";
 
 const Card = styled(MuiCard)(spacing);
@@ -16,7 +15,7 @@ const CardContent = styled(MuiCardContent)(spacing);
 const Divider = styled(MuiDivider)(spacing);
 const Spacer = styled.div(spacing);
 
-const Source = () => {
+const MISAdministration = () => {
   return (
     <React.Fragment>
       <Card sx={{ width: "100%" }}>
@@ -28,45 +27,16 @@ const Source = () => {
       <br />
       <Grid container spacing={2} alignItems="stretch">
         <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#8D6E97" }} elevation={8}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Market Conditions
+                  Digital Twins
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
-                    <Grid item md={12}>
-                      <NavLink to={""}>Primary and Secondary Data</NavLink>
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      <NavLink to={`/source/market-research`}>Market Research</NavLink>
-                      <Divider />
-                    </Grid>
-                  </Grid>
-                </Box>
-              </CardContent>
-            </Card>
-          </Paper>
-        </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#8D6E97" }} elevation={8}>
-            <Card>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Logistics Category Profiles
-                </Typography>
-                <Divider />
-                <Spacer mb={4} />
-                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
-                  <Grid container spacing={6}>
-                    <Grid item md={12}>
-                      Customs Clearance
-                      <Divider />
-                    </Grid>
                     <Grid item md={12}>
                       Storage
                       <Divider />
@@ -75,12 +45,25 @@ const Source = () => {
                       Delivery
                       <Divider />
                     </Grid>
+                  </Grid>
+                </Box>
+              </CardContent>
+            </Card>
+          </Paper>
+        </Grid>
+        <Grid item md={4} style={{display: 'flex'}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} elevation={8}>
+            <Card>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Chain of Custody
+                </Typography>
+                <Divider />
+                <Spacer mb={4} />
+                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+                  <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Products
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Network Design
+                      Commodity Tracer
                       <Divider />
                     </Grid>
                   </Grid>
@@ -90,38 +73,18 @@ const Source = () => {
           </Paper>
         </Grid>
         <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#8D6E97" }} elevation={8}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Procurement
+                  Green House Gas Monitoring
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Vendor Registry
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Underqualified Bidder Action Plans
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Request for Proposals(Annual)
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Request for Proposals(Spot Market)
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Service Level Agreements
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Purchase Orders
+                      Annual Report
                       <Divider />
                     </Grid>
                   </Grid>
@@ -130,8 +93,75 @@ const Source = () => {
             </Card>
           </Paper>
         </Grid>
+        <Grid item md={4} style={{display: 'flex'}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} elevation={8}>
+            <Card>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Risk Management
+                </Typography>
+                <Divider />
+                <Spacer mb={4} />
+                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+                  <Grid container spacing={6}>
+                    <Grid item md={12}>
+                      Incident Management
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Risk Profiles
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Risk Alerts
+                      <Divider />
+                    </Grid>
+                  </Grid>
+                </Box>
+              </CardContent>
+            </Card>
+          </Paper>
+        </Grid>
+        <Grid item md={4} style={{display: 'flex'}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} elevation={8}>
+            <Card>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Automated Reports
+                </Typography>
+                <Divider />
+                <Spacer mb={4} />
+                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+                  <Grid container spacing={6}>
+                    <Grid item md={12}>
+                      By Country
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      By Function
+                      <Divider />
+                    </Grid>
+                  </Grid>
+                </Box>
+              </CardContent>
+            </Card>
+          </Paper>
+        </Grid>
+        <Grid item md={4} style={{display: 'flex'}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} elevation={8}>
+            <Card>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Custom Reports
+                </Typography>
+                <Divider />
+                <Spacer mb={4} />
+              </CardContent>
+            </Card>
+          </Paper>
+        </Grid>
       </Grid>
     </React.Fragment>
   );
 };
-export default Source;
+export default MISAdministration;

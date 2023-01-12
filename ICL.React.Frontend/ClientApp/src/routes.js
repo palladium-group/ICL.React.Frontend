@@ -37,6 +37,13 @@ const ChainOfCustody = async(() => import("./pages/dashboards/dwh/ChainOfCustody
 const Manage = async(() => import("./pages/manage/index"));
 const Plan = async(() => import("./pages/plan/index"));
 const Source = async(() => import("./pages/source/index"));
+const MarketResearch = async(() => import("./pages/source/MarketResearch"));
+
+const Store = async(() => import("./pages/store/index"));
+
+const Deliver = async(() => import("./pages/deliver"));
+const Enable = async(() => import("./pages/enable"));
+const MISAdministration = async(() => import("./pages/MISAdministration"));
 
 const routes = [
   {
@@ -80,8 +87,52 @@ const routes = [
       {
         path: "",
         element: <Source />,
+      },
+      {
+        path: "market-research",
+        element: <MarketResearch />,
       }
-    ]
+    ],
+  },
+  {
+    path: "/store",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <Store />,
+      },
+    ],
+  },
+  {
+    path: "deliver",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <Deliver />,
+      },
+    ],
+  },
+  {
+    path: "enable",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <Enable />,
+      },
+    ],
+  },
+  {
+    path: "MISAdministration",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <MISAdministration />,
+      },
+    ],
   },
   {
     path: "shipment",
