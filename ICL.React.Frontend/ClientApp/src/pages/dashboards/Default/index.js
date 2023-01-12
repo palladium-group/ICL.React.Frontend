@@ -1,7 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
+import AreaChart from '../../charts/ApexCharts';
+import ColumnChart from '../../control-tower/ColumnChart';
+import PieChart from '../../control-tower/PieChart';
+
 import styled from "@emotion/styled";
 import { Helmet } from "react-helmet-async";
-
+import TableActions from './TableActions';
+import PurchaseOrderForm from '../../control-tower/PurchaseOrderForm'
 import {
   Grid,
   Divider as MuiDivider,
@@ -29,7 +34,7 @@ const Paper = styled(MuiPaper)(spacing);
 const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
 const Button = styled(MuiButton)(spacing);
 
-const IncomingOrdersData = () => {
+const IncomingOrdersData = (props) => {
   // fetch incoming orders
   const { data, isLoading, isError } = useQuery(
     ["incomingOrders"], getPurchaseOrders
@@ -47,11 +52,14 @@ const IncomingOrdersData = () => {
       );
     }
   };
-  const bookingLink = (params) => {
+  const actionLink = (params) => {
     const uri = params.row.id ? `https://opsuat.freightintime.com/Booking/home/viewbooking?itemid=${params.row.id}` : "";
-    return (
+/*    return (
       <span>{params.row.id ? <a target="_blank" rel="noreferrer" href={uri}>View</a> : ""}</span>
-    );
+    );*/
+    return (
+        <TableActions params={params} loadPO={props.setShowPOForm} setCurrentPO={props.setCurrentPO}/>
+    )
   };
   return (
     <Card mb={6}>
@@ -73,7 +81,16 @@ const IncomingOrdersData = () => {
                 valueFormatter: params => format(new Date(params?.value), 'dd-MMM-yyyy')
               },
               {
-                field: "status",
+                field: "submitStatus",
+                headerName: "Submit Status",
+                editable: false,
+                flex: 1,
+                renderCell: (params) => {
+                  return priorityFormater(params.value);
+                },
+              },
+              {
+                field: "deliveryStatus",
                 headerName: "Delivery Status",
                 editable: false,
                 flex: 1,
@@ -83,11 +100,11 @@ const IncomingOrdersData = () => {
               },
               {
                 field: "id",
-                headerName: "Options",
+                headerName: "Actions",
                 editable: false,
                 flex: 1,
                 renderCell: (params) => {
-                  return bookingLink(params);
+                  return actionLink(params);
                 },
               }
             ]}
@@ -104,20 +121,45 @@ const IncomingOrdersData = () => {
 };
 
 function Default() {
+  const[showPOForm, setShowPOForm] = useState(false);
+  const[currentPO, setCurrentPO] = useState();
   return (
-    <React.Fragment>
-      <Helmet title="Incoming Orders" />
-      <Grid justifyContent="space-between" container spacing={6}>
-        <Grid item>
-          <Typography variant="h3" gutterBottom>
-            Purchase Orders/ASN
-          </Typography>
-        </Grid>
-      </Grid>
+      <React.Fragment>
+        {!showPOForm &&
+            <>
+              <Helmet title="Incoming Orders" />
+              <Grid justifyContent="space-between" container spacing={6}>
+                <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
+                  <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
+                    Purchase Orders/ASN
+                  </Typography>
+                </Grid>
+              </Grid>
 
-      <Divider my={6} />
-      <IncomingOrdersData />
-    </React.Fragment>
+              <Divider my={6} />
+              <IncomingOrdersData setShowPOForm={setShowPOForm} setCurrentPO={setCurrentPO}  />
+              <Grid container spacing={6} sx={{marginTop:'20px'}}>
+                <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
+                  <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
+                    Middleware Messaging Statistics
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <PieChart/>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <ColumnChart/>
+                </Grid>
+              </Grid>
+            </>
+
+
+        }
+        {showPOForm &&
+            <PurchaseOrderForm params={currentPO} setShowPOForm={setShowPOForm}/>
+        }
+      </React.Fragment>
+
   );
 }
 
