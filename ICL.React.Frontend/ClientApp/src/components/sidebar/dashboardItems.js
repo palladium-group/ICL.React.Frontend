@@ -32,6 +32,7 @@ const manageSection = [
     href: "/manage",
     icon: TrendingUpOutlinedIcon,
     title: "Manage",
+    backgroundcolor: "#E57200",
   },
 ];
 const planSection = [
@@ -39,275 +40,47 @@ const planSection = [
     href: "/plan",
     icon: CalendarMonthOutlinedIcon,
     title: "Plan",
+    backgroundcolor: "#BA0C2F",
   }
 ];
 const sourceSection = [
   {
     title: "Source",
-    href: "",
+    href: "/source",
     icon: ShoppingCartCheckoutOutlinedIcon,
-    children: [
-      {
-        title: "Market Conditions",
-        href: "",
-        children: [
-          {
-            title: "Primary and Secondary Data",
-            href: "",
-          },
-          {
-            title: "Market Research",
-            href: "",
-          },
-        ],
-      },
-      {
-        title: "Logistics Category Profiles",
-        href: "",
-        children: [
-          {
-            title: "Customs Clearance",
-            href: ""
-          },
-          {
-            title: "Storage",
-            href: ""
-          },
-          {
-            title: "Delivery",
-            href: ""
-          },
-          {
-            title: "Product Master List",
-            href: ""
-          },
-          {
-            title: "Network Design",
-            href: ""
-          },
-        ],
-      },
-      {
-        title: "Procurement",
-        href: "",
-        children: [
-          {
-            title: "Vendor Registry",
-            href: "",
-          },
-          {
-            title: "Underqualified Bidder Action Plans",
-            href: "",
-          },
-          {
-            title: "Request for Proposals (Annual)",
-            href: "",
-          },
-          {
-            title: "Request for Proposals (Spot Market)",
-            href: "",
-          },
-          {
-            title: "Service Level Agreements",
-            href: "",
-          },
-          {
-            title: "Purchase Orders",
-            href: "",
-          },
-        ],
-      },
-    ],
+    backgroundcolor: "#8D6E97",
   },
 ];
 const storeSection = [
   {
-    href: "",
+    href: "/store",
     title: "Store",
     icon: WarehouseOutlinedIcon,
-    children: [
-      {
-        title: "Inventory Monitoring",
-        href: "",
-        children: [
-          {
-            title: "Per Location",
-            href: "",
-          }
-        ],
-      },
-      {
-        title: "Temperature Monitoring",
-        href: "",
-        children: [
-          {
-            title: "Per Location",
-            href: "",
-          }
-        ],
-      },
-      {
-        title: "Insurance",
-        href: "",
-        children: [
-          {
-            title: "Per Location",
-            href: "",
-          }
-        ],
-      },
-      {
-        title: "3PL Performance",
-        href: "",
-        children: [
-          {
-            title: "Vendor Scorecard",
-            href: "",
-          },
-          {
-            title: "Corrective Action Reports",
-            href: "",
-          },
-        ],
-      },
-    ],
+    backgroundcolor: "#FFB500"
   }
 ];
 const deliverSection = [
   {
     title: "Deliver",
-    href: "",
+    href: "/deliver",
     icon: LocalShippingOutlinedIcon,
-    children: [
-      {
-        title: "Commodity Tracking",
-        href: "",
-      },
-      {
-        title: "Temperature Monitoring",
-        href: "",
-      },
-      {
-        title: "Proof of Delivery",
-        href: "",
-      },
-      {
-        title: "3PL Performance",
-        href: "",
-        children: [
-          {
-            title: "Vendor Scorecard",
-            href: "",
-          }
-        ]
-      },
-    ],
+    backgroundcolor: "#64A70B"
   },
 ];
 const enableSection = [
   {
     title: "Enable",
-    href: "",
+    href: "/enable",
     icon: CheckBoxOutlinedIcon,
-    children: [
-      {
-        title: "Digital Twins",
-        href: "",
-      },
-      {
-        title: "Chain of Custody",
-        href: "",
-      },
-      {
-        title: "Green House Gas Monitoring",
-        href: "",
-      },
-      {
-        title: "Risk Management",
-        href: "",
-      },
-      {
-        title: "Automated Reports",
-        href: "",
-      },
-      {
-        title: "Custom Reports",
-        href: "",
-      },
-    ],
+    backgroundcolor: "#05C3DE"
   }
 ];
 const MISAdministrationSection = [
   {
     title: "MIS Administration",
-    href: "",
+    href: "/MISAdministration",
     icon: ManageAccountsOutlinedIcon,
-    children: [
-      {
-        title: "Interoperability",
-        href: "",
-        children: [
-          {
-            title: "Middleware status",
-            href: "",
-          },
-        ],
-      },
-      {
-        title: "Data Management",
-        href: "",
-        children: [
-          {
-            title: "Data warehouse",
-            href: "",
-          },
-          {
-            title: "Data lake",
-            href: "",
-          },
-          {
-            title: "Data Marts",
-            href: "",
-          },
-          {
-            title: "Logic Apps",
-            href: "",
-          },
-          {
-            title: "Queues, Subscriptions, and Events",
-            href: "",
-          },
-        ]
-      },
-      {
-        title: "User Management",
-        href: "",
-        children: [
-          {
-            title: "User Registry",
-            href: "",
-          },
-          {
-            title: "Assign New User",
-            href: "",
-          },
-          {
-            title: "Remove User",
-            href: "",
-          },
-        ],
-      },
-      {
-        title: "Information Security",
-        href: "",
-        children: [
-          {
-            title: "Policy",
-            href: "",
-          },
-        ],
-      },
-    ],
+    backgroundcolor: "#4D4D4D"
   },
 ];
 
@@ -412,35 +185,37 @@ const navItems = [
         title: "Home",
         href: "/",
         icon: HomeOutlinedIcon,
+        backgroundcolor: "#FFFFFF",
+        color: "#000000"
       }
     ],
   },
   {
-    title: "",
+    title: "manage",
     pages: manageSection,
   },
   {
-    title: "",
+    title: "Plan",
     pages: planSection,
   },
   {
-    title: "",
+    title: "Source",
     pages: sourceSection,
   },
   {
-    title: "",
+    title: "Store",
     pages: storeSection,
   },
   {
-    title: "",
+    title: "Deliver",
     pages: deliverSection,
   },
   {
-    title: "",
+    title: "Enable",
     pages: enableSection,
   },
   {
-    title: "",
+    title: "MIS",
     pages: MISAdministrationSection,
   },
   // {
