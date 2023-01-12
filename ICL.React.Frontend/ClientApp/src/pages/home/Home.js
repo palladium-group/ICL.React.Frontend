@@ -68,9 +68,9 @@ const Home = () => {
               </MDBCarousel>
             </Grid>
             <Grid item md={12}>
-              <Card mb={2} sx={{ borderTop: 5 }} variant="outlined" square={false}>
+              <Paper elevation={3} sx={{ borderTop: 5 }} square={true}>
+              <Card mb={2}>
                 <CardContent>
-                  <Paper elevation={3}>
                     <Typography sx={{ fontSize: 28 }}>
                       Strategy & Key References
                     </Typography>
@@ -120,93 +120,89 @@ const Home = () => {
                         </Card>
                       </Grid>
                     </Grid>
-                  </Paper>
+
                 </CardContent>
               </Card>
+              </Paper>
             </Grid>
           </Grid>
         </Grid>
         <Grid item md={12}>
-          <Grid container spacing={2}>
-            <Grid item md={4}>
-              <Card
-                mb={6}
-              >
-                <CardActionArea>
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Events
-                    </Typography>
-                    <Divider />
-                    <Typography component="p" sx={{ fontSize: 10 }}>
-                      Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem
-                      quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam
-                      quam nunc, blandit vel, luctus pulvinar.
-                    </Typography>
+          <Grid container spacing={2} alignItems="stretch">
+            <Grid item md={4} style={{display: 'flex'}}>
+              <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
+                <Card mb={6}>
+                  <CardActionArea>
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Events
+                      </Typography>
+                      <Divider />
+                      <Typography component="p" sx={{ fontSize: 10 }}>
+                        Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem
+                        quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam
+                        quam nunc, blandit vel, luctus pulvinar.
+                      </Typography>
 
-                    <Typography component="p" sx={{ fontSize: 10 }}>
-                      Sit illum aperiam et aliquam maiores aut nulla autem ab ratione sunt.
-                      In assumenda dolorem ut autem vitae et eveniet eveniet ad maxime laudantium.
-                      Est ipsa dolores sit minus numquam qui doloremque voluptatem.
-                    </Typography>
+                      <Typography component="p" sx={{ fontSize: 10 }}>
+                        Sit illum aperiam et aliquam maiores aut nulla autem ab ratione sunt.
+                        In assumenda dolorem ut autem vitae et eveniet eveniet ad maxime laudantium.
+                        Est ipsa dolores sit minus numquam qui doloremque voluptatem.
+                      </Typography>
 
-                    <Typography component="p" sx={{ fontSize: 10 }}>
-                      33 distinctio nisi est tempore perspiciatis est assumenda galisum id
-                      fugit alias ut nulla distinctio est voluptas dolorem et doloribus internos.
-                      Et quasi impedit sed nemo quidem qui harum ullam sit quia iure.
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+                      <Typography component="p" sx={{ fontSize: 10 }}>
+                        33 distinctio nisi est tempore perspiciatis est assumenda galisum id
+                        fugit alias ut nulla distinctio est voluptas dolorem et doloribus internos.
+                        Et quasi impedit sed nemo quidem qui harum ullam sit quia iure.
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Paper>
             </Grid>
-            <Grid item md={4}>
-              <Card
-                mb={6}
-                sx={{
-                  maxHeight: 210,
-                }}
-              >
-                <CardActionArea>
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Yammer Feed
-                    </Typography>
-                    <Divider />
-                    <Typography component="p">
-                      {/*<iframe name="embed-feed" title="Yammer" src="https://web.yammer.com/embed/feed?header=false&footer=false&theme=dark" style={{ border: "0px", overflow: "hidden", width: "100%", height: "100%", minHeight: "400px" }}></iframe>*/}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+            <Grid item md={4} style={{display: 'flex'}}>
+              <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
+                <Card mb={6}>
+                  <CardActionArea>
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Yammer Feed
+                      </Typography>
+                      <Divider />
+                      <Typography component="p">
+                        <iframe name="embed-feed" title="Yammer" src="https://web.yammer.com/embed/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxMTU1MjgxOSJ9?header=false&footer=false&theme=light&includeFeedInformation=false" style={{ border: "0px", overflow: "hidden", width: "100%", height: "100%;", minHeight: "400px" }}></iframe>
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Paper>
             </Grid>
-            <Grid item md={4}>
-              <Card
-                mb={6}
-              >
-                <CardActionArea>
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Quick Links
-                    </Typography>
-                    <Divider sx={{ marginBottom: 2 }} />
-                    <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
-                      <Chip label="Timesheet" component="a" target="_blank" href="https://thepalladiumgroup-cp.deltekenterprise.com/cpweb/" clickable />
-                      <Chip label="Expense Reports" component="a" target="_blank" href="https://delegationofauthority.thepalladiumgroup.com/" clickable />
-                    </Stack>
-                    <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
-                      <Chip label="Travel Reports" component="a" target="_blank" href="https://delegationofauthority.thepalladiumgroup.com/" clickable />
-                      <Chip label="HR Portal" component="a" target="_blank" href="https://hrcompass.thepalladiumgroup.com/" clickable />
-                    </Stack>
-                    <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
-                      <Chip label="Compliance" component="a" target="_blank" href="https://thepalladiumgroup-cp.deltekenterprise.com/cpweb/" clickable />
-                      <Chip label="Training" component="a" />
-                    </Stack>
-                    <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
-                      <Chip label="Learning Compass" component="a" target="_blank" href="https://palladium.blackboard.com/" clickable />
-                    </Stack>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+            <Grid item md={4} style={{display: 'flex'}}>
+              <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
+                <Card mb={6}>
+                  <CardActionArea>
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Quick Links
+                      </Typography>
+                      <Divider sx={{ marginBottom: 2 }} />
+                      <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
+                        <Chip label="Timesheet" component="a" target="_blank" href="https://thepalladiumgroup-cp.deltekenterprise.com/cpweb/" clickable />
+                        <Chip label="Expense Reports" component="a" target="_blank" href="https://delegationofauthority.thepalladiumgroup.com/" clickable />
+                        <Chip label="Travel Reports" component="a" target="_blank" href="https://delegationofauthority.thepalladiumgroup.com/" clickable />
+                      </Stack>
+                      <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
+                        <Chip label="HR Portal" component="a" target="_blank" href="https://hrcompass.thepalladiumgroup.com/" clickable />
+                        <Chip label="Learning Compass" component="a" target="_blank" href="https://palladium.blackboard.com/" clickable />
+                      </Stack>
+                      <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
+                        <Chip label="Compliance" component="a" target="_blank" href="https://thepalladiumgroup-cp.deltekenterprise.com/cpweb/" clickable />
+                        <Chip label="Training" component="a" />
+                      </Stack>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Paper>
             </Grid>
           </Grid>
         </Grid>
