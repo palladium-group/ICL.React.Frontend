@@ -36,6 +36,7 @@ const TransportationAndDistribution = async(() => import("./pages/dashboards/dwh
 const ChainOfCustody = async(() => import("./pages/dashboards/dwh/ChainOfCustody"));
 const Manage = async(() => import("./pages/manage/index"));
 const Plan = async(() => import("./pages/plan/index"));
+const Source = async(() => import("./pages/source/index"));
 
 const routes = [
   {
@@ -69,6 +70,16 @@ const routes = [
       {
         path: "",
         element: <Plan />
+      }
+    ]
+  },
+  {
+    path: "/source",
+    element: (<DashboardLayout />),
+    children: [
+      {
+        path: "",
+        element: <Source />,
       }
     ]
   },
