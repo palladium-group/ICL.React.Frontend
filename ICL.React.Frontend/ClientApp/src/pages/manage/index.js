@@ -22,7 +22,7 @@ const Manage = () => {
     <React.Fragment>
         
       <Grid container spacing={2} alignItems="stretch">
-        <Grid item md={4} xs={4} px={5} sx={{marginTop:10}} display="flex">
+      <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} style={{height:100}}>
           <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange" }} elevation={8}>
             <Card>
               <CardContent>
@@ -84,7 +84,7 @@ const Manage = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} display="flex" >
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} style={{height:100}}>
           <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange", marginBottom:20 }} elevation={8}>
             <Card>
               <CardContent>
@@ -131,7 +131,7 @@ const Manage = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} xs={4} px={5} sx={{marginTop:10}} display="flex">
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
           <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange" }} elevation={8}>
             <Card>
               <CardContent>
@@ -171,7 +171,7 @@ const Manage = () => {
      
         
      
-        <Grid item md={4} sx={{marginTop:10}} display="flex">
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
           <Paper square={true} sx={{ borderTop: 5, borderTopColor:"orange" }}  elevation={8}>
             <Card>
               <CardContent>
@@ -208,7 +208,7 @@ const Manage = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} sx={{marginTop:10}} display="flex">
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
           <Paper square={true} sx={{ borderTop: 5, borderTopColor:"orange" }} elevation={8}>
             <Card>
               <CardContent>
@@ -276,7 +276,7 @@ const Manage = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} sx={{marginTop:10}} display="flex">
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
           <Paper square={true} sx={{ borderTop: 5, borderTopColor:"orange" }} elevation={8}>
             <Card>
               <CardContent>

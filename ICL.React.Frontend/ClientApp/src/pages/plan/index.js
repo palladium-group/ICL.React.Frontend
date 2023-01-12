@@ -107,7 +107,7 @@ const Manage = () => {
           </Paper>
         </Grid>
         <Grid item md={4} xs={4} px={5} sx={{marginTop:10}}  >
-          <Paper square={true} sx={{ borderTop: 5,borderTopColor:"red", marginBottom:20 }} elevation={8}>
+          <Paper square={true} sx={{ borderTop: 5,borderTopColor:"red", marginBottom:20 }} className="fullHeight" height="100" elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h4" fontSize={35} fontWeight="300" component="div">
