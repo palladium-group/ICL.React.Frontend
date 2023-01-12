@@ -357,7 +357,7 @@ const SuccessContent=()=> {
       </Paper>
     </Box>)
 }
-const LeadershipContent=()=>{
+const LeadershipContent=()=> {
   return (
     <Box>
       <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
@@ -370,60 +370,60 @@ const LeadershipContent=()=>{
             <Spacer mb={4} />
             <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
               <Grid item md={3}>
-                <Avatar alt="Lucy Lavender" src="/static/img/avatars/avatar-1.jpg" />
+                <Avatar alt="Dan Rhodes" src="/static/img/avatars/dan.png" />
               </Grid>
               <Grid item md={9}>
                 <Grid container direction="column" alignItems="left" mb={2}>
                   <Grid item>
-                    Dan Rhodes
+                    <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Dan Rhodes</Typography>
                   </Grid>
                   <Grid item>
-                    Project Director
+                    <Typography sx={{ fontSize: 18 }}>Project Director</Typography>
                   </Grid>
                 </Grid>
               </Grid>
             </Grid>
             <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
               <Grid item md={3}>
-                <Avatar alt="Lucy Lavender" src="/static/img/avatars/avatar-1.jpg" />
+                <Avatar alt="Marilyn Noguera" src="/static/img/avatars/Marilyn.png" />
               </Grid>
               <Grid item md={9}>
                 <Grid container direction="column" alignItems="left" mb={2}>
                   <Grid item>
-                    Marilyn Noguera
+                    <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Marilyn Noguera</Typography>
                   </Grid>
                   <Grid item>
-                    Deputy Project Director
+                    <Typography sx={{ fontSize: 18 }}>Deputy Project Director</Typography>
                   </Grid>
                 </Grid>
               </Grid>
             </Grid>
             <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
               <Grid item md={3}>
-                <Avatar alt="Lucy Lavender" src="/static/img/avatars/avatar-1.jpg" />
+                <Avatar alt="Jabu Nyenwa" src="/static/img/avatars/Jabu.png" />
               </Grid>
               <Grid item md={9}>
                 <Grid container direction="column" alignItems="left" mb={2}>
                   <Grid item>
-                    Jabu Nyenwa
+                    <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Jabu Nyenwa</Typography>
                   </Grid>
                   <Grid item>
-                    Country Programs Director
+                    <Typography sx={{ fontSize: 18 }}>Country Programs Director</Typography>
                   </Grid>
                 </Grid>
               </Grid>
             </Grid>
             <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
               <Grid item md={3}>
-                <Avatar alt="Lucy Lavender" src="/static/img/avatars/avatar-1.jpg" />
+                <Avatar alt="Sean Lockhead" src="/static/img/avatars/Sean.png" />
               </Grid>
               <Grid item md={9}>
                 <Grid container direction="column" alignItems="left" mb={2}>
                   <Grid item>
-                    Sean Lockhead
+                    <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Sean Lockhead</Typography>
                   </Grid>
                   <Grid item>
-                    Management, Information & Results Director
+                    <Typography sx={{ fontSize: 18 }}>Management, Information & Results Director</Typography>
                   </Grid>
                 </Grid>
               </Grid>
