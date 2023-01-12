@@ -26,6 +26,7 @@ import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined
 import AcUnitOutlinedIcon from "@mui/icons-material/AcUnitOutlined";
 import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 import AirplanemodeActiveOutlinedIcon from "@mui/icons-material/AirplanemodeActiveOutlined";
+import {NavLink} from "react-router-dom";
 
 const Typography = styled(MuiTypography)(spacing);
 // const Divider = styled(MuiDivider)(spacing);
@@ -78,7 +79,9 @@ function Demos() {
       <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
         <Grid container spacing={6}>
           <Grid item md={12}>
-            SCM Profit: Store and Deliver
+            <a href="https://opsuat.freightintime.com/" target="_blank">
+              SCM Profit: Store and Deliver
+            </a>
             <Divider />
           </Grid>
           <Grid item md={12}>
@@ -109,7 +112,7 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-            JIRA/Confluence: Quality Management
+            <a href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26" target="_blank">JIRA/Confluence: Quality Management</a>
             <Divider />
           </Grid>
           <Grid item md={12}>
@@ -117,7 +120,7 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-            Parsyl: Temperature Monitoring
+            <a href="https://app.parsyl.com/report/assets?dataWindow=7&dataType=humidity&weeklyRate=false" target="_blank">Parsyl: Temperature Monitoring</a>
             <Divider />
           </Grid>
           <Grid item md={12}>
