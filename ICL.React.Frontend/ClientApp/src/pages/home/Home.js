@@ -1,17 +1,18 @@
 import React from "react";
 import {Helmet} from "react-helmet-async";
 import {
-  Box,
-  Breadcrumbs as MuiBreadcrumbs,
-  Button as MuiButton,
-  Card as MuiCard, CardActionArea, CardActions, CardContent,
-  CardMedia as MuiCardMedia,
+  Avatar as MuiAvatar,
+  Card as MuiCard,
+  CardActionArea,
+  CardContent as MuiCardContent,
   Divider as MuiDivider,
-  Grid, Link, Typography,
+  Grid,
+  Link,
+  Paper,
+  Typography,
 } from "@mui/material";
 import styled from "@emotion/styled";
 import {spacing} from "@mui/system";
-import { Icon } from '@iconify/react';
 import {
   MDBCarousel,
   MDBCarouselItem,
@@ -21,15 +22,14 @@ import SecondImg from "../../../src/vendor/illustration-2.png";
 import ThirdImg from "../../../src/vendor/illustration-3.png";
 
 const Card = styled(MuiCard)(spacing);
-
-const Button = styled(MuiButton)(spacing);
-
+const CardContent = styled(MuiCardContent)(spacing);
 const Divider = styled(MuiDivider)(spacing);
+const Spacer = styled.div(spacing);
 
-const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
-
-const CardMedia = styled(MuiCardMedia)`
-  height: 220px;
+const Avatar = styled(MuiAvatar)`
+  display: inline-block;
+  height: 50px;
+  width: 50px;
 `;
 
 const Home = () => {
@@ -67,147 +67,69 @@ const Home = () => {
               </MDBCarousel>
             </Grid>
             <Grid item md={12}>
-              <Typography
-                sx={{
-                  fontFamily: '"Helvetica Neue"',
-                  fontSize: 15,
-                  fontWeightBold: "bold",
-                  // text-align: left;
-                  color: "#266662",
-                }}
-              >
-                Our Strategy
-              </Typography>
-            </Grid>
-            <Grid
-              item
-              md={12}
-              sx={{
-                margin: "19px 125px 31px 82px",
-              }}
-            >
-              <Grid container spacing={2}>
-                <Grid item md={2}>
-                  <Box
-                    sx={{
-                      '& > :not(style) + :not(style)': {
-                        ml: 2,
-                      },
-                      textAlign: "center"
-                    }}>
-                    <Icon icon="fluent:brain-circuit-20-regular" style={{ fontSize: '32px', color: "#A49382" }} />
-                    <Typography>NextGen ICL Strategy</Typography>
-                  </Box>
-                </Grid>
-                <Grid item md={2}>
-                  <Box
-                    sx={{
-                      '& > :not(style) + :not(style)': {
-                        ml: 2,
-                      },
-                      textAlign: "center"
-                    }}>
-                    <Icon icon="bi:graph-up-arrow" style={{ fontSize: '32px', color: "#A49382" }}></Icon>
-                    <Typography>Results Framework</Typography>
-                  </Box>
-                </Grid>
-                <Grid item md={2}>
-                  <Box
-                    sx={{
-                      '& > :not(style) + :not(style)': {
-                        ml: 2,
-                      },
-                      textAlign: "center"
-                    }}>
-                    <Icon icon="iconoir:submit-document" style={{ fontSize: '32px', color: "#A49382" }}></Icon>
-                    <Typography>HQ Work Plan</Typography>
-                  </Box>
-                </Grid>
-                <Grid item md={2}>
-                  <Box
-                    sx={{
-                      '& > :not(style) + :not(style)': {
-                        ml: 2,
-                      },
-                      textAlign: "center"
-                    }}>
-                    <Icon icon="mdi:office-building-marker-outline" style={{ fontSize: '32px', color: "#A49382" }}></Icon>
-                    <Typography>Country Office Work Plans</Typography>
-                  </Box>
-                </Grid>
-                <Grid item md={2}>
-                  <Box
-                    sx={{
-                      '& > :not(style) + :not(style)': {
-                        ml: 2,
-                      },
-                      textAlign: "center"
-                    }}>
-                    <Icon icon="material-symbols:play-circle-outline-rounded" style={{ fontSize: '32px', color: "#A49382" }}></Icon>
-                    <Typography>4PL Playbook</Typography>
-                  </Box>
-                </Grid>
-                <Grid item md={2}>
-                  <Box
-                    sx={{
-                      '& > :not(style) + :not(style)': {
-                        ml: 2,
-                      },
-                      textAlign: "center"
-                    }}>
-                    <Icon icon="academicons:ideas-repec" style={{ fontSize: '32px', color: "#A49382" }}></Icon>
-                    <Typography>4PL Body of Knowledge</Typography>
-                  </Box>
-                </Grid>
-              </Grid>
-            </Grid>
-            <Grid item md={12}>
-              <Typography
-                sx={{
-                  fontFamily: '"Helvetica Neue"',
-                  fontSize: 15,
-                  fontWeightBold: "bold",
-                  // text-align: left;
-                  color: "#266662",
-                }}
-              >
-                Success Stories
-              </Typography>
-              <Typography component="p" sx={{ fontSize: 10 }}>
-                Sit illum aperiam et aliquam maiores aut nulla autem ab ratione sunt.
-                In assumenda dolorem ut autem vitae et eveniet eveniet ad maxime laudantium.
-                Est ipsa dolores sit minus numquam qui doloremque voluptatem.
-              </Typography>
-            </Grid>
-            <Grid item md={12}>
-              <Typography
-                sx={{
-                  fontFamily: '"Helvetica Neue"',
-                  fontSize: 15,
-                  fontWeightBold: "bold",
-                  // text-align: left;
-                  color: "#266662",
-                }}
-              >
-                Leadership Profiles
-              </Typography>
-              <Typography component="p" sx={{ fontSize: 10 }}>
-                Sit illum aperiam et aliquam maiores aut nulla autem ab ratione sunt.
-                In assumenda dolorem ut autem vitae et eveniet eveniet ad maxime laudantium.
-                Est ipsa dolores sit minus numquam qui doloremque voluptatem.
-              </Typography>
+              <Card mb={2} sx={{ borderTop: 5 }} variant="outlined" square={false}>
+                <CardContent>
+                  <Paper elevation={3}>
+                    <Typography sx={{ fontSize: 28 }}>
+                      Strategy & Key References
+                    </Typography>
+                    <Divider />
+                    <br />
+                    <Grid direction="row" justifyContent="center" container spacing={2} alignItems="stretch">
+                      <Grid item md={2} style={{display: 'flex'}}>
+                        <Card sx={{ backgroundColor: "#05C3DE" }}>
+                          <CardContent>
+                            <Typography variant="body2" sx={{ fontSize: 18, alignContent: 'center' }}>NEXTGEN ICL STRATEGY</Typography>
+                          </CardContent>
+                        </Card>
+                      </Grid>
+                      <Grid item md={2} style={{display: 'flex'}}>
+                        <Card sx={{ backgroundColor: "#BA0C2F" }} style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
+                          <CardContent>
+                            <Typography sx={{ fontSize: 18 }}>RESULTS FRAMEWORK</Typography>
+                          </CardContent>
+                        </Card>
+                      </Grid>
+                      <Grid item md={2} style={{display: 'flex'}}>
+                        <Card sx={{ backgroundColor: "#64A70B" }} style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
+                          <CardContent>
+                            <Typography sx={{ fontSize: 18 }}>HQ WORK PLAN</Typography>
+                          </CardContent>
+                        </Card>
+                      </Grid>
+                      <Grid item md={2} style={{display: 'flex'}}>
+                        <Card sx={{ backgroundColor: "#64A70B" }} style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
+                          <CardContent>
+                            <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: 18 }}>COUNTRY OFFICE WORK PLANS</Typography>
+                          </CardContent>
+                        </Card>
+                      </Grid>
+                      <Grid item md={2} style={{display: 'flex'}}>
+                        <Card sx={{ backgroundColor: "#8D6E97" }} style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
+                          <CardContent>
+                            <Typography sx={{ fontSize: 18 }}>4PL PLAYBOOK</Typography>
+                          </CardContent>
+                        </Card>
+                      </Grid>
+                      <Grid item md={2} style={{display: 'flex'}}>
+                        <Card sx={{ backgroundColor: "#8D6E97" }} style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
+                          <CardContent>
+                            <Typography sx={{ fontSize: 18 }}>4PL BODY OF KNOWLEDGE</Typography>
+                          </CardContent>
+                        </Card>
+                      </Grid>
+                    </Grid>
+                  </Paper>
+                </CardContent>
+              </Card>
             </Grid>
           </Grid>
         </Grid>
         <Grid item md={12}>
           <Grid container spacing={2}>
-            <Grid item md={12}>
+            <Grid item md={4}>
               <Card
                 mb={6}
-                sx={{
-                  backgroundColor: "#266662",
-                  color: "#fff",
-                }}
               >
                 <CardActionArea>
                   <CardContent>
@@ -236,13 +158,11 @@ const Home = () => {
                 </CardActionArea>
               </Card>
             </Grid>
-
-            <Grid item md={12}>
+            <Grid item md={4}>
               <Card
                 mb={6}
                 sx={{
-                  backgroundColor: "#266662",
-                  color: "#fff",
+                  maxHeight: 210,
                 }}
               >
                 <CardActionArea>
@@ -258,14 +178,9 @@ const Home = () => {
                 </CardActionArea>
               </Card>
             </Grid>
-
-            <Grid item md={12}>
+            <Grid item md={4}>
               <Card
                 mb={6}
-                sx={{
-                  backgroundColor: "#266662",
-                  color: "#fff",
-                }}
               >
                 <CardActionArea>
                   <CardContent>
@@ -284,6 +199,151 @@ const Home = () => {
                   </CardContent>
                 </CardActionArea>
               </Card>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item md={12}>
+          <Grid container spacing={2}>
+            <Grid item md={8}>
+              <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
+                <Card>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      Success stories
+                    </Typography>
+                    <Divider />
+                    <Grid container direction="column" alignItems="left" mb={2} spacing={2}>
+                      <Grid item>
+                        <Card>
+                          <CardContent>
+                            <Grid container alignItems="left" mb={2} spacing={2}>
+                              <Grid item md={4}>
+                                gg
+                              </Grid>
+                              <Grid item md={8}>
+                                <Card>
+                                  <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                      Title of the story
+                                    </Typography>
+                                    <Typography variant="body2" gutterBottom>
+                                      Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                      elit, sed diam nonummy nibh euismod tincidunt ut
+                                      laoreet dolore magna aliquam erat volutpat. Ut wisi
+                                      enim ad minim veniam, quis nostrud exerci tation
+                                      ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                                    </Typography>
+                                  </CardContent>
+                                </Card>
+                              </Grid>
+                            </Grid>
+                          </CardContent>
+                        </Card>
+                      </Grid>
+                      <Grid item>
+                        <Card>
+                          <CardContent>
+                            <Grid container alignItems="left" mb={2} spacing={2}>
+                              <Grid item md={4}>
+                                gg
+                              </Grid>
+                              <Grid item md={8}>
+                                <Card>
+                                  <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                      Title of the story
+                                    </Typography>
+                                    <Typography variant="body2" gutterBottom>
+                                      Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                      elit, sed diam nonummy nibh euismod tincidunt ut
+                                      laoreet dolore magna aliquam erat volutpat. Ut wisi
+                                      enim ad minim veniam, quis nostrud exerci tation
+                                      ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                                    </Typography>
+                                  </CardContent>
+                                </Card>
+                              </Grid>
+                            </Grid>
+                          </CardContent>
+                        </Card>
+                      </Grid>
+                    </Grid>
+                  </CardContent>
+                </Card>
+              </Paper>
+            </Grid>
+            <Grid item md={4}>
+              <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
+                <Card>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      Leadership Profiles
+                    </Typography>
+                    <Divider />
+                    <Spacer mb={4} />
+                    <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
+                      <Grid item md={3}>
+                        <Avatar alt="Lucy Lavender" src="/static/img/avatars/avatar-1.jpg" />
+                      </Grid>
+                      <Grid item md={9}>
+                        <Grid container direction="column" alignItems="left" mb={2}>
+                          <Grid item>
+                            Dan Rhodes
+                          </Grid>
+                          <Grid item>
+                            Project Director
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
+                      <Grid item md={3}>
+                        <Avatar alt="Lucy Lavender" src="/static/img/avatars/avatar-1.jpg" />
+                      </Grid>
+                      <Grid item md={9}>
+                        <Grid container direction="column" alignItems="left" mb={2}>
+                          <Grid item>
+                            Marilyn Noguera
+                          </Grid>
+                          <Grid item>
+                            Deputy Project Director
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
+                      <Grid item md={3}>
+                        <Avatar alt="Lucy Lavender" src="/static/img/avatars/avatar-1.jpg" />
+                      </Grid>
+                      <Grid item md={9}>
+                        <Grid container direction="column" alignItems="left" mb={2}>
+                          <Grid item>
+                            Jabu Nyenwa
+                          </Grid>
+                          <Grid item>
+                            Country Programs Director
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
+                      <Grid item md={3}>
+                        <Avatar alt="Lucy Lavender" src="/static/img/avatars/avatar-1.jpg" />
+                      </Grid>
+                      <Grid item md={9}>
+                        <Grid container direction="column" alignItems="left" mb={2}>
+                          <Grid item>
+                            Sean Lockhead
+                          </Grid>
+                          <Grid item>
+                            Management, Information & Results Director
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </CardContent>
+                </Card>
+              </Paper>
             </Grid>
           </Grid>
         </Grid>
