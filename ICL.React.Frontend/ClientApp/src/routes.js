@@ -34,6 +34,8 @@ const Costing = async(() => import("./pages/dashboards/dwh/Costing"));
 const TenderingAndContracting = async(() => import("./pages/dashboards/dwh/TenderingAndContracting"));
 const TransportationAndDistribution = async(() => import("./pages/dashboards/dwh/TransportationAndDistribution"));
 const ChainOfCustody = async(() => import("./pages/dashboards/dwh/ChainOfCustody"));
+const Manage = async(() => import("./pages/manage/index"));
+const Plan = async(() => import("./pages/plan/index"));
 
 const routes = [
   {
@@ -56,7 +58,7 @@ const routes = [
     children: [
       {
         path: "",
-        // element:
+        element: <Manage />
       }
     ]
   },
@@ -66,7 +68,7 @@ const routes = [
     children: [
       {
         path: "",
-        // element:
+        element: <Plan />
       }
     ]
   },
