@@ -1,25 +1,20 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { withTheme } from "@emotion/react";
-// import { darken } from "polished";
-// import { Search as SearchIcon } from "react-feather";
-// import { useTranslation } from "react-i18next";
-
 import {
   Grid,
-  // InputBase,
   AppBar as MuiAppBar,
   IconButton as MuiIconButton,
   Toolbar,
 } from "@mui/material";
-
+// import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
+import Chip from '@mui/material/Chip';
 import { Menu as MenuIcon } from "@mui/icons-material";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import NavbarNotificationsDropdown from "./NavbarNotificationsDropdown";
-import NavbarMessagesDropdown from "./NavbarMessagesDropdown";
-// import NavbarLanguagesDropdown from "./NavbarLanguagesDropdown";
 import NavbarUserDropdown from "./NavbarUserDropdown";
-// import NavbarUSAIDIcon from "./NavbarUSAIDIcon";
 
 const AppBar = styled(MuiAppBar)`
   background: ${(props) => props.theme.header.background};
@@ -33,50 +28,42 @@ const IconButton = styled(MuiIconButton)`
   }
 `;
 
-// const Search = styled.div`
-//   border-radius: 2px;
-//   background-color: ${(props) => props.theme.header.background};
-//   display: none;
-//   position: relative;
-//   width: 100%;
-//
-//   &:hover {
-//     background-color: ${(props) => darken(0.05, props.theme.header.background)};
-//   }
-//
-//   ${(props) => props.theme.breakpoints.up("md")} {
-//     display: block;
-//   }
-// `;
+const outerTheme = createTheme({
+  typography: {
+    fontFamily: [
+      '"Helvetica Neue"',
+      'Manrope',
+      "Inter",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+    fontSize: 12,
+    fontWeight: 600,
+  },
+  palette: {
+    primary: {
+      main: "#000",
+    },
+  },
+});
 
-// const SearchIconWrapper = styled.div`
-//   width: 50px;
-//   height: 100%;
-//   position: absolute;
-//   pointer-events: none;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//
-//   svg {
-//     width: 22px;
-//     height: 22px;
-//   }
-// `;
-
-// const Input = styled(InputBase)`
-//   color: inherit;
-//   width: 100%;
-//
-//   > input {
-//     color: ${(props) => props.theme.header.search.color};
-//     padding-top: ${(props) => props.theme.spacing(2.5)};
-//     padding-right: ${(props) => props.theme.spacing(2.5)};
-//     padding-bottom: ${(props) => props.theme.spacing(2.5)};
-//     padding-left: ${(props) => props.theme.spacing(12)};
-//     width: 160px;
-//   }
-// `;
+const options = {
+  shouldForwardProp: (prop) => prop !== 'bgcolor',
+};
+const StyledChip = styled(
+  Chip,
+  options,
+)(({ }) => ({
+  color: 'white',
+  backgroundColor: "#000",
+}));
 
 const Navbar = ({ onDrawerToggle }) => {
   // const { t } = useTranslation();
@@ -95,13 +82,23 @@ const Navbar = ({ onDrawerToggle }) => {
                 <MenuIcon />
               </IconButton>
             </Grid>
+            <Grid item sm={1}>&nbsp;</Grid>
             <Grid item>
-              {/*<Search>*/}
-              {/*  <SearchIconWrapper>*/}
-              {/*    <SearchIcon />*/}
-              {/*  </SearchIconWrapper>*/}
-              {/*  <Input placeholder={t("Search")} />*/}
-              {/*</Search>*/}
+              <ThemeProvider theme={outerTheme}>
+                <Box
+                  sx={{
+                    '& > :not(style) + :not(style)': {
+                      ml: 4,
+                    },
+                  }}
+                >
+                  <StyledChip label="Report an Incident" component="a" href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26" target="_blank" clickable />
+                  <StyledChip label="HQ Office" component="a" href="#" clickable />
+                  <StyledChip label="Country Offices" component="a" href="#" clickable />
+                  <StyledChip label="Custom Reports" component="a" href="#" clickable />
+                  <StyledChip label="Standard Reports" component="a" href="#" clickable />
+                </Box>
+              </ThemeProvider>
             </Grid>
             <Grid item xs />
             <Grid item>

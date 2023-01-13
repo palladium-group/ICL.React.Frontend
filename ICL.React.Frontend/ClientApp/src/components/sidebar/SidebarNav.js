@@ -45,6 +45,8 @@ const SidebarNav = ({ items }) => {
                 key={item.title}
                 pages={item.pages}
                 title={item.title}
+                backgroundcolor={item.backgroundcolor}
+                color={item.color}
               />
             ))}
         </Items>

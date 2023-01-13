@@ -10,6 +10,8 @@ import {Formik} from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import {useMutation} from "@tanstack/react-query";
+import {newPurchaseOrder} from "../../api/purchase-orders";
 
 const Card = styled(MuiCard)(spacing);
 const Alert = styled(MuiAlert)(spacing);
@@ -27,6 +29,10 @@ const timeOut = (time) => new Promise((res) => setTimeout(res, time));
 
 const NewASNFormUpload = () => {
   const navigate = useNavigate();
+
+  const mutation = useMutation({
+    mutationFn: newPurchaseOrder,
+  });
   
   const handleSubmit = async (
     values, { resetForm, setErrors, setStatus, setSubmitting }
@@ -34,7 +40,8 @@ const NewASNFormUpload = () => {
     try {
       const formData = new FormData();
       formData.append("file", values.file);
-      await axios.post(`/api/ReceiveOrder`, formData);
+      // await axios.post(`/api/ReceiveOrder`, formData);
+      await mutation.mutateAsync(formData);
       await timeOut(1500);
       resetForm();
       setStatus({ sent: true });

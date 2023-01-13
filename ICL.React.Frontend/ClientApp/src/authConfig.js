@@ -1,7 +1,7 @@
 import {LogLevel} from "@azure/msal-browser";
 
 const loggerCallback = (logLevel, message) => {
-  console.log(message);
+  // console.log(message);
 };
 
 export const msalConfig = {
