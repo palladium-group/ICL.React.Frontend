@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import {spacing} from "@mui/system";
 import FirstImg from "../../vendor/illustration-store.png";
+import {NavLink} from "react-router-dom";
 
 const Card = styled(MuiCard)(spacing);
 const CardContent = styled(MuiCardContent)(spacing);
@@ -102,7 +103,7 @@ const Store = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Vender Score
+                      <NavLink to={`/dashboard/outbound`}>Vendor Score Card</NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

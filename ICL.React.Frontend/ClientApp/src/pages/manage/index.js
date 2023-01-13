@@ -231,7 +231,9 @@ const Manage = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Letter of Credit Management
+                      <NavLink to={`/manage/letter-of-credit`}>
+                        Letter of Credit Management
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

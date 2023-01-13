@@ -46,9 +46,9 @@ const DistributionCostAnalysis = async(() => import("./pages/manage/Distribution
 const WarehousingCostAnalysis = async(() => import("./pages/manage/WarehousingCostAnalysis"));
 const TotalLandedCostsAnalysis = async(() => import("./pages/manage/TotalLandedCostsAnalysis"));
 const GlobalFund = async(() => import("./pages/manage/GlobalFund"));
+const LetterOfCredit = async(() => import("./pages/manage/LetterOfCredit"));
 const Plan = async(() => import("./pages/plan/index"));
 const Source = async(() => import("./pages/source/index"));
-const MarketResearch = async(() => import("./pages/source/MarketResearch"));
 const QuantificationReports = async(() => import("./pages/plan/QuantificationReports"));
 
 
@@ -56,6 +56,8 @@ const Store = async(() => import("./pages/store/index"));
 
 const Deliver = async(() => import("./pages/deliver"));
 const Enable = async(() => import("./pages/enable"));
+const CommodityTracker = async(() => import("./pages/enable/CommodityTracker"));
+const GreenHouseGasMonitoring = async(() => import("./pages/enable/GreenHouseGasMonitoring"));
 const MISAdministration = async(() => import("./pages/MISAdministration"));
 
 const routes = [
@@ -120,6 +122,10 @@ const routes = [
       {
         path: "global-fund",
         element: <GlobalFund />,
+      },
+      {
+        path: "letter-of-credit",
+        element: <LetterOfCredit />,
       }
     ]
   },
@@ -145,10 +151,6 @@ const routes = [
         path: "",
         element: <Source />,
       },
-      {
-        path: "market-research",
-        element: <MarketResearch />,
-      }
     ],
   },
   {
@@ -179,6 +181,14 @@ const routes = [
         path: "",
         element: <Enable />,
       },
+      {
+        path: "commodity-tracker",
+        element: <CommodityTracker />,
+      },
+      {
+        path: "green-house-gas-monitoring",
+        element: <GreenHouseGasMonitoring />,
+      }
     ],
   },
   {

@@ -43,7 +43,7 @@ const Source = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      <NavLink to={`/source/market-research`}>Market Research</NavLink>
+                      <a target="_blank" rel="noopener noreferrer" href="https://thepalladiumgroup.atlassian.net/l/cp/1U2Y9HNy">Market Research</a>
                       <Divider />
                     </Grid>
                   </Grid>

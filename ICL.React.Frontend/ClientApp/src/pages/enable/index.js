@@ -63,7 +63,9 @@ const Enable = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Commodity Tracer
+                      <NavLink to={`/enable/commodity-tracker`}>
+                        Commodity Tracer
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
@@ -77,7 +79,9 @@ const Enable = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Green House Gas Monitoring
+                  <NavLink to={`/enable/green-house-gas-monitoring`}>
+                    Green House Gas Monitoring
+                  </NavLink>
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
