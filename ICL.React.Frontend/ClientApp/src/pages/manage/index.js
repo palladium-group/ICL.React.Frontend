@@ -87,10 +87,13 @@ const Manage = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                  
-                    Work Plan Status
-                      
-                      
+                      <NavLink to={`/manage/performance-monitoring`}>
+                        Performance Dashboard
+                      </NavLink>
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Work Plan Status
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

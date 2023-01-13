@@ -24,7 +24,7 @@ const Default = async(() => import("./pages/dashboards/Default"));
 const Products = async(() => import("./pages/dashboards/products"));
 // const Analytics = async(() => import("./pages/dashboards/Analytics"));
 // const SaaS = async(() => import("./pages/dashboards/SaaS"));
-// const Home = async(() => import("./pages/home"));
+const Home = async(() => import("./pages/home"));
 const HomePage = async(() => import("./pages/home/Home"));
 const ControlTower = async (() => import("./pages/control-tower"));
 // const HomeAnalytics = async(() => import("./pages/analytics/HomeAnalytics"));
@@ -125,6 +125,10 @@ const routes = [
       {
         path: "letter-of-credit",
         element: <LetterOfCredit />,
+      },
+      {
+        path: "performance-monitoring",
+        element: <Home />,
       }
     ]
   },
