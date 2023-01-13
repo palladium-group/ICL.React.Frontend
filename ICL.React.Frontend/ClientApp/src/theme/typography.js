@@ -1,11 +1,12 @@
 const typography = {
   fontFamily: [
+    '"Helvetica Neue"',
+    "Manrope",
     "Inter",
     "-apple-system",
     "BlinkMacSystemFont",
     '"Segoe UI"',
     "Roboto",
-    '"Helvetica Neue"',
     "Arial",
     "sans-serif",
     '"Apple Color Emoji"',

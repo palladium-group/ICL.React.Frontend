@@ -27,6 +27,7 @@ const reduceChildRoutes = (props) => {
         open={!!open}
         title={page.title}
         href={page.href}
+        backgroundColor={page.backgroundColor}
       >
         <SidebarNavList depth={depth + 1} pages={page.children} />
       </SidebarNavListItem>
@@ -40,6 +41,8 @@ const reduceChildRoutes = (props) => {
         key={page.title}
         badge={page.badge}
         title={page.title}
+        backgroundcolor={page.backgroundcolor}
+        color={page.color}
       />
     );
   }

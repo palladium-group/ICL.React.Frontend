@@ -34,10 +34,9 @@ const Item = styled(ListItemButton)`
     color: ${(props) => props.theme.sidebar.color};
   }
   &.${(props) => props.activeclassname} {
-    background-color: ${(props) =>
-      darken(0.03, props.theme.sidebar.background)};
+    background-color: ${(props) => props.backgroundcolor};
     span {
-      color: ${(props) => props.theme.sidebar.color};
+      color: ${(props) => props.color ? props.color : props.theme.sidebar.color};
     }
   }
 `;
@@ -85,6 +84,8 @@ const SidebarNavListItem = (props) => {
   const {
     title,
     href,
+    backgroundcolor,
+    color,
     depth = 0,
     children,
     icon: Icon,
@@ -93,7 +94,6 @@ const SidebarNavListItem = (props) => {
   } = props;
 
   const [open, setOpen] = React.useState(openProp);
-
   const handleToggle = () => {
     setOpen((state) => !state);
   };
@@ -121,6 +121,8 @@ const SidebarNavListItem = (props) => {
         component={CustomRouterLink}
         to={href}
         activeclassname="active"
+        backgroundcolor={backgroundcolor}
+        color={color}
       >
         {Icon && <Icon />}
         <Title depth={depth}>

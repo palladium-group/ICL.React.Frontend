@@ -1,5 +1,5 @@
-import React from "react";
-// import {useMsal} from "@azure/msal-react";
+import React, {useEffect} from "react";
+import {useMsal, useIsAuthenticated } from "@azure/msal-react";
 // import {loginRequest} from "../../authConfig";
 // import { Navigate } from "react-router-dom";
 
@@ -9,9 +9,16 @@ import React from "react";
 
 // For routes that can only be accessed by authenticated users
 function AuthGuard({ children }) {
+  const { instance, accounts } = useMsal();
+  const isAuthenticated = useIsAuthenticated();
   // const accessToken = window.localStorage.getItem("accessToken");
   // const { isAuthenticated, isInitialized } = useAuth();
-  // const { instance, accounts } = useMsal();
+  useEffect(() => {
+    const activeAccount = instance.getAllAccounts();
+    console.log(isAuthenticated);
+    console.log(accounts);
+    console.log(activeAccount[0]?.idTokenClaims);
+  });
   // const isAuthenticated = useIsAuthenticated();
 
   // console.log(isAuthenticated);
