@@ -6,7 +6,9 @@ import {
   // Avatar as MuiAvatar,
   Badge, Box,
   // Box,
-  Button as MuiButton, Divider, Drawer,
+  // Button as MuiButton,
+  Divider,
+  Drawer,
   // Divider as MuiDivider,
   Grid,
   IconButton, ListItemButton,
@@ -14,35 +16,35 @@ import {
   // ListItem,
   // ListItemAvatar,
   // ListItemText,
-  Popover as MuiPopover,
+  // Popover as MuiPopover,
   // SvgIcon,
   Tooltip,
-  Typography as MuiTypography,
+  // Typography as MuiTypography,
 } from "@mui/material";
 import AppsIcon from '@mui/icons-material/Apps';
 // import { Bell, Home, UserPlus, Server } from "react-feather";
-import {spacing} from "@mui/system";
-import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
-import AcUnitOutlinedIcon from "@mui/icons-material/AcUnitOutlined";
-import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
-import AirplanemodeActiveOutlinedIcon from "@mui/icons-material/AirplanemodeActiveOutlined";
-import {NavLink} from "react-router-dom";
+// import {spacing} from "@mui/system";
+// import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
+// import AcUnitOutlinedIcon from "@mui/icons-material/AcUnitOutlined";
+// import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
+// import AirplanemodeActiveOutlinedIcon from "@mui/icons-material/AirplanemodeActiveOutlined";
+// import {NavLink} from "react-router-dom";
 
-const Typography = styled(MuiTypography)(spacing);
+// const Typography = styled(MuiTypography)(spacing);
 // const Divider = styled(MuiDivider)(spacing);
-const Button = styled(MuiButton)(spacing);
+// const Button = styled(MuiButton)(spacing);
 
-const Centered = styled.div`
-  text-align: center;
-`;
-
-const Popover = styled(MuiPopover)`
-  .MuiPaper-root {
-    width: 300px;
-    ${(props) => props.theme.shadows[1]};
-    border: 1px solid ${(props) => props.theme.palette.divider};
-  }
-`;
+// const Centered = styled.div`
+//   text-align: center;
+// `;
+//
+// const Popover = styled(MuiPopover)`
+//   .MuiPaper-root {
+//     width: 300px;
+//     ${(props) => props.theme.shadows[1]};
+//     border: 1px solid ${(props) => props.theme.palette.divider};
+//   }
+// `;
 
 const Indicator = styled(Badge)`
   .MuiBadge-badge {
@@ -79,17 +81,21 @@ function Demos() {
       <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
         <Grid container spacing={6}>
           <Grid item md={12}>
-            <a href="https://opsuat.freightintime.com/" target="_blank">
+            <a href="https://opsuat.freightintime.com/" target="_blank" rel="noopener noreferrer">
               SCM Profit: Store and Deliver
             </a>
             <Divider />
           </Grid>
           <Grid item md={12}>
-            Mercell: Source
+            <a target="_blank" rel="noopener noreferrer" href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fs2c.mercell.com%2Fsso%2Fthepalladiumgroup.com&data=05%7C01%7CBVlietstra%40iplussolutions.org%7C3f396fa500444fc779d908daf49500da%7C6029b554b35744bb9f9e3036df46c4a0%7C0%7C0%7C638091218051078146%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=RwpDIGG3FojyhqnYZv5dkkSyXPH5APwFgonJplg3zDI%3D&reserved=0">
+              Mercell: Source
+            </a>
             <Divider />
           </Grid>
           <Grid item md={12}>
-            MacroEyes: Plan
+            <a target="_blank" rel="noopener noreferrer" href="https://palladium-forecast.s3.us-east-1.amazonaws.com/index.html">
+              MacroEyes: Plan
+            </a>
             <Divider />
           </Grid>
           <Grid item md={12}>
@@ -112,7 +118,7 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-            <a href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26" target="_blank">JIRA/Confluence: Quality Management</a>
+            <a href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26" target="_blank" rel="noopener noreferrer">JIRA/Confluence: Quality Management</a>
             <Divider />
           </Grid>
           <Grid item md={12}>
@@ -120,7 +126,7 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-            <a href="https://app.parsyl.com/report/assets?dataWindow=7&dataType=humidity&weeklyRate=false" target="_blank">Parsyl: Temperature Monitoring</a>
+            <a href="https://app.parsyl.com/report/assets?dataWindow=7&dataType=humidity&weeklyRate=false" target="_blank" rel="noopener noreferrer">Parsyl: Temperature Monitoring</a>
             <Divider />
           </Grid>
           <Grid item md={12}>
