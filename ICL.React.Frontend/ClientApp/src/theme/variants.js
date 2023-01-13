@@ -48,17 +48,17 @@ const defaultVariant = {
   },
   sidebar: {
     color: grey[200],
-    background: "#000000",
+    background: "#333333",
     header: {
       color: grey[200],
-      background: "#000000",
+      background: "#333333",
       brand: {
         color: customBlue[500],
       },
     },
     footer: {
       color: grey[200],
-      background: "#000000",
+      background: "#333333",
       online: {
         background: green[500],
       },

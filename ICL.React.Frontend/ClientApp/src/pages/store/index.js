@@ -1,24 +1,21 @@
 import React from "react";
+import styled from "@emotion/styled";
 import {
   Box,
   Card as MuiCard,
   CardContent as MuiCardContent, CardMedia,
   Divider as MuiDivider,
-  Grid,
-  Paper,
-  Typography
+  Grid, Paper, Typography,
 } from "@mui/material";
-import styled from "@emotion/styled";
-import {display, spacing} from "@mui/system";
-import { orange } from "@mui/material/colors";
-import FirstImg from "../../vendor/illustration-plan.png";
+import {spacing} from "@mui/system";
+import FirstImg from "../../vendor/illustration-store.png";
 
 const Card = styled(MuiCard)(spacing);
 const CardContent = styled(MuiCardContent)(spacing);
 const Divider = styled(MuiDivider)(spacing);
 const Spacer = styled.div(spacing);
 
-const Manage = () => {
+const Store = () => {
   return (
     <React.Fragment>
       <Card sx={{ width: "100%" }}>
@@ -29,39 +26,19 @@ const Manage = () => {
       </Card>
       <br />
       <Grid container spacing={2} alignItems="stretch">
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5,borderTopColor:"red" }} elevation={8}>
+        <Grid item md={4} style={{display: 'flex'}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Planning Inputs
+                  Inventory Monitoring
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Quantification Reports
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Quarterly Supply Plans
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Orders Fulfilled (historical)
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Third Party Data Feeds
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      PSA Inbound Product Monitoring
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Customs Requirements
+                      Per Location
                       <Divider />
                     </Grid>
                   </Grid>
@@ -70,23 +47,19 @@ const Manage = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} xs={4} px={5} sx={{marginTop:10}} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5,borderTopColor:"red" }} className="fullHeight" height="100" elevation={8}>
+        <Grid item md={4} style={{display: 'flex'}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Order Intake
+                  Temperature Monitoring
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Orders Received (current)
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Orders Validated (current)
+                      Per Location
                       <Divider />
                     </Grid>
                   </Grid>
@@ -95,31 +68,45 @@ const Manage = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} xs={4} px={5} sx={{marginTop:10}} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5,borderTopColor:"red" }} elevation={8}>
+        <Grid item md={4} style={{display: 'flex'}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Monthly Operational Plans
+                  Insurance
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Supply
+                      Per Location
+                      <Divider />
+                    </Grid>
+                  </Grid>
+                </Box>
+              </CardContent>
+            </Card>
+          </Paper>
+        </Grid>
+
+        <Grid item md={4} style={{display: 'flex'}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
+            <Card>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  3PL Performance
+                </Typography>
+                <Divider />
+                <Spacer mb={4} />
+                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+                  <Grid container spacing={6}>
+                    <Grid item md={12}>
+                      Vender Score
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Demand
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Cost
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Rolling 12-month master plan
+                      Corrective Action Reports
                       <Divider />
                     </Grid>
                   </Grid>
@@ -132,4 +119,4 @@ const Manage = () => {
     </React.Fragment>
   );
 };
-export default Manage;
+export default Store;
