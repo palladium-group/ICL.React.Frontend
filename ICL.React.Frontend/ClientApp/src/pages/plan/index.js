@@ -45,7 +45,7 @@ const Manage = () => {
                       {/* <NavLink to={`/plan/quantification-reports`}>
                         Quantification Reports
                       </NavLink> */}
-                      <a href={`https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2118385665/Quantification+Reports`}>
+                      <a href={`https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2118385665/Quantification+Reports`} target="_blank">
                         Quantification Reports
                       </a>
                       <Divider />
