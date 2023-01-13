@@ -36,6 +36,14 @@ const TransportationAndDistribution = async(() => import("./pages/dashboards/dwh
 const ChainOfCustody = async(() => import("./pages/dashboards/dwh/ChainOfCustody"));
 const Manage = async(() => import("./pages/manage/index"));
 const HqStartUpstatus = async(() => import("./pages/manage/HqStartUpstatus"));
+const BuyInStatus = async(() => import("./pages/manage/BuyInStatus"));
+const StaffingLevelsHQ = async(() => import("./pages/manage/StaffingLevelsHQ"));
+const StaffingLevelsCountries = async(() => import("./pages/manage/StaffingLevelsCountries"));
+const KPIDashboard = async(() => import("./pages/manage/KPIDashboard"));
+const IncrementalObligationManagement = async(() => import("./pages/manage/IncrementalObligationManagement"));
+const DistributionCostAnalysis = async(() => import("./pages/manage/DistributionCostAnalysis"));
+const WarehousingCostAnalysis = async(() => import("./pages/manage/WarehousingCostAnalysis"));
+const TotalLandedCostsAnalysis = async(() => import("./pages/manage/TotalLandedCostsAnalysis"));
 const Plan = async(() => import("./pages/plan/index"));
 const Source = async(() => import("./pages/source/index"));
 const MarketResearch = async(() => import("./pages/source/MarketResearch"));
@@ -72,6 +80,38 @@ const routes = [
       {
         path: "hq-start-up-status",
         element: <HqStartUpstatus />,
+      },
+      {
+        path: "buy-in-status",
+        element: <BuyInStatus />,
+      },
+      {
+        path: "staffing-levels-hq",
+        element: <StaffingLevelsHQ />,
+      },
+      {
+        path: "staffing-levels-countries",
+        element: <StaffingLevelsCountries />,
+      },
+      {
+        path: "kpi-dashboard",
+        element: <KPIDashboard />,
+      },
+      {
+        path: "incremental-obligation-management",
+        element: <IncrementalObligationManagement />,
+      },
+      {
+        path: "distribution-cost-analysis",
+        element: <DistributionCostAnalysis />,
+      },
+      {
+        path: "warehousing-cost-analysis",
+        element: <WarehousingCostAnalysis />,
+      },
+      {
+        path: "total-landed-costs-analysis",
+        element: <TotalLandedCostsAnalysis />,
       }
     ]
   },

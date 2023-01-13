@@ -48,15 +48,24 @@ const Manage = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Buy-In Status
+                    <NavLink to={`/manage/buy-in-status`}>
+                    Buy-In Status
+                      </NavLink>
+                     
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Staffing Levels – HQ
+                    <NavLink to={`/manage/staffing-levels-hq`}>
+                    Staffing Levels – HQ
+                      </NavLink>
+                      
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Staffing Levels – Countries
+                    <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2117697540/Staffing+Levels+-+Countries" target="_blank" rel="noopener noreferrer">  Staffing Levels – Countries</a>
+                   
+                     
+                     
                       <Divider />
                     </Grid>
 
@@ -78,11 +87,17 @@ const Manage = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Work Plan Status
+                  
+                    Work Plan Status
+                      
+                      
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      KPI Dashboard
+                    <NavLink to={`/manage/kpi-dashboard`}>
+                    KPI Dashboard
+                      </NavLink>
+                     
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
@@ -107,7 +122,8 @@ const Manage = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Annual Survey
+                    <a href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26/group/70/create/271" target="_blank" rel="noopener noreferrer"> Annual Survey</a>
+                     
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
@@ -125,6 +141,7 @@ const Manage = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
+                  
                   Stakeholder Engagement
                 </Typography>
                 <Divider />
@@ -132,11 +149,13 @@ const Manage = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Stakeholder Register
+                    <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2117730305/Stakeholder+Register" target="_blank" rel="noopener noreferrer">Stakeholder Register</a>
+                      
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Stakeholder Strategy
+                    <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2118123557/Stakeholder+Strategy" target="_blank" rel="noopener noreferrer"> Stakeholder Strategy</a>
+                     
                       <Divider />
                     </Grid>
                   </Grid>
@@ -194,7 +213,10 @@ const Manage = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Incremental Obligation Management
+                    <NavLink to={`/manage/incremental-obligation-management`}>
+                    Incremental Obligation Management
+                      </NavLink>
+                     
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
@@ -206,15 +228,25 @@ const Manage = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Distribution Cost Analysis
+                    <NavLink to={`/manage/distribution-cost-analysis`}>
+                    Distribution Cost Analysis
+                      </NavLink>
+                     
+                      
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Warehousing Cost Analysis
+                    <NavLink to={`/manage/warehousing-cost-analysis`}>
+                    Warehousing Cost Analysis
+                      </NavLink>
+                      
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Total Landed Costs Analysis
+                    <NavLink to={`/manage/total-landed-costs-analysis`}>
+                    Total Landed Costs Analysis
+                      </NavLink>
+                     
                       <Divider />
                     </Grid>
                   </Grid>
