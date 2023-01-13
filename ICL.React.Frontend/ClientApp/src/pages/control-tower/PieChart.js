@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useEffect,useState} from "react";
 import styled from "@emotion/styled";
 import { withTheme } from "@emotion/react";
 import Chart from "react-apexcharts";
-
+import axios from "axios";
 import { CardContent, Card as MuiCard, Typography } from "@mui/material";
 import { spacing } from "@mui/system";
 
@@ -16,7 +16,8 @@ const ChartWrapper = styled.div`
 `;
 
 const PieChart = ({ theme }) => {
-  const data = [44, 55, 13];
+  //const data = [44, 55, 13];
+  const [data, setData]=useState([0,0,0])
 
   const options = {
     labels: ['Successful', 'Pending', 'Failed'],
@@ -31,6 +32,22 @@ const PieChart = ({ theme }) => {
     },
     colors:['#64A70B', '#E57200', '#BA0C2F']
   };
+  useEffect(() => {
+    axios.get(`https://localhost:7014/api/PurchaseOrder/statistics`)
+        .then((response)=>{
+          let success = 0;
+          let failed=0;
+          let pending = 0;
+          response.data.map(row =>{
+            console.log(row)
+            success = success + row.delivered;
+            failed = failed+row.failed;
+            pending = pending + row.pending;
+          })
+          setData([success,pending,failed])
+        })
+  },[]);
+
 
   return (
     <Card mb={1}>

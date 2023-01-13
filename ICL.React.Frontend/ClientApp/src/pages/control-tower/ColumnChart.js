@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useEffect,useState} from "react";
 import styled from "@emotion/styled";
 import { withTheme } from "@emotion/react";
 import Chart from "react-apexcharts";
-
+import axios from "axios";
 import { CardContent, Card as MuiCard, Typography } from "@mui/material";
 import { spacing } from "@mui/system";
+import {format} from "date-fns";
+
 
 const Card = styled(MuiCard)(spacing);
 
@@ -16,7 +18,40 @@ const ChartWrapper = styled.div`
 `;
 
 const ColumnChart = ({ theme }) => {
-  const data = [
+  const [data,setData] = useState([]);
+  const [dates, setDates] = useState([]);
+  useEffect(() => {
+    axios.get(`https://localhost:7014/api/PurchaseOrder/statistics`)
+        .then((response)=>{
+          let temp = [
+            {
+              name: "Successful",
+              data: [],
+            },
+            {
+              name: "Pending",
+              data: [],
+            },
+            {
+              name: "Failed",
+              data: [],
+            },
+          ];
+          let tempDates = [];
+          response.data.map(row =>{
+            tempDates.push(format(new Date(row.createdate), 'dd-MM-yy'))
+            temp[0].data.push(row.delivered);
+            temp[1].data.push(row.pending);
+            temp[2].data.push(row.failed);
+          });
+          setData(temp);
+          setDates(tempDates)
+        })
+  },[]);
+
+
+
+/*  const data = [
     {
       name: "Successful",
       data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
@@ -29,7 +64,7 @@ const ColumnChart = ({ theme }) => {
       name: "Failed",
       data: [1, 0, 3, 10, 5, 1, 1, 2, 1],
     },
-  ];
+  ];*/
 
   const options = {
     plotOptions: {
@@ -56,17 +91,7 @@ const ColumnChart = ({ theme }) => {
       colors: ["transparent"],
     },
     xaxis: {
-      categories: [
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-      ],
+      categories: dates,
     },
     yaxis: {
       title: {

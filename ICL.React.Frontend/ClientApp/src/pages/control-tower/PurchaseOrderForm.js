@@ -4,6 +4,7 @@ import AreaChart from '../../pages/charts/ApexCharts';
 import {format} from "date-fns";
 import { FormControl } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import CircularProgress from '@mui/material/CircularProgress';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
@@ -134,18 +135,42 @@ TablePaginationActions.propTypes = {
 };
 const timeOut = (time) => new Promise((res) => setTimeout(res, time));
 
+
+// Inspired by the former Facebook spinners.
+const useStylesFacebook = styled((theme) => ({
+    root: {
+        position: 'relative',
+    },
+    bottom: {
+        color: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
+    },
+    top: {
+        color: '#05C3DE',
+        animationDuration: '550ms',
+        position: 'absolute',
+        left: 0,
+    },
+    circle: {
+        strokeLinecap: 'round',
+    },
+}));
+
+
+
 function PurchaseOrderForm(props) {
     console.log(props.params)
+    const classes = useStylesFacebook();
     const[] = useState();
     const[products, setProducts] = useState(props.params.row.products);
     const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(5);
+    const [rowsPerPage, setRowsPerPage] = useState(10);
     const [sent, setSent] = useState(false);
     const [errors, setErrors] = useState({});
     const[status,setStatus] = useState({});
     const[allowSubmit,setAllowSubmit] = useState(false);
     const [open, setOpen] = useState(false);
     const [alert, setAlert] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const handleClose = () => {
         setOpen(false);
@@ -193,11 +218,15 @@ function PurchaseOrderForm(props) {
     };
     const handleSubmit = async() => {
         try {
+            setLoading(true)
             await axios.get(`https://localhost:7014/api/PurchaseOrder/post/${props.params.row.bookingNo}`)
                 .then((response)=>{
                     if(response.status === 200){
+                        props.setAlertMessage(`${props.params.row.bookingNo} Successfully sent ASN`);
+                        props.showAlert();
                         setOpen(false);
-                        setAlert(true);
+                        setLoading(false);
+                        //setAlert(true);
                         props.setShowPOForm(false);
                         //Successfully sent ASN
                     }else{
@@ -244,7 +273,22 @@ function PurchaseOrderForm(props) {
                             }}
                         />
                     </FormControl>
-
+                    <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+                        <InputLabel htmlFor="standard-adornment-amount" sx={{fontSize:18,color:'#992E62', fontWeight:'bolder'}}>Place Of Delivery</InputLabel>
+                        <Input
+                            disabled
+                            id="standard-adornment-amount"
+                            defaultValue={props.params.row.placeOfDelivery}
+                            sx={{
+                                fontSize:14,
+                                fontWeight:'bolder',
+                                color:'red',
+                                '& input.Mui-disabled': {
+                                    '-webkit-text-fill-color':'#014d88'
+                                },
+                            }}
+                        />
+                    </FormControl>
                     <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
                         <InputLabel htmlFor="standard-adornment-amount" sx={{fontSize:18,color:'#992E62', fontWeight:'bolder'}}>Booking Date</InputLabel>
                         <Input
@@ -267,6 +311,22 @@ function PurchaseOrderForm(props) {
                             disabled
                             id="standard-adornment-amount"
                             defaultValue={props.params.row.processType}
+                            sx={{
+                                fontSize:14,
+                                fontWeight:'bolder',
+                                color:'red',
+                                '& input.Mui-disabled': {
+                                    '-webkit-text-fill-color':'#014d88'
+                                },
+                            }}
+                        />
+                    </FormControl>
+                    <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+                        <InputLabel htmlFor="standard-adornment-amount" sx={{fontSize:18,color:'#992E62', fontWeight:'bolder'}}>Status</InputLabel>
+                        <Input
+                            disabled
+                            id="standard-adornment-amount"
+                            defaultValue={props.params.row.submitStatus}
                             sx={{
                                 fontSize:14,
                                 fontWeight:'bolder',
@@ -362,36 +422,75 @@ function PurchaseOrderForm(props) {
 
                 </Grid>
                 <Grid item xs={4}  >
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2} justifyContent="right">
                         <Grid item xs={4}>
                             <Item>
                                 <Button variant="contained" startIcon={<ReplyAllIcon />} sx={{width:'150px',backgroundColor: '#BA0C2F'}} onClick={()=>props.setShowPOForm(false)}>Back</Button>
                             </Item>
                         </Grid>
-                        <Grid item xs={6}>
-                            <Item>
-                                <Button onClick={()=>handleValidation()} variant="contained" endIcon={<SendIcon/>} sx={{width:'200px',backgroundColor: '#64A70B'}} >Validate & Submit</Button>
-                            </Item>
-                        </Grid>
+                        {props.params.row.submitStatus != 'Submitted' &&
+                            <Grid item xs={6}>
+                                <Item>
+                                    <Button onClick={()=>handleValidation()} variant="contained" endIcon={<SendIcon/>} sx={{width:'200px',backgroundColor: '#64A70B'}} >Validate & Submit</Button>
+                                </Item>
+                            </Grid>
+                        }
+
                     </Grid>
 
                 </Grid>
             </Grid>
 
 
-            <Dialog open={open} onClose={handleClose} >
-                <DialogTitle sx={{fontSize:24, color:'#BA0C2F',fontWeight:'bolder'}}>Plan Status</DialogTitle>
-                <DialogContent sx={{height:'100px'}}>
-                    <DialogContentText sx={{fontSize:16, color:'#014d88',fontWeight:'bolder'}}>
-                        Your ASN Plan has passed the validation tests. You can now submit for processing.
-                    </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose} sx={{fontSize:16,fontWeight:'bolder', color:'#9C27B0'}} variant="outlined">Back</Button>
-                    <Button onClick={()=>handleSubmit()} sx={{fontSize:16,fontWeight:'bolder', backgroundColor:'#59940A'}} variant="contained">Submit</Button>
-                </DialogActions>
-            </Dialog>
+            <Dialog open={open} onClose={handleClose}
+                    PaperProps={{
+                        style: {
+                            backgroundColor: 'transparent',
+                            boxShadow: 'none',
+                        },
+                    }}
+            >
+                {!loading &&
+                    <div sx={{backgroundColor:'#fff'}}>
+                        <DialogTitle sx={{fontSize:24, color:'#BA0C2F',fontWeight:'bolder',backgroundColor:'#fff'}}>Plan Status</DialogTitle>
+                        <DialogContent sx={{height:'100px',backgroundColor:'#fff'}}>
+                            <DialogContentText sx={{fontSize:16, color:'#014d88',fontWeight:'bolder'}}>
+                                Your ASN Plan has passed the validation tests. You can now submit for processing.
+                            </DialogContentText>
+                        </DialogContent>
+                        <DialogActions sx={{backgroundColor:'#fff'}}>
+                            <Button onClick={handleClose} sx={{fontSize:16,fontWeight:'bolder', color:'#9C27B0'}} variant="outlined">Back</Button>
+                            {props.params.row.submitStatus != 'Submitted' &&
+                                <Button onClick={()=>handleSubmit()} sx={{fontSize:16,fontWeight:'bolder', backgroundColor:'#59940A'}} variant="contained">Submit</Button>
+                            }
 
+                        </DialogActions>
+                    </div>
+
+
+                }
+                {loading &&
+                        <DialogContent sx={{height:'600px',width:'600px',backgroundColor: 'transparent'}}>
+                            <Grid container justifyContent="center" alignItems="center" sx={{height:'500px',width:'500px',backgroundColor: 'transparent'}}>
+                                <div className={classes.root}>
+                                    <CircularProgress
+                                        variant="indeterminate"
+                                        disableShrink
+                                        className={classes.top}
+                                        classes={{
+                                            circle: classes.circle,
+                                        }}
+                                        size={500}
+                                        thickness={5}
+                                        sx={{color:'#05C3DE'}}
+                                        {...props}
+                                    />
+                                </div>
+                            </Grid>
+
+                        </DialogContent>
+                }
+            </Dialog>
         </div>
     );
 }

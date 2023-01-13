@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/control-tower/ColumnChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/control-tower/PieChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/control-tower/PurchaseOrderForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/TableActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/control-tower/ColumnChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/control-tower/ColumnChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/control-tower/PieChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/control-tower/PieChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/control-tower/PurchaseOrderForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/control-tower/PurchaseOrderForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,17 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/gicha/OneDrive/Desktop/Dias/GHSC/Code/ICL.React.Frontend/ICL.React.Frontend/ClientApp/src/pages/control-tower",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/gicha/OneDrive/Desktop/Dias/GHSC/Code/ICL.React.Frontend/ICL.React.Frontend/ClientApp/src/pages/control-tower&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\gicha\OneDrive\Desktop\Dias\GHSC\Code\ICL.React.Frontend\ICL.React.Frontend\ClientApp\src\pages\control-tower" />
@@ -61,7 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1673499968046</updated>
       <workItem from="1673499972469" duration="1852000" />
-      <workItem from="1673509264509" duration="22544000" />
+      <workItem from="1673509264509" duration="22647000" />
+      <workItem from="1673588369416" duration="6257000" />
     </task>
     <servers />
   </component>
