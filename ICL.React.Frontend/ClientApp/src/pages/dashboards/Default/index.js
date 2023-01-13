@@ -1,7 +1,13 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
+import axios from "axios";
+import AreaChart from '../../charts/ApexCharts';
+import ColumnChart from '../../control-tower/ColumnChart';
+import PieChart from '../../control-tower/PieChart';
+import Alert from '@mui/material/Alert';
 import styled from "@emotion/styled";
 import { Helmet } from "react-helmet-async";
-
+import TableActions from './TableActions';
+import PurchaseOrderForm from '../../control-tower/PurchaseOrderForm'
 import {
   Grid,
   Divider as MuiDivider,
@@ -24,34 +30,34 @@ import Pending from "@mui/icons-material/Pending";
 const Divider = styled(MuiDivider)(spacing);
 const Typography = styled(MuiTypography)(spacing);
 const Card = styled(MuiCard)(spacing);
-const CardContent = styled(MuiCardContent)(spacing);
+// const CardContent = styled(MuiCardContent)(spacing);
 const Paper = styled(MuiPaper)(spacing);
-const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
-const Button = styled(MuiButton)(spacing);
+// const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
+// const Button = styled(MuiButton)(spacing);
 
-const IncomingOrdersData = () => {
+const IncomingOrdersData = (props) => {
   // fetch incoming orders
   const { data, isLoading, isError } = useQuery(
     ["incomingOrders"], getPurchaseOrders
   );
   const priorityFormater = (cell) => {
     if (cell === 0) {
-      return (<span> <Pending color="secondary" /> </span>);
+      return (<Typography> Pending </Typography>);
     } else if (cell === 1) {
       return (
-        <span><DoneIcon color="success" /></span>
+          <Typography> Successful </Typography>
       );
     } else if (cell === 2) {
       return (
-        <span><CancelIcon color="error" /></span>
+          <Typography> Failed</Typography>
       );
     }
   };
-  const bookingLink = (params) => {
-    const uri = params.row.scmid ? `https://opsuat.freightintime.com/Booking/home/viewbooking?itemid=${params.row.scmid}` : "";
+  const actionLink = (params) => {
+    const uri = params.row.id ? `https://opsuat.freightintime.com/Booking/home/viewbooking?itemid=${params.row.id}` : "";
     return (
-      <span>{params.row.scmid ? <a target="_blank" rel="noreferrer" href={uri}>View</a> : ""}</span>
-    );
+        <TableActions params={params} loadPO={props.setShowPOForm} setCurrentPO={props.setCurrentPO}/>
+    )
   };
   return (
     <Card mb={6}>
@@ -59,6 +65,25 @@ const IncomingOrdersData = () => {
         <div style={{ height: 400, width: "100%" }}>
           <DataGrid
             columns={[
+              {
+                field: "createDate",
+                headerName: "Created",
+                editable: false,
+                flex: 1,
+                valueFormatter: params => format(new Date(params?.value), 'dd-MMM-yyyy')
+              },
+              {
+                field: "processType",
+                headerName: "Process Type",
+                editable: false,
+                flex: 1
+              },
+              {
+                field: "placeOfDelivery",
+                headerName: "Place Of Delivery",
+                editable: false,
+                flex: 1,
+              },
               {
                 field: "bookingNo",
                 headerName: "Booking No",
@@ -73,7 +98,16 @@ const IncomingOrdersData = () => {
                 valueFormatter: params => format(new Date(params?.value), 'dd-MMM-yyyy')
               },
               {
-                field: "status",
+                field: "submitStatus",
+                headerName: "Submit Status",
+                editable: false,
+                flex: 1,
+                renderCell: (params) => {
+                  return priorityFormater(params.value);
+                },
+              },
+              {
+                field: "deliveryStatus",
                 headerName: "Delivery Status",
                 editable: false,
                 flex: 1,
@@ -82,12 +116,12 @@ const IncomingOrdersData = () => {
                 },
               },
               {
-                field: "scmid&id",
-                headerName: "Booking",
+                field: "id",
+                headerName: "Actions",
                 editable: false,
                 flex: 1,
                 renderCell: (params) => {
-                  return bookingLink(params);
+                  return actionLink(params);
                 },
               }
             ]}
@@ -104,20 +138,61 @@ const IncomingOrdersData = () => {
 };
 
 function Default() {
-  return (
-    <React.Fragment>
-      <Helmet title="Incoming Orders" />
-      <Grid justifyContent="space-between" container spacing={6}>
-        <Grid item>
-          <Typography variant="h3" gutterBottom>
-            Purchase Orders/ASN
-          </Typography>
-        </Grid>
-      </Grid>
+  const[showPOForm, setShowPOForm] = useState(false);
+  const[currentPO, setCurrentPO] = useState();
+  const[alert, setAlert]=useState(false);
+  const[alertMessage, setAlertMessage]=useState();
+  const showAlert = () =>{
+    setAlert(true)
+    const timer = setTimeout(() => {
+      setAlert(false)
+    }, 10000);
+  }
 
-      <Divider my={6} />
-      <IncomingOrdersData />
-    </React.Fragment>
+
+
+
+  return (
+      <React.Fragment>
+        {!showPOForm &&
+            <>
+              <Helmet title="Incoming Orders" />
+              <Grid justifyContent="space-between" container spacing={6}>
+                <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
+                  <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
+                    Purchase Orders/ASN
+                  </Typography>
+
+                </Grid>
+              </Grid>
+
+              <Divider my={6} />
+              {alert &&
+                  <Alert severity="success" >{alertMessage}</Alert>
+              }
+              <IncomingOrdersData setShowPOForm={setShowPOForm} setCurrentPO={setCurrentPO}  />
+              <Grid container spacing={6} sx={{marginTop:'20px'}}>
+                <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
+                  <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
+                    Middleware Messaging Statistics
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <PieChart/>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <ColumnChart/>
+                </Grid>
+              </Grid>
+            </>
+
+
+        }
+        {showPOForm &&
+            <PurchaseOrderForm params={currentPO} showAlert={showAlert} setAlertMessage={setAlertMessage} setShowPOForm={setShowPOForm}/>
+        }
+      </React.Fragment>
+
   );
 }
 

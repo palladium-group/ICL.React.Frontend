@@ -1,5 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
-
+//builder.Configuration.AddJsonFile("hosting.json", optional: true);
 // Add services to the container.
 
 builder.Services.AddControllers();

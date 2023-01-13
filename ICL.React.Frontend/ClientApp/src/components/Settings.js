@@ -31,10 +31,10 @@ const DemoButton = styled.div`
   font-size: 0.825rem;
   position: relative;
   border: 1px solid
-    ${(props) =>
-      !props.active
-        ? props.theme.palette.action.selected
-        : props.theme.palette.action.active};
+  ${(props) =>
+          !props.active
+                  ? props.theme.palette.action.selected
+                  : props.theme.palette.action.active};
 `;
 
 const DemoButtonInner = styled.div`
@@ -45,35 +45,35 @@ const DemoButtonInner = styled.div`
   position: relative;
 
   ${(props) =>
-    props.selectedTheme === THEMES.DEFAULT &&
-    css`
-      background: linear-gradient(-45deg, #23303f 50%, ${grey[100]} 0);
-    `}
+          props.selectedTheme === THEMES.DEFAULT &&
+          css`
+            background: linear-gradient(-45deg, #23303f 50%, ${grey[100]} 0);
+          `}
   ${(props) =>
-    props.selectedTheme === THEMES.DARK &&
-    css`
-      background: #23303f;
-    `}
+          props.selectedTheme === THEMES.DARK &&
+          css`
+            background: #23303f;
+          `}
   ${(props) =>
-    props.selectedTheme === THEMES.LIGHT &&
-    css`
-      background: ${grey[100]};
-    `}
+          props.selectedTheme === THEMES.LIGHT &&
+          css`
+            background: ${grey[100]};
+          `}
   ${(props) =>
-    props.selectedTheme === THEMES.BLUE &&
-    css`
-      background: linear-gradient(-45deg, #4782da 50%, ${grey[100]} 0);
-    `}
+          props.selectedTheme === THEMES.BLUE &&
+          css`
+            background: linear-gradient(-45deg, #4782da 50%, ${grey[100]} 0);
+          `}
   ${(props) =>
-    props.selectedTheme === THEMES.GREEN &&
-    css`
-      background: linear-gradient(-45deg, ${green[500]} 50%, ${grey[100]} 0);
-    `}
+          props.selectedTheme === THEMES.GREEN &&
+          css`
+            background: linear-gradient(-45deg, ${green[500]} 50%, ${grey[100]} 0);
+          `}
   ${(props) =>
-    props.selectedTheme === THEMES.INDIGO &&
-    css`
-      background: linear-gradient(-45deg, ${indigo[500]} 50%, ${grey[100]} 0);
-    `}
+          props.selectedTheme === THEMES.INDIGO &&
+          css`
+            background: linear-gradient(-45deg, ${indigo[500]} 50%, ${grey[100]} 0);
+          `}
 `;
 
 const DemoTitle = styled(Typography)`

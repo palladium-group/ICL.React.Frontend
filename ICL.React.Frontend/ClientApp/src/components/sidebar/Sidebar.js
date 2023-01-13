@@ -25,8 +25,8 @@ const Brand = styled(ListItemButton)`
   background-color: ${(props) => props.theme.sidebar.header.background};
   font-family: ${(props) => props.theme.typography.fontFamily};
   min-height: 56px;
-  padding-left: ${(props) => props.theme.spacing(6)};
-  padding-right: ${(props) => props.theme.spacing(6)};
+  // padding-left: ${(props) => props.theme.spacing(6)};
+  // padding-right: ${(props) => props.theme.spacing(6)};
   justify-content: center;
   cursor: pointer;
   flex-grow: 0;

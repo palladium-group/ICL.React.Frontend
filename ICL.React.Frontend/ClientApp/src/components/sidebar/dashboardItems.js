@@ -17,22 +17,70 @@ import {
   Home,
   Move,
 } from "react-feather";
+import home from '@iconify/icons-dashicons/admin-home';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import TrendingUpOutlinedIcon from '@mui/icons-material/TrendingUpOutlined';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import ShoppingCartCheckoutOutlinedIcon from '@mui/icons-material/ShoppingCartCheckoutOutlined';
+import WarehouseOutlinedIcon from '@mui/icons-material/WarehouseOutlined';
+import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
+import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 
-const clearingSection = [
+const manageSection = [
   {
-    href: "",
-    icon: Move,
-    title: "Clearing",
-    children: [
-      {
-        title: "Shipment",
-        href: "/control-tower",
-      },
-      {
-        title: "Pos/ASN",
-        href: "/shipment/pos",
-      }
-    ],
+    href: "/manage",
+    icon: TrendingUpOutlinedIcon,
+    title: "Manage",
+    backgroundcolor: "#E57200",
+  },
+];
+const planSection = [
+  {
+    href: "/plan",
+    icon: CalendarMonthOutlinedIcon,
+    title: "Plan",
+    backgroundcolor: "#BA0C2F",
+  }
+];
+const sourceSection = [
+  {
+    title: "Source",
+    href: "/source",
+    icon: ShoppingCartCheckoutOutlinedIcon,
+    backgroundcolor: "#8D6E97",
+  },
+];
+const storeSection = [
+  {
+    href: "/store",
+    title: "Store",
+    icon: WarehouseOutlinedIcon,
+    backgroundcolor: "#FFB500"
+  }
+];
+const deliverSection = [
+  {
+    title: "Deliver",
+    href: "/deliver",
+    icon: LocalShippingOutlinedIcon,
+    backgroundcolor: "#64A70B"
+  },
+];
+const enableSection = [
+  {
+    title: "Enable",
+    href: "/enable",
+    icon: CheckBoxOutlinedIcon,
+    backgroundcolor: "#05C3DE"
+  }
+];
+const MISAdministrationSection = [
+  {
+    title: "MIS Administration",
+    href: "/MISAdministration",
+    icon: ManageAccountsOutlinedIcon,
+    backgroundcolor: "#4D4D4D"
   },
 ];
 
@@ -136,30 +184,56 @@ const navItems = [
       {
         title: "Home",
         href: "/",
-        icon: Home,
+        icon: HomeOutlinedIcon,
+        backgroundcolor: "#FFFFFF",
+        color: "#000000"
       }
     ],
   },
   {
-    title: "Clearing",
-    pages: clearingSection,
+    title: "manage",
+    pages: manageSection,
   },
   {
-    title: "Warehouse",
-    pages: pagesSection,
+    title: "Plan",
+    pages: planSection,
   },
   {
-    title: "Transportation And Planning",
-    pages: transportationPlanning,
+    title: "Source",
+    pages: sourceSection,
   },
   {
-    title: "Delivery",
-    pages: deliveryStatus,
+    title: "Store",
+    pages: storeSection,
   },
   {
-    title: "Inventory Analysis and Planning",
-    pages: inventoryAnalysisAndPlanning,
+    title: "Deliver",
+    pages: deliverSection,
   },
+  {
+    title: "Enable",
+    pages: enableSection,
+  },
+  {
+    title: "MIS",
+    pages: MISAdministrationSection,
+  },
+  // {
+  //   title: "",
+  //   pages: pagesSection,
+  // },
+  // {
+  //   title: "Transportation And Planning",
+  //   pages: transportationPlanning,
+  // },
+  // {
+  //   title: "Delivery",
+  //   pages: deliveryStatus,
+  // },
+  // {
+  //   title: "Inventory Analysis and Planning",
+  //   pages: inventoryAnalysisAndPlanning,
+  // },
   // {
   //   title: "Control Tower",
   //   pages: controlTower,
