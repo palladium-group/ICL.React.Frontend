@@ -93,7 +93,9 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-            MacroEyes: Plan
+            <a target="_blank" rel="noopener noreferrer" href="https://palladium-forecast.s3.us-east-1.amazonaws.com/index.html">
+              MacroEyes: Plan
+            </a>
             <Divider />
           </Grid>
           <Grid item md={12}>

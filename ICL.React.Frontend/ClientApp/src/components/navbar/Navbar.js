@@ -92,7 +92,7 @@ const Navbar = ({ onDrawerToggle }) => {
                     },
                   }}
                 >
-                  <StyledChip label="Report an Incident" component="a" href="#" clickable />
+                  <StyledChip label="Report an Incident" component="a" href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26" target="_blank" clickable />
                   <StyledChip label="HQ Office" component="a" href="#" clickable />
                   <StyledChip label="Country Offices" component="a" href="#" clickable />
                   <StyledChip label="Custom Reports" component="a" href="#" clickable />
