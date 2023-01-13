@@ -16,6 +16,7 @@
   <ItemGroup>
     <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.11.1" />
     <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
@@ -31,7 +32,8 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\public\" />
-    <Folder Include="ClientApp\src\" />
+    <Folder Include="ClientApp\src\pages\dashboards\NewFolder1\" />
+    <Folder Include="ClientApp\src\pages\dashboards\NewFolder\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

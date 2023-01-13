@@ -21,6 +21,7 @@ import Page500 from "./pages/auth/Page500";
 
 // Dashboard components
 const Default = async(() => import("./pages/dashboards/Default"));
+const Products = async(() => import("./pages/dashboards/products"));
 const Analytics = async(() => import("./pages/dashboards/Analytics"));
 const SaaS = async(() => import("./pages/dashboards/SaaS"));
 const Home = async(() => import("./pages/home"));
@@ -190,6 +191,10 @@ const routes = [
       {
         path: "pos",
         element: <Default />,
+      },
+      {
+        path: "products",
+        element: <Products />,
       }
     ]
   },
