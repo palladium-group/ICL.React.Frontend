@@ -188,7 +188,7 @@ function PurchaseOrderForm(props) {
 
     const handleValidation =async() => {
         try {
-            await axios.get(`https://localhost:7014/api/PurchaseOrder/validate/${props.params.row.bookingNo}`)
+            await axios.get(`https://icl-dwh-backend.azurewebsites.net/api/PurchaseOrder/validate/${props.params.row.bookingNo}`)
                 .then((response)=>{
                     if(response.status === 200 && response.data.message === 'valid'){
                         setAllowSubmit(true);
@@ -219,7 +219,7 @@ function PurchaseOrderForm(props) {
     const handleSubmit = async() => {
         try {
             setLoading(true)
-            await axios.get(`https://localhost:7014/api/PurchaseOrder/post/${props.params.row.bookingNo}`)
+            await axios.get(`https://icl-dwh-backend.azurewebsites.net/api/PurchaseOrder/post/${props.params.row.bookingNo}`)
                 .then((response)=>{
                     if(response.status === 200){
                         props.setAlertMessage(`${props.params.row.bookingNo} Successfully sent ASN`);
