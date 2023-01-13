@@ -26,8 +26,8 @@ const Enable = () => {
       </Card>
       <br />
       <Grid container spacing={2} alignItems="stretch">
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -51,8 +51,8 @@ const Enable = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} >
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -72,8 +72,8 @@ const Enable = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} >
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -93,8 +93,8 @@ const Enable = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} >
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}}  elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -122,8 +122,8 @@ const Enable = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} >
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -147,8 +147,8 @@ const Enable = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} >
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}}  elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">

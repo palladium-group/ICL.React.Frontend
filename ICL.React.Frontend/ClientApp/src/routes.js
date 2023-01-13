@@ -48,6 +48,8 @@ const TotalLandedCostsAnalysis = async(() => import("./pages/manage/TotalLandedC
 const Plan = async(() => import("./pages/plan/index"));
 const Source = async(() => import("./pages/source/index"));
 const MarketResearch = async(() => import("./pages/source/MarketResearch"));
+const QuantificationReports = async(() => import("./pages/plan/QuantificationReports"));
+
 
 const Store = async(() => import("./pages/store/index"));
 
@@ -123,6 +125,10 @@ const routes = [
       {
         path: "",
         element: <Plan />
+      },
+      {
+        path: "quantification-reports",
+        element: <QuantificationReports />
       }
     ]
   },
