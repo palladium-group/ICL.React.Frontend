@@ -21,7 +21,7 @@ const ColumnChart = ({ theme }) => {
   const [data,setData] = useState([]);
   const [dates, setDates] = useState([]);
   useEffect(() => {
-    axios.get(`https://localhost:7014/api/PurchaseOrder/statistics`)
+    axios.get(`https://icl-dwh-backend.azurewebsites.net/api/PurchaseOrder/statistics`)
         .then((response)=>{
           let temp = [
             {
