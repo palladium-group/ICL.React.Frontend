@@ -50,14 +50,13 @@ const LetterOfCredit = async(() => import("./pages/manage/LetterOfCredit"));
 const Plan = async(() => import("./pages/plan/index"));
 const Source = async(() => import("./pages/source/index"));
 const QuantificationReports = async(() => import("./pages/plan/QuantificationReports"));
-
-
 const Store = async(() => import("./pages/store/index"));
-
 const Deliver = async(() => import("./pages/deliver"));
 const Enable = async(() => import("./pages/enable"));
 const CommodityTracker = async(() => import("./pages/enable/CommodityTracker"));
 const GreenHouseGasMonitoring = async(() => import("./pages/enable/GreenHouseGasMonitoring"));
+const Demand = async(() => import("./pages/enable/Demand"));
+const KPMGDeliver = async(() => import("./pages/enable/Deliver"));
 const MISAdministration = async(() => import("./pages/MISAdministration"));
 
 const routes = [
@@ -188,7 +187,15 @@ const routes = [
       {
         path: "green-house-gas-monitoring",
         element: <GreenHouseGasMonitoring />,
-      }
+      },
+      {
+        path: "demand",
+        element: <Demand />,
+      },
+      {
+        path: "deliver",
+        element: <KPMGDeliver />,
+      },
     ],
   },
   {
