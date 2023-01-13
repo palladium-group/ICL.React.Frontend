@@ -42,7 +42,15 @@ const Enable = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Delivery
+                      <NavLink to={`/enable/demand`}>
+                        Demand
+                      </NavLink>
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      <NavLink to={`/enable/deliver`}>
+                        Delivery
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
@@ -79,16 +87,16 @@ const Enable = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  <NavLink to={`/enable/green-house-gas-monitoring`}>
-                    Green House Gas Monitoring
-                  </NavLink>
+                  Green House Gas Monitoring
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Annual Report
+                      <NavLink to={`/enable/green-house-gas-monitoring`}>
+                        Annual Report
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
