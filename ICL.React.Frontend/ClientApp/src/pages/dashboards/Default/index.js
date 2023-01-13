@@ -30,10 +30,10 @@ import Pending from "@mui/icons-material/Pending";
 const Divider = styled(MuiDivider)(spacing);
 const Typography = styled(MuiTypography)(spacing);
 const Card = styled(MuiCard)(spacing);
-const CardContent = styled(MuiCardContent)(spacing);
+// const CardContent = styled(MuiCardContent)(spacing);
 const Paper = styled(MuiPaper)(spacing);
-const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
-const Button = styled(MuiButton)(spacing);
+// const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
+// const Button = styled(MuiButton)(spacing);
 
 const IncomingOrdersData = (props) => {
   // fetch incoming orders

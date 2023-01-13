@@ -121,7 +121,9 @@ const Source = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Purchase Orders
+                      <NavLink to={`/shipment/pos`}>
+                        Purchase Orders
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>

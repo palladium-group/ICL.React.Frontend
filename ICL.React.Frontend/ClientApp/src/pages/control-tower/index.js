@@ -10,38 +10,41 @@ import {Formik} from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-import {useMutation} from "@tanstack/react-query";
-import {newPurchaseOrder} from "../../api/purchase-orders";
+
+
 
 const Card = styled(MuiCard)(spacing);
 const Alert = styled(MuiAlert)(spacing);
 const TextField = styled(MuiTextField)(spacing);
 
+
+
 const initialValues = {
   file: "",
 };
+
+
 
 const validationSchema = Yup.object().shape({
   file: Yup.mixed().required("Required"),
 });
 
+
+
 const timeOut = (time) => new Promise((res) => setTimeout(res, time));
+
+
 
 const NewASNFormUpload = () => {
   const navigate = useNavigate();
 
-  const mutation = useMutation({
-    mutationFn: newPurchaseOrder,
-  });
-  
   const handleSubmit = async (
     values, { resetForm, setErrors, setStatus, setSubmitting }
   ) => {
     try {
       const formData = new FormData();
       formData.append("file", values.file);
-      // await axios.post(`/api/ReceiveOrder`, formData);
-      await mutation.mutateAsync(formData);
+      await axios.post(`/api/ReceiveOrder`, formData);
       await timeOut(1500);
       resetForm();
       setStatus({ sent: true });
@@ -58,22 +61,24 @@ const NewASNFormUpload = () => {
     }
   };
 
+
+
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={handleSubmit}>
       {({
-        errors,
-        handleBlur,
-        handleChange,
-        handleSubmit,
-        isSubmitting,
-        touched,
-        values,
-        status,
-        setFieldValue,
-      }) => (
+          errors,
+          handleBlur,
+          handleChange,
+          handleSubmit,
+          isSubmitting,
+          touched,
+          values,
+          status,
+          setFieldValue,
+        }) => (
         <Card mb={6}>
           <CardContent>
             <Typography variant="h6" gutterBottom>
@@ -85,11 +90,15 @@ const NewASNFormUpload = () => {
               </Alert>
             )}
 
+
+
             {status && !status.sent && (
               <Alert severity="error" my={3}>
                 { errors.submit }
               </Alert>
             )}
+
+
 
             {isSubmitting ? (
               <Box display="flex" justifyContent="center" my={6}>
@@ -141,6 +150,8 @@ const NewASNFormUpload = () => {
   );
 };
 
+
+
 const ControlTower = () => {
   return (
     <React.Fragment>
@@ -149,10 +160,14 @@ const ControlTower = () => {
         ASN(Control Tower => InCountry Logistics)
       </Typography>
 
+
+
       <Divider my={6} />
       <NewASNFormUpload />
     </React.Fragment>
   );
 };
+
+
 
 export default ControlTower;
