@@ -33,7 +33,7 @@ const PieChart = ({ theme }) => {
     colors:['#64A70B', '#E57200', '#BA0C2F']
   };
   useEffect(() => {
-    axios.get(`https://localhost:7014/api/PurchaseOrder/statistics`)
+    axios.get(`https://icl-dwh-backend.azurewebsites.net/api/PurchaseOrder/statistics`)
         .then((response)=>{
           let success = 0;
           let failed=0;
