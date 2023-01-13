@@ -16,24 +16,26 @@ import {
   CardContent as MuiCardContent,
   Paper as MuiPaper,
   Breadcrumbs as MuiBreadcrumbs,
-  Button as MuiButton,
+  Button as MuiButton, CardContent, Button,
 } from "@mui/material";
 import { spacing } from "@mui/system";
 import {DataGrid, GridToolbar} from "@mui/x-data-grid";
 import {useQuery} from "@tanstack/react-query";
 import {getPurchaseOrders} from "../../../api/purchase-orders";
 import {format} from "date-fns";
+import { Add as AddIcon } from "@mui/icons-material";
 import DoneIcon from '@mui/icons-material/Done';
 import CancelIcon from '@mui/icons-material/Cancel';
 import Pending from "@mui/icons-material/Pending";
+import {useNavigate} from "react-router-dom";
 
 const Divider = styled(MuiDivider)(spacing);
 const Typography = styled(MuiTypography)(spacing);
 const Card = styled(MuiCard)(spacing);
-const CardContent = styled(MuiCardContent)(spacing);
+// const CardContent = styled(MuiCardContent)(spacing);
 const Paper = styled(MuiPaper)(spacing);
-const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
-const Button = styled(MuiButton)(spacing);
+// const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
+// const Button = styled(MuiButton)(spacing);
 
 const IncomingOrdersData = (props) => {
   // fetch incoming orders
@@ -138,6 +140,7 @@ const IncomingOrdersData = (props) => {
 };
 
 function Default() {
+  const navigate = useNavigate();
   const[showPOForm, setShowPOForm] = useState(false);
   const[currentPO, setCurrentPO] = useState();
   const[alert, setAlert]=useState(false);
@@ -149,11 +152,21 @@ function Default() {
     }, 10000);
   }
 
-
-
-
   return (
       <React.Fragment>
+        <Card>
+          <CardContent pb={1}>
+            <Button
+            mr={2}
+            variant="contained"
+            color="secondary"
+            onClick={() => navigate("/control-tower")}
+            >
+              <AddIcon /> Upload ASN
+            </Button>
+          </CardContent>
+        </Card>
+        <br />
         {!showPOForm &&
             <>
               <Helmet title="Incoming Orders" />

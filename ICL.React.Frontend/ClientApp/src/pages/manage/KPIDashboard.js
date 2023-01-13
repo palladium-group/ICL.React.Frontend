@@ -6,9 +6,9 @@ const KPIDashboard = () => {
   return (
     <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
       <Grid item md={12} zeroMinWidth>
-      <iframe title="ICL Performance Monitoring_KPI Dashboards - Objective 1" width="100%" height="100%"
-      src="https://app.powerbi.com/view?r=eyJrIjoiY2FjOTdhNTAtNjc4ZS00ZDQ5LWI2ODgtMjI2NWRkMThkNmM1IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9" 
-      frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="LIT ICL Dashboards - KPI Dashboard Quality level" width="100%" height="100%"
+                src="https://app.powerbi.com/view?r=eyJrIjoiMTM0ZDkyZWYtNTI2Zi00ZGYxLThmODItNThjODQyNTAyNDhjIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection"
+                frameBorder="0" allowFullScreen="true"></iframe>
       </Grid>
     </Grid>
   );

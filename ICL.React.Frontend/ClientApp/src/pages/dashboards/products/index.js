@@ -7,10 +7,10 @@ import {
   Divider as MuiDivider,
   Typography as MuiTypography,
   Card as MuiCard,
-  CardContent as MuiCardContent,
+  // CardContent as MuiCardContent,
   Paper as MuiPaper,
-  Breadcrumbs as MuiBreadcrumbs,
-  Button as MuiButton,
+  // Breadcrumbs as MuiBreadcrumbs,
+  // Button as MuiButton,
 } from "@mui/material";
 import { spacing } from "@mui/system";
 import {DataGrid, GridToolbar} from "@mui/x-data-grid";
@@ -24,10 +24,10 @@ import Pending from "@mui/icons-material/Pending";
 const Divider = styled(MuiDivider)(spacing);
 const Typography = styled(MuiTypography)(spacing);
 const Card = styled(MuiCard)(spacing);
-const CardContent = styled(MuiCardContent)(spacing);
+// const CardContent = styled(MuiCardContent)(spacing);
 const Paper = styled(MuiPaper)(spacing);
-const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
-const Button = styled(MuiButton)(spacing);
+// const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
+// const Button = styled(MuiButton)(spacing);
 
 const IncomingOrdersData = () => {
   // fetch incoming orders

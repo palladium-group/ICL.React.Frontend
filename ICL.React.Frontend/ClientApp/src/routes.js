@@ -22,12 +22,12 @@ import Page500 from "./pages/auth/Page500";
 // Dashboard components
 const Default = async(() => import("./pages/dashboards/Default"));
 const Products = async(() => import("./pages/dashboards/products"));
-const Analytics = async(() => import("./pages/dashboards/Analytics"));
-const SaaS = async(() => import("./pages/dashboards/SaaS"));
+// const Analytics = async(() => import("./pages/dashboards/Analytics"));
+// const SaaS = async(() => import("./pages/dashboards/SaaS"));
 const Home = async(() => import("./pages/home"));
 const HomePage = async(() => import("./pages/home/Home"));
 const ControlTower = async (() => import("./pages/control-tower"));
-const HomeAnalytics = async(() => import("./pages/analytics/HomeAnalytics"));
+// const HomeAnalytics = async(() => import("./pages/analytics/HomeAnalytics"));
 const Inbound = async(() => import("./pages/dashboards/dwh/Inbound"));
 const Outbound = async(() => import("./pages/dashboards/dwh/Outbound"));
 const Monitoring = async(() => import("./pages/dashboards/dwh/Monitoring"));
@@ -45,14 +45,18 @@ const IncrementalObligationManagement = async(() => import("./pages/manage/Incre
 const DistributionCostAnalysis = async(() => import("./pages/manage/DistributionCostAnalysis"));
 const WarehousingCostAnalysis = async(() => import("./pages/manage/WarehousingCostAnalysis"));
 const TotalLandedCostsAnalysis = async(() => import("./pages/manage/TotalLandedCostsAnalysis"));
+const GlobalFund = async(() => import("./pages/manage/GlobalFund"));
+const LetterOfCredit = async(() => import("./pages/manage/LetterOfCredit"));
 const Plan = async(() => import("./pages/plan/index"));
 const Source = async(() => import("./pages/source/index"));
-const MarketResearch = async(() => import("./pages/source/MarketResearch"));
-
+const QuantificationReports = async(() => import("./pages/plan/QuantificationReports"));
 const Store = async(() => import("./pages/store/index"));
-
 const Deliver = async(() => import("./pages/deliver"));
 const Enable = async(() => import("./pages/enable"));
+const CommodityTracker = async(() => import("./pages/enable/CommodityTracker"));
+const GreenHouseGasMonitoring = async(() => import("./pages/enable/GreenHouseGasMonitoring"));
+const Demand = async(() => import("./pages/enable/Demand"));
+const KPMGDeliver = async(() => import("./pages/enable/Deliver"));
 const MISAdministration = async(() => import("./pages/MISAdministration"));
 
 const routes = [
@@ -113,6 +117,18 @@ const routes = [
       {
         path: "total-landed-costs-analysis",
         element: <TotalLandedCostsAnalysis />,
+      },
+      {
+        path: "global-fund",
+        element: <GlobalFund />,
+      },
+      {
+        path: "letter-of-credit",
+        element: <LetterOfCredit />,
+      },
+      {
+        path: "performance-monitoring",
+        element: <Home />,
       }
     ]
   },
@@ -123,6 +139,10 @@ const routes = [
       {
         path: "",
         element: <Plan />
+      },
+      {
+        path: "quantification-reports",
+        element: <QuantificationReports />
       }
     ]
   },
@@ -134,10 +154,6 @@ const routes = [
         path: "",
         element: <Source />,
       },
-      {
-        path: "market-research",
-        element: <MarketResearch />,
-      }
     ],
   },
   {
@@ -167,6 +183,22 @@ const routes = [
       {
         path: "",
         element: <Enable />,
+      },
+      {
+        path: "commodity-tracker",
+        element: <CommodityTracker />,
+      },
+      {
+        path: "green-house-gas-monitoring",
+        element: <GreenHouseGasMonitoring />,
+      },
+      {
+        path: "demand",
+        element: <Demand />,
+      },
+      {
+        path: "deliver",
+        element: <KPMGDeliver />,
       },
     ],
   },

@@ -9,8 +9,8 @@ import {
   Typography
 } from "@mui/material";
 import styled from "@emotion/styled";
-import {display, spacing} from "@mui/system";
-import { orange } from "@mui/material/colors";
+import {spacing} from "@mui/system";
+// import { orange } from "@mui/material/colors";
 import FirstImg from "../../vendor/illustration-manage.png";
 import {NavLink} from "react-router-dom";
 
@@ -87,10 +87,13 @@ const Manage = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                  
-                    Work Plan Status
-                      
-                      
+                      <NavLink to={`/manage/performance-monitoring`}>
+                        Performance Dashboard
+                      </NavLink>
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Work Plan Status
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
@@ -102,6 +105,12 @@ const Manage = () => {
                     </Grid>
                     <Grid item md={12}>
                       QASP Monitoring
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      <NavLink to={`/manage/global-fund`}>
+                        Global Fund
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
@@ -213,14 +222,21 @@ const Manage = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    <NavLink to={`/manage/incremental-obligation-management`}>
-                    Incremental Obligation Management
+                      <NavLink to={`/manage/incremental-obligation-management`}>
+                        Incremental Obligation Management
                       </NavLink>
-                     
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Letter of Credit Management
+                      <a target="_blank" rel="noopener noreferrer" href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2118352933/Incremental+Obligation+Management+-+Reports">
+                        Incremental Obligation Management - Reports
+                      </a>
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      <NavLink to={`/manage/letter-of-credit`}>
+                        Letter of Credit Management
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

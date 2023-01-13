@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import {spacing} from "@mui/system";
 import FirstImg from "../../vendor/illustration-store.png";
+import {NavLink} from "react-router-dom";
 
 const Card = styled(MuiCard)(spacing);
 const CardContent = styled(MuiCardContent)(spacing);
@@ -26,8 +27,8 @@ const Store = () => {
       </Card>
       <br />
       <Grid container spacing={2} alignItems="stretch">
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -47,8 +48,8 @@ const Store = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -68,8 +69,8 @@ const Store = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -90,8 +91,8 @@ const Store = () => {
           </Paper>
         </Grid>
 
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -102,7 +103,7 @@ const Store = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Vender Score
+                      <NavLink to={`/dashboard/outbound`}>Vendor Score Card</NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

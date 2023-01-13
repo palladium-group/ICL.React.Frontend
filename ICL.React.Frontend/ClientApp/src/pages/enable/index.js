@@ -26,8 +26,8 @@ const Enable = () => {
       </Card>
       <br />
       <Grid container spacing={2} alignItems="stretch">
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -42,7 +42,15 @@ const Enable = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Delivery
+                      <NavLink to={`/enable/demand`}>
+                        Demand
+                      </NavLink>
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      <NavLink to={`/enable/deliver`}>
+                        Delivery
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
@@ -51,8 +59,8 @@ const Enable = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} >
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -63,7 +71,9 @@ const Enable = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Commodity Tracer
+                      <NavLink to={`/enable/commodity-tracker`}>
+                        Commodity Tracer
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
@@ -72,8 +82,8 @@ const Enable = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} >
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -84,7 +94,9 @@ const Enable = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Annual Report
+                      <NavLink to={`/enable/green-house-gas-monitoring`}>
+                        Annual Report
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
@@ -93,8 +105,8 @@ const Enable = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} >
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}}  elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -122,8 +134,8 @@ const Enable = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} >
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -147,8 +159,8 @@ const Enable = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4} style={{display: 'flex'}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} elevation={8}>
+        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} >
+          <Paper square={true} sx={{ borderTop: 5, borderColor: "#05C3DE" }} style={{height:'100%'}}  elevation={8}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
