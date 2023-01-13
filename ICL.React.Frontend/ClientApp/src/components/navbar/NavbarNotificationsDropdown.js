@@ -6,7 +6,9 @@ import {
   // Avatar as MuiAvatar,
   Badge, Box,
   // Box,
-  Button as MuiButton, Divider, Drawer,
+  // Button as MuiButton,
+  Divider,
+  Drawer,
   // Divider as MuiDivider,
   Grid,
   IconButton, ListItemButton,
@@ -14,35 +16,35 @@ import {
   // ListItem,
   // ListItemAvatar,
   // ListItemText,
-  Popover as MuiPopover,
+  // Popover as MuiPopover,
   // SvgIcon,
   Tooltip,
-  Typography as MuiTypography,
+  // Typography as MuiTypography,
 } from "@mui/material";
 import AppsIcon from '@mui/icons-material/Apps';
 // import { Bell, Home, UserPlus, Server } from "react-feather";
-import {spacing} from "@mui/system";
-import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
-import AcUnitOutlinedIcon from "@mui/icons-material/AcUnitOutlined";
-import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
-import AirplanemodeActiveOutlinedIcon from "@mui/icons-material/AirplanemodeActiveOutlined";
-import {NavLink} from "react-router-dom";
+// import {spacing} from "@mui/system";
+// import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
+// import AcUnitOutlinedIcon from "@mui/icons-material/AcUnitOutlined";
+// import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
+// import AirplanemodeActiveOutlinedIcon from "@mui/icons-material/AirplanemodeActiveOutlined";
+// import {NavLink} from "react-router-dom";
 
-const Typography = styled(MuiTypography)(spacing);
+// const Typography = styled(MuiTypography)(spacing);
 // const Divider = styled(MuiDivider)(spacing);
-const Button = styled(MuiButton)(spacing);
+// const Button = styled(MuiButton)(spacing);
 
-const Centered = styled.div`
-  text-align: center;
-`;
-
-const Popover = styled(MuiPopover)`
-  .MuiPaper-root {
-    width: 300px;
-    ${(props) => props.theme.shadows[1]};
-    border: 1px solid ${(props) => props.theme.palette.divider};
-  }
-`;
+// const Centered = styled.div`
+//   text-align: center;
+// `;
+//
+// const Popover = styled(MuiPopover)`
+//   .MuiPaper-root {
+//     width: 300px;
+//     ${(props) => props.theme.shadows[1]};
+//     border: 1px solid ${(props) => props.theme.palette.divider};
+//   }
+// `;
 
 const Indicator = styled(Badge)`
   .MuiBadge-badge {
