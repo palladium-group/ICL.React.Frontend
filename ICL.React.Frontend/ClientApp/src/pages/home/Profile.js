@@ -52,16 +52,29 @@ const Profile = () => {
                                             </Grid>
                                             <Grid item>
                                                 <Typography sx={{ fontSize: 15, color:'orange' }}>Project Director</Typography>
-                                                <Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>
-
+                                                {/*<Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>*/}
                                             </Grid>
                                         </Grid>
                                         <Grid item md={9}>
                                             <Grid item>
-                                                <Typography sx={{ fontWeight: 700, fontSize: 20 }}>History</Typography>
+                                                <Typography sx={{ fontWeight: 700, fontSize: 20 }}>Bio Blurb</Typography>
                                             </Grid>
                                             <Grid item>
-                                                I am an enthusiastic, self-motivated, reliable, responsible and hard working person. I am a mature team worker and adaptable to all challenging situations. I am able to work well both in a team environment as well as using own initiative. I am able to work well under pressure and adhere to strict deadlines.
+                                                <Typography variant="body2">
+                                                    Dan has deep and varied experience designing, leading, improving, and scaling supply chain activities, including having held commercial responsibility for portfolios of over $250 million per year and operational leadership of over $750 million per year across 25 countries. He has experience implementing ICL related requirements having been involved in nearly all aspects of the GHSC-Procurement and Supply Management project including leading its’ largest country office. Dan has practical experience effectivelymanaging complex, large-scale USAID contracts with diverse teams, while ensuring compliance and responsiveness. A former United States Marine, he has an advanced degree and management-related certifications.
+                                                </Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography sx={{ fontWeight: 700, fontSize: 20 }}>Alignment to Project Objectives</Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant="body2">
+                                                    Dan is Palladium’s Vice President responsible for its Procurement, Logistics, and Supply Chain Management Portfolio, delivering work for public and private clients in the health and defense sectors. He previously acted as a Managing Director, Country Director, Project Director, and subject matter expert on the GHSC-Procurement and Supply Management project. He combines technical expertise with multidisciplinary management skills.
+
+                                                    Dan holds a Master’s in Business Administration as well as an undergraduate degree in political science. He has earned certifications as a Project Management Professional, a Certified Performance Technologist, and a Lean Six Sigma Black Belt from the American Society of Quality.
+
+                                                    After leading teams of 200+ United States Marines and 500+ local staff on all aspects of logistics during his military career, Dan became a supply chain professional in the commercial world, conducting assignments of increasing size on behalf of leading logistics providers. He has experience working in most of the current GHSC countries, including the Nigeria country program.
+                                                </Typography>
                                             </Grid>
                                         </Grid>                                       
                                     </Grid>
