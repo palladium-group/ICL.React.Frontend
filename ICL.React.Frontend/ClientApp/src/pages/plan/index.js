@@ -55,13 +55,9 @@ const Manage = () => {
                       <Divider />
                       </Grid>
                     <Grid item md={12}>
-                      Orders Fulfilled (historical)
+                    Historical Distribution Orders
                       <Divider />
-                      </Grid>
-                    <Grid item md={12}>
-                      Third Party Data Feeds
-                      <Divider />
-                    </Grid>
+                      </Grid>                  
                     <Grid item md={12}>
                       PSA Inbound Product Monitoring
                       <Divider />
@@ -106,22 +102,26 @@ const Manage = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Monthly Operational Plans
+                Operational Planning
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Supply
+                    Inventory Planning
                       <Divider />
                       </Grid>
                     <Grid item md={12}>
-                      Demand
+                    Distribution Planning
                       <Divider />
                       </Grid>
+                      <Grid item md={12}>
+                      Reconciliation & Allocation
+                      <Divider />
+                    </Grid>
                     <Grid item md={12}>
-                      Cost
+                    Cost Estimating
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

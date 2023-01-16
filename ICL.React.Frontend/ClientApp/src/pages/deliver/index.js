@@ -34,6 +34,20 @@ const Deliver = () => {
                   Commodity Tracking
                 </Typography>
                 <Divider />
+                <Spacer mb={4} />
+                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+                  <Grid container spacing={6}>
+                    <Grid item md={12}>
+                    Global Tracking
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Country Tracking
+                      <Divider />
+                    </Grid>              
+                 
+                  </Grid>
+                </Box>
               </CardContent>
             </Card>
           </Paper>
@@ -47,6 +61,19 @@ const Deliver = () => {
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
+                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+                  <Grid container spacing={6}>
+                    <Grid item md={12}>
+                    Global Monitoring
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Country Monitoring
+                      <Divider />
+                    </Grid>              
+                 
+                  </Grid>
+                </Box>
               </CardContent>
             </Card>
           </Paper>
@@ -60,6 +87,15 @@ const Deliver = () => {
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
+                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+                  <Grid container spacing={6}>
+                    <Grid item md={12}>
+                    Proof of Delivery Repository
+                      <Divider />
+                    </Grid>                             
+                 
+                  </Grid>
+                </Box>
               </CardContent>
             </Card>
           </Paper>
@@ -77,6 +113,18 @@ const Deliver = () => {
                   <Grid container spacing={6}>
                     <Grid item md={12}>
                       Vendor Scorecard
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Vendor Self Inspection Reports
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Annual Site Visit Reports
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Quartlery Reviews
                       <Divider />
                     </Grid>
                   </Grid>
