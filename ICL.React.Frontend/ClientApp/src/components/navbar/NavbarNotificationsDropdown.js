@@ -22,6 +22,7 @@ import {
   // Typography as MuiTypography,
 } from "@mui/material";
 import AppsIcon from '@mui/icons-material/Apps';
+import {NavLink} from "react-router-dom";
 // import { Bell, Home, UserPlus, Server } from "react-feather";
 // import {spacing} from "@mui/system";
 // import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
@@ -93,9 +94,9 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-            <a target="_blank" rel="noopener noreferrer" href="https://palladium-forecast.s3.us-east-1.amazonaws.com/index.html">
-            Planning
-            </a>
+            <NavLink to={`/macro-eyes`}>
+              Planning
+            </NavLink>
             <Divider />
           </Grid>
           <Grid item md={12}>
