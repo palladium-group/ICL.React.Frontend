@@ -40,7 +40,10 @@ import IconButton from '@mui/material/IconButton';
 import FirstPageIcon from '@mui/icons-material/FirstPage';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import LastPageIcon from '@mui/icons-material/LastPage';;
+import LastPageIcon from '@mui/icons-material/LastPage';
+import {apiRoutes} from "../../apiRoutes";
+
+;
 
 
 
@@ -188,7 +191,7 @@ function PurchaseOrderForm(props) {
 
     const handleValidation =async() => {
         try {
-            await axios.get(`https://icl-dwh-backend.azurewebsites.net/api/PurchaseOrder/validate/${props.params.row.bookingNo}`)
+            await axios.get(`${apiRoutes.purchaseOrder}/validate/${props.params.row.bookingNo}`)
                 .then((response)=>{
                     if(response.status === 200 && response.data.message === 'valid'){
                         setAllowSubmit(true);
@@ -219,7 +222,7 @@ function PurchaseOrderForm(props) {
     const handleSubmit = async() => {
         try {
             setLoading(true)
-            await axios.get(`https://icl-dwh-backend.azurewebsites.net/api/PurchaseOrder/post/${props.params.row.bookingNo}`)
+            await axios.get(`${apiRoutes.purchaseOrder}/post/${props.params.row.bookingNo}`)
                 .then((response)=>{
                     if(response.status === 200){
                         props.setAlertMessage(`${props.params.row.bookingNo} Successfully sent ASN`);

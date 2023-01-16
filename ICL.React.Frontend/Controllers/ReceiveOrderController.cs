@@ -18,10 +18,11 @@ namespace ICL.React.Frontend.Controllers
     public class ReceiveOrderController : ControllerBase
     {
         private static readonly HttpClient _httpClient = new HttpClient();
+        private IConfiguration _configuration;
 
-        public ReceiveOrderController()
+        public ReceiveOrderController(IConfiguration configuration)
         {
-
+            _configuration = configuration;
         }
 
         [HttpPost]
@@ -29,6 +30,7 @@ namespace ICL.React.Frontend.Controllers
         {
             try
             {
+                var uri = _configuration.GetSection("DWH_URI");
                 var formCollection = await Request.ReadFormAsync();
                 var file = formCollection.Files.First();
                 if (file.ContentType != "text/xml" && file.ContentType != "application/json")
@@ -94,7 +96,7 @@ namespace ICL.React.Frontend.Controllers
 
                 var bookingRequestContent = new StringContent(asndata, Encoding.UTF8, "application/json");
                 _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", null);
-                var dwhResponse = await _httpClient.PostAsync("https://icl-dwh-backend.azurewebsites.net/api/PurchaseOrder", bookingRequestContent);
+                var dwhResponse = await _httpClient.PostAsync($"{uri.Value}/api/PurchaseOrder", bookingRequestContent);
                 var responseContent = await dwhResponse.Content.ReadAsStringAsync();
 
                 return Ok(new { message = "Saved successfully" });

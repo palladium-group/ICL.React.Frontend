@@ -6,6 +6,7 @@ import axios from "axios";
 import { CardContent, Card as MuiCard, Typography } from "@mui/material";
 import { spacing } from "@mui/system";
 import {format} from "date-fns";
+import {apiRoutes} from "../../apiRoutes";
 
 
 const Card = styled(MuiCard)(spacing);
@@ -21,7 +22,7 @@ const ColumnChart = ({ theme }) => {
   const [data,setData] = useState([]);
   const [dates, setDates] = useState([]);
   useEffect(() => {
-    axios.get(`https://icl-dwh-backend.azurewebsites.net/api/PurchaseOrder/statistics`)
+    axios.get(`${apiRoutes.purchaseOrder}/statistics`)
         .then((response)=>{
           let temp = [
             {
