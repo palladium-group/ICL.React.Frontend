@@ -114,31 +114,31 @@ function Demos() {
       <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
         <Grid container spacing={6}>
           <Grid item md={12}>
-            ChainLockR: Risk Management
+            Risk Management
             <Divider />
           </Grid>
           <Grid item md={12}>
-            <a href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26" target="_blank" rel="noopener noreferrer">JIRA/Confluence: Quality Management</a>
+            <a href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26" target="_blank" rel="noopener noreferrer">Quality Management</a>
             <Divider />
           </Grid>
           <Grid item md={12}>
-            Greenhouse: Greenhouse GasMonitoring
+            Greenhouse Gas Monitoring
             <Divider />
           </Grid>
           <Grid item md={12}>
-            <a href="https://app.parsyl.com/report/assets?dataWindow=7&dataType=humidity&weeklyRate=false" target="_blank" rel="noopener noreferrer">Parsyl: Temperature Monitoring</a>
+            <a href="https://app.parsyl.com/report/assets?dataWindow=7&dataType=humidity&weeklyRate=false" target="_blank" rel="noopener noreferrer">Temperature Monitoring</a>
             <Divider />
           </Grid>
           <Grid item md={12}>
-            KPMG: Digital Twin
+            Digital Twin
             <Divider />
           </Grid>
           <Grid item md={12}>
-            Quetica: Freight Bill Audit
+            Freight Bill Audit
             <Divider />
           </Grid>
           <Grid item md={12}>
-            PowerBI: Custom Reporting
+            Custom Reporting
             <Divider />
           </Grid>
         </Grid>

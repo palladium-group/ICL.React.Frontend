@@ -58,6 +58,7 @@ const GreenHouseGasMonitoring = async(() => import("./pages/enable/GreenHouseGas
 const Demand = async(() => import("./pages/enable/Demand"));
 const KPMGDeliver = async(() => import("./pages/enable/Deliver"));
 const MISAdministration = async(() => import("./pages/MISAdministration"));
+const Profile = async(() => import("./pages/home/Profile"));
 
 const routes = [
   {
@@ -71,6 +72,10 @@ const routes = [
       {
         path: "",
         element: <HomePage />,
+      },
+      {
+        path: "/dan-rhodes",
+        element: <Profile />,
       }
     ]
   },
