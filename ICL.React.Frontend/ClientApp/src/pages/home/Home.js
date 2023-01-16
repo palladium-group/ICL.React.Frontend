@@ -304,7 +304,7 @@ const SuccessContent=()=> {
         <Card>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Success stories
+              Our Impact
             </Typography>
             <Divider />
             <Spacer mb={4} />
@@ -377,22 +377,25 @@ const LeadershipContent=()=> {
               <Grid item md={3}>
                 <Avatar alt="Dan Rhodes" src="/static/img/avatars/dan.png" />
               </Grid>
-              <Grid item md={9}>
+              <Grid item md={8} mx={3}>
                 <Grid container direction="column" alignItems="left" mb={2}>
+                  <a target="_blank" rel="noopener noreferrer" href={`/dan-rhodes`}>
                   <Grid item>
                     <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Dan Rhodes</Typography>
                   </Grid>
                   <Grid item>
                     <Typography sx={{ fontSize: 18 }}>Project Director</Typography>
                   </Grid>
+                  </a>
                 </Grid>
               </Grid>
+              <Divider />
             </Grid>
             <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
               <Grid item md={3}>
                 <Avatar alt="Marilyn Noguera" src="/static/img/avatars/Marilyn.png" />
               </Grid>
-              <Grid item md={9}>
+              <Grid item md={8} mx={3}>
                 <Grid container direction="column" alignItems="left" mb={2}>
                   <Grid item>
                     <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Marilyn Noguera</Typography>
@@ -407,7 +410,7 @@ const LeadershipContent=()=> {
               <Grid item md={3}>
                 <Avatar alt="Jabu Nyenwa" src="/static/img/avatars/Jabu.png" />
               </Grid>
-              <Grid item md={9}>
+              <Grid item md={8} mx={3}>
                 <Grid container direction="column" alignItems="left" mb={2}>
                   <Grid item>
                     <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Jabu Nyenwa</Typography>
@@ -422,7 +425,7 @@ const LeadershipContent=()=> {
               <Grid item md={3}>
                 <Avatar alt="Sean Lockhead" src="/static/img/avatars/Sean.png" />
               </Grid>
-              <Grid item md={9}>
+              <Grid item md={8} mx={3}>
                 <Grid container direction="column" alignItems="left" mb={2}>
                   <Grid item>
                     <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Sean Lockhead</Typography>
