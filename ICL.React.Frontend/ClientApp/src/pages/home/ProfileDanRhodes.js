@@ -61,7 +61,7 @@ const ProfileJabuNyenwa = () => {
                                             </Grid>
                                             <Grid item>
                                                 <Typography sx={{ fontSize: 15, color:'orange' }}>Project Director</Typography>
-                                                <Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>
+                                                {/*<Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>*/}
                                                 <ListItemIcon>
                                                     <FacebookIcon />                                               
                                                     <TwitterIcon />                                               
