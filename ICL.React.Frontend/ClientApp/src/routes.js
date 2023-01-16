@@ -59,8 +59,12 @@ const GreenHouseGasMonitoring = async(() => import("./pages/enable/GreenHouseGas
 const Demand = async(() => import("./pages/enable/Demand"));
 const KPMGDeliver = async(() => import("./pages/enable/Deliver"));
 const MISAdministration = async(() => import("./pages/MISAdministration"));
-const Profile = async(() => import("./pages/home/Profile"));
+const ProfileDanRhodes = async(() => import("./pages/home/ProfileDanRhodes"));
+const ProfileJabuNyenwa = async(() => import("./pages/home/ProfileJabuNyenwa"));
+const ProfileSeanLockhead = async(() => import("./pages/home/ProfileSeanLockhead"));
+const ProfileMarilynNoguera = async(() => import("./pages/home/ProfileMarilynNoguera"));
 const MacroEyes = async(() => import("./pages/home/MacroEyes"));
+
 
 const routes = [
   {
@@ -77,7 +81,19 @@ const routes = [
       },
       {
         path: "/dan-rhodes",
-        element: <Profile />,
+        element: <ProfileDanRhodes />,
+      },
+      {
+        path: "/jabu-nyenwa",
+        element: <ProfileJabuNyenwa />,
+      },
+      {
+        path: "/sean-lockhead",
+        element: <ProfileSeanLockhead />,
+      },
+      {
+        path: "/marilyn-noguera",
+        element: <ProfileMarilynNoguera />,
       },
       {
         path: "macro-eyes",

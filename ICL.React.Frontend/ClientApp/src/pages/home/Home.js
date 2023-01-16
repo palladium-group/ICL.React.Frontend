@@ -397,14 +397,16 @@ const LeadershipContent=()=> {
                 <Avatar alt="Marilyn Noguera" src="/static/img/avatars/Marilyn.png" />
               </Grid>
               <Grid item md={8} mx={3}>
-                <Grid container direction="column" alignItems="left" mb={2}>
-                  <Grid item>
-                    <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Marilyn Noguera</Typography>
+                <NavLink to={`/marilyn-noguera`}>
+                  <Grid container direction="column" alignItems="left" mb={2}>
+                    <Grid item>
+                      <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Marilyn Noguera</Typography>
+                    </Grid>
+                    <Grid item>
+                      <Typography sx={{ fontSize: 18 }}>Deputy Project Director</Typography>
+                    </Grid>
                   </Grid>
-                  <Grid item>
-                    <Typography sx={{ fontSize: 18 }}>Deputy Project Director</Typography>
-                  </Grid>
-                </Grid>
+                </NavLink>
               </Grid>
             </Grid>
             <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
@@ -413,12 +415,14 @@ const LeadershipContent=()=> {
               </Grid>
               <Grid item md={8} mx={3}>
                 <Grid container direction="column" alignItems="left" mb={2}>
-                  <Grid item>
-                    <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Jabu Nyenwa</Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography sx={{ fontSize: 18 }}>Country Programs Director</Typography>
-                  </Grid>
+                  <NavLink to={`/jabu-nyenwa`}>
+                    <Grid item>
+                      <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Jabu Nyenwa</Typography>
+                    </Grid>
+                    <Grid item>
+                      <Typography sx={{ fontSize: 18 }}>Country Programs Director</Typography>
+                    </Grid>
+                  </NavLink>
                 </Grid>
               </Grid>
             </Grid>
@@ -428,12 +432,14 @@ const LeadershipContent=()=> {
               </Grid>
               <Grid item md={8} mx={3}>
                 <Grid container direction="column" alignItems="left" mb={2}>
-                  <Grid item>
-                    <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Sean Lockhead</Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography sx={{ fontSize: 18 }}>Management, Information & Results Director</Typography>
-                  </Grid>
+                  <NavLink to={`/sean-lockhead`}>
+                    <Grid item>
+                      <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Sean Lockhead</Typography>
+                    </Grid>
+                    <Grid item>
+                      <Typography sx={{ fontSize: 18 }}>Management, Information & Results Director</Typography>
+                    </Grid>
+                  </NavLink>
                 </Grid>
               </Grid>
             </Grid>
