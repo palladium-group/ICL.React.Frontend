@@ -39,7 +39,11 @@ const Store = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Per Location
+                    Global Inventory
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Country Inventory
                       <Divider />
                     </Grid>
                   </Grid>
@@ -60,7 +64,11 @@ const Store = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Per Location
+                    Global Temperature Monitoring
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Country Temperature Monitoring
                       <Divider />
                     </Grid>
                   </Grid>
@@ -81,7 +89,11 @@ const Store = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Per Location
+                    Insurance Requirements
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Insurance Monitoring and Alerts
                       <Divider />
                     </Grid>
                   </Grid>
@@ -108,6 +120,18 @@ const Store = () => {
                     </Grid>
                     <Grid item md={12}>
                       Corrective Action Reports
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Vendor Self Inspection Reports
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Annual Site Visit Reports
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Quartlery Reviews
                       <Divider />
                     </Grid>
                   </Grid>

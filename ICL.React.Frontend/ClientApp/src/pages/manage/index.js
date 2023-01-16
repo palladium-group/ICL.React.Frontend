@@ -63,9 +63,13 @@ const Manage = () => {
                     </Grid>
                     <Grid item md={12}>
                     <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2117697540/Staffing+Levels+-+Countries" target="_blank" rel="noopener noreferrer">  Staffing Levels – Countries</a>
-                   
+              
+               
                      
-                     
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>                      
+                      Staffing Level- Cost Shared Regional Operations Team
                       <Divider />
                     </Grid>
 
@@ -109,7 +113,7 @@ const Manage = () => {
                     </Grid>
                     <Grid item md={12}>
                       <NavLink to={`/manage/global-fund`}>
-                        Global Fund
+                      Third Party Monitoring
                       </NavLink>
                       <Divider />
                     </Grid>
