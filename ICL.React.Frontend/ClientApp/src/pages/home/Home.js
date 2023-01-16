@@ -40,6 +40,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import SearchIcon from '@mui/icons-material/Search';
+import {NavLink} from "react-router-dom";
 
 const Card = styled(MuiCard)(spacing);
 const CardContent = styled(MuiCardContent)(spacing);
@@ -379,14 +380,14 @@ const LeadershipContent=()=> {
               </Grid>
               <Grid item md={8} mx={3}>
                 <Grid container direction="column" alignItems="left" mb={2}>
-                  <a target="_blank" rel="noopener noreferrer" href={`/dan-rhodes`}>
-                  <Grid item>
-                    <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Dan Rhodes</Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography sx={{ fontSize: 18 }}>Project Director</Typography>
-                  </Grid>
-                  </a>
+                  <NavLink to={`/dan-rhodes`}>
+                    <Grid item>
+                      <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Dan Rhodes</Typography>
+                    </Grid>
+                    <Grid item>
+                      <Typography sx={{ fontSize: 18 }}>Project Director</Typography>
+                    </Grid>
+                  </NavLink>
                 </Grid>
               </Grid>
               <Divider />
