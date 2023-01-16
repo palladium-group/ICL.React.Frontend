@@ -109,7 +109,7 @@ const Manage = () => {
                     </Grid>
                     <Grid item md={12}>
                       <NavLink to={`/manage/global-fund`}>
-                        Global Fund
+                      Third Party Monitoring
                       </NavLink>
                       <Divider />
                     </Grid>

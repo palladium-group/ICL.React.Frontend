@@ -38,18 +38,18 @@ const Enable = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Storage
+                    Network Monitoring
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
                       <NavLink to={`/enable/demand`}>
-                        Demand
+                      Network Analytics
                       </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
                       <NavLink to={`/enable/deliver`}>
-                        Delivery
+                      Network Optimization
                       </NavLink>
                       <Divider />
                     </Grid>
@@ -95,8 +95,18 @@ const Enable = () => {
                   <Grid container spacing={6}>
                     <Grid item md={12}>
                       <NavLink to={`/enable/green-house-gas-monitoring`}>
-                        Annual Report
+                      Annual Reports
                       </NavLink>
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                     
+                      Global Monitoring
+                   
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>                      
+                      Country Monitoring                    
                       <Divider />
                     </Grid>
                   </Grid>
@@ -168,6 +178,18 @@ const Enable = () => {
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
+                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+                  <Grid container spacing={6}>
+                    <Grid item md={12}>
+                    Visualizations
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                    Reports
+                      <Divider />
+                    </Grid>
+                  </Grid>
+                </Box>
               </CardContent>
             </Card>
           </Paper>
