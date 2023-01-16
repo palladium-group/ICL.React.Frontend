@@ -1,103 +1,59 @@
 ﻿import React from "react";
 import { useMsal } from "@azure/msal-react";
+import TrendingUpOutlinedIcon from "@mui/icons-material/TrendingUpOutlined";
+import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
+import ShoppingCartCheckoutOutlinedIcon from "@mui/icons-material/ShoppingCartCheckoutOutlined";
+import WarehouseOutlinedIcon from "@mui/icons-material/WarehouseOutlined";
+import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
+import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
+import ManageAccountsOutlinedIcon from "@mui/icons-material/ManageAccountsOutlined";
+
+const menues =
+  [
+    {
+      href: "/manage",
+      title: "Manage",
+      visible: true
+    },
+    {
+      href: "/plan",
+      title: "Plan",
+      visible: true
+    },
+    {
+      title: "Source",
+      href: "/source",
+      visible: true
+    },
+    {
+      href: "/store",
+      title: "Store",
+      visible: true
+    },
+    {
+      title: "Deliver",
+      href: "/deliver",
+      visible: true
+    },
+    {
+      title: "Enable",
+      href: "/enable",
+      visible: true
+    },
+    {
+      title: "MIS Administration",
+      href: "/MISAdministration",
+      visible: true
+    },
+  ];
+
+const protect = (protectedMenues) => {
+  return  menues.map(m => (protectedMenues.includes(m.href) ? { ...m, visible: false } : m))
+};
 
 const permissionsTree = {
-    "Palladium.User":
-        [
-            {
-                href: "/dashboard",
-                title: "Clearing",
-                visible: true
-            },
-            {
-                href: "/control-tower",
-                title: "Shipment",
-                visible: true
-            },
-            {
-                href: "pos",
-                title: "Pos/ASN",
-                visible: false
-            },
-            {
-                href: "/dashboard",
-                title: "Warehouse",
-                visible: true
-            },
-            {
-                href: "inbound",
-                title: "Inbound",
-                visible: true
-            },
-            {
-                href: "outbound",
-                title: "Outbound",
-                visible: true
-            },
-            {
-                href: "monitoring",
-                title: "Monitoring",
-                visible: true
-            },
-            {
-                href: "/transportation",
-                title: "Transportation And Planning",
-                visible: true
-            },
-            {
-                href: "costing",
-                title: "Costing",
-                visible: true
-            },
-            {
-                href: "tendering-contracting",
-                title: "Tendering Contracting",
-                visible: true
-            },
-            {
-                href: "transportation-distribution",
-                title: "Transportation And Distribution",
-                visible: true
-            },
-            {
-                href: "chain-of-custody",
-                title: "Chain of Custody",
-                visible: true
-            },
-            {
-                href: "/dashboard",
-                title: "Delivery",
-                visible: true
-            },
-            {
-                href: "ePOD",
-                title: "ePOD",
-                visible: true
-            },
-            {
-                href: "",
-                title: "Returns",
-                visible: true
-            },
-            {
-                href: "/inventory",
-                title: "Inventory Analysis and Planning",
-                visible: true
-            },
-            {
-                href: "/dashboard/",
-                title: "Consumption Prediction",
-                visible: true
-            },
-            {
-                href: "/dashboard/",
-                title: "Allocation Prediction",
-                visible: true
-            },
-        ],
-    "Super.User":[
-
-    ]
+  "Palladium.User": protect(["/enable","/MISAdministration"]),
+  "Super.User":protect(["/enable"]),
 };
 
 function CheckRol(href, title) {
@@ -110,10 +66,6 @@ function CheckRol(href, title) {
         return false
     var roles = user["idTokenClaims"]["roles"];
 
-    if (roles && roles.length>0) {
-        if (roles.includes('Super.User'))
-            return true;
-    }
     //2. check each rol for permission
     for (const userRol of roles) {
         var permissions = permissionsTree[userRol];
