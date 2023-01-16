@@ -68,11 +68,11 @@ const Source = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Storage
+                    Warehousing
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Delivery
+                    Distribution
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

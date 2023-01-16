@@ -18,6 +18,7 @@ import SignUp from "./pages/auth/SignUp";
 import ResetPassword from "./pages/auth/ResetPassword";
 import Page404 from "./pages/auth/Page404";
 import Page500 from "./pages/auth/Page500";
+import SurveyResults from "./pages/manage/SurveyResults";
 
 // Dashboard components
 const Default = async(() => import("./pages/dashboards/Default"));
@@ -62,6 +63,7 @@ const ProfileDanRhodes = async(() => import("./pages/home/ProfileDanRhodes"));
 const ProfileJabuNyenwa = async(() => import("./pages/home/ProfileJabuNyenwa"));
 const ProfileSeanLockhead = async(() => import("./pages/home/ProfileSeanLockhead"));
 const ProfileMarilynNoguera = async(() => import("./pages/home/ProfileMarilynNoguera"));
+const MacroEyes = async(() => import("./pages/home/MacroEyes"));
 
 
 const routes = [
@@ -92,6 +94,10 @@ const routes = [
       {
         path: "/marilyn-noguera",
         element: <ProfileMarilynNoguera />,
+      },
+      {
+        path: "macro-eyes",
+        element: <MacroEyes />,
       }
     ]
   },
@@ -150,6 +156,10 @@ const routes = [
       {
         path: "performance-monitoring",
         element: <Home />,
+      },
+      {
+        path: "survey-results",
+        element: <SurveyResults />
       }
     ]
   },
