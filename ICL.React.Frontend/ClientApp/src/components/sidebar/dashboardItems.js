@@ -80,7 +80,7 @@ const MISAdministrationSection = [
     title: "MIS Administration",
     href: "/MISAdministration",
     icon: ManageAccountsOutlinedIcon,
-    backgroundcolor: "#4D4D4D"
+    backgroundcolor: "#4D4D4D",
   },
 ];
 
