@@ -59,9 +59,9 @@ const protect = (protectedMenues) => {
 };
 
 const permissionsTree = {
-    "USAID.User": protect(["/MISAdministration"]),
-    "Palladium.User": protect(["/MISAdministration"]),
-    "Super.User": protect([]),
+    "GHSC-ICL-USAID-Washington-User": protect(["/MISAdministration"]),
+    "GHSC-ICL-Country-Officer-User": protect(["/MISAdministration"]),
+    "GHSC-ICL-Palladium-HQ-users": protect([]),
 };
 
 function CheckRol(href, title) {
