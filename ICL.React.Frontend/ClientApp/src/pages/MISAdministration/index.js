@@ -31,18 +31,14 @@ const MISAdministration = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Digital Twins
+                  Interoperability
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Storage
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Delivery
+                      Middleware Status
                       <Divider />
                     </Grid>
                   </Grid>
@@ -56,14 +52,30 @@ const MISAdministration = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Chain of Custody
+                  Data Management
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Commodity Tracer
+                      Data Warehouse
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Data Lake
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Data Marts
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Logic Apps
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Queues, Subscriptions, and Events
                       <Divider />
                     </Grid>
                   </Grid>
@@ -77,14 +89,22 @@ const MISAdministration = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Green House Gas Monitoring
+                  User Management
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Annual Report
+                      User Registry
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Assign New User
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Remove User
                       <Divider />
                     </Grid>
                   </Grid>
@@ -98,64 +118,18 @@ const MISAdministration = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Risk Management
+                  Information Security
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Incident Management
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Risk Profiles
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Risk Alerts
+                      Policy
                       <Divider />
                     </Grid>
                   </Grid>
                 </Box>
-              </CardContent>
-            </Card>
-          </Paper>
-        </Grid>
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} style={{height:'100%'}} elevation={8}>
-            <Card>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Automated Reports
-                </Typography>
-                <Divider />
-                <Spacer mb={4} />
-                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
-                  <Grid container spacing={6}>
-                    <Grid item md={12}>
-                      By Country
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      By Function
-                      <Divider />
-                    </Grid>
-                  </Grid>
-                </Box>
-              </CardContent>
-            </Card>
-          </Paper>
-        </Grid>
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} style={{height:'100%'}} elevation={8}>
-            <Card>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Custom Reports
-                </Typography>
-                <Divider />
-                <Spacer mb={4} />
               </CardContent>
             </Card>
           </Paper>
