@@ -15,7 +15,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter'; 
 import PhoneIcon from '@mui/icons-material/Phone';
-const BannerContent = async(() => import("./HomeBanner"));
+import BannerContent from "./HomeBanner";
 
 import styled from "@emotion/styled";
 import {spacing} from "@mui/system";
@@ -45,7 +45,7 @@ const ProfileJabuNyenwa = () => {
             <br />
             <Grid container spacing={2} alignItems="stretch">
                 <Grid item md={12}  xs={12} px={5} sx={{marginTop:10}}>
-                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange" }} elevation={8}>
+                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"black" }} elevation={8}>
                         <Card>
                             <CardContent>                              
                                 
@@ -97,7 +97,7 @@ const ProfileJabuNyenwa = () => {
             </Grid>
             <Grid container spacing={2} alignItems="stretch">
                 <Grid item md={12}  xs={12} px={5} sx={{marginTop:10}}>
-                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange" }} elevation={8}>
+                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"black" }} elevation={8}>
                         <Card>
                             <CardContent>
                                 

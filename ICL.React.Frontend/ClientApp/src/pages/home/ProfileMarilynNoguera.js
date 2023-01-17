@@ -23,8 +23,7 @@ import FirstImg from "../../vendor/illustration-manage.png";
 import {NavLink} from "react-router-dom";
 import PlaceIcon from "@mui/icons-material/Place";
 import async from "../../components/Async";
-const BannerContent = async(() => import("./HomeBanner"));
-
+import BannerContent from "./HomeBanner";
 
 
 const Avatar = styled(MuiAvatar)`
@@ -46,7 +45,7 @@ const ProfileMarilynNoguera = () => {
             <br />
             <Grid container spacing={2} alignItems="stretch">
                 <Grid item md={12}  xs={12} px={5} sx={{marginTop:10}}>
-                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange" }} elevation={8}>
+                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"black" }} elevation={8}>
                         <Card>
                             <CardContent>                              
                                 
@@ -91,7 +90,7 @@ const ProfileMarilynNoguera = () => {
             </Grid>
             <Grid container spacing={2} alignItems="stretch">
                 <Grid item md={12}  xs={12} px={5} sx={{marginTop:10}}>
-                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange" }} elevation={8}>
+                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"black" }} elevation={8}>
                         <Card>
                             <CardContent>
                                 
