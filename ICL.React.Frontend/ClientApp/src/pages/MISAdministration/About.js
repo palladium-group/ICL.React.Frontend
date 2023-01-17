@@ -44,7 +44,7 @@ const About = () => {
       </Grid>
       <Card sx={{ width: "100%" }}>
         <CardMedia
-          sx={{ height: 879 }}
+          sx={{ height: 879, width: 1200 }}
           image={ICL_Architecture}
         />
       </Card>
