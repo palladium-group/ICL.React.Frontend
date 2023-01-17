@@ -64,15 +64,21 @@ const MISAdministration = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Data Warehouse
+                      <a target="_blank" rel="noopener noreferrer" href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119630896/Data+Warehouse">
+                        Data Warehouse
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Data Lake
+                      <a target="_blank" rel="noopener noreferrer" href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119532641/Data+Lake">
+                        Data Lake
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Data Marts
+                      <a target="_blank" rel="noopener noreferrer" href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119630918/Data+Marts">
+                        Data Marts
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
