@@ -1,12 +1,5 @@
 ﻿import React from "react";
 import { useMsal } from "@azure/msal-react";
-import TrendingUpOutlinedIcon from "@mui/icons-material/TrendingUpOutlined";
-import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
-import ShoppingCartCheckoutOutlinedIcon from "@mui/icons-material/ShoppingCartCheckoutOutlined";
-import WarehouseOutlinedIcon from "@mui/icons-material/WarehouseOutlined";
-import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
-import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
-import ManageAccountsOutlinedIcon from "@mui/icons-material/ManageAccountsOutlined";
 
 const menues =
   [
