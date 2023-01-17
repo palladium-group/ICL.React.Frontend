@@ -92,7 +92,7 @@ const Navbar = ({ onDrawerToggle }) => {
                     },
                   }}
                 >
-                  <StyledChip label="Report and Incident" component="a" href="https://issuesandriskregistry.thepalladiumgroup.com/" target="_blank" clickable />
+                  <StyledChip label="Report and Incident" component="a" href="https://palladiumgroup.sharepoint.com/SafetySecurity/SitePages/IncidentReporting.aspx" target="_blank" clickable />
                   <StyledChip label="HQ Office" component="a" href="#" clickable />
                   <StyledChip label="Country Offices" component="a" href="#" clickable />
                   <StyledChip label="Custom Reports" component="a" href="#" clickable />

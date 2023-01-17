@@ -68,8 +68,10 @@ const Manage = () => {
                      
                       <Divider />
                     </Grid>
-                    <Grid item md={12}>                      
+                    <Grid item md={12}>  
+                    <NavLink to={'/manage/regional-operations-team'}  >
                       Staffing Level- Cost Shared Regional Operations Team
+                    </NavLink>
                       <Divider />
                     </Grid>
 
@@ -97,7 +99,7 @@ const Manage = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Work Plan Status
+                      <a target={'_blank'} href={'https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119499777/Work+Plan+Status'}>Work Plan Status</a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
@@ -191,23 +193,24 @@ const Manage = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Salary Approval Requests
+                      <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119532562/Salary+Approval+Requests" target="_blank" rel="noopener noreferrer">Salary Approval Requests</a>
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>                      
+                      {/*<a href="" target="_blank" rel="noopener noreferrer"></a>*/}
+                      <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119598121/Travel+Approval+Requests" target="_blank" rel="noopener noreferrer">Travel Approval Requests</a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Travel Approval Requests
+                      <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119696434/Other+Approvals+Requests" target="_blank" rel="noopener noreferrer">Other Approval Requests</a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Other Approval Requests
+                      <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119794693/Deliverable+Submissions" target="_blank" rel="noopener noreferrer">Deliverable Submissions</a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Deliverable Submissions
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Small Business Utilization
+                      <a href="https://app.powerbi.com/groups/de688e05-b326-4741-81f5-462482ead6c4/reports/6e2b9fad-b778-4323-b105-d0cb2dc7a5c4/ReportSection" target="_blank" rel="noopener noreferrer">Small Business Utilization</a>
                       <Divider />
                     </Grid>
                   </Grid>

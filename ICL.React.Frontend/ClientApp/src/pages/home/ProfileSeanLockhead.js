@@ -8,12 +8,14 @@ import {
     Grid,
     Paper,
     Typography,
-    ListItemIcon
+    ListItemIcon, ListItem
 } from "@mui/material";
 
 import EmailIcon from '@mui/icons-material/Email';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import TwitterIcon from '@mui/icons-material/Twitter'; 
+import PhoneIcon from '@mui/icons-material/Phone';
+import BannerContent from "./HomeBanner";
 
 import styled from "@emotion/styled";
 import {spacing} from "@mui/system";
@@ -21,6 +23,7 @@ import {spacing} from "@mui/system";
 import FirstImg from "../../vendor/illustration-manage.png";
 import {NavLink} from "react-router-dom";
 import PlaceIcon from "@mui/icons-material/Place";
+import async from "../../components/Async";
 
 
 const Avatar = styled(MuiAvatar)`
@@ -36,16 +39,13 @@ const Spacer = styled.div(spacing);
 const ProfileDanRhodes = () => {
     return (
         <React.Fragment>
-            <Card sx={{ width: "100%" }}>
-                <CardMedia
-                    sx={{ height: 299 }}
-                    image={FirstImg}
-                />
-            </Card>
+            <Grid item xs={12}>
+                <BannerContent/>
+            </Grid>
             <br />
             <Grid container spacing={2} alignItems="stretch">
                 <Grid item md={12}  xs={12} px={5} sx={{marginTop:10}}>
-                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange" }} elevation={8}>
+                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"black" }} elevation={8}>
                         <Card>
                             <CardContent>                              
                                 
@@ -61,12 +61,13 @@ const ProfileDanRhodes = () => {
                                             </Grid>
                                             <Grid item>
                                                 <Typography sx={{ fontSize: 15, color:'orange' }}>Management, Information & Results Director</Typography>
-                                                {/*<Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>*/}
-                                                <ListItemIcon>
-                                                    <FacebookIcon />                                               
-                                                    <TwitterIcon />                                               
-                                                    <EmailIcon />
-                                                </ListItemIcon>
+                                                <Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>
+                                                <ListItemIcon style={{marginTop:'20px'}}>
+                                                    <PhoneIcon /><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}> + 1 609-947 2629</Typography>
+                                                </ListItemIcon>                                               
+                                                <ListItem  key="Email" component="a" href="mailto:sean.lockhead@thepalladiumgroup.com" sx={{padding:'0px'}}>
+                                                    <EmailIcon sx={{color:'rgba(0, 0, 0, 0.54)'}}/><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}>sean.lockhead@thepalladiumgroup.com</Typography>
+                                                </ListItem>
                                             </Grid>
                                         </Grid>
                                         <Grid item md={9}>
@@ -89,7 +90,7 @@ const ProfileDanRhodes = () => {
             </Grid>
             <Grid container spacing={2} alignItems="stretch">
                 <Grid item md={12}  xs={12} px={5} sx={{marginTop:10}}>
-                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange" }} elevation={8}>
+                    <Paper square={true} sx={{ borderTop: 5,borderTopColor:"black" }} elevation={8}>
                         <Card>
                             <CardContent>
                                 
