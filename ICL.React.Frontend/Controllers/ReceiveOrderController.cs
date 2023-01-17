@@ -63,7 +63,7 @@ namespace ICL.React.Frontend.Controllers
                     po.BookingNo = booking.BasicDetails.BookingNo;
                     po.BookingDate = DateTime.ParseExact(booking.BasicDetails.BookingDate.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
                     po.AsnFile = asn.ToString();
-                    po.ProcessType = booking.Services.Service.ProcessType;
+                    po.ProcessType = booking.Services[0].ProcessType;
                     po.PlaceOfReceipt = booking.BasicDetails.Movement.PlaceOfReceipt.Code;
                     po.PlaceOfDelivery = booking.BasicDetails.Movement.PlaceOfDelivery.Code;
                     po.DeliveryStatus = 0;
@@ -76,7 +76,7 @@ namespace ICL.React.Frontend.Controllers
                         product.CreateDate = DateTime.Now;
                         product.uuid = Guid.NewGuid();
                         product.PoUuid = po.uuid;
-                        product.LineItemId = prod.LineItemId;
+                        product.LineItemId = "";
                         product.ProductCode = prod.ProductCode.ToString();
                         product.Quantity = prod.Quantity.Value + " " + prod.Quantity.Uom;
                         product.UnitDimension = prod.UnitDimension.Length + "*" + prod.UnitDimension.Width + "*" +
