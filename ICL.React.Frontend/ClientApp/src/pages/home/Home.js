@@ -41,6 +41,9 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import SearchIcon from '@mui/icons-material/Search';
 import {NavLink} from "react-router-dom";
+import async from "../../components/Async";
+const BannerContent = async(() => import("./HomeBanner"));
+
 
 const Card = styled(MuiCard)(spacing);
 const CardContent = styled(MuiCardContent)(spacing);
@@ -53,37 +56,7 @@ const Avatar = styled(MuiAvatar)`
   width: 80px;
 `;
 
-const BannerContent=()=> {
-  console.log(process.env);
-  return (
-    <Box>
-      <MDBCarousel showIndicators showControls fade>
-        <MDBCarouselItem
-          className='w-100 d-block'
-          itemId={1}
-          src={FirstImg}
-          alt='...'
-        >
-        </MDBCarouselItem>
 
-        <MDBCarouselItem
-          className='w-100 d-block'
-          itemId={2}
-          src={SecondImg}
-          alt='...'
-        >
-        </MDBCarouselItem>
-
-        <MDBCarouselItem
-          className='w-100 d-block'
-          itemId={3}
-          src={ThirdImg}
-          alt='...'
-        >
-        </MDBCarouselItem>
-      </MDBCarousel>
-    </Box>)
-}
 const HeaderContent=()=> {
   return (
     <Box>
@@ -101,7 +74,7 @@ const HeaderContent=()=> {
                   <Grid item xs>
                     <Card sx={{ height:90,  backgroundColor: "#05C3DE" }}>
                       <CardContent>
-                        <Typography variant="body2" sx={{ fontSize: 18, alignContent: 'center' }}>NEXTGEN ICL
+                        <Typography variant="body2" sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>NEXTGEN ICL
                           STRATEGY</Typography>
                       </CardContent>
                     </Card>
@@ -110,7 +83,7 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#BA0C2F" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18 }}>RESULTS FRAMEWORK</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>RESULTS FRAMEWORK</Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -118,7 +91,7 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90,backgroundColor: "#64A70B" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18 }}>HQ WORK PLAN</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>HQ WORK PLAN</Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -126,7 +99,7 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#64A70B" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: 18 }}>COUNTRY OFFICE WORK
+                        <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>COUNTRY OFFICE WORK
                           PLANS</Typography>
                       </CardContent>
                     </Card>
@@ -135,7 +108,7 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#8D6E97" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18 }}>4PL PLAYBOOK</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>4PL PLAYBOOK</Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -143,7 +116,7 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#8D6E97" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18 }}>4PL BODY OF KNOWLEDGE</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>4PL BODY OF KNOWLEDGE</Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -398,16 +371,16 @@ const LeadershipContent=()=> {
                 <Avatar alt="Marilyn Noguera" src="/static/img/avatars/Marilyn.png" />
               </Grid>
               <Grid item md={8} mx={3}>
-                <NavLink to={`/marilyn-noguera`}>
-                  <Grid container direction="column" alignItems="left" mb={2}>
-                    <Grid item>
-                      <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Marilyn Noguera</Typography>
-                    </Grid>
-                    <Grid item>
-                      <Typography sx={{ fontSize: 18 }}>Deputy Project Director</Typography>
-                    </Grid>
+                <a target="_blank" rel="noopener noreferrer" href={`/marilyn-noguera`}>
+                <Grid container direction="column" alignItems="left" mb={2}>
+                  <Grid item>
+                    <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Marilyn Noguera</Typography>
                   </Grid>
-                </NavLink>
+                  <Grid item>
+                    <Typography sx={{ fontSize: 18 }}>Deputy Project Director</Typography>
+                  </Grid>
+                </Grid>
+                </a>
               </Grid>
             </Grid>
             <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
@@ -416,14 +389,14 @@ const LeadershipContent=()=> {
               </Grid>
               <Grid item md={8} mx={3}>
                 <Grid container direction="column" alignItems="left" mb={2}>
-                  <NavLink to={`/jabu-nyenwa`}>
-                    <Grid item>
-                      <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Jabu Nyenwa</Typography>
-                    </Grid>
-                    <Grid item>
-                      <Typography sx={{ fontSize: 18 }}>Country Programs Director</Typography>
-                    </Grid>
-                  </NavLink>
+                  <a target="_blank" rel="noopener noreferrer" href={`/jabu-nyenwa`}>
+                  <Grid item>
+                    <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Jabu Nyenwa</Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography sx={{ fontSize: 18 }}>Country Programs Director</Typography>
+                  </Grid>
+                  </a>
                 </Grid>
               </Grid>
             </Grid>
@@ -433,14 +406,14 @@ const LeadershipContent=()=> {
               </Grid>
               <Grid item md={8} mx={3}>
                 <Grid container direction="column" alignItems="left" mb={2}>
-                  <NavLink to={`/sean-lockhead`}>
+                  <a target="_blank" rel="noopener noreferrer" href={`/sean-lockhead`}>
                     <Grid item>
                       <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Sean Lockhead</Typography>
                     </Grid>
                     <Grid item>
                       <Typography sx={{ fontSize: 18 }}>Management, Information & Results Director</Typography>
                     </Grid>
-                  </NavLink>
+                  </a>
                 </Grid>
               </Grid>
             </Grid>
