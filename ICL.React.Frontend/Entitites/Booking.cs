@@ -118,6 +118,8 @@
 
         private BookingBasicDetailsSystemInformation systemInformationField;
 
+        private string serviceTemplateNameField;
+
         /// <remarks/>
         public string BookingType
         {
@@ -273,6 +275,19 @@
                 this.systemInformationField = value;
             }
         }
+
+        /// <remarks/>
+        public string ServiceTemplateName
+        {
+            get
+            {
+                return this.serviceTemplateNameField;
+            }
+            set
+            {
+                this.serviceTemplateNameField = value;
+            }
+        }
     }
 
     /// <remarks/>
@@ -351,10 +366,10 @@
     public partial class BookingBasicDetailsConsignee
     {
 
-        private ushort codeField;
+        private string codeField;
 
         /// <remarks/>
-        public ushort Code
+        public string Code
         {
             get
             {
@@ -412,6 +427,10 @@
     public partial class BookingBasicDetailsMovement
     {
 
+        private string movementTypeField;
+
+        private string shipmentModeField;
+
         private BookingBasicDetailsMovementPlaceOfReceipt placeOfReceiptField;
 
         private BookingBasicDetailsMovementPlaceOfDelivery placeOfDeliveryField;
@@ -421,6 +440,34 @@
         private BookingBasicDetailsMovementRequestedArrivalDate requestedArrivalDateField;
 
         private string transportationModeField;
+
+        private string shipmentTypeField;
+
+        /// <remarks/>
+        public string MovementType
+        {
+            get
+            {
+                return this.movementTypeField;
+            }
+            set
+            {
+                this.movementTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string ShipmentMode
+        {
+            get
+            {
+                return this.shipmentModeField;
+            }
+            set
+            {
+                this.shipmentModeField = value;
+            }
+        }
 
         /// <remarks/>
         public BookingBasicDetailsMovementPlaceOfReceipt PlaceOfReceipt
@@ -484,6 +531,19 @@
             set
             {
                 this.transportationModeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string ShipmentType
+        {
+            get
+            {
+                return this.shipmentTypeField;
+            }
+            set
+            {
+                this.shipmentTypeField = value;
             }
         }
     }

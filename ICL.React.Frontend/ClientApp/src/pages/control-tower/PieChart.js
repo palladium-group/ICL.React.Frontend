@@ -5,6 +5,7 @@ import Chart from "react-apexcharts";
 import axios from "axios";
 import { CardContent, Card as MuiCard, Typography } from "@mui/material";
 import { spacing } from "@mui/system";
+import {apiRoutes} from "../../apiRoutes";
 
 const Card = styled(MuiCard)(spacing);
 
@@ -33,7 +34,7 @@ const PieChart = ({ theme }) => {
     colors:['#64A70B', '#E57200', '#BA0C2F']
   };
   useEffect(() => {
-    axios.get(`https://icl-dwh-backend.azurewebsites.net/api/PurchaseOrder/statistics`)
+    axios.get(`${apiRoutes.purchaseOrder}/statistics`)
         .then((response)=>{
           let success = 0;
           let failed=0;
