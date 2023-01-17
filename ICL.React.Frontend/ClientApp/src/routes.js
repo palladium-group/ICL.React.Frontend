@@ -69,6 +69,7 @@ const ProfileSeanLockhead = async(() => import("./pages/home/ProfileSeanLockhead
 const ProfileMarilynNoguera = async(() => import("./pages/home/ProfileMarilynNoguera"));
 const MacroEyes = async(() => import("./pages/home/MacroEyes"));
 const MiddleWareStatus = async(() => import("./pages/MISAdministration/MiddleWareStatus"));
+const VendorScoreCard = async(() => import("./pages/store/VendorScoreCard"));
 
 
 const routes = [
@@ -204,6 +205,10 @@ const routes = [
         path: "",
         element: <Store />,
       },
+      {
+        path: "vendor-score-card",
+        element: <VendorScoreCard />,
+      }
     ],
   },
   {
