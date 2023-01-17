@@ -1,5 +1,6 @@
 ﻿namespace ICL.React.Frontend.Entitites
 {
+
     // NOTE: Generated code may require at least .NET Framework 4.5 or .NET Core/Standard 2.0.
     /// <remarks/>
     [System.SerializableAttribute()]
@@ -15,9 +16,11 @@
 
         private BookingParty[] partiesField;
 
+        private BookingCommercialInvoices commercialInvoicesField;
+
         private BookingProduct[] productsField;
 
-        private BookingServices servicesField;
+        private BookingService[] servicesField;
 
         /// <remarks/>
         public string Action
@@ -60,6 +63,19 @@
         }
 
         /// <remarks/>
+        public BookingCommercialInvoices CommercialInvoices
+        {
+            get
+            {
+                return this.commercialInvoicesField;
+            }
+            set
+            {
+                this.commercialInvoicesField = value;
+            }
+        }
+
+        /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("Product", IsNullable = false)]
         public BookingProduct[] Products
         {
@@ -74,7 +90,8 @@
         }
 
         /// <remarks/>
-        public BookingServices Services
+        [System.Xml.Serialization.XmlArrayItemAttribute("Service", IsNullable = false)]
+        public BookingService[] Services
         {
             get
             {
@@ -902,14 +919,126 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class BookingCommercialInvoices
+    {
+
+        private BookingCommercialInvoicesCommercialInvoice commercialInvoiceField;
+
+        /// <remarks/>
+        public BookingCommercialInvoicesCommercialInvoice CommercialInvoice
+        {
+            get
+            {
+                return this.commercialInvoiceField;
+            }
+            set
+            {
+                this.commercialInvoiceField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class BookingCommercialInvoicesCommercialInvoice
+    {
+
+        private string invoiceNoField;
+
+        private uint invoiceDateField;
+
+        private BookingCommercialInvoicesCommercialInvoiceAmount amountField;
+
+        /// <remarks/>
+        public string InvoiceNo
+        {
+            get
+            {
+                return this.invoiceNoField;
+            }
+            set
+            {
+                this.invoiceNoField = value;
+            }
+        }
+
+        /// <remarks/>
+        public uint InvoiceDate
+        {
+            get
+            {
+                return this.invoiceDateField;
+            }
+            set
+            {
+                this.invoiceDateField = value;
+            }
+        }
+
+        /// <remarks/>
+        public BookingCommercialInvoicesCommercialInvoiceAmount Amount
+        {
+            get
+            {
+                return this.amountField;
+            }
+            set
+            {
+                this.amountField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class BookingCommercialInvoicesCommercialInvoiceAmount
+    {
+
+        private uint valueField;
+
+        private string currencyField;
+
+        /// <remarks/>
+        public uint Value
+        {
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Currency
+        {
+            get
+            {
+                return this.currencyField;
+            }
+            set
+            {
+                this.currencyField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
     public partial class BookingProduct
     {
 
         private string actionField;
 
-        private string lineItemIdField;
-
-        private ulong productCodeField;
+        private string productCodeField;
 
         private BookingProductQuantity quantityField;
 
@@ -937,20 +1066,7 @@
         }
 
         /// <remarks/>
-        public string LineItemId
-        {
-            get
-            {
-                return this.lineItemIdField;
-            }
-            set
-            {
-                this.lineItemIdField = value;
-            }
-        }
-
-        /// <remarks/>
-        public ulong ProductCode
+        public string ProductCode
         {
             get
             {
@@ -1242,30 +1358,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServices
-    {
-
-        private BookingServicesService serviceField;
-
-        /// <remarks/>
-        public BookingServicesService Service
-        {
-            get
-            {
-                return this.serviceField;
-            }
-            set
-            {
-                this.serviceField = value;
-            }
-        }
-    }
-
-    /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesService
+    public partial class BookingService
     {
 
         private string serviceTypeField;
@@ -1274,33 +1367,29 @@
 
         private byte serviceSequenceNoField;
 
-        private BookingServicesServicePlaceOfReceipt placeOfReceiptField;
+        private BookingServicePlaceOfReceipt placeOfReceiptField;
 
-        private BookingServicesServicePlaceOfDelivery placeOfDeliveryField;
+        private BookingServicePlaceOfDelivery placeOfDeliveryField;
 
-        private BookingServicesServicePortOfLoading portOfLoadingField;
+        private BookingServicePortOfLoading portOfLoadingField;
 
-        private BookingServicesServicePortOfDischarge portOfDischargeField;
+        private BookingServicePortOfDischarge portOfDischargeField;
 
-        private BookingServicesServiceETD eTDField;
+        private BookingServiceETD eTDField;
 
-        private BookingServicesServiceETA eTAField;
+        private BookingServiceETA eTAField;
 
         private object serviceClassField;
 
-        private string managedByField;
+        private BookingServiceOwnerOfficeorSite ownerOfficeorSiteField;
 
-        private BookingServicesServiceOwnerOfficeorSite ownerOfficeorSiteField;
+        private BookingServiceExecutingOfficeorSite executingOfficeorSiteField;
 
-        private BookingServicesServiceExecutingOfficeorSite executingOfficeorSiteField;
+        private BookingServiceSea seaField;
 
-        private byte primaryServiceField;
+        private BookingServiceAir airField;
 
-        private BookingServicesServiceSea seaField;
-
-        private BookingServicesServiceAir airField;
-
-        private BookingServicesServiceRoad roadField;
+        private BookingServiceRoad roadField;
 
         private object warehouseField;
 
@@ -1348,7 +1437,7 @@
         }
 
         /// <remarks/>
-        public BookingServicesServicePlaceOfReceipt PlaceOfReceipt
+        public BookingServicePlaceOfReceipt PlaceOfReceipt
         {
             get
             {
@@ -1361,7 +1450,7 @@
         }
 
         /// <remarks/>
-        public BookingServicesServicePlaceOfDelivery PlaceOfDelivery
+        public BookingServicePlaceOfDelivery PlaceOfDelivery
         {
             get
             {
@@ -1374,7 +1463,7 @@
         }
 
         /// <remarks/>
-        public BookingServicesServicePortOfLoading PortOfLoading
+        public BookingServicePortOfLoading PortOfLoading
         {
             get
             {
@@ -1387,7 +1476,7 @@
         }
 
         /// <remarks/>
-        public BookingServicesServicePortOfDischarge PortOfDischarge
+        public BookingServicePortOfDischarge PortOfDischarge
         {
             get
             {
@@ -1400,7 +1489,7 @@
         }
 
         /// <remarks/>
-        public BookingServicesServiceETD ETD
+        public BookingServiceETD ETD
         {
             get
             {
@@ -1413,7 +1502,7 @@
         }
 
         /// <remarks/>
-        public BookingServicesServiceETA ETA
+        public BookingServiceETA ETA
         {
             get
             {
@@ -1439,20 +1528,7 @@
         }
 
         /// <remarks/>
-        public string ManagedBy
-        {
-            get
-            {
-                return this.managedByField;
-            }
-            set
-            {
-                this.managedByField = value;
-            }
-        }
-
-        /// <remarks/>
-        public BookingServicesServiceOwnerOfficeorSite OwnerOfficeorSite
+        public BookingServiceOwnerOfficeorSite OwnerOfficeorSite
         {
             get
             {
@@ -1465,7 +1541,7 @@
         }
 
         /// <remarks/>
-        public BookingServicesServiceExecutingOfficeorSite ExecutingOfficeorSite
+        public BookingServiceExecutingOfficeorSite ExecutingOfficeorSite
         {
             get
             {
@@ -1478,20 +1554,7 @@
         }
 
         /// <remarks/>
-        public byte PrimaryService
-        {
-            get
-            {
-                return this.primaryServiceField;
-            }
-            set
-            {
-                this.primaryServiceField = value;
-            }
-        }
-
-        /// <remarks/>
-        public BookingServicesServiceSea Sea
+        public BookingServiceSea Sea
         {
             get
             {
@@ -1504,7 +1567,7 @@
         }
 
         /// <remarks/>
-        public BookingServicesServiceAir Air
+        public BookingServiceAir Air
         {
             get
             {
@@ -1517,7 +1580,7 @@
         }
 
         /// <remarks/>
-        public BookingServicesServiceRoad Road
+        public BookingServiceRoad Road
         {
             get
             {
@@ -1573,7 +1636,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesServicePlaceOfReceipt
+    public partial class BookingServicePlaceOfReceipt
     {
 
         private string codeField;
@@ -1596,7 +1659,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesServicePlaceOfDelivery
+    public partial class BookingServicePlaceOfDelivery
     {
 
         private string codeField;
@@ -1619,7 +1682,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesServicePortOfLoading
+    public partial class BookingServicePortOfLoading
     {
 
         private string codeField;
@@ -1642,7 +1705,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesServicePortOfDischarge
+    public partial class BookingServicePortOfDischarge
     {
 
         private string codeField;
@@ -1665,7 +1728,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesServiceETD
+    public partial class BookingServiceETD
     {
 
         private uint dateField;
@@ -1718,7 +1781,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesServiceETA
+    public partial class BookingServiceETA
     {
 
         private uint dateField;
@@ -1771,7 +1834,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesServiceOwnerOfficeorSite
+    public partial class BookingServiceOwnerOfficeorSite
     {
 
         private string codeField;
@@ -1794,7 +1857,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesServiceExecutingOfficeorSite
+    public partial class BookingServiceExecutingOfficeorSite
     {
 
         private string codeField;
@@ -1817,7 +1880,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesServiceSea
+    public partial class BookingServiceSea
     {
 
         private object voyageDateField;
@@ -1840,7 +1903,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesServiceAir
+    public partial class BookingServiceAir
     {
 
         private object flightDateField;
@@ -1863,7 +1926,7 @@
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class BookingServicesServiceRoad
+    public partial class BookingServiceRoad
     {
 
         private object pickupWindowFromDateField;
@@ -1926,4 +1989,6 @@
             }
         }
     }
+
+
 }
