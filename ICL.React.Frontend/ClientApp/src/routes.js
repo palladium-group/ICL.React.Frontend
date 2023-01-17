@@ -70,6 +70,7 @@ const ProfileMarilynNoguera = async(() => import("./pages/home/ProfileMarilynNog
 const MacroEyes = async(() => import("./pages/home/MacroEyes"));
 const MiddleWareStatus = async(() => import("./pages/MISAdministration/MiddleWareStatus"));
 const VendorScoreCard = async(() => import("./pages/store/VendorScoreCard"));
+const About = async(() => import("./pages/MISAdministration/About"));
 
 
 const routes = [
@@ -262,6 +263,10 @@ const routes = [
       {
         path: "middle-ware-status",
         element: <MiddleWareStatus />
+      },
+      {
+        path: "about",
+        element: <About />,
       }
     ],
   },
