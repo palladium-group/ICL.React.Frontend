@@ -94,20 +94,20 @@ const protect = (protectedMenues) => {
 };
 
 const permissionsTree = {
-  "USAID.User": protect([
+  "Washington.User": protect([
     { page: "/plan", header: "Order Intake", display: "Orders Validated (current)" },
     { page: "/plan", header: "Planning Inputs", display: "Historical Distribution Orders" },
     { page: "/plan", header: "Planning Inputs", display: "PSA Inbound Product Monitoring" },
     { page: "/plan", header: "Operational Planning", display: "Supply" },
     { page: "/plan", header: "Operational Planning", display: "Demand" }
   ]),
-  "Palladium.User": protect([
+  "Country.User": protect([
       { page: "/plan", header: "Planning Inputs", display: "Customs Requirements" },
       { page: "/plan", header: "Planning Inputs", display: "Quarterly Supply Plans" },
       { page: "/plan", header: "Operational Planning", display: "Rolling 12-month master plan" }
     ]
   ),
-   "Super.User": protect([])
+   "HQ.User": protect([])
 };
 
 function CheckPageRole(page,header,title) {
