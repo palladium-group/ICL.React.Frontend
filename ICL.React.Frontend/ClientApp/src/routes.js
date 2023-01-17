@@ -73,7 +73,7 @@ const VendorScoreCard = async(() => import("./pages/store/VendorScoreCard"));
 const About = async(() => import("./pages/MISAdministration/About"));
 const Parsyl = async(() => import("./pages/store/Parsyl"));
 const InventoryAnalysis = async(() => import("./pages/store/InventoryAnalysis"));
-
+const SmallBusiness = async(() => import("./pages/manage/SmallBusiness"));
 
 const routes = [
   {
@@ -173,8 +173,12 @@ const routes = [
       {
         path: "regional-operations-team",
         element: <RegionalOperationsTeam />
-      }
-    ]
+      },
+      {
+        path: "small-business",
+        element: <SmallBusiness />,
+      },
+    ],
   },
   {
     path: "/plan",

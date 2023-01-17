@@ -210,7 +210,9 @@ const Manage = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      <a href="https://app.powerbi.com/groups/de688e05-b326-4741-81f5-462482ead6c4/reports/6e2b9fad-b778-4323-b105-d0cb2dc7a5c4/ReportSection" target="_blank" rel="noopener noreferrer">Small Business Utilization</a>
+                      <NavLink to={`/manage/small-business`}>
+                        Small Business Utilization
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
