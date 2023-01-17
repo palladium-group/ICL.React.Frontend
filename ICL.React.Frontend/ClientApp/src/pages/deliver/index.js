@@ -31,7 +31,7 @@ const Deliver = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Commodity Tracking
+                  <NavLink to={'/deliver/commodity-tracking'}>Commodity Tracking</NavLink>
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
