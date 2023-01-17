@@ -11,6 +11,11 @@ import ManageAccountsOutlinedIcon from "@mui/icons-material/ManageAccountsOutlin
 const menues =
   [
     {
+      href: "",
+      title: "Home",
+      visible: true
+    },
+    {
       href: "/manage",
       title: "Manage",
       visible: true
