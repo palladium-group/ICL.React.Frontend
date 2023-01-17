@@ -8,6 +8,10 @@ on:
     branches:
       - dev
   workflow_dispatch:
+  
+env:
+  REACT_APP_REDIRECTURI: ${{secrets.REACT_APP_REDIRECTURI}}
+  REACT_APP_CLIENTID: ${{secrets.REACT_APP_CLIENTID}}
 
 jobs:
   build:
