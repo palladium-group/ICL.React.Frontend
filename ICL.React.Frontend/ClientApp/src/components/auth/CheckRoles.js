@@ -1,12 +1,5 @@
 ﻿import React from "react";
 import { useMsal } from "@azure/msal-react";
-import TrendingUpOutlinedIcon from "@mui/icons-material/TrendingUpOutlined";
-import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
-import ShoppingCartCheckoutOutlinedIcon from "@mui/icons-material/ShoppingCartCheckoutOutlined";
-import WarehouseOutlinedIcon from "@mui/icons-material/WarehouseOutlined";
-import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
-import CheckBoxOutlinedIcon from "@mui/icons-material/CheckBoxOutlined";
-import ManageAccountsOutlinedIcon from "@mui/icons-material/ManageAccountsOutlined";
 
 const menues =
   [
@@ -60,8 +53,8 @@ const protect = (protectedMenues) => {
 
 /*
 const permissionsTree = {
-    "Washington.User": protect(["/MISAdministration"]),
-    "Country.User": protect(["/MISAdministration"]),
+    "Washington.User": protect([]),
+    "Country.User": protect([]),
     "HQ.User": protect([]),
 };
 */
@@ -80,11 +73,11 @@ function CheckRol(href, title) {
         return false
     if (!user["idTokenClaims"]["roles"] || user["idTokenClaims"]["roles"].length <= 0)
         return false
-    var roles = user["idTokenClaims"]["roles"];
+    const roles = user["idTokenClaims"]["roles"];
 
     //2. check each rol for permission
     for (const userRol of roles) {
-        var permissions = permissionsTree[userRol];
+        const permissions = permissionsTree[userRol];
         if (permissions && permissions.length > 0) {
             for (const pageItem in permissions) {
                 if (href && (href == permissions[pageItem].href))

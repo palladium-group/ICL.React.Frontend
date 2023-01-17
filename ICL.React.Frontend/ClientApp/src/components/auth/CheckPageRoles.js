@@ -95,19 +95,8 @@ const protect = (protectedMenues) => {
 
 /*
 const permissionsTree = {
-  "Washington.User": protect([
-    { page: "/plan", header: "Order Intake", display: "Orders Validated (current)" },
-    { page: "/plan", header: "Planning Inputs", display: "Historical Distribution Orders" },
-    { page: "/plan", header: "Planning Inputs", display: "PSA Inbound Product Monitoring" },
-    { page: "/plan", header: "Operational Planning", display: "Supply" },
-    { page: "/plan", header: "Operational Planning", display: "Demand" }
-  ]),
-  "Country.User": protect([
-      { page: "/plan", header: "Planning Inputs", display: "Customs Requirements" },
-      { page: "/plan", header: "Planning Inputs", display: "Quarterly Supply Plans" },
-      { page: "/plan", header: "Operational Planning", display: "Rolling 12-month master plan" }
-    ]
-  ),
+  "Washington.User": protect([]),
+  "Country.User": protect([]),
    "HQ.User": protect([])
 };
 */
@@ -127,11 +116,13 @@ function CheckPageRole(page,header,title) {
     return false;
   if (!user["idTokenClaims"]["roles"] || user["idTokenClaims"]["roles"].length <= 0)
     return false;
-  var roles = user["idTokenClaims"]["roles"];
+  const roles = user["idTokenClaims"]["roles"];
+  console.log(roles);
 
   //2. check each rol for permission
   for (const userRol of roles) {
-    var permissions = permissionsTree[userRol];
+    const permissions = permissionsTree[userRol];
+    console.log(permissions);
 
     if (permissions && permissions.length > 0) {
       for (const pageItem in permissions) {
