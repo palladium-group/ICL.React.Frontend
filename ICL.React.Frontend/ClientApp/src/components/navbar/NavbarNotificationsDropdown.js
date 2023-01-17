@@ -22,6 +22,7 @@ import {
   // Typography as MuiTypography,
 } from "@mui/material";
 import AppsIcon from '@mui/icons-material/Apps';
+import {NavLink} from "react-router-dom";
 // import { Bell, Home, UserPlus, Server } from "react-feather";
 // import {spacing} from "@mui/system";
 // import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
@@ -82,24 +83,24 @@ function Demos() {
         <Grid container spacing={6}>
           <Grid item md={12}>
             <a href="https://opsuat.freightintime.com/" target="_blank" rel="noopener noreferrer">
-              SCM Profit: Store and Deliver
+            Warehousing & Distribution
             </a>
             <Divider />
           </Grid>
           <Grid item md={12}>
             <a target="_blank" rel="noopener noreferrer" href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fs2c.mercell.com%2Fsso%2Fthepalladiumgroup.com&data=05%7C01%7CBVlietstra%40iplussolutions.org%7C3f396fa500444fc779d908daf49500da%7C6029b554b35744bb9f9e3036df46c4a0%7C0%7C0%7C638091218051078146%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=RwpDIGG3FojyhqnYZv5dkkSyXPH5APwFgonJplg3zDI%3D&reserved=0">
-              Mercell: Source
+            Sourcing
             </a>
             <Divider />
           </Grid>
           <Grid item md={12}>
-            <a target="_blank" rel="noopener noreferrer" href="https://palladium-forecast.s3.us-east-1.amazonaws.com/index.html">
-              MacroEyes: Plan
-            </a>
+            <NavLink to={`/macro-eyes`}>
+              Planning
+            </NavLink>
             <Divider />
           </Grid>
           <Grid item md={12}>
-            Comcare: Third Party Monitoring
+          Third Party Monitoring
             <Divider />
           </Grid>
         </Grid>
@@ -114,31 +115,31 @@ function Demos() {
       <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
         <Grid container spacing={6}>
           <Grid item md={12}>
-            ChainLockR: Risk Management
+            Risk Management
             <Divider />
           </Grid>
           <Grid item md={12}>
-            <a href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26" target="_blank" rel="noopener noreferrer">JIRA/Confluence: Quality Management</a>
+            <a href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26" target="_blank" rel="noopener noreferrer">Quality Management</a>
             <Divider />
           </Grid>
           <Grid item md={12}>
-            Greenhouse: Greenhouse GasMonitoring
+            Greenhouse Gas Monitoring
             <Divider />
           </Grid>
           <Grid item md={12}>
-            <a href="https://app.parsyl.com/report/assets?dataWindow=7&dataType=humidity&weeklyRate=false" target="_blank" rel="noopener noreferrer">Parsyl: Temperature Monitoring</a>
+            <a href="https://app.parsyl.com/report/assets?dataWindow=7&dataType=humidity&weeklyRate=false" target="_blank" rel="noopener noreferrer">Temperature Monitoring</a>
             <Divider />
           </Grid>
           <Grid item md={12}>
-            KPMG: Digital Twin
+            Digital Twin
             <Divider />
           </Grid>
           <Grid item md={12}>
-            Quetica: Freight Bill Audit
+            Freight Bill Audit
             <Divider />
           </Grid>
           <Grid item md={12}>
-            PowerBI: Custom Reporting
+            Custom Reporting
             <Divider />
           </Grid>
         </Grid>

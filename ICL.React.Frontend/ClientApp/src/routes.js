@@ -18,6 +18,9 @@ import SignUp from "./pages/auth/SignUp";
 import ResetPassword from "./pages/auth/ResetPassword";
 import Page404 from "./pages/auth/Page404";
 import Page500 from "./pages/auth/Page500";
+import SurveyResults from "./pages/manage/SurveyResults";
+import RegionalOperationsTeam from "./pages/manage/RegionalOperationsTeam";
+
 
 // Dashboard components
 const Default = async(() => import("./pages/dashboards/Default"));
@@ -52,12 +55,22 @@ const Source = async(() => import("./pages/source/index"));
 const QuantificationReports = async(() => import("./pages/plan/QuantificationReports"));
 const Store = async(() => import("./pages/store/index"));
 const Deliver = async(() => import("./pages/deliver"));
+const CommodityTracking = async(() => import("./pages/deliver/CommodityTracking"));
+
 const Enable = async(() => import("./pages/enable"));
 const CommodityTracker = async(() => import("./pages/enable/CommodityTracker"));
 const GreenHouseGasMonitoring = async(() => import("./pages/enable/GreenHouseGasMonitoring"));
 const Demand = async(() => import("./pages/enable/Demand"));
 const KPMGDeliver = async(() => import("./pages/enable/Deliver"));
 const MISAdministration = async(() => import("./pages/MISAdministration"));
+const ProfileDanRhodes = async(() => import("./pages/home/ProfileDanRhodes"));
+const ProfileJabuNyenwa = async(() => import("./pages/home/ProfileJabuNyenwa"));
+const ProfileSeanLockhead = async(() => import("./pages/home/ProfileSeanLockhead"));
+const ProfileMarilynNoguera = async(() => import("./pages/home/ProfileMarilynNoguera"));
+const MacroEyes = async(() => import("./pages/home/MacroEyes"));
+const MiddleWareStatus = async(() => import("./pages/MISAdministration/MiddleWareStatus"));
+const VendorScoreCard = async(() => import("./pages/store/VendorScoreCard"));
+
 
 const routes = [
   {
@@ -71,6 +84,26 @@ const routes = [
       {
         path: "",
         element: <HomePage />,
+      },
+      {
+        path: "/dan-rhodes",
+        element: <ProfileDanRhodes />,
+      },
+      {
+        path: "/jabu-nyenwa",
+        element: <ProfileJabuNyenwa />,
+      },
+      {
+        path: "/sean-lockhead",
+        element: <ProfileSeanLockhead />,
+      },
+      {
+        path: "/marilyn-noguera",
+        element: <ProfileMarilynNoguera />,
+      },
+      {
+        path: "macro-eyes",
+        element: <MacroEyes />,
       }
     ]
   },
@@ -129,6 +162,14 @@ const routes = [
       {
         path: "performance-monitoring",
         element: <Home />,
+      },
+      {
+        path: "survey-results",
+        element: <SurveyResults />
+      },
+      {
+        path: "regional-operations-team",
+        element: <RegionalOperationsTeam />
       }
     ]
   },
@@ -164,6 +205,10 @@ const routes = [
         path: "",
         element: <Store />,
       },
+      {
+        path: "vendor-score-card",
+        element: <VendorScoreCard />,
+      }
     ],
   },
   {
@@ -173,6 +218,10 @@ const routes = [
       {
         path: "",
         element: <Deliver />,
+      },
+      {
+        path: "commodity-tracking",
+        element: <CommodityTracking />,
       },
     ],
   },
@@ -210,6 +259,10 @@ const routes = [
         path: "",
         element: <MISAdministration />,
       },
+      {
+        path: "middle-ware-status",
+        element: <MiddleWareStatus />
+      }
     ],
   },
   {

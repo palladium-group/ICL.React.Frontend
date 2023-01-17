@@ -1,17 +1,50 @@
 import React from "react";
+import {Grid} from "@mui/material";
+import {useNavigate} from "react-router-dom";
+import styled from "@emotion/styled";
+import { spacing } from "@mui/system";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import {
-  Grid
+  Button as MuiButton,
 } from "@mui/material";
+import ReplyIcon from '@mui/icons-material/Reply';
+
+const Button = styled(MuiButton)(spacing);
+const theme = createTheme({
+  palette: {
+    secondary: {
+      main: "#05C3DE",
+    },
+  },
+});
 
 const CommodityTracker = () => {
+  const navigate = useNavigate();
   return (
-    <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
-      <Grid item md={12} zeroMinWidth>
-        <iframe title="LIT ICL Dashboards - Chain of custody" width="100%" height="100%"
-                src="https://app.powerbi.com/view?r=eyJrIjoiNjk3NmMzN2QtYzJhMS00OTRmLTgxY2EtZmJkMDZhOTA2ZjAxIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSectionb69e2243123e0610a062"
-                frameBorder="0" allowFullScreen="true"></iframe>
+    <>
+      <Grid container spacing={6}>
+        <Grid item>
+          <ThemeProvider theme={theme}>
+            <Button
+              mr={2}
+              variant="contained"
+              color="secondary"
+              onClick={() => navigate("/enable")}
+            >
+              <ReplyIcon />
+            </Button>
+          </ThemeProvider>
+        </Grid>
       </Grid>
-    </Grid>
+      <br />
+      <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
+        <Grid item md={12} zeroMinWidth>
+          <iframe title="LIT ICL Dashboards - Chain of custody - Tracking PO by Country" width="100%" height="100%"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiZWU5YmQ3NGYtNjU5NS00OTgzLWFhYjktZjBlZDM5NTQ0MjZhIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+                  frameBorder="0" allowFullScreen="true"></iframe>
+        </Grid>
+      </Grid>
+    </>
   );
 };
 export default CommodityTracker;
