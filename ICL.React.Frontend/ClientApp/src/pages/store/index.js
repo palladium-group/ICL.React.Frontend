@@ -115,7 +115,7 @@ const Store = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      <NavLink to={`/dashboard/outbound`}>Vendor Score Card</NavLink>
+                      <NavLink to={`/store/vendor-score-card`}>Vendor Score Card</NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
