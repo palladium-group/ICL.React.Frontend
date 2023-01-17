@@ -14,7 +14,6 @@ import { orange } from "@mui/material/colors";
 import FirstImg from "../../vendor/illustration-plan.png";
 import {NavLink, Link} from "react-router-dom";
 import checkPageRoles from "../../components/auth/CheckPageRoles";
-import CheckRol from "../../components/auth/CheckRoles";
 
 const Card = styled(MuiCard)(spacing);
 const CardContent = styled(MuiCardContent)(spacing);
@@ -40,13 +39,7 @@ const allLinks = [
       },
       {
         header: "Planning Inputs",
-        display: "Orders Fulfilled (historical)",
-        href: "",
-        visible: true
-      },
-      {
-        header: "Planning Inputs",
-        display: "Third Party Data Feeds",
+        display: "Historical Distribution Orders",
         href: "",
         visible: true
       },
@@ -59,7 +52,7 @@ const allLinks = [
       {
         header: "Planning Inputs",
         display: "Customs Requirements",
-        href: "",
+        href: "https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26/group/70/create/272",
         visible: true
       }]
   },
@@ -81,23 +74,35 @@ const allLinks = [
       }]
   },
   {
-    header: "Monthly Operational Plans",
+    header: "Operational Planning",
     visible: true,
     links: [
       {
-        header: "Monthly Operational Plans",
-        display: "Supply",
+        header: "Operational Planning",
+        display: "Inventory Planning",
         href: "",
         visible: true
       },
       {
-        header: "Monthly Operational Plans",
-        display: "Demand",
+        header: "Operational Planning",
+        display: "Distribution Planning",
         href: "",
         visible: true
       },
       {
-        header: "Monthly Operational Plans",
+        header: "Operational Planning",
+        display: "Reconciliation & Allocation",
+        href: "",
+        visible: true
+      },
+      {
+        header: "Operational Planning",
+        display: "Cost Estimating",
+        href: "",
+        visible: true
+      },
+      {
+        header: "Operational Planning",
         display: "Rolling 12-month master plan",
         href: "",
         visible: true

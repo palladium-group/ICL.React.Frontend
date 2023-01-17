@@ -26,14 +26,7 @@ const menues = [
   {
     page: "/plan",
     header: "Planning Inputs",
-    display: "Orders Fulfilled (historical)",
-    href: "",
-    visible: true
-  },
-  {
-    page: "/plan",
-    header: "Planning Inputs",
-    display: "Third Party Data Feeds",
+    display: "Historical Distribution Orders",
     href: "",
     visible: true
   },
@@ -48,7 +41,7 @@ const menues = [
     page: "/plan",
     header: "Planning Inputs",
     display: "Customs Requirements",
-    href: "",
+    href: "https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26/group/70/create/272",
     visible: true
   },
   {
@@ -67,21 +60,28 @@ const menues = [
   },
   {
     page: "/plan",
-    header: "Monthly Operational Plans",
-    display: "Supply",
+    header: "Operational Planning",
+    display: "Distribution Planning",
     href: "",
     visible: true
   },
   {
     page: "/plan",
-    header: "Monthly Operational Plans",
-    display: "Demand",
+    header: "Operational Planning",
+    display: "Reconciliation & Allocation",
     href: "",
     visible: true
   },
   {
     page: "/plan",
-    header: "Monthly Operational Plans",
+    header: "Operational Planning",
+    display: "Cost Estimating",
+    href: "",
+    visible: true
+  },
+  {
+    page: "/plan",
+    header: "Operational Planning",
     display: "Rolling 12-month master plan",
     href: "",
     visible: true
@@ -96,15 +96,15 @@ const protect = (protectedMenues) => {
 const permissionsTree = {
   "USAID.User": protect([
     { page: "/plan", header: "Order Intake", display: "Orders Validated (current)" },
-    { page: "/plan", header: "Planning Inputs", display: "Third Party Data Feeds" },
+    { page: "/plan", header: "Planning Inputs", display: "Historical Distribution Orders" },
     { page: "/plan", header: "Planning Inputs", display: "PSA Inbound Product Monitoring" },
-    { page: "/plan", header: "Monthly Operational Plans", display: "Supply" },
-    { page: "/plan", header: "Monthly Operational Plans", display: "Demand" }
+    { page: "/plan", header: "Operational Planning", display: "Supply" },
+    { page: "/plan", header: "Operational Planning", display: "Demand" }
   ]),
   "Palladium.User": protect([
       { page: "/plan", header: "Planning Inputs", display: "Customs Requirements" },
       { page: "/plan", header: "Planning Inputs", display: "Quarterly Supply Plans" },
-      { page: "/plan", header: "Monthly Operational Plans", display: "Rolling 12-month master plan" }
+      { page: "/plan", header: "Operational Planning", display: "Rolling 12-month master plan" }
     ]
   ),
    "Super.User": protect([])
