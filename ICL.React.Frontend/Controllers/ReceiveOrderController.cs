@@ -60,14 +60,19 @@ namespace ICL.React.Frontend.Controllers
                     po.Id = Guid.NewGuid();
                     po.CreateDate = DateTime.Now;
                     po.uuid = Guid.NewGuid();
+                    po.AsnFile = asn.ToString();
                     po.BookingNo = booking.BasicDetails.BookingNo;
                     po.BookingDate = DateTime.ParseExact(booking.BasicDetails.BookingDate.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
-                    po.AsnFile = asn.ToString();
-                    po.ProcessType = booking.Services[0].ProcessType;
                     po.PlaceOfReceipt = booking.BasicDetails.Movement.PlaceOfReceipt.Code;
                     po.PlaceOfDelivery = booking.BasicDetails.Movement.PlaceOfDelivery.Code;
                     po.DeliveryStatus = 0;
                     po.SubmitStatus = "Available";
+
+                    try
+                    {
+                        po.ProcessType = booking.Services[0].ProcessType;
+                    }
+                    catch { }
 
                     foreach (var prod in booking.Products)
                     {
@@ -76,16 +81,22 @@ namespace ICL.React.Frontend.Controllers
                         product.CreateDate = DateTime.Now;
                         product.uuid = Guid.NewGuid();
                         product.PoUuid = po.uuid;
-                        product.LineItemId = "";
-                        product.ProductCode = prod.ProductCode.ToString();
-                        product.Quantity = prod.Quantity.Value + " " + prod.Quantity.Uom;
-                        product.UnitDimension = prod.UnitDimension.Length + "*" + prod.UnitDimension.Width + "*" +
-                            prod.UnitDimension.Height + " " + prod.UnitDimension.Uom;
-                        product.UnitVolume = prod.UnitVolume.ToString();
-                        product.UnitWeight = prod.UnitWeight.GrossWeight + " " + prod.UnitWeight.Uom;
-                        product.UnitRate = prod.UnitRate.ToString();
-                        product.OrderDetails = prod.OrderDetails.SKULineNo;
-                        product.SKULineNo = prod.OrderDetails.SKULineNo;
+
+                        try
+                        {
+                            product.LineItemId = "";
+                            product.ProductCode = prod.ProductCode.ToString();
+                            product.Quantity = prod.Quantity.Value + " " + prod.Quantity.Uom;
+                            product.UnitDimension = prod.UnitDimension.Length + "*" + prod.UnitDimension.Width + "*" +
+                                prod.UnitDimension.Height + " " + prod.UnitDimension.Uom;
+                            product.UnitVolume = prod.UnitVolume.ToString();
+                            product.UnitWeight = prod.UnitWeight.GrossWeight + " " + prod.UnitWeight.Uom;
+                            product.UnitRate = prod.UnitRate.ToString();
+                            product.OrderDetails = prod.OrderDetails.SKULineNo;
+                            product.SKULineNo = prod.OrderDetails.SKULineNo; 
+                        }
+                        catch { }
+
                         products.Add(product);
                     }
 
