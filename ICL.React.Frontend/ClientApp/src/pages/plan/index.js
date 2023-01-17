@@ -13,6 +13,8 @@ import {display, spacing} from "@mui/system";
 import { orange } from "@mui/material/colors";
 import FirstImg from "../../vendor/illustration-plan.png";
 import {NavLink, Link} from "react-router-dom";
+import checkPageRoles from "../../components/auth/CheckPageRoles";
+import CheckRol from "../../components/auth/CheckRoles";
 
 const Card = styled(MuiCard)(spacing);
 const CardContent = styled(MuiCardContent)(spacing);
@@ -106,7 +108,25 @@ const allLinks = [
 
 const LinkList = props => {
   const area = allLinks.filter(x => x.header === props.header)[0];
-  const listItems = area?.links.map((link, i) =>
+
+  const pageRoles=area.links.map(a=> ({
+    page: "/plan",
+    header: a.header,
+    display: a.display,
+    href: a.href,
+    visible: a.visible
+  }));
+
+  let accessLinks = [];
+  for (const accessLink of pageRoles) {
+    if (checkPageRoles(accessLink.page, accessLink.header, accessLink.display))
+      accessLinks.push(accessLink);
+  }
+
+  console.log(accessLinks)
+
+  const listItems = accessLinks.map((link, i) =>
+
     <Grid key={i} item md={12}>
       {link.href.startsWith("http")?
         <a href={link.href} target="_blank" rel="noopener noreferrer">
