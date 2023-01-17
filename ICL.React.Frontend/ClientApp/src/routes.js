@@ -71,6 +71,7 @@ const MacroEyes = async(() => import("./pages/home/MacroEyes"));
 const MiddleWareStatus = async(() => import("./pages/MISAdministration/MiddleWareStatus"));
 const VendorScoreCard = async(() => import("./pages/store/VendorScoreCard"));
 const About = async(() => import("./pages/MISAdministration/About"));
+const Parsyl = async(() => import("./pages/store/Parsyl"));
 
 
 const routes = [
@@ -209,6 +210,10 @@ const routes = [
       {
         path: "vendor-score-card",
         element: <VendorScoreCard />,
+      },
+      {
+        path: "parsyl",
+        element: <Parsyl />
       }
     ],
   },
