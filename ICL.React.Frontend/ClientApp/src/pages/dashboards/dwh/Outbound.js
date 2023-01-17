@@ -13,7 +13,7 @@ const Button = styled(MuiButton)(spacing);
 const theme = createTheme({
   palette: {
     secondary: {
-      main: "#E57200",
+      main: "#64A70B",
     },
   },
 });
@@ -29,7 +29,7 @@ const Outbound = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/store")}
+              onClick={() => navigate("/deliver")}
             >
               <ReplyIcon />
             </Button>

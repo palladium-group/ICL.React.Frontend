@@ -1,5 +1,5 @@
 import React from "react";
-import {Card as MuiCard, CardMedia, Grid} from "@mui/material";
+import {Grid} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import styled from "@emotion/styled";
 import { spacing } from "@mui/system";
@@ -8,23 +8,18 @@ import {
   Button as MuiButton,
 } from "@mui/material";
 import ReplyIcon from '@mui/icons-material/Reply';
-// import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
-import ICL_Architecture from "../../../src/vendor/System_Architecture.png";
-// import FirstImg from "../../vendor/illustration-manage.png";
-// import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-// import 'react-pdf/dist/esm/Page/TextLayer.css';
-const Card = styled(MuiCard)(spacing);
+
 const Button = styled(MuiButton)(spacing);
 
 const theme = createTheme({
   palette: {
     secondary: {
-      main: "#4D4D4D",
+      main: "#FFB500",
     },
   },
 });
 
-const About = () => {
+const InventoryAnalysis = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -35,20 +30,22 @@ const About = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/MISAdministration")}
+              onClick={() => navigate("/store")}
             >
               <ReplyIcon />
             </Button>
           </ThemeProvider>
         </Grid>
       </Grid>
-      <Card sx={{ width: "100%" }}>
-        <CardMedia
-          sx={{ height: 879, width: 1200 }}
-          image={ICL_Architecture}
-        />
-      </Card>
+      <br />
+      <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
+        <Grid item md={12} zeroMinWidth>
+          <iframe title="LIT ICL Inventory Analysis - Inventory Analysis" width="100%" height="100%"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiMDIwYmVhM2EtMTA2Yi00NGUzLTkzMWItZTg0ZDk5ZGJjZmRhIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+                  frameBorder="0" allowFullScreen="true"></iframe>
+        </Grid>
+      </Grid>
     </>
   );
 };
-export default About;
+export default InventoryAnalysis;
