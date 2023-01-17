@@ -89,7 +89,8 @@ const menues = [
 ];
 
 const protect = (protectedMenues) => {
-  return menues.map(m => (m.page==protectedMenues[0]&&m.header==protectedMenues[1]&&m.display==protectedMenues[2] ? { ...m, visible: false } : m));
+  const preventAccess = m => m.page == protectedMenues[0] && m.header == protectedMenues[1] && m.display == protectedMenues[2];
+  return menues.map(m => (preventAccess(m) ? { ...m, visible: false } : m));
 };
 
 const permissionsTree = {

@@ -48,7 +48,9 @@ const menues =
   ];
 
 const protect = (protectedMenues) => {
-  return  menues.map(m => (protectedMenues.includes(m.href) ? { ...m, visible: false } : m))
+  const preventAccess = m => protectedMenues.includes(m.href);
+
+  return  menues.map(m => (preventAccess(m) ? { ...m, visible: false } : m))
 };
 
 const permissionsTree = {
