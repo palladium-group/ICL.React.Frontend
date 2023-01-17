@@ -52,8 +52,9 @@ const protect = (protectedMenues) => {
 };
 
 const permissionsTree = {
-  "Palladium.User": protect(["/MISAdministration"]),
-  "Super.User":protect([]),
+    "USAID.User": protect(["/MISAdministration"]),
+    "Palladium.User": protect(["/MISAdministration"]),
+    "Super.User": protect([]),
 };
 
 function CheckRol(href, title) {
