@@ -63,7 +63,8 @@ const Manage = () => {
                       <Divider />
                   </Grid>
                     <Grid item md={12}>
-                      Customs Requirements
+                      {/*<a href="" target="_blank" rel="noopener noreferrer"></a>*/}
+                      <a href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26/group/70/create/272" target="_blank" rel="noopener noreferrer">Customs Requirements</a>
                       <Divider />
                 </Grid>
                   </Grid>

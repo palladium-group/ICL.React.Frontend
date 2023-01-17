@@ -39,7 +39,7 @@ const StaffingLevelsHQ = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-          <iframe title="LIT ICL Dashboards Staffing level HQ" width="100%" height="100%"
+          <iframe title="LIT ICL Dashboards Staffing level HQ" width="1024" height="1060"
                   src="https://app.powerbi.com/view?r=eyJrIjoiMzJiZWZmZDctMDQ5YS00ZTUxLWE4ZjEtYjZhNjJhN2Q2MGIwIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection774f0d67cd9b3b706368"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>

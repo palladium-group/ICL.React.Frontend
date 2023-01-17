@@ -19,6 +19,8 @@ import ResetPassword from "./pages/auth/ResetPassword";
 import Page404 from "./pages/auth/Page404";
 import Page500 from "./pages/auth/Page500";
 import SurveyResults from "./pages/manage/SurveyResults";
+import RegionalOperationsTeam from "./pages/manage/RegionalOperationsTeam";
+
 
 // Dashboard components
 const Default = async(() => import("./pages/dashboards/Default"));
@@ -160,6 +162,10 @@ const routes = [
       {
         path: "survey-results",
         element: <SurveyResults />
+      },
+      {
+        path: "regional-operations-team",
+        element: <RegionalOperationsTeam />
       }
     ]
   },
