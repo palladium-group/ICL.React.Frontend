@@ -41,6 +41,9 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import SearchIcon from '@mui/icons-material/Search';
 import {NavLink} from "react-router-dom";
+import async from "../../components/Async";
+const BannerContent = async(() => import("./HomeBanner"));
+
 
 const Card = styled(MuiCard)(spacing);
 const CardContent = styled(MuiCardContent)(spacing);
@@ -53,36 +56,7 @@ const Avatar = styled(MuiAvatar)`
   width: 80px;
 `;
 
-const BannerContent=()=> {
-  return (
-    <Box>
-      <MDBCarousel showIndicators showControls fade>
-        <MDBCarouselItem
-          className='w-100 d-block'
-          itemId={1}
-          src={FirstImg}
-          alt='...'
-        >
-        </MDBCarouselItem>
 
-        <MDBCarouselItem
-          className='w-100 d-block'
-          itemId={2}
-          src={SecondImg}
-          alt='...'
-        >
-        </MDBCarouselItem>
-
-        <MDBCarouselItem
-          className='w-100 d-block'
-          itemId={3}
-          src={ThirdImg}
-          alt='...'
-        >
-        </MDBCarouselItem>
-      </MDBCarousel>
-    </Box>)
-}
 const HeaderContent=()=> {
   return (
     <Box>
@@ -100,7 +74,7 @@ const HeaderContent=()=> {
                   <Grid item xs>
                     <Card sx={{ height:90,  backgroundColor: "#05C3DE" }}>
                       <CardContent>
-                        <Typography variant="body2" sx={{ fontSize: 18, alignContent: 'center' }}>NEXTGEN ICL
+                        <Typography variant="body2" sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>NEXTGEN ICL
                           STRATEGY</Typography>
                       </CardContent>
                     </Card>
@@ -109,7 +83,7 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#BA0C2F" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18 }}>RESULTS FRAMEWORK</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>RESULTS FRAMEWORK</Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -117,7 +91,7 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90,backgroundColor: "#64A70B" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18 }}>HQ WORK PLAN</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>HQ WORK PLAN</Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -125,7 +99,7 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#64A70B" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: 18 }}>COUNTRY OFFICE WORK
+                        <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>COUNTRY OFFICE WORK
                           PLANS</Typography>
                       </CardContent>
                     </Card>
@@ -134,7 +108,7 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#8D6E97" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18 }}>4PL PLAYBOOK</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>4PL PLAYBOOK</Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -142,7 +116,7 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#8D6E97" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18 }}>4PL BODY OF KNOWLEDGE</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>4PL BODY OF KNOWLEDGE</Typography>
                       </CardContent>
                     </Card>
                   </Grid>
