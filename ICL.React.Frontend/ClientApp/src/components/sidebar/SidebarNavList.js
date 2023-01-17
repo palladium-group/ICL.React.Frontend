@@ -13,7 +13,11 @@ const SidebarNavList = (props) => {
   let pages2 = [];
   for (const itemPage of pages) {
     if (CheckRol(null, itemPage.title))
+    {
       pages2.push(itemPage);
+    } else {
+      pages2.push(itemPage);
+    }
   }
 
   const childRoutes = pages2.reduce(
