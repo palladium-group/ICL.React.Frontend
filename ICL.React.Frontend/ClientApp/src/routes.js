@@ -72,6 +72,7 @@ const MiddleWareStatus = async(() => import("./pages/MISAdministration/MiddleWar
 const VendorScoreCard = async(() => import("./pages/store/VendorScoreCard"));
 const About = async(() => import("./pages/MISAdministration/About"));
 const Parsyl = async(() => import("./pages/store/Parsyl"));
+const InventoryAnalysis = async(() => import("./pages/store/InventoryAnalysis"));
 
 
 const routes = [
@@ -214,7 +215,11 @@ const routes = [
       {
         path: "parsyl",
         element: <Parsyl />
-      }
+      },
+      {
+        path: "inventory-analysis",
+        element: <InventoryAnalysis />,
+      },
     ],
   },
   {
