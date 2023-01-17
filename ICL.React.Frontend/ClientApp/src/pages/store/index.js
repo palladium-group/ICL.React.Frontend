@@ -39,11 +39,15 @@ const Store = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    Global Inventory
+                      <NavLink to={`/store/inventory-analysis`}>
+                        Global Inventory
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                    Country Inventory
+                      <NavLink to={`/store/inventory-analysis`}>
+                        Country Inventory
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
@@ -64,11 +68,15 @@ const Store = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    Global Temperature Monitoring
+                      <NavLink to={`/store/parsyl`}>
+                        Global Temperature Monitoring
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                    Country Temperature Monitoring
+                      <NavLink to={`/store/parsyl`}>
+                        Country Temperature Monitoring
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>

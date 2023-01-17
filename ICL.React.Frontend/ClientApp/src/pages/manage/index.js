@@ -236,12 +236,12 @@ const Manage = () => {
                       </NavLink>
                       <Divider />
                     </Grid>
-                    <Grid item md={12}>
-                      <a target="_blank" rel="noopener noreferrer" href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2118352933/Incremental+Obligation+Management+-+Reports">
-                        Incremental Obligation Management - Reports
-                      </a>
-                      <Divider />
-                    </Grid>
+                    {/*<Grid item md={12}>*/}
+                    {/*  <a target="_blank" rel="noopener noreferrer" href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2118352933/Incremental+Obligation+Management+-+Reports">*/}
+                    {/*    Incremental Obligation Management - Reports*/}
+                    {/*  </a>*/}
+                    {/*  <Divider />*/}
+                    {/*</Grid>*/}
                     <Grid item md={12}>
                       <NavLink to={`/manage/letter-of-credit`}>
                         Letter of Credit Management
