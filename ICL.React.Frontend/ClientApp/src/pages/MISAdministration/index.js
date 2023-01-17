@@ -157,7 +157,9 @@ const MISAdministration = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      About
+                      <NavLink to={`/MISAdministration/about`}>
+                        About
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
