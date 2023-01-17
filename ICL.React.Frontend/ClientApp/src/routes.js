@@ -55,6 +55,8 @@ const Source = async(() => import("./pages/source/index"));
 const QuantificationReports = async(() => import("./pages/plan/QuantificationReports"));
 const Store = async(() => import("./pages/store/index"));
 const Deliver = async(() => import("./pages/deliver"));
+const CommodityTracking = async(() => import("./pages/deliver/CommodityTracking"));
+
 const Enable = async(() => import("./pages/enable"));
 const CommodityTracker = async(() => import("./pages/enable/CommodityTracker"));
 const GreenHouseGasMonitoring = async(() => import("./pages/enable/GreenHouseGasMonitoring"));
@@ -211,6 +213,10 @@ const routes = [
       {
         path: "",
         element: <Deliver />,
+      },
+      {
+        path: "commodity-tracking",
+        element: <CommodityTracking />,
       },
     ],
   },

@@ -61,7 +61,7 @@ const ProfileDanRhodes = () => {
                                             </Grid>
                                             <Grid item>
                                                 <Typography sx={{ fontSize: 15, color:'orange' }}>Management, Information & Results Director</Typography>
-                                                <Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>
+                                                {/*<Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>*/}
                                                 <ListItemIcon style={{marginTop:'20px'}}>
                                                     <PhoneIcon /><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}> + 1 609-947 2629</Typography>
                                                 </ListItemIcon>                                               

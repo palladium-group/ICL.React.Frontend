@@ -61,7 +61,7 @@ const ProfileMarilynNoguera = () => {
                                             </Grid>
                                             <Grid item>
                                                 <Typography sx={{ fontSize: 15, color:'orange' }}>Deputy Project Director</Typography>
-                                                <Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>
+                                                {/*<Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>*/}
                                                 <ListItemIcon style={{marginTop:'20px'}}>
                                                         <PhoneIcon /><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}>+1 202-468-6149</Typography>
                                                 </ListItemIcon>
