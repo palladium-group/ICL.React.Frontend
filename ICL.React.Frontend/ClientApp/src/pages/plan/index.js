@@ -19,81 +19,102 @@ const CardContent = styled(MuiCardContent)(spacing);
 const Divider = styled(MuiDivider)(spacing);
 const Spacer = styled.div(spacing);
 
-const pageLinks=[
+const allLinks = [
   {
-    header: 'Planning Inputs',
-    display: 'Quantification Reports',
-    href: 'https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2118385665/Quantification+Reports',
-    enabled: true
+    header: "Planning Inputs",
+    visible: true,
+    links: [
+      {
+        header: "Planning Inputs",
+        display: "Quantification Reports",
+        href: "https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2118385665/Quantification+Reports",
+        visible: true
+      },
+      {
+        header: "Planning Inputs",
+        display: "Quarterly Supply Plans",
+        href: "",
+        visible: true
+      },
+      {
+        header: "Planning Inputs",
+        display: "Orders Fulfilled (historical)",
+        href: "",
+        visible: true
+      },
+      {
+        header: "Planning Inputs",
+        display: "Third Party Data Feeds",
+        href: "",
+        visible: true
+      },
+      {
+        header: "Planning Inputs",
+        display: "PSA Inbound Product Monitoring",
+        href: "",
+        visible: true
+      },
+      {
+        header: "Planning Inputs",
+        display: "Customs Requirements",
+        href: "",
+        visible: true
+      }]
   },
   {
-    header: 'Planning Inputs',
-    display: 'Quarterly Supply Plans',
-    href: '',
-    enabled: true
+    header: "Order Intake",
+    visible: true,
+    links: [
+      {
+        header: "Order Intake",
+        display: "Orders Received (current)",
+        href: "",
+        visible: true
+      },
+      {
+        header: "Order Intake",
+        display: "Orders Validated (current)",
+        href: "",
+        visible: true
+      }]
   },
   {
-    header: 'Planning Inputs',
-    display: 'Orders Fulfilled (historical)',
-    href: '',
-    enabled: true
-  },
-  {
-    header: 'Planning Inputs',
-    display: 'Third Party Data Feeds',
-    href: '',
-    enabled: true
-  },
-  {
-    header: 'Planning Inputs',
-    display: 'PSA Inbound Product Monitoring',
-    href: '',
-    enabled: true
-  },
-  {
-    header: 'Planning Inputs',
-    display: 'Customs Requirements',
-    href: '',
-    enabled: true
-  },
-
-  {
-    header: 'Order Intake',
-    display: 'Orders Received (current)',
-    href: '',
-    enabled: true
-  },
-  {
-    header: 'Order Intake',
-    display: 'Orders Validated (current)',
-    href: '',
-    enabled: true
-  },
-  {
-    header: 'Monthly Operational Plans',
-    display: 'Supply',
-    href: '',
-    enabled: true
-  },
-  {
-    header: 'Monthly Operational Plans',
-    display: 'Demand',
-    href: '',
-    enabled: true
-  },
-  {
-    header: 'Monthly Operational Plans',
-    display: 'Rolling 12-month master plan',
-    href: '',
-    enabled: true
+    header: "Monthly Operational Plans",
+    visible: true,
+    links: [
+      {
+        header: "Monthly Operational Plans",
+        display: "Supply",
+        href: "",
+        visible: true
+      },
+      {
+        header: "Monthly Operational Plans",
+        display: "Demand",
+        href: "",
+        visible: true
+      },
+      {
+        header: "Monthly Operational Plans",
+        display: "Rolling 12-month master plan",
+        href: "",
+        visible: true
+      }
+    ]
   }
 ];
 
-function AreaList(props) {
-  const links = pageLinks.filter(x => x.header === props.header);
-  const listItems = links.map((link, i) =>
+const LinkList = props => {
+  const area = allLinks.filter(x => x.header === props.header)[0];
+  const listItems = area?.links.map((link, i) =>
     <Grid key={i} item md={12}>
-      {link.display}
+      {link.href.startsWith("http")?
+        <a href={link.href} target="_blank" rel="noopener noreferrer">
+        {link.display}
+      </a>:  <NavLink to={link.href}>
+          {link.display}
+        </NavLink>}
+
       <Divider />
     </Grid>
   );
@@ -105,7 +126,36 @@ function AreaList(props) {
       </Grid>
     </Box>
   );
-}
+};
+
+const AreaList = () => {
+  const areas = allLinks.filter(x => x.visible === true);
+  const areaList = areas.map((area, i) =>
+        <Grid key={i}  item md={4} xs={4} px={5} sx={{ marginTop: 10 }}>
+        <Paper square={true} sx={{ borderTop: 5, borderTopColor: "red" }} style={{ height: '100%' }}
+               className="fullHeight" height="100" elevation={8}>
+          <Card>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {area.header}
+              </Typography>
+              <Divider />
+              <Spacer mb={4} />
+              <LinkList header={area.header}/>
+            </CardContent>
+          </Card>
+        </Paper>
+      </Grid>
+  );
+
+  return (
+    <Grid container spacing={2} alignItems="stretch">
+      {areaList}
+    </Grid>
+  );
+
+};
+
 
 
 const Manage = () => {
@@ -118,81 +168,7 @@ const Manage = () => {
         />
       </Card>
       <br />
-      <Grid container spacing={2} alignItems="stretch">
-        <Grid item md={4} xs={4} px={5} sx={{ marginTop: 10 }}>
-          <Paper square={true} sx={{ borderTop: 5, borderTopColor: "red" }} style={{ height: '100%' }} elevation={8}>
-            <Card>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Planning Inputs
-                </Typography>
-                <Divider />
-                <Spacer mb={4} />
-                <AreaList header="Planning Inputs" />
-              </CardContent>
-            </Card>
-          </Paper>
-        </Grid>
-        <Grid item md={4} xs={4} px={5} sx={{ marginTop: 10 }}>
-          <Paper square={true} sx={{ borderTop: 5, borderTopColor: "red" }} style={{ height: '100%' }}
-                 className="fullHeight" height="100" elevation={8}>
-            <Card>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Order Intake
-                </Typography>
-                <Divider />
-                <Spacer mb={4} />
-                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
-                  <Grid container spacing={6}>
-                    <Grid item md={12}>
-                      Orders Received (current)
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Orders Validated (current)
-                      <Divider />
-                    </Grid>
-                  </Grid>
-                </Box>
-              </CardContent>
-            </Card>
-          </Paper>
-        </Grid>
-        <Grid item md={4} xs={4} px={5} sx={{ marginTop: 10 }}>
-          <Paper square={true} sx={{ borderTop: 5, borderTopColor: "red" }} style={{ height: '100%' }} elevation={8}>
-            <Card>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Monthly Operational Plans
-                </Typography>
-                <Divider />
-                <Spacer mb={4} />
-                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
-                  <Grid container spacing={6}>
-                    <Grid item md={12}>
-                      Supply
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Demand
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Cost
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Rolling 12-month master plan
-                      <Divider />
-                    </Grid>
-                  </Grid>
-                </Box>
-              </CardContent>
-            </Card>
-          </Paper>
-        </Grid>
-      </Grid>
+      <AreaList/>
     </React.Fragment>
   );
 };
