@@ -123,8 +123,6 @@ const LinkList = props => {
       accessLinks.push(accessLink);
   }
 
-  console.log(accessLinks)
-
   const listItems = accessLinks.map((link, i) =>
 
     <Grid key={i} item md={12}>

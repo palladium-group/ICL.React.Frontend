@@ -89,17 +89,25 @@ const menues = [
 ];
 
 const protect = (protectedMenues) => {
-  const preventAccess = m => m.page == protectedMenues[0] && m.header == protectedMenues[1] && m.display == protectedMenues[2];
+  const preventAccess = m =>( protectedMenues.filter(x => x.page === m.page && x.header === m.header && x.display === m.display).length>0);
   return menues.map(m => (preventAccess(m) ? { ...m, visible: false } : m));
 };
 
 const permissionsTree = {
-  "USAID.User": protect(
-    ["/plan", "Order Intake", "Orders Validated (current)"],
-    ["/plan", "Planning Inputs", "Third Party Data Feeds"], ["/plan", "Planning Inputs", "PSA Inbound Product Monitoring"],
-    ["/plan", "Monthly Operational Plans", "Supply"], ["/plan", "Monthly Operational Plans", "Demand"]),
-  "Palladium.User": protect(["/plan", "Planning Inputs", "Customs Requirements"], ["/plan", "Planning Inputs", "Quarterly Supply Plans"]),
-  "Super.User": protect([])
+  "USAID.User": protect([
+    { page: "/plan", header: "Order Intake", display: "Orders Validated (current)" },
+    { page: "/plan", header: "Planning Inputs", display: "Third Party Data Feeds" },
+    { page: "/plan", header: "Planning Inputs", display: "PSA Inbound Product Monitoring" },
+    { page: "/plan", header: "Monthly Operational Plans", display: "Supply" },
+    { page: "/plan", header: "Monthly Operational Plans", display: "Demand" }
+  ]),
+  "Palladium.User": protect([
+      { page: "/plan", header: "Planning Inputs", display: "Customs Requirements" },
+      { page: "/plan", header: "Planning Inputs", display: "Quarterly Supply Plans" },
+      { page: "/plan", header: "Monthly Operational Plans", display: "Rolling 12-month master plan" }
+    ]
+  ),
+   "Super.User": protect([])
 };
 
 function CheckPageRole(page,header,title) {
@@ -116,7 +124,6 @@ function CheckPageRole(page,header,title) {
   for (const userRol of roles) {
     var permissions = permissionsTree[userRol];
 
-    console.log(permissions);
     if (permissions && permissions.length > 0) {
       for (const pageItem in permissions) {
         if (
