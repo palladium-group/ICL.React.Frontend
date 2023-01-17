@@ -64,6 +64,7 @@ const ProfileJabuNyenwa = async(() => import("./pages/home/ProfileJabuNyenwa"));
 const ProfileSeanLockhead = async(() => import("./pages/home/ProfileSeanLockhead"));
 const ProfileMarilynNoguera = async(() => import("./pages/home/ProfileMarilynNoguera"));
 const MacroEyes = async(() => import("./pages/home/MacroEyes"));
+const MiddleWareStatus = async(() => import("./pages/MISAdministration/MiddleWareStatus"));
 
 
 const routes = [
@@ -241,6 +242,10 @@ const routes = [
         path: "",
         element: <MISAdministration />,
       },
+      {
+        path: "middle-ware-status",
+        element: <MiddleWareStatus />
+      }
     ],
   },
   {

@@ -54,7 +54,6 @@ const Avatar = styled(MuiAvatar)`
 `;
 
 const BannerContent=()=> {
-  console.log(process.env);
   return (
     <Box>
       <MDBCarousel showIndicators showControls fade>
