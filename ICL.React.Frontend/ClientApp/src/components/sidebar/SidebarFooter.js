@@ -43,7 +43,7 @@ const SidebarFooter = ({ ...rest }) => {
   const user = accounts.length > 0 && accounts[0];
   console.log(user);
   let userRole;
-  if (user && user.idTokenClaims && user.idTokenClaims.roles.length > 0) {
+  if (user && user.idTokenClaims && user.idTokenClaims.roles && user.idTokenClaims.roles.length > 0) {
     userRole = user.idTokenClaims.roles[0];
   }
 
