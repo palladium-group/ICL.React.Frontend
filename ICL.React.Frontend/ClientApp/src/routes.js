@@ -278,10 +278,16 @@ const routes = [
         path: "middle-ware-status",
         element: <MiddleWareStatus />
       },
+    ],
+  },
+  {
+    path: "about",
+    element: <DashboardLayout />,
+    children: [
       {
-        path: "about",
+        path: "",
         element: <About />,
-      }
+      },
     ],
   },
   {
