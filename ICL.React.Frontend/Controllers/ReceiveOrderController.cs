@@ -60,15 +60,21 @@ namespace ICL.React.Frontend.Controllers
                 po.Id = Guid.NewGuid();
                 po.CreateDate = DateTime.Now;
                 po.uuid = Guid.NewGuid();
-                po.BookingNo = booking.BasicDetails.BookingNo;
-                po.BookingDate = DateTime.ParseExact(booking.BasicDetails.BookingDate.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
+                if (booking.GetType().GetProperty("BasicDetails") != null)
+                {
+                    po.BookingNo = booking.BasicDetails.BookingNo;
+                    po.BookingDate = DateTime.ParseExact(booking.BasicDetails.BookingDate.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
+                    if (booking.BasicDetails.GetType().GetProperty("Movement") != null)
+                    {
+                        po.PlaceOfReceipt = booking.BasicDetails.Movement.PlaceOfReceipt.Code;
+                        po.PlaceOfDelivery = booking.BasicDetails.Movement.PlaceOfDelivery.Code;
+                    }
+                }
                 po.AsnFile = asn.ToString();
                 if (booking.GetType().GetProperty("Services") != null)
                 {
                     po.ProcessType = booking.Services[0].ProcessType;
                 }
-                po.PlaceOfReceipt = booking.BasicDetails.Movement.PlaceOfReceipt.Code;
-                po.PlaceOfDelivery = booking.BasicDetails.Movement.PlaceOfDelivery.Code;
                 po.DeliveryStatus = 0;
                 po.SubmitStatus = "Available";
 
