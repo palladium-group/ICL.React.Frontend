@@ -93,11 +93,20 @@ const protect = (protectedMenues) => {
   return menues.map(m => (preventAccess(m) ? { ...m, visible: false } : m));
 };
 
+/*
 const permissionsTree = {
   "Washington.User": protect([]),
   "Country.User": protect([]),
    "HQ.User": protect([])
 };
+*/
+
+const permissionsTree = {
+    "Washington.User": protect([]),
+    "Country.User": protect([]),
+    "HQ.User": protect([])
+};
+
 
 function CheckPageRole(page,header,title) {
   //1. get the roles of the user

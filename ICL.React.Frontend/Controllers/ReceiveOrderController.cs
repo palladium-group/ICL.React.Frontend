@@ -25,25 +25,50 @@ namespace ICL.React.Frontend.Controllers
             _configuration = configuration;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> ReceiveOrder()
+        [HttpPost("inbound")]
+        public async Task<IActionResult> ReceiveInboundOrder()
+        {
+            var uri = _configuration.GetSection("DWH_URI");
+            var formCollection = await Request.ReadFormAsync();
+            var file = formCollection.Files.First();
+            if (file.ContentType != "text/xml" && file.ContentType != "application/json")
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "File is not a valid type");
+            }
+            var asn = new StringBuilder();
+            using (var reader = new StreamReader(file.OpenReadStream()))
+            {
+                while (reader.Peek() >= 0)
+                    asn.AppendLine(reader.ReadLine());
+            }
+
+            return await ReceiveOrderAsync("inbound", asn, uri);
+        }
+
+        [HttpPost("outbound")]
+        public async Task<IActionResult> ReceiveOutboundOrderAsync()
+        {
+            var uri = _configuration.GetSection("DWH_URI");
+            var formCollection = await Request.ReadFormAsync();
+            var file = formCollection.Files.First();
+            if (file.ContentType != "text/xml" && file.ContentType != "application/json")
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "File is not a valid type");
+            }
+            var asn = new StringBuilder();
+            using (var reader = new StreamReader(file.OpenReadStream()))
+            {
+                while (reader.Peek() >= 0)
+                    asn.AppendLine(reader.ReadLine());
+            }
+
+            return await ReceiveOrderAsync("outbound", asn, uri);
+        }
+
+        private async Task<IActionResult> ReceiveOrderAsync(string processType, StringBuilder asn, IConfigurationSection uri)
         {
             try
             {
-                var uri = _configuration.GetSection("DWH_URI");
-                var formCollection = await Request.ReadFormAsync();
-                var file = formCollection.Files.First();
-                if (file.ContentType != "text/xml" && file.ContentType != "application/json")
-                {
-                    return StatusCode(StatusCodes.Status500InternalServerError, "File is not a valid type");
-                }
-                var asn = new StringBuilder();
-                using (var reader = new StreamReader(file.OpenReadStream()))
-                {
-                    while (reader.Peek() >= 0)
-                        asn.AppendLine(reader.ReadLine());
-                }
-
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.LoadXml(asn.ToString());
 
@@ -60,14 +85,19 @@ namespace ICL.React.Frontend.Controllers
                     po.Id = Guid.NewGuid();
                     po.CreateDate = DateTime.Now;
                     po.uuid = Guid.NewGuid();
+                    po.AsnFile = asn.ToString();
                     po.BookingNo = booking.BasicDetails.BookingNo;
                     po.BookingDate = DateTime.ParseExact(booking.BasicDetails.BookingDate.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
-                    po.AsnFile = asn.ToString();
-                    po.ProcessType = booking.Services[0].ProcessType;
                     po.PlaceOfReceipt = booking.BasicDetails.Movement.PlaceOfReceipt.Code;
                     po.PlaceOfDelivery = booking.BasicDetails.Movement.PlaceOfDelivery.Code;
                     po.DeliveryStatus = 0;
                     po.SubmitStatus = "Available";
+
+                    try
+                    {
+                        po.ProcessType = booking.Services[0].ProcessType;
+                    }
+                    catch { }
 
                     foreach (var prod in booking.Products)
                     {
@@ -76,16 +106,22 @@ namespace ICL.React.Frontend.Controllers
                         product.CreateDate = DateTime.Now;
                         product.uuid = Guid.NewGuid();
                         product.PoUuid = po.uuid;
-                        product.LineItemId = "";
-                        product.ProductCode = prod.ProductCode.ToString();
-                        product.Quantity = prod.Quantity.Value + " " + prod.Quantity.Uom;
-                        product.UnitDimension = prod.UnitDimension.Length + "*" + prod.UnitDimension.Width + "*" +
-                            prod.UnitDimension.Height + " " + prod.UnitDimension.Uom;
-                        product.UnitVolume = prod.UnitVolume.ToString();
-                        product.UnitWeight = prod.UnitWeight.GrossWeight + " " + prod.UnitWeight.Uom;
-                        product.UnitRate = prod.UnitRate.ToString();
-                        product.OrderDetails = prod.OrderDetails.SKULineNo;
-                        product.SKULineNo = prod.OrderDetails.SKULineNo;
+
+                        try
+                        {
+                            product.LineItemId = "";
+                            product.ProductCode = prod.ProductCode.ToString();
+                            product.Quantity = prod.Quantity.Value + " " + prod.Quantity.Uom;
+                            product.UnitDimension = prod.UnitDimension.Length + "*" + prod.UnitDimension.Width + "*" +
+                                prod.UnitDimension.Height + " " + prod.UnitDimension.Uom;
+                            product.UnitVolume = prod.UnitVolume.ToString();
+                            product.UnitWeight = prod.UnitWeight.GrossWeight + " " + prod.UnitWeight.Uom;
+                            product.UnitRate = prod.UnitRate.ToString();
+                            product.OrderDetails = prod.OrderDetails.SKULineNo;
+                            product.SKULineNo = prod.OrderDetails.SKULineNo;
+                        }
+                        catch { }
+
                         products.Add(product);
                     }
 
@@ -96,7 +132,7 @@ namespace ICL.React.Frontend.Controllers
 
                 var bookingRequestContent = new StringContent(asndata, Encoding.UTF8, "application/json");
                 _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", null);
-                var dwhResponse = await _httpClient.PostAsync($"{uri.Value}/api/PurchaseOrder", bookingRequestContent);
+                var dwhResponse = await _httpClient.PostAsync($"{uri.Value}/api/PurchaseOrder/"+ processType, bookingRequestContent);
                 var responseContent = await dwhResponse.Content.ReadAsStringAsync();
 
                 return Ok(new { message = "Saved successfully" });
