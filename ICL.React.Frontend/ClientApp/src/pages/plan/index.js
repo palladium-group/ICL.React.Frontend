@@ -63,7 +63,7 @@ const allLinks = [
       {
         header: "Order Intake",
         display: "Orders Received (current)",
-        href: "",
+        href: "/customer-orders/pos",
         visible: true
       },
       {

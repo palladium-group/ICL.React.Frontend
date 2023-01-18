@@ -7,7 +7,7 @@ import {
   Divider as MuiDivider, Grid, Paper, Typography,
 } from "@mui/material";
 import {spacing} from "@mui/system";
-import FirstImg from "../../vendor/illustration-deliver.png";
+import FirstImg from "../../vendor/illustration-enable.png";
 import {NavLink} from "react-router-dom";
 
 const Card = styled(MuiCard)(spacing);
