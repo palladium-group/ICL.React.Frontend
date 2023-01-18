@@ -1,8 +1,7 @@
 import { apiRoutes } from "../apiRoutes";
 import axios from "axios";
 
-export const
-    s = async () => {
+export const getPurchaseOrders = async () => {
     return await axios.get(`${apiRoutes.purchaseOrder}`);
 };
 
