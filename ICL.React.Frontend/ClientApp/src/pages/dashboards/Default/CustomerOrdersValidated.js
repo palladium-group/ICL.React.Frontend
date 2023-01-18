@@ -125,6 +125,7 @@ const CustomerOrdersValidatedData = (props) => {
             pageSize={10}
             components={{ Toolbar: GridToolbar }}
             density="compact"
+            loading={isLoading}
           />
         </div>
       </Paper>
