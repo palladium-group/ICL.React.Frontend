@@ -122,7 +122,7 @@ const Source = () => {
                     </Grid>
                     <Grid item md={12}>
                       <NavLink to={`/shipment/pos`}>
-                        Purchase Orders
+                        Advanced Shipment Notice/ASN
                       </NavLink>
                       <Divider />
                     </Grid>
