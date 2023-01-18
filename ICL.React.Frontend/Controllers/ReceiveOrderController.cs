@@ -160,7 +160,7 @@ namespace ICL.React.Frontend.Controllers
 
                 var bookingRequestContent = new StringContent(asndata, Encoding.UTF8, "application/json");
                 _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", null);
-                var dwhResponse = await _httpClient.PostAsync($"{uri.Value}/api/PurchaseOrder", bookingRequestContent);
+                var dwhResponse = await _httpClient.PostAsync($"{uri.Value}/api/PurchaseOrder/inbound", bookingRequestContent);
                 var responseContent = await dwhResponse.Content.ReadAsStringAsync();
 
                 return Ok(new { message = "Saved successfully" });
