@@ -104,44 +104,53 @@ namespace ICL.React.Frontend.Controllers
                 po.DeliveryStatus = 0;
                 po.SubmitStatus = "Available";
 
-                foreach (var prod in booking.Products)
+                foreach (var prod in booking.Products.Product)
                 {
+                    //var xProd = ((KeyValuePair<String, object>)prod).Value;
                     Product product = new Product();
                     product.Id = Guid.NewGuid();
                     product.CreateDate = DateTime.Now;
                     product.uuid = Guid.NewGuid();
                     product.PoUuid = po.uuid;
                     product.LineItemId = "";
-                    if (((IDictionary<String, object>)prod).ContainsKey("ProductCode"))
+                    try
                     {
-                        product.ProductCode = prod.ProductCode.ToString();
+                        if (((IDictionary<String, object>)prod).ContainsKey("ProductCode"))
+                        {
+                            product.ProductCode = prod.ProductCode.ToString();
+                        }
+                        if (((IDictionary<String, object>)prod).ContainsKey("Quantity"))
+                        {
+                            product.Quantity = prod.Quantity.Value + " " + prod.Quantity.Uom;
+                        }
+                        if (((IDictionary<String, object>)prod).ContainsKey("UnitDimension"))
+                        {
+                            product.UnitDimension = prod.UnitDimension.Length + "*" + prod.UnitDimension.Width + "*" +
+                            prod.UnitDimension.Height + " " + prod.UnitDimension.Uom;
+                        }
+                        var cc = ((IDictionary<String, object>)prod);
+                        if (((IDictionary<String, object>)prod).ContainsKey("UnitVolume"))
+                        {
+                            product.UnitVolume = prod.UnitVolume.ToString();
+                        }
+                        if (((IDictionary<String, object>)prod).ContainsKey("UnitWeight"))
+                        {
+                            product.UnitWeight = prod.UnitWeight.GrossWeight + " " + prod.UnitWeight.Uom;
+                        }
+                        if (((IDictionary<String, object>)prod).ContainsKey("UnitRate"))
+                        {
+                            product.UnitRate = prod.UnitRate.ToString();
+                        }
+                        if (((IDictionary<String, object>)prod).ContainsKey("OrderDetails"))
+                        {
+                            product.OrderDetails = prod.OrderDetails.SKULineNo;
+                            product.SKULineNo = prod.OrderDetails.SKULineNo;
+                        }
                     }
-                    if (((IDictionary<String, object>)prod).ContainsKey("Quantity"))
+                    catch (Exception)
                     {
-                        product.Quantity = prod.Quantity.Value + " " + prod.Quantity.Uom;
                     }
-                    if (((IDictionary<String, object>)prod).ContainsKey("UnitDimension"))
-                    {
-                        product.UnitDimension = prod.UnitDimension.Length + "*" + prod.UnitDimension.Width + "*" +
-                        prod.UnitDimension.Height + " " + prod.UnitDimension.Uom;
-                    }
-                    if (((IDictionary<String, object>)prod).ContainsKey("UnitVolume"))
-                    {
-                        product.UnitVolume = prod.UnitVolume.ToString();
-                    }
-                    if (((IDictionary<String, object>)prod).ContainsKey("UnitWeight"))
-                    {
-                        product.UnitWeight = prod.UnitWeight.GrossWeight + " " + prod.UnitWeight.Uom;
-                    }
-                    if (((IDictionary<String, object>)prod).ContainsKey("UnitRate"))
-                    {
-                        product.UnitRate = prod.UnitRate.ToString();
-                    }
-                    if (((IDictionary<String, object>)prod).ContainsKey("OrderDetails"))
-                    {
-                        product.OrderDetails = prod.OrderDetails.SKULineNo;
-                        product.SKULineNo = prod.OrderDetails.SKULineNo;
-                    }
+                    
                     products.Add(product);
                 }
 
