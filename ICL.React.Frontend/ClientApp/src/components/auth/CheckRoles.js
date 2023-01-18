@@ -43,6 +43,11 @@ const menues =
       href: "/MISAdministration",
       visible: true
     },
+    {
+        title: "About",
+        href: "/about",
+        visible: true
+    },
   ];
 
 const protect = (protectedMenues) => {
