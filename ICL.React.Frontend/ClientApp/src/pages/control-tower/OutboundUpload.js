@@ -44,7 +44,7 @@ const NewASNFormUpload = () => {
         try {
             const formData = new FormData();
             formData.append("file", values.file);
-            await axios.post(`/api/PurchaseOrder/outbound`, formData);
+            await axios.post(`/api/ReceiveOrder/outbound`, formData);
             await timeOut(1500);
             resetForm();
             setStatus({ sent: true });
