@@ -293,14 +293,12 @@ const SuccessContent=()=> {
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <CardContent sx={{ flex: '1 0 auto' }}>
                     <Typography component="div" variant="h5">
-                      COVID-19 Response in Central America: A Race Against the Virus
+                      DHSC Framework
                     </Typography>
-                    <Typography variant="subtitle1" color="text.secondary" component="div">
-                      In a new report, COVID-19 Response in Central America: A Race Against the Virus, Palladium’s
-                      Health
-                      Policy Plus (HP+) project team highlights its health systems strengthening efforts and pandemic
-                      control
-                      in Central America in partnership with the U.S. Agency for International Development (USAID).
+                    <Typography variant="body2" color="text.secondary" component="div">
+                      Our platform is one of a select few service providers supporting the UK Government’s short and long-term distribution of medical devices, consumables, reagents, and equipment across the country. The platform manages the storage of goods, provides a secure and user-friendly ordering system, and a means to collect payments in a UK primary care setting. Additionally, with ISO9000 certification for warehousing and 1so9001 for provision of customer-focused activities, the team can distribute medical devices and more to NHS centres, hospitals, and GP surgeries.
+                      We provide an adaptive and scalable approach to resource management and a solution that can flex in real time in response to the volume and pace of demand for goods.
+
                     </Typography>
                   </CardContent>
                 </Box>
@@ -316,17 +314,11 @@ const SuccessContent=()=> {
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <CardContent sx={{ flex: '1 0 auto' }}>
                     <Typography component="div" variant="h5">
-                      How Can Data Improve HIV Prevention Programs for Adolescent Girls and Young Women?
+                      The Global Fund [Global Fund Supply Chain Health Services Spot Check Project (GFSCHSSC)]
                     </Typography>
-                    <Typography variant="subtitle1" color="text.secondary" component="div">
-                      In partnership with DREAMS, the Data.FI project, funding by the United States Agency for
-                      International
-                      Development (USAID) conducts high-impact analyses on adolescent girls and young women to inform
-                      programming decisions. The team leverages existing gender data from traditional data sources, such
-                      as
-                      representative household surveys, in combination with novel data sources such as satellite
-                      imagery, with
-                      machine-learning software to fill gaps in these data sources.
+                    <Typography variant="body2" color="text.secondary" component="div">
+                      Across 22 countries and with data from 800 health facilities, we support The Global Fund to embed a culture of performance management in each country’s health supply chains. We routinely track indicators for on-shelf availability, on-time-in-full delivery, commodities stocked according to plan, and timeliness of facility’s reporting to the LMIS. Our analyses support health programs and the ability of supply chain actors to monitor needs, identify risks, and track trends in individual country logistics operations to help inform systems strengthening priorities.
+                      By supporting national program managers in monitoring the availability of essential health commodities and services at different points in the system, we have created an in-depth understanding of whether and how health facilities have adapted to the challenges of COVID-19.
                     </Typography>
                   </CardContent>
                 </Box>

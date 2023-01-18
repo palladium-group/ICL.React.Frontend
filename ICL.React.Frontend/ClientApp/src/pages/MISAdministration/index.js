@@ -7,7 +7,7 @@ import {
   Divider as MuiDivider, Grid, Paper, Typography,
 } from "@mui/material";
 import {spacing} from "@mui/system";
-import FirstImg from "../../vendor/illustration-deliver.png";
+import FirstImg from "../../vendor/illustration-MIS.png";
 import {NavLink} from "react-router-dom";
 
 const Card = styled(MuiCard)(spacing);
@@ -145,29 +145,29 @@ const MISAdministration = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
-          <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} style={{height:'100%'}} elevation={8}>
-            <Card>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Architecture
-                </Typography>
-                <Divider />
-                <Spacer mb={4} />
-                <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
-                  <Grid container spacing={6}>
-                    <Grid item md={12}>
-                      <NavLink to={`/MISAdministration/about`}>
-                        About
-                      </NavLink>
-                      <Divider />
-                    </Grid>
-                  </Grid>
-                </Box>
-              </CardContent>
-            </Card>
-          </Paper>
-        </Grid>
+        {/*<Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>*/}
+        {/*  <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} style={{height:'100%'}} elevation={8}>*/}
+        {/*    <Card>*/}
+        {/*      <CardContent>*/}
+        {/*        <Typography gutterBottom variant="h5" component="div">*/}
+        {/*          Architecture*/}
+        {/*        </Typography>*/}
+        {/*        <Divider />*/}
+        {/*        <Spacer mb={4} />*/}
+        {/*        <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>*/}
+        {/*          <Grid container spacing={6}>*/}
+        {/*            <Grid item md={12}>*/}
+        {/*              <NavLink to={`/MISAdministration/about`}>*/}
+        {/*                About*/}
+        {/*              </NavLink>*/}
+        {/*              <Divider />*/}
+        {/*            </Grid>*/}
+        {/*          </Grid>*/}
+        {/*        </Box>*/}
+        {/*      </CardContent>*/}
+        {/*    </Card>*/}
+        {/*  </Paper>*/}
+        {/*</Grid>*/}
       </Grid>
     </React.Fragment>
   );

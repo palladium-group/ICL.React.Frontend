@@ -139,7 +139,7 @@ const Store = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                    Quartlery Reviews
+                      Quarterly Reviews
                       <Divider />
                     </Grid>
                   </Grid>
