@@ -31,14 +31,16 @@ const Deliver = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  <NavLink to={'/deliver/commodity-tracking'}>Commodity Tracking</NavLink>
+                  Commodity Tracking
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    Global Tracking
+                      <NavLink to={'/deliver/commodity-tracking'}>
+                        Global Tracking
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

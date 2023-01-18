@@ -29,7 +29,7 @@ const CommodityTracking = () => {
                             mr={2}
                             variant="contained"
                             color="secondary"
-                            onClick={() => navigate("/manage")}
+                            onClick={() => navigate("/deliver")}
                         >
                             <ReplyIcon />
                         </Button>
