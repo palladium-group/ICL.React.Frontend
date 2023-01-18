@@ -276,7 +276,7 @@ const SuccessContent=()=> {
   return (
     <Box>
       <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
-        <Card>
+        <Card sx={{ display: 'flex' }}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               Our Impact
@@ -284,7 +284,7 @@ const SuccessContent=()=> {
             <Divider />
             <Spacer mb={4} />
             <Box sx={{p:2}} border={1} borderColor="lightgrey">
-              <Card sx={{ height:220, display: 'flex' }}>
+              <Card sx={{ display: 'flex' }}>
                 <CardMedia
                   component="img"
                   sx={{ width: 300 }}
@@ -305,7 +305,7 @@ const SuccessContent=()=> {
               </Card>
             </Box>
             <Box sx={{p:2}} border={1} borderColor="lightgrey">
-              <Card sx={{ height:220, display: 'flex' }}>
+              <Card sx={{ display: 'flex' }}>
                 <CardMedia
                   component="img"
                   sx={{ width: 300 }}
@@ -333,7 +333,7 @@ const LeadershipContent=()=> {
   return (
     <Box>
       <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
-        <Card>
+        <Card sx={{ display: 'flex' }}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               Leadership Profiles
