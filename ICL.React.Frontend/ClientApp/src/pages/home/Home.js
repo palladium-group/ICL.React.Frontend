@@ -74,8 +74,11 @@ const HeaderContent=()=> {
                   <Grid item xs>
                     <Card sx={{ height:90,  backgroundColor: "#05C3DE" }}>
                       <CardContent>
-                        <Typography variant="body2" sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>NEXTGEN ICL
-                          STRATEGY</Typography>
+                        <Typography variant="body2" sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
+                          <a style={{ color: "white" }} href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119794707/Nextgen+ICL+strategy" target="_blank" rel="noopener noreferrer">NEXTGEN ICL
+                            STRATEGY
+                          </a>
+                        </Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -83,7 +86,9 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#BA0C2F" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>RESULTS FRAMEWORK</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
+                          <a style={{ color: "white" }} href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119794714/Results+framework" target="_blank" rel="noopener noreferrer">RESULTS FRAMEWORK</a>
+                        </Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -91,7 +96,9 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90,backgroundColor: "#64A70B" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>HQ WORK PLAN</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
+                          <a style={{ color: "white" }} href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119696749/HQ+workplan" target="_blank" rel="noopener noreferrer">HQ WORK PLAN</a>
+                        </Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -99,8 +106,10 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#64A70B" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>COUNTRY OFFICE WORK
-                          PLANS</Typography>
+                        <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
+                          <a style={{ color: "white" }} href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119499829/Country+office+workplan" target="_blank" rel="noopener noreferrer">COUNTRY OFFICE WORK
+                            PLANS</a>
+                        </Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -108,7 +117,9 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#8D6E97" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>4PL PLAYBOOK</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
+                          <a style={{ color: "white" }} href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119630939/4PL+Play+book" target="_blank" rel="noopener noreferrer">4PL PLAYBOOK</a>
+                        </Typography>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -116,7 +127,9 @@ const HeaderContent=()=> {
                     <Card sx={{ height:90, backgroundColor: "#8D6E97" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
-                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>4PL BODY OF KNOWLEDGE</Typography>
+                        <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
+                          <a style={{ color: "white" }} href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2120155137/4PL+Body+of+knowledge" target="_blank" rel="noopener noreferrer">4PL BODY OF KNOWLEDGE</a>
+                        </Typography>
                       </CardContent>
                     </Card>
                   </Grid>
