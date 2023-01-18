@@ -4,6 +4,6 @@ const hostname = window.location.hostname;
 const path = "https://" + hostname;
 
 export const apiRoutes = {
-  purchaseOrder: `${process.env.REACT_APP_DWH_BACKEND}/api/PurchaseOrder/inbound`,
+  purchaseOrder: `${process.env.REACT_APP_DWH_BACKEND}/api/PurchaseOrder`,
   customerOrder:`${process.env.REACT_APP_DWH_BACKEND}/api/PurchaseOrder/outbound`
 };
