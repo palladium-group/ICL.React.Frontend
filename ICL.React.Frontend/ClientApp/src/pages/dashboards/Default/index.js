@@ -173,7 +173,7 @@ function Default() {
               <Grid justifyContent="space-between" container spacing={6}>
                 <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
                   <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
-                    Purchase Orders/ASN
+                    Advanced Shipment Notice/ASN
                   </Typography>
                 </Grid>
               </Grid>
