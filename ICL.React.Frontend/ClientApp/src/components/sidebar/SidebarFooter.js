@@ -41,6 +41,11 @@ const SidebarFooter = ({ ...rest }) => {
   // const { user } = useAuth();
   const { accounts } = useMsal();
   const user = accounts.length > 0 && accounts[0];
+  console.log(user);
+  let userRole;
+  if (user && user.idTokenClaims && user.idTokenClaims.roles && user.idTokenClaims.roles.length > 0) {
+    userRole = user.idTokenClaims.roles[0];
+  }
 
   return (
     <Footer {...rest}>
@@ -61,6 +66,7 @@ const SidebarFooter = ({ ...rest }) => {
           {!!user && (
             <FooterText variant="body2">{user.name}</FooterText>
           )}
+          {<FooterSubText variant="caption">{userRole}</FooterSubText>}
         </Grid>
       </Grid>
     </Footer>
