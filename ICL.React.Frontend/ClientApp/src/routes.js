@@ -25,11 +25,17 @@ import RegionalOperationsTeam from "./pages/manage/RegionalOperationsTeam";
 // Dashboard components
 const Default = async(() => import("./pages/dashboards/Default"));
 const Products = async(() => import("./pages/dashboards/products"));
+
+const CustomerOrders = async(() => import("./pages/dashboards/Default/OutboundPO"));
+const CustomerOrdersProducts = async(() => import("./pages/dashboards/products"));
+
+
 // const Analytics = async(() => import("./pages/dashboards/Analytics"));
 // const SaaS = async(() => import("./pages/dashboards/SaaS"));
 const Home = async(() => import("./pages/home"));
 const HomePage = async(() => import("./pages/home/Home"));
 const ControlTower = async (() => import("./pages/control-tower"));
+const CustomerUploadPage = async (() => import("./pages/control-tower/OutboundUpload"));
 // const HomeAnalytics = async(() => import("./pages/analytics/HomeAnalytics"));
 const Inbound = async(() => import("./pages/dashboards/dwh/Inbound"));
 const Outbound = async(() => import("./pages/dashboards/dwh/Outbound"));
@@ -309,6 +315,24 @@ const routes = [
     ]
   },
   {
+    path: "customer-orders",
+    element: (
+        <AuthGuard>
+          <DashboardLayout />
+        </AuthGuard>
+    ),
+    children: [
+      {
+        path: "pos",
+        element: <CustomerOrders />,
+      },
+      {
+        path: "products",
+        element: <Products />,
+      }
+    ]
+  },
+  {
     path: "dashboard",
     element: (
       <AuthGuard>
@@ -360,6 +384,20 @@ const routes = [
       {
         path: "",
         element: <ControlTower />,
+      },
+    ],
+  },
+  {
+    path: "customer-order-upload",
+    element: (
+        <AuthGuard>
+          <DashboardLayout />
+        </AuthGuard>
+    ),
+    children: [
+      {
+        path: "",
+        element: <CustomerUploadPage />,
       },
     ],
   },
