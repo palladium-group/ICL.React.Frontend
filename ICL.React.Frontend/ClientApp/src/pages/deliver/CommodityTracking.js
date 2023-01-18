@@ -13,7 +13,7 @@ const Button = styled(MuiButton)(spacing);
 const theme = createTheme({
     palette: {
         secondary: {
-            main: "#E57200",
+            main: "#64A70B",
         },
     },
 });
