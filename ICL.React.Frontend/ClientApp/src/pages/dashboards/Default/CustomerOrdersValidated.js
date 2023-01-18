@@ -51,8 +51,10 @@ const CustomerOrdersValidatedData = (props) => {
     }
   };
   const actionLink = (params) => {
-    const uri = params.row.id ? `https://opsuat.freightintime.com/Booking/home/viewbooking?itemid=${params.row.id}` : "";
-    return uri;
+    const uri = params.row.id ? `https://opsuat.freightintime.com/Booking/home/viewbooking?itemid=${params.row.scmid}` : "";
+    return (
+      <span>{params.row.scmid ? <a target="_blank" rel="noreferrer" href={uri}>View</a> : ""}</span>
+    );
   };
   return (
     <Card mb={6}>
