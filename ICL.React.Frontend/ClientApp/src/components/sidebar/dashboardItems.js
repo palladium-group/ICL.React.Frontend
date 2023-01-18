@@ -1,23 +1,11 @@
 import {
-  BookOpen,
   Briefcase,
   Calendar,
-  CheckSquare,
-  CreditCard,
   Grid,
-  Heart,
-  Layout,
-  List,
-  Map,
-  ShoppingCart,
-  PieChart,
   Sliders,
-  Users,
   Server,
-  Home,
-  Move,
 } from "react-feather";
-import home from '@iconify/icons-dashicons/admin-home';
+// import home from '@iconify/icons-dashicons/admin-home';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import TrendingUpOutlinedIcon from '@mui/icons-material/TrendingUpOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
@@ -26,6 +14,7 @@ import WarehouseOutlinedIcon from '@mui/icons-material/WarehouseOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 const manageSection = [
   {
@@ -80,6 +69,14 @@ const MISAdministrationSection = [
     title: "MIS Administration",
     href: "/MISAdministration",
     icon: ManageAccountsOutlinedIcon,
+    backgroundcolor: "#4D4D4D",
+  },
+];
+const AboutSection = [
+  {
+    title: "About",
+    href: "/about",
+    icon: InfoOutlinedIcon,
     backgroundcolor: "#4D4D4D",
   },
 ];
@@ -218,6 +215,10 @@ const navItems = [
     title: "MIS",
     pages: MISAdministrationSection,
   },
+  {
+    title: "About",
+    pages: AboutSection,
+  }
   // {
   //   title: "",
   //   pages: pagesSection,

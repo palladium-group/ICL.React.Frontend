@@ -30,6 +30,31 @@ const clientSideEmotionCache = createEmotionCache();
 
 function App({ emotionCache = clientSideEmotionCache }) {
   useMsalAuthentication(InteractionType.Redirect);
+  //Code to delete routes by permissions
+  //need more test:
+  /*var routes2 = routes.slice();
+  for (var itemRoute of routes2) {
+      if (itemRoute.children) {
+          for (var itemChild of itemRoute.children) {
+              if (itemChild.path && itemChild.path.length > 0) {
+                  if (itemChild.path != "sign-in" && itemChild.path != "sign-up" &&
+                      itemChild.path != "reset-password" && itemChild.path != "404" &&
+                      itemChild.path != "500" && itemChild.path != "*") {
+
+                      var itemValue = CheckRol(itemChild.path, null);
+                      console.log("path", itemChild.path);
+                      console.log("true/false", itemValue);
+
+
+                      if (!CheckRol(itemChild.path, null)) {
+                          const indexNum = itemRoute.children.indexOf(itemChild);
+                          itemRoute.children.splice(indexNum, 1);
+                      }
+                  }
+              }
+          }
+      }
+  }*/
   const content = useRoutes(routes);
 
   const { theme } = useTheme();

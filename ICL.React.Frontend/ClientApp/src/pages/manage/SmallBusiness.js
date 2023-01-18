@@ -13,12 +13,12 @@ const Button = styled(MuiButton)(spacing);
 const theme = createTheme({
   palette: {
     secondary: {
-      main: "#64A70B",
+      main: "#E57200",
     },
   },
 });
 
-const Outbound = () => {
+const SmallBusiness = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -29,7 +29,7 @@ const Outbound = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/deliver")}
+              onClick={() => navigate("/manage")}
             >
               <ReplyIcon />
             </Button>
@@ -39,12 +39,12 @@ const Outbound = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-          <iframe title="LIT ICL Dashboards - Outbound - Warehouse Outbound" width="100%" height="100%"
-                  src="https://app.powerbi.com/view?r=eyJrIjoiOTBhM2RlYjMtM2NiMC00ZTNmLTgxYWItYzczY2Q0MGI0OWI1IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+          <iframe title="LIT ICL Dashboards - Small Business Utilization" width="100%" height="100%"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiZjI3MGM4OGYtN2UzNC00OWFlLWEzMTAtM2FhMWU1MzYxZGRlIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>
     </>
   );
 };
-export default Outbound;
+export default SmallBusiness;

@@ -3,22 +3,23 @@ import {Grid} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import styled from "@emotion/styled";
 import { spacing } from "@mui/system";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import {
   Button as MuiButton,
 } from "@mui/material";
 import ReplyIcon from '@mui/icons-material/Reply';
-import {createTheme, ThemeProvider} from "@mui/material/styles";
 
 const Button = styled(MuiButton)(spacing);
+
 const theme = createTheme({
   palette: {
     secondary: {
-      main: "#64A70B",
+      main: "#FFB500",
     },
   },
 });
 
-const Outbound = () => {
+const Parsyl = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -29,7 +30,7 @@ const Outbound = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/deliver")}
+              onClick={() => navigate("/store")}
             >
               <ReplyIcon />
             </Button>
@@ -39,12 +40,12 @@ const Outbound = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-          <iframe title="LIT ICL Dashboards - Outbound - Warehouse Outbound" width="100%" height="100%"
-                  src="https://app.powerbi.com/view?r=eyJrIjoiOTBhM2RlYjMtM2NiMC00ZTNmLTgxYWItYzczY2Q0MGI0OWI1IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+          <iframe title="Parsyl" width="100%" height="100%"
+                  src="https://app.parsyl.com/report/shipments/v3/aa5dcfff-b494-4f63-9544-34b5f537d497?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzQzOTgzNzAsImlhdCI6MTY3Mzk2NjM3MCwiaXNzIjoicGFyc3lsLWFwaSIsInVzZXJJZCI6IjdkZmYxYTIzLWQ0N2UtNGFiYi1hZDIzLThhMDhmNWI4YWVlNSIsInJlc291cmNlSWQiOiJhYTVkY2ZmZi1iNDk0LTRmNjMtOTU0NC0zNGI1ZjUzN2Q0OTciLCJyZXNvdXJjZVR5cGUiOiJzaGlwbWVudCJ9.DCruetpvhh5aMMLuDsUdIeXCG5hHer1qdX2PvMbAzQs"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>
     </>
   );
 };
-export default Outbound;
+export default Parsyl;

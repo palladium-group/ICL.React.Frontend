@@ -76,7 +76,10 @@ const ProfileMarilynNoguera = async(() => import("./pages/home/ProfileMarilynNog
 const MacroEyes = async(() => import("./pages/home/MacroEyes"));
 const MiddleWareStatus = async(() => import("./pages/MISAdministration/MiddleWareStatus"));
 const VendorScoreCard = async(() => import("./pages/store/VendorScoreCard"));
-
+const About = async(() => import("./pages/MISAdministration/About"));
+const Parsyl = async(() => import("./pages/store/Parsyl"));
+const InventoryAnalysis = async(() => import("./pages/store/InventoryAnalysis"));
+const SmallBusiness = async(() => import("./pages/manage/SmallBusiness"));
 
 const routes = [
   {
@@ -176,8 +179,12 @@ const routes = [
       {
         path: "regional-operations-team",
         element: <RegionalOperationsTeam />
-      }
-    ]
+      },
+      {
+        path: "small-business",
+        element: <SmallBusiness />,
+      },
+    ],
   },
   {
     path: "/plan",
@@ -214,7 +221,15 @@ const routes = [
       {
         path: "vendor-score-card",
         element: <VendorScoreCard />,
-      }
+      },
+      {
+        path: "parsyl",
+        element: <Parsyl />
+      },
+      {
+        path: "inventory-analysis",
+        element: <InventoryAnalysis />,
+      },
     ],
   },
   {
@@ -268,7 +283,17 @@ const routes = [
       {
         path: "middle-ware-status",
         element: <MiddleWareStatus />
-      }
+      },
+    ],
+  },
+  {
+    path: "about",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <About />,
+      },
     ],
   },
   {
