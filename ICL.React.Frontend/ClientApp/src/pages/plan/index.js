@@ -69,7 +69,7 @@ const allLinks = [
       {
         header: "Order Intake",
         display: "Orders Validated (current)",
-        href: "",
+        href: "/customer-orders/pos-validated",
         visible: true
       }]
   },

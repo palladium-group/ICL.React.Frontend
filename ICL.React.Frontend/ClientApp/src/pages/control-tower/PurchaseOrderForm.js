@@ -42,6 +42,7 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import LastPageIcon from '@mui/icons-material/LastPage';
 import {apiRoutes} from "../../apiRoutes";
+import {useNavigate} from "react-router-dom";
 
 ;
 
@@ -174,6 +175,7 @@ function PurchaseOrderForm(props) {
     const [open, setOpen] = useState(false);
     const [alert, setAlert] = useState(false);
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
     const handleClose = () => {
         setOpen(false);
@@ -232,6 +234,7 @@ function PurchaseOrderForm(props) {
                         //setAlert(true);
                         props.setShowPOForm(false);
                         //Successfully sent ASN
+                      navigate("/customer-orders/pos-validated");
                     }else{
                         setAllowSubmit(false)
                     }
@@ -483,8 +486,8 @@ function PurchaseOrderForm(props) {
                                         classes={{
                                             circle: classes.circle,
                                         }}
-                                        size={500}
-                                        thickness={5}
+                                        size={50}
+                                        thickness={2}
                                         sx={{color:'#05C3DE'}}
                                         {...props}
                                     />
