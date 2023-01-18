@@ -21,7 +21,7 @@ import {
 import { spacing } from "@mui/system";
 import {DataGrid, GridToolbar} from "@mui/x-data-grid";
 import {useQuery} from "@tanstack/react-query";
-import {getPurchaseOrders} from "../../../api/purchase-orders";
+import {getPurchaseOrderWithParam} from "../../../api/purchase-orders";
 import {format} from "date-fns";
 import { Add as AddIcon } from "@mui/icons-material";
 import DoneIcon from '@mui/icons-material/Done';
@@ -39,9 +39,9 @@ const Paper = styled(MuiPaper)(spacing);
 
 const IncomingOrdersData = (props) => {
   // fetch incoming orders
-  const { data, isLoading, isError } = useQuery(
-    ["incomingOrders"], getPurchaseOrders
-  );
+    const { data, isLoading, isError } = useQuery(
+        ["incomingOrders", "inbound"], getPurchaseOrderWithParam
+    );
   const priorityFormater = (cell) => {
     if (cell === 0) {
       return (<Typography> Pending </Typography>);
