@@ -15,8 +15,6 @@ const SidebarNavList = (props) => {
     if (CheckRol(null, itemPage.title))
     {
       pages2.push(itemPage);
-    } else {
-      pages2.push(itemPage);
     }
   }
 
