@@ -1,6 +1,4 @@
 import React,{useState, useEffect} from "react";
-import axios from "axios";
-import AreaChart from '../../charts/ApexCharts';
 import ColumnChart from '../../control-tower/ColumnChart';
 import PieChart from '../../control-tower/PieChart';
 import Alert from '@mui/material/Alert';
@@ -13,10 +11,9 @@ import {
     Divider as MuiDivider,
     Typography as MuiTypography,
     Card as MuiCard,
-    CardContent as MuiCardContent,
     Paper as MuiPaper,
-    Breadcrumbs as MuiBreadcrumbs,
-    Button as MuiButton, CardContent, Button,
+    CardContent,
+    Button,
 } from "@mui/material";
 import { spacing } from "@mui/system";
 import {DataGrid, GridToolbar} from "@mui/x-data-grid";
@@ -24,23 +21,27 @@ import {useQuery} from "@tanstack/react-query";
 import {getCustomerOrders} from "../../../api/purchase-orders";
 import {format} from "date-fns";
 import { Add as AddIcon } from "@mui/icons-material";
-import DoneIcon from '@mui/icons-material/Done';
-import CancelIcon from '@mui/icons-material/Cancel';
-import Pending from "@mui/icons-material/Pending";
 import {useNavigate} from "react-router-dom";
+import {createTheme, ThemeProvider} from "@mui/material/styles";
+import ReplyIcon from "@mui/icons-material/Reply";
 
 const Divider = styled(MuiDivider)(spacing);
 const Typography = styled(MuiTypography)(spacing);
 const Card = styled(MuiCard)(spacing);
-// const CardContent = styled(MuiCardContent)(spacing);
 const Paper = styled(MuiPaper)(spacing);
-// const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
-// const Button = styled(MuiButton)(spacing);
+
+const theme = createTheme({
+    palette: {
+        secondary: {
+            main: "#BA0C2F",
+        },
+    },
+});
 
 const IncomingOrdersData = (props) => {
     // fetch incoming orders
     const { data, isLoading, isError } = useQuery(
-        ["incomingOrders"], getCustomerOrders
+        ["incomingOrders", 0], getCustomerOrders
     );
     const priorityFormater = (cell) => {
         if (cell === 0) {
@@ -154,6 +155,20 @@ function OutboundPO() {
 
     return (
         <React.Fragment>
+            <Grid container spacing={6}>
+                <Grid item>
+                    <ThemeProvider theme={theme}>
+                        <Button
+                          mr={2}
+                          variant="contained"
+                          color="secondary"
+                          onClick={() => navigate("/plan")}
+                        >
+                            <ReplyIcon />
+                        </Button>
+                    </ThemeProvider>
+                </Grid>
+            </Grid>
             <Card>
                 <CardContent pb={1}>
                     <Button
@@ -169,7 +184,7 @@ function OutboundPO() {
             <br />
             {!showPOForm &&
                 <>
-                    <Helmet title="Incoming Orders" />
+                    <Helmet title="Customer Orders" />
                     <Grid justifyContent="space-between" container spacing={6}>
                         <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
                             <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>

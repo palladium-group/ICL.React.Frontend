@@ -27,6 +27,7 @@ const Default = async(() => import("./pages/dashboards/Default"));
 const Products = async(() => import("./pages/dashboards/products"));
 
 const CustomerOrders = async(() => import("./pages/dashboards/Default/OutboundPO"));
+const CustomerOrdersValidated = async(() => import("./pages/dashboards/Default/CustomerOrdersValidated"));
 const CustomerOrdersProducts = async(() => import("./pages/dashboards/products"));
 
 
@@ -329,6 +330,10 @@ const routes = [
       {
         path: "products",
         element: <Products />,
+      },
+      {
+        path: "pos-validated",
+        element: <CustomerOrdersValidated />,
       }
     ]
   },
