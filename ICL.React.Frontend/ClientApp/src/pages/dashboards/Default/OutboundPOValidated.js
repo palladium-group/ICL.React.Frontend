@@ -13,7 +13,7 @@ import {
 import { spacing } from "@mui/system";
 import {DataGrid, GridToolbar} from "@mui/x-data-grid";
 import {useQuery} from "@tanstack/react-query";
-import {getCustomerOrders} from "../../../api/purchase-orders";
+import {getCustomerOrders, getPurchaseOrderWithParam} from "../../../api/purchase-orders";
 import {format} from "date-fns";
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import ReplyIcon from "@mui/icons-material/Reply";
@@ -27,15 +27,15 @@ const Paper = styled(MuiPaper)(spacing);
 const theme = createTheme({
   palette: {
     secondary: {
-      main: "#BA0C2F",
+      main: "#8D6E97",
     },
   },
 });
 
-const CustomerOrdersValidatedData = (props) => {
+const ASNValidatedData = () => {
 // fetch incoming orders
   const { data, isLoading, isError } = useQuery(
-    ["incomingOrders", 1], getCustomerOrders
+    ["incomingOrders", "inbound", 1], getPurchaseOrderWithParam
   );
   const priorityFormater = (cell) => {
     if (cell === 0) {
@@ -135,11 +135,11 @@ const CustomerOrdersValidatedData = (props) => {
   );
 };
 
-const CustomerOrdersValidated = () => {
+const OutboundPOValidated = () => {
   const navigate = useNavigate();
   return (
     <React.Fragment>
-      <Helmet title="Customer Orders Validated" />
+      <Helmet title="Advanced Shipment Notice/ASN(Validated)" />
       <Grid container spacing={6}>
         <Grid item>
           <ThemeProvider theme={theme}>
@@ -147,7 +147,7 @@ const CustomerOrdersValidated = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/plan")}
+              onClick={() => navigate("/source")}
             >
               <ReplyIcon />
             </Button>
@@ -157,12 +157,12 @@ const CustomerOrdersValidated = () => {
       <Grid justifyContent="space-between" container spacing={6}>
         <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
           <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
-            Customer Orders Validated
+            Advanced Shipment Notice/ASN(Validated)
           </Typography>
         </Grid>
       </Grid>
       <Divider my={6} />
-      <CustomerOrdersValidatedData  />
+      <ASNValidatedData  />
       <Grid container spacing={6} sx={{marginTop:'20px'}}>
         <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
           <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
@@ -179,4 +179,4 @@ const CustomerOrdersValidated = () => {
     </React.Fragment>
   );
 };
-export default CustomerOrdersValidated;
+export default OutboundPOValidated;

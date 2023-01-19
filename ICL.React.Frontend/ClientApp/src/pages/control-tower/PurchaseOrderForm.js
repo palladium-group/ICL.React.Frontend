@@ -201,6 +201,7 @@ function PurchaseOrderForm(props) {
                         //Set to submit
                         console.log(response.status)
                         console.log(response.data.message)
+                      navigate("/shipment/pos-validated");
                     }else{
                         setAllowSubmit(false)
                     }
