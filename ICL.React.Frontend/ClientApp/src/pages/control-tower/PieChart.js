@@ -16,7 +16,7 @@ const ChartWrapper = styled.div`
   width: 100%;
 `;
 
-const PieChart = ({ theme }) => {
+function PieChart (props) {
   //const data = [44, 55, 13];
   const [data, setData]=useState([0,0,0])
 
@@ -34,7 +34,7 @@ const PieChart = ({ theme }) => {
     colors:['#64A70B', '#E57200', '#BA0C2F']
   };
   useEffect(() => {
-    axios.get(`${apiRoutes.purchaseOrder}/statistics`)
+      axios.get(`${apiRoutes.purchaseOrder}/statistics/${props.dataType}`)
         .then((response)=>{
           let success = 0;
           let failed=0;
@@ -70,4 +70,4 @@ const PieChart = ({ theme }) => {
   );
 };
 
-export default withTheme(PieChart);
+export default PieChart;

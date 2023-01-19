@@ -10,15 +10,16 @@ import {
 import ReplyIcon from '@mui/icons-material/Reply';
 
 const Button = styled(MuiButton)(spacing);
+
 const theme = createTheme({
   palette: {
     secondary: {
-      main: "#E57200",
+      main: "#BA0C2F",
     },
   },
 });
 
-const StaffingLevelsHQ = () => {
+const PSAInboundProductMonitoring = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -39,12 +40,12 @@ const StaffingLevelsHQ = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-          <iframe title="LIT ICL Dashboards Staffing level HQ" width="100%" height="100%"
-                  src="https://app.powerbi.com/view?r=eyJrIjoiMzJiZWZmZDctMDQ5YS00ZTUxLWE4ZjEtYjZhNjJhN2Q2MGIwIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection774f0d67cd9b3b706368"
+          <iframe title="LIT ICL Inventory Analysis - Inventory Analysis" width="100%" height="100%"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiMDIwYmVhM2EtMTA2Yi00NGUzLTkzMWItZTg0ZDk5ZGJjZmRhIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>
     </>
   );
 };
-export default StaffingLevelsHQ;
+export default PSAInboundProductMonitoring;

@@ -40,7 +40,7 @@ const Paper = styled(MuiPaper)(spacing);
 const IncomingOrdersData = (props) => {
   // fetch incoming orders
     const { data, isLoading, isError } = useQuery(
-        ["incomingOrders", "inbound"], getPurchaseOrderWithParam
+        ["incomingOrders", "inbound", 0], getPurchaseOrderWithParam
     );
   const priorityFormater = (cell) => {
     if (cell === 0) {
@@ -191,10 +191,10 @@ function Default() {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <PieChart/>
+                  <PieChart dataType='inbound'/>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <ColumnChart/>
+                      <ColumnChart dataType='inbound'/>
                 </Grid>
               </Grid>
             </>

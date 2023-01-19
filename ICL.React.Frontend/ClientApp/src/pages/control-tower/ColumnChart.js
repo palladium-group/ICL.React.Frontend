@@ -18,11 +18,15 @@ const ChartWrapper = styled.div`
   width: 100%;
 `;
 
-const ColumnChart = ({ theme }) => {
+function ColumnChart (props) {
   const [data,setData] = useState([]);
-  const [dates, setDates] = useState([]);
+    const [dates, setDates] = useState([]);
+    console.log('props')
+    console.log(props.dataType)
+    console.log('props')
+
   useEffect(() => {
-    axios.get(`${apiRoutes.purchaseOrder}/statistics`)
+    axios.get(`${apiRoutes.purchaseOrder}/statistics/${props.dataType}`)
         .then((response)=>{
           let temp = [
             {
@@ -132,4 +136,4 @@ const ColumnChart = ({ theme }) => {
   );
 };
 
-export default withTheme(ColumnChart);
+export default ColumnChart;

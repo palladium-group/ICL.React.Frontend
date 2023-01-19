@@ -83,6 +83,8 @@ const InventoryAnalysis = async(() => import("./pages/store/InventoryAnalysis"))
 const SmallBusiness = async(() => import("./pages/manage/SmallBusiness"));
 const AutomatedReports = async(() => import("./pages/enable/AutomatedReports"));
 const CustomsClearance = async(() => import("./pages/source/CustomsClearance"));
+const OutboundPOValidated = async(() => import("./pages/dashboards/Default/OutboundPOValidated"));
+const PSAInboundProductMonitoring = async(() => import("./pages/plan/PSAInboundProductMonitoring"));
 
 const routes = [
   {
@@ -200,6 +202,10 @@ const routes = [
       {
         path: "quantification-reports",
         element: <QuantificationReports />
+      },
+      {
+        path: "psa-inbound-product-monitoring",
+        element: <PSAInboundProductMonitoring />,
       }
     ]
   },
@@ -322,6 +328,10 @@ const routes = [
       {
         path: "products",
         element: <Products />,
+      },
+      {
+        path: "pos-validated",
+        element: <OutboundPOValidated />,
       }
     ]
   },

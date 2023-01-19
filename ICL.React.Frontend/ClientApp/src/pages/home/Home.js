@@ -266,7 +266,7 @@ const QuickLinksContent=()=>{
                 Quick Links
               </Typography>
               <Divider />
-              <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
+              <Stack direction="row" spacing={2} sx={{ marginBottom: 2, marginTop: 2 }}>
                 <Chip label="Timesheet" component="a" target="_blank" href="https://thepalladiumgroup-cp.deltekenterprise.com/cpweb/" clickable />
                 <Chip label="Expense Reports" component="a" target="_blank" href="https://delegationofauthority.thepalladiumgroup.com/" clickable />
                 <Chip label="Travel Reports" component="a" target="_blank" href="https://delegationofauthority.thepalladiumgroup.com/" clickable />
@@ -353,7 +353,7 @@ const LeadershipContent=()=> {
             </Typography>
             <Divider />
             <Spacer mb={4} />
-            <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
+            <Grid container direction="row" alignItems="center" mb={2} spacing={12}>
               <Grid item md={3}>
                 <Avatar alt="Dan Rhodes" src="/static/img/avatars/dan.png" />
               </Grid>
@@ -371,7 +371,7 @@ const LeadershipContent=()=> {
               </Grid>
               <Divider />
             </Grid>
-            <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
+            <Grid container direction="row" alignItems="center" mb={2} spacing={12}>
               <Grid item md={3}>
                 <Avatar alt="Marilyn Noguera" src="/static/img/avatars/Marilyn.png" />
               </Grid>
@@ -388,7 +388,7 @@ const LeadershipContent=()=> {
                 </NavLink>
               </Grid>
             </Grid>
-            <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
+            <Grid container direction="row" alignItems="center" mb={2} spacing={12}>
               <Grid item md={3}>
                 <Avatar alt="Jabu Nyenwa" src="/static/img/avatars/Jabu.png" />
               </Grid>
@@ -405,7 +405,7 @@ const LeadershipContent=()=> {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid container direction="row" alignItems="center" mb={2} spacing={2}>
+            <Grid container direction="row" alignItems="center" mb={2} spacing={12}>
               <Grid item md={3}>
                 <Avatar alt="Sean Lockhead" src="/static/img/avatars/Sean.png" />
               </Grid>

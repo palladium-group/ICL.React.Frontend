@@ -11,7 +11,7 @@ export const getCustomerOrders = async ({ queryKey }) => {
 };
 
 export const getPurchaseOrderWithParam = async ({ queryKey }) => {
-    const [, path] = queryKey;
-    return await axios.get(`${apiRoutes.purchaseOrder}/${path}`);
+    const [, path, validated] = queryKey;
+    return await axios.get(`${apiRoutes.purchaseOrder}/${path}/${validated}`);
 };
 
