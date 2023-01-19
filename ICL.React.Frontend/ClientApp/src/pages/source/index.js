@@ -19,12 +19,12 @@ const Spacer = styled.div(spacing);
 const Source = () => {
   return (
     <React.Fragment>
-      <Card sx={{ width: "100%" }}>
+      <Paper square={true} sx={{ width: "100%" }}>
         <CardMedia
-          sx={{ height: 299 }}
+          sx={{ height: 220 }}
           image={FirstImg}
         />
-      </Card>
+      </Paper>
       <br />
       <Grid container spacing={2} alignItems="stretch">
         <Grid item md={4} style={{display: 'flex'}}>

@@ -18,12 +18,12 @@ const Spacer = styled.div(spacing);
 const Enable = () => {
   return (
     <React.Fragment>
-      <Card sx={{ width: "100%" }}>
+      <Paper square={true} sx={{ width: "100%" }}>
         <CardMedia
-          sx={{ height: 299 }}
+          sx={{ height: 220 }}
           image={FirstImg}
         />
-      </Card>
+      </Paper>
       <br />
       <Grid container spacing={2} alignItems="stretch">
         <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
@@ -149,7 +149,7 @@ const Enable = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Automated Reports
+                  Predefined Reports
                 </Typography>
                 <Divider />
                 <Spacer mb={4} />
@@ -157,12 +157,20 @@ const Enable = () => {
                   <Grid container spacing={6}>
                     <Grid item md={12}>
                       <NavLink to={`/enable/automated-reports`}>
-                        By Country
+                        General
                       </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      By Function
+                      Warehousing
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Inventory Analysis
+                      <Divider />
+                    </Grid>
+                    <Grid item md={12}>
+                      Transportation
                       <Divider />
                     </Grid>
                   </Grid>
@@ -187,7 +195,9 @@ const Enable = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                    Reports
+                      <NavLink to={`/enable/custom-reports`}>
+                        Reports
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>

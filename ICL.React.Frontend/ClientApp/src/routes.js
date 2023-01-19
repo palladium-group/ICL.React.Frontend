@@ -85,6 +85,7 @@ const AutomatedReports = async(() => import("./pages/enable/AutomatedReports"));
 const CustomsClearance = async(() => import("./pages/source/CustomsClearance"));
 const OutboundPOValidated = async(() => import("./pages/dashboards/Default/OutboundPOValidated"));
 const PSAInboundProductMonitoring = async(() => import("./pages/plan/PSAInboundProductMonitoring"));
+const CustomReports = async(() => import("./pages/enable/CustomReports"));
 
 const routes = [
   {
@@ -286,6 +287,10 @@ const routes = [
       {
         path: "automated-reports",
         element: <AutomatedReports />,
+      },
+      {
+        path: "custom-reports",
+        element: <CustomReports />,
       }
     ],
   },

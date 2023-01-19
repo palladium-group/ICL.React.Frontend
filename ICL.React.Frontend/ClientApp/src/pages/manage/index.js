@@ -22,12 +22,12 @@ const Spacer = styled.div(spacing);
 const Manage = () => {
   return (
     <React.Fragment>
-      <Card sx={{ width: "100%" }}>
+      <Paper square={true} sx={{ width: "100%" }}>
         <CardMedia
-          sx={{ height: 299 }}
+          sx={{ height: 220 }}
           image={FirstImg}
         />
-      </Card>
+      </Paper>
       <br />
       <Grid container spacing={2} alignItems="stretch">
         <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} style={{display: 'flex'}}>
@@ -251,7 +251,9 @@ const Manage = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Monthly Financial Reports
+                      <a target="_blank" rel="noopener noreferrer" href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2120679425/Monthly+Financial+Reports">
+                        Monthly Financial Reports
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
