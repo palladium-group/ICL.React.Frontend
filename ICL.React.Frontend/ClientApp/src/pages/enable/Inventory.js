@@ -18,7 +18,7 @@ const theme = createTheme({
   },
 });
 
-const AutomatedReports = () => {
+const Inventory = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -39,12 +39,12 @@ const AutomatedReports = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-          <iframe title="ICL Dashboards - Automated Reports" width="100%" height="100%"
-                  src="https://app.powerbi.com/view?r=eyJrIjoiNmRkYjU5N2UtMDNiMS00YmVkLWI3YjktNjI2YWEwNDQ0MmM3IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSectionabb0fc3d2b07206c01d0"
+          <iframe title="ICL Custom Reports" width="100%" height="100%"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiYTRlZWJlMTQtYzM5YS00OTM1LTk3NWMtNmRhYWExNGM0YWYzIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection219f87e998dc237938e9"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>
     </>
   );
 };
-export default AutomatedReports;
+export default Inventory;
