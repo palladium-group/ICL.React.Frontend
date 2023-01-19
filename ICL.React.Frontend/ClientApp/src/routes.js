@@ -81,6 +81,7 @@ const About = async(() => import("./pages/MISAdministration/About"));
 const Parsyl = async(() => import("./pages/store/Parsyl"));
 const InventoryAnalysis = async(() => import("./pages/store/InventoryAnalysis"));
 const SmallBusiness = async(() => import("./pages/manage/SmallBusiness"));
+const AutomatedReports = async(() => import("./pages/enable/AutomatedReports"));
 
 const routes = [
   {
@@ -271,6 +272,10 @@ const routes = [
         path: "deliver",
         element: <KPMGDeliver />,
       },
+      {
+        path: "automated-reports",
+        element: <AutomatedReports />,
+      }
     ],
   },
   {
