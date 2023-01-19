@@ -40,7 +40,7 @@ const Paper = styled(MuiPaper)(spacing);
 const IncomingOrdersData = (props) => {
   // fetch incoming orders
     const { data, isLoading, isError } = useQuery(
-        ["incomingOrders", "inbound"], getPurchaseOrderWithParam
+        ["incomingOrders", "inbound", 0], getPurchaseOrderWithParam
     );
   const priorityFormater = (cell) => {
     if (cell === 0) {
