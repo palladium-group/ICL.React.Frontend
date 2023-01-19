@@ -86,6 +86,9 @@ const CustomsClearance = async(() => import("./pages/source/CustomsClearance"));
 const OutboundPOValidated = async(() => import("./pages/dashboards/Default/OutboundPOValidated"));
 const PSAInboundProductMonitoring = async(() => import("./pages/plan/PSAInboundProductMonitoring"));
 const CustomReports = async(() => import("./pages/enable/CustomReports"));
+const UserRegistry = async(() => import("./pages/MISAdministration/UserRegistry"));
+const NewUserForm = async(() => import("./pages/MISAdministration/NewUserForm"));
+const AssignUserRole = async(() => import("./pages/MISAdministration/AssignUserRole"));
 
 const routes = [
   {
@@ -306,6 +309,18 @@ const routes = [
         path: "middle-ware-status",
         element: <MiddleWareStatus />
       },
+      {
+        path: "user-registry",
+        element: <UserRegistry />,
+      },
+      {
+        path: "new-user-form",
+        element: <NewUserForm />,
+      },
+      {
+        path: "assign-user-role",
+        element: <AssignUserRole />,
+      }
     ],
   },
   {
