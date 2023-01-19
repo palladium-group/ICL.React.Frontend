@@ -206,10 +206,10 @@ function OutboundPO() {
                             </Typography>
                         </Grid>
                         <Grid item xs={12} md={6}>
-                            <PieChart/>
+                        <PieChart dataType='outbound' />
                         </Grid>
                         <Grid item xs={12} md={6}>
-                            <ColumnChart/>
+                        <ColumnChart dataType='outbound' />
                         </Grid>
                     </Grid>
                 </>
