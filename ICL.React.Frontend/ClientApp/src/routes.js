@@ -82,6 +82,7 @@ const Parsyl = async(() => import("./pages/store/Parsyl"));
 const InventoryAnalysis = async(() => import("./pages/store/InventoryAnalysis"));
 const SmallBusiness = async(() => import("./pages/manage/SmallBusiness"));
 const AutomatedReports = async(() => import("./pages/enable/AutomatedReports"));
+const CustomsClearance = async(() => import("./pages/source/CustomsClearance"));
 
 const routes = [
   {
@@ -210,6 +211,10 @@ const routes = [
         path: "",
         element: <Source />,
       },
+      {
+        path: "customs-clearance",
+        element: <CustomsClearance />,
+      }
     ],
   },
   {
