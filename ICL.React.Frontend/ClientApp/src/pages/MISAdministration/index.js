@@ -119,7 +119,9 @@ const MISAdministration = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Remove User
+                      <NavLink to={`/MISAdministration/user-registry`}>
+                        Remove User
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>

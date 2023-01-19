@@ -21,6 +21,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 // import { toast } from "react-toastify";
 import { useMutation, useQuery } from "@tanstack/react-query";
+import {newUser} from "../../api/user";
 
 
 const Card = styled(MuiCard)(spacing);
@@ -36,16 +37,21 @@ const initialValues = {
 };
 
 const NewUserForm = () => {
+  const navigate = useNavigate();
+
+  const mutation = useMutation({ mutationFn: newUser });
   const formik = useFormik({
     initialValues: initialValues,
     validationSchema: Yup.object().shape({
-
+      firstName: Yup.string().required("Required"),
+      lastName: Yup.string().required("Required"),
     }),
     onSubmit: async (values) => {
       try {
-        
+        await mutation.mutateAsync(values);
+        navigate("/MISAdministration/user-registry");
       } catch (e) {
-        
+        console.log(e);
       }
     }
   });

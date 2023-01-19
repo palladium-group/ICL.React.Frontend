@@ -157,16 +157,12 @@ const Enable = () => {
                   <Grid container spacing={6}>
                     <Grid item md={12}>
                       <NavLink to={`/enable/automated-reports`}>
-                        General
+                        Shipments
                       </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
                       Warehousing
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Inventory Analysis
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
@@ -191,7 +187,7 @@ const Enable = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    Visualizations
+                      Inventory
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
