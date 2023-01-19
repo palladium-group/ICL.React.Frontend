@@ -20,7 +20,11 @@ const ChartWrapper = styled.div`
 
 function ColumnChart (props) {
   const [data,setData] = useState([]);
-  const [dates, setDates] = useState([]);
+    const [dates, setDates] = useState([]);
+    console.log('props')
+    console.log(props.dataType)
+    console.log('props')
+
   useEffect(() => {
     axios.get(`${apiRoutes.purchaseOrder}/statistics/${props.dataType}`)
         .then((response)=>{
