@@ -201,7 +201,6 @@ function PurchaseOrderForm(props) {
                         //Set to submit
                         console.log(response.status)
                         console.log(response.data.message)
-                      navigate("/shipment/pos-validated");
                     }else{
                         setAllowSubmit(false)
                     }
@@ -228,6 +227,8 @@ function PurchaseOrderForm(props) {
             await axios.get(`${apiRoutes.purchaseOrder}/post/${props.params.row.bookingNo}`)
                 .then((response)=>{
                     if(response.status === 200){
+                      console.log(props);
+                      console.log(response);
                         props.setAlertMessage(`${props.params.row.bookingNo} Successfully sent ASN`);
                         props.showAlert();
                         setOpen(false);
@@ -235,7 +236,11 @@ function PurchaseOrderForm(props) {
                         //setAlert(true);
                         props.setShowPOForm(false);
                         //Successfully sent ASN
-                      navigate("/customer-orders/pos-validated");
+                      if (props.params.row.processType === "Inbound") {
+                        navigate("/shipment/pos-validated");
+                      } else {
+                        navigate("/customer-orders/pos-validated");
+                      }
                     }else{
                         setAllowSubmit(false)
                     }
