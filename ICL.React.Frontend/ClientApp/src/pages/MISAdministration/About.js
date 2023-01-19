@@ -11,7 +11,7 @@ const About = () => {
       <Card raised sx={{ width: "100%" }}>
         <CardMedia
           component="img"
-          sx={{ padding: "1em 1em 0 1em", objectFit: "contain" }}
+          sx={{ padding: "0em 0em 0 0em", objectFit: "contain" }}
           image={ICL_Architecture}
         />
       </Card>
