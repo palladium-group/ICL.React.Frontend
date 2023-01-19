@@ -134,10 +134,9 @@ const LinkList = props => {
       {link.href.startsWith("http")?
         <a href={link.href} target="_blank" rel="noopener noreferrer">
         {link.display}
-      </a>:  <NavLink to={link.href}>
+      </a>: (link.href.startsWith("/") ?  <NavLink to={link.href}>
           {link.display}
-        </NavLink>}
-
+        </NavLink>: <>{link.display}</>)}
       <Divider />
     </Grid>
   );
