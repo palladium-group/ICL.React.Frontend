@@ -62,10 +62,9 @@ const Manage = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                    <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2117697540/Staffing+Levels+-+Countries" target="_blank" rel="noopener noreferrer">  Staffing Levels – Countries</a>
-              
-               
-                     
+                      <NavLink to={`/manage/staffing-levels-countries`} >
+                        Staffing Levels – Countries
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>  
