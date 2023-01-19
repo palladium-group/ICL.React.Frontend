@@ -95,7 +95,7 @@ const Enable = () => {
                   <Grid container spacing={6}>
                     <Grid item md={12}>
                       <NavLink to={`/enable/green-house-gas-monitoring`}>
-                      Annual Reports
+                      Annual Emissions Report
                       </NavLink>
                       <Divider />
                     </Grid>
