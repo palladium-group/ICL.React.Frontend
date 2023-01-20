@@ -3,22 +3,23 @@ import {Grid} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import styled from "@emotion/styled";
 import { spacing } from "@mui/system";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import {
   Button as MuiButton,
 } from "@mui/material";
 import ReplyIcon from '@mui/icons-material/Reply';
-import {createTheme, ThemeProvider} from "@mui/material/styles";
 
 const Button = styled(MuiButton)(spacing);
+
 const theme = createTheme({
   palette: {
     secondary: {
-      main: "#8D6E97",
+      main: "#BA0C2F",
     },
   },
 });
 
-const Warehousing = () => {
+const HistoricalOrders = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -29,7 +30,7 @@ const Warehousing = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/source")}
+              onClick={() => navigate("/plan")}
             >
               <ReplyIcon />
             </Button>
@@ -39,12 +40,12 @@ const Warehousing = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-        <iframe title="LIT ICL Dashboards - Warehousing" width="100%" height="100%" 
-        src="https://app.powerbi.com/view?r=eyJrIjoiMzBhM2RmMjQtMTFmNi00NzM1LThhYWItYjI3YmIwYmFiOTc3IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection41a072b839dc3a7bc861" 
-        frameborder="0" allowFullScreen="true"></iframe>
+          <iframe title="6. Historical Orders - Historical Orders" width="100%" height="100%"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiMDllNWJmNWItZGM3MS00NDQ3LWIxMmItYmY4Nzc0MDBkMTU2IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+                  frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>
     </>
   );
 };
-export default Warehousing;
+export default HistoricalOrders;

@@ -40,8 +40,8 @@ const VendorScoreCard = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-          <iframe title="LIT ICL Dashboards - Outbound" width="100%" height="100%"
-                  src="https://app.powerbi.com/view?r=eyJrIjoiOTBhM2RlYjMtM2NiMC00ZTNmLTgxYWItYzczY2Q0MGI0OWI1IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSectiona57f1ce7e0a76cd7c7bb"
+          <iframe title="LIT ICL Dashboards - Inbound" width="100%" height="100%"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiMTE4MzVkMDctNGZkZC00YjA1LWJjYmMtNjgwNjhjZjU3MWNlIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection7418f0806a599f574d43"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>

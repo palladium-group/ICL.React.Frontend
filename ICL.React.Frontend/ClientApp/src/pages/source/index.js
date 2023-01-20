@@ -74,8 +74,10 @@ const Source = () => {
                     Distribution
                       <Divider />
                     </Grid>
-                    <Grid item md={12}>
-                      Products
+                    <Grid item md={12}>                      
+                      <NavLink to={`/source/products`}>
+                        Products
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

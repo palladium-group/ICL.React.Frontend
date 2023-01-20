@@ -13,12 +13,12 @@ const Button = styled(MuiButton)(spacing);
 const theme = createTheme({
   palette: {
     secondary: {
-      main: "#8D6E97",
+      main: "#E57200",
     },
   },
 });
 
-const Warehousing = () => {
+const SourceProducts = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -29,7 +29,7 @@ const Warehousing = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/source")}
+              onClick={() => navigate("/manage")}
             >
               <ReplyIcon />
             </Button>
@@ -39,12 +39,12 @@ const Warehousing = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-        <iframe title="LIT ICL Dashboards - Warehousing" width="100%" height="100%" 
-        src="https://app.powerbi.com/view?r=eyJrIjoiMzBhM2RmMjQtMTFmNi00NzM1LThhYWItYjI3YmIwYmFiOTc3IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection41a072b839dc3a7bc861" 
-        frameborder="0" allowFullScreen="true"></iframe>
+          <iframe title="ICL Product Master" width="1024" height="1060"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiNWMyZjU2NzUtMmNhMS00MTI3LThmNTYtZjJiM2YwNGUxNDE0IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection676adc5001f66c212e7e"
+                  frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>
     </>
   );
 };
-export default Warehousing;
+export default SourceProducts;

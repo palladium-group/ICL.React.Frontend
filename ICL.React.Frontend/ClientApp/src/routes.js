@@ -58,8 +58,11 @@ const TotalLandedCostsAnalysis = async(() => import("./pages/manage/TotalLandedC
 const GlobalFund = async(() => import("./pages/manage/GlobalFund"));
 const LetterOfCredit = async(() => import("./pages/manage/LetterOfCredit"));
 const Plan = async(() => import("./pages/plan/index"));
+
 const Source = async(() => import("./pages/source/index"));
+const SourceProducts = async(() => import("./pages/source/SourceProducts"));
 const Warehousing = async(() => import("./pages/source/Warehousing"));
+
 const QuantificationReports = async(() => import("./pages/plan/QuantificationReports"));
 const Store = async(() => import("./pages/store/index"));
 const Deliver = async(() => import("./pages/deliver"));
@@ -96,6 +99,13 @@ const Inventory = async(() => import("./pages/enable/Inventory"));
 const OperationalPlanning = async(() => import("./pages/plan/OperationalPlanning"));
 const OutboundMilestoneMonitoring = async(() => import("./pages/plan/OutboundMilestoneMonitoring"));
 const InboundMilestoneMonitoring = async(() => import("./pages/plan/InboundMilestoneMonitoring"));
+const InventoryOnHand = async(() => import("./pages/plan/InventoryOnHand"));
+const InsuranceMonitoring = async(() => import("./pages/plan/InsuranceMonitoring"));
+const StockBalancing = async(() => import("./pages/plan/StockBalancing"));
+const HistoricalOrders = async(() => import("./pages/plan/HistoricalOrders"));
+const DeliveryPlanning = async(() => import("./pages/plan/DeliveryPlanning"));
+const InboundInventoryMonitoring = async(() => import("./pages/plan/InboundInventoryMonitoring"));
+const ForecastedOrders = async(() => import("./pages/plan/ForecastedOrders"));
 
 const routes = [
   {
@@ -233,6 +243,34 @@ const routes = [
       {
         path: "inbound-milestone-monitoring",
         element: <InboundMilestoneMonitoring />,
+      },
+      {
+        path: "inventory-on-hand",
+        element: <InventoryOnHand />,
+      },
+      {
+        path: "insurance-monitoring",
+        element: <InsuranceMonitoring />,
+      },
+      {
+        path: "stock-balancing",
+        element: <StockBalancing />,
+      },
+      {
+        path: "historical-orders",
+        element: <HistoricalOrders />,
+      },
+      {
+        path: "delivery-planning",
+        element: <DeliveryPlanning />,
+      },
+      {
+        path: "inbound-inventory-monitoring",
+        element: <InboundInventoryMonitoring />,
+      },
+      {
+        path: "forecasted-orders",
+        element: <ForecastedOrders />,
       }
     ]
   },
@@ -243,6 +281,10 @@ const routes = [
       {
         path: "",
         element: <Source />,
+      },
+      {
+        path: "products",
+        element: <SourceProducts />,
       },
       {
         path: "warehousing",
