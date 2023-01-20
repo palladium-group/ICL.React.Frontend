@@ -24,12 +24,21 @@ function PieChart (props) {
     const [options, setOptions] = useState(null)
     useEffect(() => {
         setLables(props.labels);
-        const colorRange = ['#64A70B', '#E57200', '#BA0C2F'];
+        const colorRange = [];
+        props.labels.map(label =>{
+            ['Successful', 'Pending', 'Failed'].map((l,i)=>{
+                let range = ['#64A70B', '#E57200', '#BA0C2F'];
+                if(label === l ){
+                    colorRange.push(range[i])
+                }
+            })
+        })
+
         let tempColors=[[]]
         props.labels.map((label,index) => {
             colors.push(colorRange[index])
         })
-        setColors(colors)
+        setColors(colorRange)
         setOptions(
             {
                 labels: props.labels,
@@ -52,6 +61,7 @@ function PieChart (props) {
   useEffect(() => {
       axios.get(`${apiRoutes.purchaseOrder}/statistics/${props.dataType}`)
         .then((response)=>{
+            let chartData=[];
           let success = 0;
           let failed=0;
           let pending = 0;
@@ -60,7 +70,16 @@ function PieChart (props) {
             failed = failed+row.failed;
             pending = pending + row.pending;
           })
-            setData([success, pending, failed])
+            props.labels.map(label =>{
+                if(label === 'Successful'){
+                    chartData.push(success)
+                }else if(label === 'Pending'){
+                    chartData.push(pending)
+                }else if(label === 'Failed'){
+                    chartData.push(failed)
+                }
+            })
+            setData([...chartData])
         })
   },[]);
 

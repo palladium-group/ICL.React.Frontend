@@ -191,10 +191,10 @@ function Default() {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <PieChart dataType='inbound'/>
+                  <PieChart dataType='inbound'  labels={['Pending','Failed']}/>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                      <ColumnChart dataType='inbound'/>
+                      <ColumnChart dataType='inbound'  labels={['Pending','Failed']}/>
                 </Grid>
               </Grid>
             </>

@@ -170,10 +170,10 @@ const CustomerOrdersValidated = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} md={6}>
-          <PieChart/>
+          <PieChart dataType='outbound'  labels={['Successful']}/>
         </Grid>
         <Grid item xs={12} md={6}>
-          <ColumnChart/>
+          <ColumnChart dataType='outbound'  labels={['Successful']}/>
         </Grid>
       </Grid>
     </React.Fragment>

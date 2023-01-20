@@ -20,7 +20,8 @@ const ChartWrapper = styled.div`
 
 function ColumnChart (props) {
   const [data,setData] = useState([]);
-    const [dates, setDates] = useState([]);
+  const [dates, setDates] = useState([]);
+  const [colors, setColors] = useState([])
     console.log('props')
     console.log(props.dataType)
     console.log('props')
@@ -49,7 +50,27 @@ function ColumnChart (props) {
             temp[1].data.push(row.pending);
             temp[2].data.push(row.failed);
           });
-          setData(temp);
+
+          const colorRange = [];
+          props.labels.map(label =>{
+            ['Successful', 'Pending', 'Failed'].map((l,i)=>{
+              let range = ['#64A70B', '#E57200', '#BA0C2F'];
+              if(label === l ){
+                colorRange.push(range[i])
+              }
+            })
+          })
+          setColors(colorRange)
+
+          let chartData=[];
+          props.labels.map((label,i) =>{
+            temp.map(item =>{
+              if(label === item.name){
+                chartData.push(item)
+              }
+            })
+          })
+          setData(chartData);
           setDates(tempDates)
         })
   },[]);
@@ -113,7 +134,7 @@ function ColumnChart (props) {
         },
       },
     },
-    colors:['#64A70B', '#E57200', '#BA0C2F']
+    colors:colors
   };
 
   return (
