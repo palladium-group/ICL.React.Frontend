@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/control-tower/ColumnChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/control-tower/ColumnChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/control-tower/PieChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/control-tower/PieChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/control-tower/PurchaseOrderForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/control-tower/PurchaseOrderForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/CustomerOrdersValidated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/CustomerOrdersValidated.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPO.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPO.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPOValidated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPOValidated.js" afterDir="false" />
@@ -66,7 +63,7 @@
       <workItem from="1673509264509" duration="22647000" />
       <workItem from="1673588369416" duration="6257000" />
       <workItem from="1674030282342" duration="2257000" />
-      <workItem from="1674204673376" duration="3605000" />
+      <workItem from="1674204673376" duration="4033000" />
     </task>
     <servers />
   </component>

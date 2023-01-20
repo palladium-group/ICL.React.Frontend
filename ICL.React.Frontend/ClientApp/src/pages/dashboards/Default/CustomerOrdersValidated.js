@@ -62,7 +62,7 @@ const CustomerOrdersValidatedData = (props) => {
         <div style={{ height: 400, width: "100%" }}>
           <DataGrid
             columns={[
-              {
+/*              {
                 field: "createDate",
                 headerName: "Created",
                 editable: false,
@@ -74,7 +74,7 @@ const CustomerOrdersValidatedData = (props) => {
                 headerName: "Process Type",
                 editable: false,
                 flex: 1
-              },
+              },*/
               {
                 field: "placeOfDelivery",
                 headerName: "Place Of Delivery",
