@@ -81,11 +81,17 @@ const About = async(() => import("./pages/MISAdministration/About"));
 const Parsyl = async(() => import("./pages/store/Parsyl"));
 const InventoryAnalysis = async(() => import("./pages/store/InventoryAnalysis"));
 const SmallBusiness = async(() => import("./pages/manage/SmallBusiness"));
-const AutomatedReports = async(() => import("./pages/enable/AutomatedReports"));
+const Shipment = async(() => import("./pages/enable/Shipment"));
 const CustomsClearance = async(() => import("./pages/source/CustomsClearance"));
 const OutboundPOValidated = async(() => import("./pages/dashboards/Default/OutboundPOValidated"));
 const PSAInboundProductMonitoring = async(() => import("./pages/plan/PSAInboundProductMonitoring"));
 const CustomReports = async(() => import("./pages/enable/CustomReports"));
+const UserRegistry = async(() => import("./pages/MISAdministration/UserRegistry"));
+const NewUserForm = async(() => import("./pages/MISAdministration/NewUserForm"));
+const AssignUserRole = async(() => import("./pages/MISAdministration/AssignUserRole"));
+const Warehouse = async(() => import("./pages/enable/Warehouse"));
+const Transport = async(() => import("./pages/enable/Transport"));
+const Inventory = async(() => import("./pages/enable/Inventory"));
 
 const routes = [
   {
@@ -285,13 +291,25 @@ const routes = [
         element: <KPMGDeliver />,
       },
       {
-        path: "automated-reports",
-        element: <AutomatedReports />,
+        path: "shipment",
+        element: <Shipment />,
       },
       {
         path: "custom-reports",
         element: <CustomReports />,
-      }
+      },
+      {
+        path: "warehousing",
+        element: <Warehouse />,
+      },
+      {
+        path: "transportation",
+        element: <Transport />,
+      },
+      {
+        path: "inventory",
+        element: <Inventory />,
+      },
     ],
   },
   {
@@ -306,6 +324,18 @@ const routes = [
         path: "middle-ware-status",
         element: <MiddleWareStatus />
       },
+      {
+        path: "user-registry",
+        element: <UserRegistry />,
+      },
+      {
+        path: "new-user-form",
+        element: <NewUserForm />,
+      },
+      {
+        path: "assign-user-role",
+        element: <AssignUserRole />,
+      }
     ],
   },
   {

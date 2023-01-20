@@ -156,21 +156,21 @@ const Enable = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      <NavLink to={`/enable/automated-reports`}>
-                        General
+                      <NavLink to={`/enable/shipment`}>
+                        Shipment
                       </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Warehousing
+                      <NavLink to={`/enable/warehousing`}>
+                        Warehousing
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Inventory Analysis
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      Transportation
+                      <NavLink to={`/enable/transportation`}>
+                        Transportation
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
@@ -191,15 +191,17 @@ const Enable = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    Visualizations
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      <NavLink to={`/enable/custom-reports`}>
-                        Reports
+                      <NavLink to={`/enable/inventory`}>
+                        Inventory
                       </NavLink>
                       <Divider />
                     </Grid>
+                    {/*<Grid item md={12}>*/}
+                    {/*  <NavLink to={`/enable/custom-reports`}>*/}
+                    {/*    Reports*/}
+                    {/*  </NavLink>*/}
+                    {/*  <Divider />*/}
+                    {/*</Grid>*/}
                   </Grid>
                 </Box>
               </CardContent>
