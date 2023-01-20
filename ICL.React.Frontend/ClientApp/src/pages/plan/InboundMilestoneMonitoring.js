@@ -19,7 +19,7 @@ const theme = createTheme({
   },
 });
 
-const PSAInboundProductMonitoring = () => {
+const InboundMilestoneMonitoring = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -30,7 +30,7 @@ const PSAInboundProductMonitoring = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/manage")}
+              onClick={() => navigate("/plan")}
             >
               <ReplyIcon />
             </Button>
@@ -40,12 +40,12 @@ const PSAInboundProductMonitoring = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-          <iframe title="ICL Custom Reports PSA Inbound - Navigation" width="100%" height="100%"
-                  src="https://app.powerbi.com/view?r=eyJrIjoiYzU2MjBmOGItMTY4ZS00YzNjLWI2YmItYTBmNjE0ZjY2NzNjIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+          <iframe title="LIT ICL Inbound Milestone Monitoring - Inbound Inventory" width="100%" height="100%"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiZWU0N2E1MjYtOTJiNy00YTdlLWJhNTQtNjExMzVlNzg5MmE5IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>
     </>
   );
 };
-export default PSAInboundProductMonitoring;
+export default InboundMilestoneMonitoring;

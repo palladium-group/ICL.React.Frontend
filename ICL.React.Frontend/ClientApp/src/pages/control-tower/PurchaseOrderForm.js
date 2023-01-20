@@ -260,6 +260,9 @@ function PurchaseOrderForm(props) {
         <div>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', marginBottom:'20px' }}>
                 <div>
+                    {props.params.row.errorMessage != null &&
+                        <Alert severity="error"> Failed due to : {props.params.row.errorMessage}</Alert>
+                    }
                     <FormControl sx={{ m: 1, width: '43ch' }} variant="standard">
                         <Typography variant="h2" sx={{color:'#014d88',fontWeight:'bolder'}} gutterBottom >
                             Purchase Order Details :

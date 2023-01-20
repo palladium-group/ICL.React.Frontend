@@ -19,7 +19,7 @@ const theme = createTheme({
   },
 });
 
-const PSAInboundProductMonitoring = () => {
+const OperationalPlanning = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -30,7 +30,7 @@ const PSAInboundProductMonitoring = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/manage")}
+              onClick={() => navigate("/plan")}
             >
               <ReplyIcon />
             </Button>
@@ -40,12 +40,12 @@ const PSAInboundProductMonitoring = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-          <iframe title="ICL Custom Reports PSA Inbound - Navigation" width="100%" height="100%"
-                  src="https://app.powerbi.com/view?r=eyJrIjoiYzU2MjBmOGItMTY4ZS00YzNjLWI2YmItYTBmNjE0ZjY2NzNjIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+          <iframe title="Supply Chain Planning" width="100%" height="100%"
+                  src="https://app.powerbi.com/reportEmbed?reportId=f4db9a59-6a0c-4969-9dcb-592d5e7c7eaa&autoAuth=true&ctid=e7942974-9738-4a4a-b646-2ab90f79db0f"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>
     </>
   );
 };
-export default PSAInboundProductMonitoring;
+export default OperationalPlanning;
