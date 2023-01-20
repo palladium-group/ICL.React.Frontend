@@ -82,7 +82,7 @@ const Parsyl = async(() => import("./pages/store/Parsyl"));
 const InventoryAnalysis = async(() => import("./pages/store/InventoryAnalysis"));
 const SmallBusiness = async(() => import("./pages/manage/SmallBusiness"));
 const Shipment = async(() => import("./pages/enable/Shipment"));
-const CustomsClearance = async(() => import("./pages/source/CustomsClearance"));
+const CustomsClearance = async(() => import("./pages/plan/CustomsClearance"));
 const OutboundPOValidated = async(() => import("./pages/dashboards/Default/OutboundPOValidated"));
 const PSAInboundProductMonitoring = async(() => import("./pages/plan/PSAInboundProductMonitoring"));
 const CustomReports = async(() => import("./pages/enable/CustomReports"));
@@ -213,6 +213,10 @@ const routes = [
       {
         path: "psa-inbound-product-monitoring",
         element: <PSAInboundProductMonitoring />,
+      },
+      {
+        path: "customs-clearance",
+        element: <CustomsClearance />,
       }
     ]
   },
@@ -224,10 +228,6 @@ const routes = [
         path: "",
         element: <Source />,
       },
-      {
-        path: "customs-clearance",
-        element: <CustomsClearance />,
-      }
     ],
   },
   {

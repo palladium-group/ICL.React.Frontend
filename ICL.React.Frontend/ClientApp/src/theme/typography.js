@@ -51,6 +51,9 @@ const typography = {
   body1: {
     fontSize: 13,
   },
+  body2: {
+    fontSize: 15,
+  },
   button: {
     textTransform: "none",
   },

@@ -47,8 +47,7 @@ const ProfileMarilynNoguera = () => {
                 <Grid item md={12}  xs={12} px={5} sx={{marginTop:10}}>
                     <Paper square={true} sx={{ borderTop: 5,borderTopColor:"black" }} elevation={8}>
                         <Card>
-                            <CardContent>                              
-                                
+                            <CardContent>
                                 <Spacer mb={4} />
                                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                                     <Grid container spacing={12}>
@@ -61,12 +60,12 @@ const ProfileMarilynNoguera = () => {
                                             </Grid>
                                             <Grid item>
                                                 <Typography sx={{ fontSize: 15, color:'orange' }}>Deputy Project Director</Typography>
-                                                {/*<Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>*/}
-                                                <ListItemIcon style={{marginTop:'20px'}}>
-                                                        <PhoneIcon /><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}>+1 202-468-6149</Typography>
+                                                <ListItemIcon style={{ marginTop: 5 }}>
+                                                        <PhoneIcon /><Typography sx={{ fontSize: 10, color:'orange', margin: 2 }}>+1 202-468-6149</Typography>
                                                 </ListItemIcon>
                                                 <ListItem  key="Email" component="a" href="mailto:marilyn.noguera@thepalladiumgroup.com" sx={{padding:'0px'}}>
-                                                    <EmailIcon sx={{color:'rgba(0, 0, 0, 0.54)'}}/><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}>marilyn.noguera@thepalladiumgroup.com</Typography>
+                                                    <EmailIcon sx={{color:'rgba(0, 0, 0, 0.54)'}}/>
+                                                    <Typography variant="h6" sx={{ fontSize: 10, color:'orange', margin: 2 }}>marilyn.noguera@thepalladiumgroup.com</Typography>
                                                 </ListItem>
                                             </Grid>
                                         </Grid>
@@ -75,7 +74,7 @@ const ProfileMarilynNoguera = () => {
                                                 <Typography sx={{ fontWeight: 700, fontSize: 20 }}>Bio</Typography>
                                             </Grid>
                                             <Grid item>
-                                                <Typography sx={{ fontSize: 15 }}>
+                                                <Typography variant="body2" sx={{ fontSize: 15 }}>
                                                     Marilyn has worked at both the country and HQ levels, combining practical delivery with vision, strategy, and technical leadership to consistently achieve results. Having served as a senior technical adviser with JSI, PATH, and Palladium, her work on previous iterations of GHSC includes delivering global technical leadership, five years leading the Mozambique program, overseeing implementation in Nigeria, and providing technical assistance to 20 countries. A highly respected, innovative, and decisive leader, she stands out for her ability to match technical strategies with practical, cutting-edge commercial solutions that meet on-the-ground needs.
                                                 </Typography>
                                             </Grid>

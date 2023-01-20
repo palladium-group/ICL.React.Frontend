@@ -61,12 +61,12 @@ const ProfileDanRhodes = () => {
                                             </Grid>
                                             <Grid item>
                                                 <Typography sx={{ fontSize: 15, color:'orange' }}>Management, Information & Results Director</Typography>
-                                                {/*<Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>*/}
-                                                <ListItemIcon style={{marginTop:'20px'}}>
-                                                    <PhoneIcon /><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}> + 1 609-947 2629</Typography>
+                                                <ListItemIcon style={{ marginTop: 5 }}>
+                                                    <PhoneIcon /><Typography sx={{ fontSize: 10, color:'orange', margin: 2 }}> + 1 609-947 2629</Typography>
                                                 </ListItemIcon>                                               
                                                 <ListItem  key="Email" component="a" href="mailto:sean.lockhead@thepalladiumgroup.com" sx={{padding:'0px'}}>
-                                                    <EmailIcon sx={{color:'rgba(0, 0, 0, 0.54)'}}/><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}>sean.lockhead@thepalladiumgroup.com</Typography>
+                                                    <EmailIcon sx={{color:'rgba(0, 0, 0, 0.54)'}}/>
+                                                    <Typography variant="h6" sx={{ fontSize: 10, color:'orange', margin: 2 }}>sean.lockhead@thepalladiumgroup.com</Typography>
                                                 </ListItem>
                                             </Grid>
                                         </Grid>
@@ -75,7 +75,7 @@ const ProfileDanRhodes = () => {
                                                 <Typography sx={{ fontWeight: 700, fontSize: 20 }}>Bio</Typography>
                                             </Grid>
                                             <Grid item>
-                                                <Typography sx={{ fontSize: 15 }}>
+                                                <Typography sx={{ fontSize: 15 }} variant="body2">
                                                     Sean was a key architect and thought leader for GS1, the gold standard for supply chain data interoperability, which has been vital to creating efficiencies in supply chain management. He is a technical and business leader with over 30 years of international experience, including on USAID global health supply chain activities. Sean has continuously demonstrated excellence in strategic planning, operational execution, product management, global standards development and implementation, and transaction-based supply chain initiatives.
                                                 </Typography>
                                             </Grid>
