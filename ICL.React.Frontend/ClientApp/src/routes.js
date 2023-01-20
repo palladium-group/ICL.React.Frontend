@@ -59,6 +59,7 @@ const GlobalFund = async(() => import("./pages/manage/GlobalFund"));
 const LetterOfCredit = async(() => import("./pages/manage/LetterOfCredit"));
 const Plan = async(() => import("./pages/plan/index"));
 const Source = async(() => import("./pages/source/index"));
+const Warehousing = async(() => import("./pages/source/Warehousing"));
 const QuantificationReports = async(() => import("./pages/plan/QuantificationReports"));
 const Store = async(() => import("./pages/store/index"));
 const Deliver = async(() => import("./pages/deliver"));
@@ -228,6 +229,10 @@ const routes = [
         path: "",
         element: <Source />,
       },
+      {
+        path: "warehousing",
+        element: <Warehousing />,
+      }
     ],
   },
   {

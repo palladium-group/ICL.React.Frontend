@@ -142,7 +142,7 @@ const MISAdministration = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      <a href="https://isomanagement.thepalladiumgroup.com?document_code=GBL%20IT01" target="_blank" rel="noopener noreferrer">Policy</a>
+                      <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119696690/Information+Security+Policy" target="_blank" rel="noopener noreferrer">Policy</a>
                       <Divider />
                     </Grid>
                   </Grid>
