@@ -96,6 +96,13 @@ const Inventory = async(() => import("./pages/enable/Inventory"));
 const OperationalPlanning = async(() => import("./pages/plan/OperationalPlanning"));
 const OutboundMilestoneMonitoring = async(() => import("./pages/plan/OutboundMilestoneMonitoring"));
 const InboundMilestoneMonitoring = async(() => import("./pages/plan/InboundMilestoneMonitoring"));
+const InventoryOnHand = async(() => import("./pages/plan/InventoryOnHand"));
+const InsuranceMonitoring = async(() => import("./pages/plan/InsuranceMonitoring"));
+const StockBalancing = async(() => import("./pages/plan/StockBalancing"));
+const HistoricalOrders = async(() => import("./pages/plan/HistoricalOrders"));
+const DeliveryPlanning = async(() => import("./pages/plan/DeliveryPlanning"));
+const InboundInventoryMonitoring = async(() => import("./pages/plan/InboundInventoryMonitoring"));
+const ForecastedOrders = async(() => import("./pages/plan/ForecastedOrders"));
 
 const routes = [
   {
@@ -233,6 +240,34 @@ const routes = [
       {
         path: "inbound-milestone-monitoring",
         element: <InboundMilestoneMonitoring />,
+      },
+      {
+        path: "inventory-on-hand",
+        element: <InventoryOnHand />,
+      },
+      {
+        path: "insurance-monitoring",
+        element: <InsuranceMonitoring />,
+      },
+      {
+        path: "stock-balancing",
+        element: <StockBalancing />,
+      },
+      {
+        path: "historical-orders",
+        element: <HistoricalOrders />,
+      },
+      {
+        path: "delivery-planning",
+        element: <DeliveryPlanning />,
+      },
+      {
+        path: "inbound-inventory-monitoring",
+        element: <InboundInventoryMonitoring />,
+      },
+      {
+        path: "forecasted-orders",
+        element: <ForecastedOrders />,
       }
     ]
   },

@@ -329,31 +329,31 @@ const PlanLinks = () => {
               <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                 <Grid container spacing={6}>
                   <Grid item md={12}>
-                    <NavLink to={`/plan/operational-planning`}>
+                    <NavLink to={`/plan/inventory-on-hand`}>
                       Inventory on Hand
                     </NavLink>
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    <NavLink to={`/plan/operational-planning`}>
+                    <NavLink to={`/plan/inbound-inventory-monitoring`}>
                       Inbound Inventory Monitoring
                     </NavLink>
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    <NavLink to={`/plan/operational-planning`}>
+                    <NavLink to={`/plan/insurance-monitoring`}>
                       Insurance Monitoring
                     </NavLink>
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    <NavLink to={`/plan/operational-planning`}>
+                    <NavLink to={`/plan/stock-balancing`}>
                       Stock Balancing
                     </NavLink>
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    <NavLink to={`/plan/operational-planning`}>
+                    <NavLink to={`/plan/historical-orders`}>
                       Historical Orders
                     </NavLink>
                     <Divider />
@@ -371,7 +371,7 @@ const PlanLinks = () => {
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    <NavLink to={`/plan/operational-planning`}>
+                    <NavLink to={`/plan/delivery-planning`}>
                       Delivery Planning
                     </NavLink>
                     <Divider />
