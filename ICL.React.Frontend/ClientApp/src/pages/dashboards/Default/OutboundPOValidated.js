@@ -62,7 +62,7 @@ const ASNValidatedData = () => {
         <div style={{ height: 400, width: "100%" }}>
           <DataGrid
             columns={[
-              {
+/*              {
                 field: "createDate",
                 headerName: "Created",
                 editable: false,
@@ -74,7 +74,7 @@ const ASNValidatedData = () => {
                 headerName: "Process Type",
                 editable: false,
                 flex: 1
-              },
+              },*/
               {
                 field: "placeOfDelivery",
                 headerName: "Place Of Delivery",
@@ -170,10 +170,10 @@ const OutboundPOValidated = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} md={6}>
-          <PieChart/>
+                  <PieChart dataType='inbound' labels={['Successful']} />
         </Grid>
         <Grid item xs={12} md={6}>
-          <ColumnChart/>
+                  <ColumnChart dataType='inbound' labels={['Successful'] } />
         </Grid>
       </Grid>
     </React.Fragment>
