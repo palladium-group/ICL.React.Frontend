@@ -49,7 +49,7 @@ const Title = styled(ListItemText)`
         props.theme.sidebar.color,
         props.depth && props.depth > 0 ? 0.7 : 1
       )};
-    font-size: ${(props) => props.theme.typography.body1.fontSize}px;
+    font-size: ${(props) => props.theme.typography.body2.fontSize}px;
     padding: 0 ${(props) => props.theme.spacing(4)};
   }
 `;

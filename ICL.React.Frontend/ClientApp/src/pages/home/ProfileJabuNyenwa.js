@@ -60,12 +60,12 @@ const ProfileSeanLockhead = () => {
                                             </Grid>
                                             <Grid item>
                                                 <Typography sx={{ fontSize: 15, color:'orange' }}>Country Programs Director</Typography>
-                                                {/*<Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>*/}
-                                                <ListItemIcon style={{marginTop:'20px'}}>
-                                                    <PhoneIcon /><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}> +44 7502220553</Typography>
+                                                <ListItemIcon style={{ marginTop: 5 }}>
+                                                    <PhoneIcon /><Typography sx={{ fontSize: 10, color:'orange', margin: 2 }}> +44 7502220553</Typography>
                                                 </ListItemIcon>
                                                 <ListItem  key="Email" component="a" href="mailto:jabulani.nyenwa@thepalladiumgroup.com" sx={{padding:'0px'}}>
-                                                    <EmailIcon sx={{color:'rgba(0, 0, 0, 0.54)'}}/><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}>jabulani.nyenwa@thepalladiumgroup.com</Typography>
+                                                    <EmailIcon sx={{color:'rgba(0, 0, 0, 0.54)'}}/>
+                                                    <Typography variant="h6" sx={{ fontSize: 10, color:'orange', margin: 2 }}>jabulani.nyenwa@thepalladiumgroup.com</Typography>
                                                 </ListItem>
                                             </Grid>
                                         </Grid>
@@ -74,7 +74,7 @@ const ProfileSeanLockhead = () => {
                                                 <Typography sx={{ fontWeight: 700, fontSize: 20 }}>Bio</Typography>
                                             </Grid>
                                             <Grid item>
-                                                <Typography sx={{ fontSize: 15 }}>
+                                                <Typography sx={{ fontSize: 15 }} variant="body2">
                                                     Jabulani “Jabu” Nyenwa has progressed over his 30-year career from a physician in his native Zimbabwe to a leader of some of the largest and most complex integrated health programs in Africa and Asia. As a long-term Palladium senior leader who is passionate about enabling people to access health services, he has implemented health service delivery, systems strengthening, and supply chain management programs in some of the world’s most challenging environments.
                                                 </Typography>
                                             </Grid>

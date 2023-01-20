@@ -51,10 +51,17 @@ const allLinks = [
       },
       {
         header: "Planning Inputs",
+        display: "Custom Clearance Monitoring",
+        href: "/plan/customs-clearance",
+        visible: true
+      },
+      {
+        header: "Planning Inputs",
         display: "Customs Requirements",
         href: "https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26/group/70/create/272",
         visible: true
-      }]
+      },
+    ]
   },
   {
     header: "Order Intake",

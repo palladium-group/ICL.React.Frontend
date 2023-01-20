@@ -14,7 +14,7 @@ const Button = styled(MuiButton)(spacing);
 const theme = createTheme({
   palette: {
     secondary: {
-      main: "#8D6E97",
+      main: "#BA0C2F",
     },
   },
 });
@@ -30,7 +30,7 @@ const CustomsClearance = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/source")}
+              onClick={() => navigate("/plan")}
             >
               <ReplyIcon />
             </Button>

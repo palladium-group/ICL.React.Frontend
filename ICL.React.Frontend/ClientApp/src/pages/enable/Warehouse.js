@@ -39,8 +39,8 @@ const Warehouse = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-          <iframe title="LIT ICL Dashboards - Warehousing - Navigation " width="100%" height="100%"
-                  src="https://app.powerbi.com/view?r=eyJrIjoiMzBhM2RmMjQtMTFmNi00NzM1LThhYWItYjI3YmIwYmFiOTc3IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+          <iframe title="LIT ICL Dashboards - Warehousing" width="100%" height="100%"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiMzBhM2RmMjQtMTFmNi00NzM1LThhYWItYjI3YmIwYmFiOTc3IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection41a072b839dc3a7bc861"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>

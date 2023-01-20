@@ -72,7 +72,7 @@ const HeaderContent=()=> {
               <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2} alignItems="stretch">
                   <Grid item xs>
-                    <Card sx={{ height:90,  backgroundColor: "#05C3DE" }}>
+                    <Card sx={{ height:90,  backgroundColor: "#333333" }}>
                       <CardContent>
                         <Typography variant="body2" sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
                           <a style={{ color: "white" }} href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119794707/Nextgen+ICL+strategy" target="_blank" rel="noopener noreferrer">NEXTGEN ICL
@@ -83,7 +83,7 @@ const HeaderContent=()=> {
                     </Card>
                   </Grid>
                   <Grid item xs>
-                    <Card sx={{ height:90, backgroundColor: "#BA0C2F" }}
+                    <Card sx={{ height:90, backgroundColor: "#333333" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
                         <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
@@ -93,7 +93,7 @@ const HeaderContent=()=> {
                     </Card>
                   </Grid>
                   <Grid item xs>
-                    <Card sx={{ height:90,backgroundColor: "#64A70B" }}
+                    <Card sx={{ height:90,backgroundColor: "#333333" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
                         <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
@@ -103,7 +103,7 @@ const HeaderContent=()=> {
                     </Card>
                   </Grid>
                   <Grid item xs>
-                    <Card sx={{ height:90, backgroundColor: "#64A70B" }}
+                    <Card sx={{ height:90, backgroundColor: "#333333" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
@@ -114,7 +114,7 @@ const HeaderContent=()=> {
                     </Card>
                   </Grid>
                   <Grid item xs>
-                    <Card sx={{ height:90, backgroundColor: "#8D6E97" }}
+                    <Card sx={{ height:90, backgroundColor: "#333333" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
                         <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
@@ -124,7 +124,7 @@ const HeaderContent=()=> {
                     </Card>
                   </Grid>
                   <Grid item xs>
-                    <Card sx={{ height:90, backgroundColor: "#8D6E97" }}
+                    <Card sx={{ height:90, backgroundColor: "#333333" }}
                           style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column' }}>
                       <CardContent>
                         <Typography sx={{ fontSize: 18, textAlign: 'center',color:'white' }}>
@@ -327,7 +327,7 @@ const SuccessContent=()=> {
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <CardContent sx={{ flex: '1 0 auto' }}>
                     <Typography component="div" variant="h5">
-                      The Global Fund [Global Fund Supply Chain Health Services Spot Check Project (GFSCHSSC)]
+                      Global Fund
                     </Typography>
                     <Typography variant="body2" component="div">
                       Across 22 countries and with data from 800 health facilities, we support The Global Fund to embed a culture of performance management in each country’s health supply chains. We routinely track indicators for on-shelf availability, on-time-in-full delivery, commodities stocked according to plan, and timeliness of facility’s reporting to the LMIS. Our analyses support health programs and the ability of supply chain actors to monitor needs, identify risks, and track trends in individual country logistics operations to help inform systems strengthening priorities.

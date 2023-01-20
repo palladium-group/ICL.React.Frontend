@@ -61,12 +61,12 @@ const ProfileJabuNyenwa = () => {
                                             </Grid>
                                             <Grid item>
                                                 <Typography sx={{ fontSize: 15, color:'orange' }}>Project Director</Typography>
-                                                {/*<Typography sx={{ fontSize: 10, color:'grey' }}><li>Since June 2022</li> <li>Nairobi, Kenya </li></Typography>*/}
-                                                <ListItemIcon style={{marginTop:'20px'}}>
-                                                    <PhoneIcon /><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}>+1 440-832-1880</Typography>
+                                                <ListItemIcon style={{ marginTop: 5 }}>
+                                                    <PhoneIcon /><Typography sx={{ fontSize: 10, color:'orange', margin: 2 }}>+1 440-832-1880</Typography>
                                                 </ListItemIcon>
                                                 <ListItem  key="Email" component="a" href="mailto:dan.rhodes@thepalladiumgroup.com" sx={{padding:'0px'}}>
-                                                    <EmailIcon sx={{color:'rgba(0, 0, 0, 0.54)'}}/><Typography sx={{ fontSize: 10, color:'orange', margin:'auto' }}>dan.rhodes@thepalladiumgroup.com</Typography>
+                                                    <EmailIcon sx={{color:'rgba(0, 0, 0, 0.54)'}}/>
+                                                    <Typography variant="h6" sx={{ fontSize: 10, color:'orange', margin: 2 }}>dan.rhodes@thepalladiumgroup.com</Typography>
                                                 </ListItem>
                                             </Grid>
                                         </Grid>
@@ -75,7 +75,7 @@ const ProfileJabuNyenwa = () => {
                                                 <Typography sx={{ fontWeight: 700, fontSize: 20 }}>Bio</Typography>
                                             </Grid>
                                             <Grid item>
-                                                <Typography sx={{ fontSize: 15 }}>
+                                                <Typography variant="body2" sx={{ fontSize: 15 }}>
                                                     Dan has deep and varied experience designing, leading, improving, and scaling supply chain activities, 
                                                     including having held commercial responsibility for portfolios of over $250 million per year and operational 
                                                     leadership of over $750 million per year across 25 countries. 
