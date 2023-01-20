@@ -30,7 +30,7 @@ const PSAInboundProductMonitoring = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/manage")}
+              onClick={() => navigate("/plan")}
             >
               <ReplyIcon />
             </Button>
