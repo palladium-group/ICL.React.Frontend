@@ -41,7 +41,7 @@ const BuyInStatus = () => {
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
           <iframe title="Buy-in Status" width="100%" height="100%"
-                  src="https://app.powerbi.com/view?r=eyJrIjoiMjMwYjVlN2YtZmNhZC00ZTE5LTgzZTQtZTQzYzRjNmE5YTRiIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiMjMwYjVlN2YtZmNhZC00ZTE5LTgzZTQtZTQzYzRjNmE5YTRiIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSectionb6939a620a830405dd94"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>
