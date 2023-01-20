@@ -39,7 +39,7 @@ const SourceProducts = () => {
       <br />
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
-          <iframe title="ICL Product Master" width="1024" height="1060"
+          <iframe title="ICL Product Master" width="100%" height="100%"
                   src="https://app.powerbi.com/view?r=eyJrIjoiNWMyZjU2NzUtMmNhMS00MTI3LThmNTYtZjJiM2YwNGUxNDE0IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection676adc5001f66c212e7e"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
