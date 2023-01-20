@@ -92,6 +92,9 @@ const AssignUserRole = async(() => import("./pages/MISAdministration/AssignUserR
 const Warehouse = async(() => import("./pages/enable/Warehouse"));
 const Transport = async(() => import("./pages/enable/Transport"));
 const Inventory = async(() => import("./pages/enable/Inventory"));
+const OperationalPlanning = async(() => import("./pages/plan/OperationalPlanning"));
+const OutboundMilestoneMonitoring = async(() => import("./pages/plan/OutboundMilestoneMonitoring"));
+const InboundMilestoneMonitoring = async(() => import("./pages/plan/InboundMilestoneMonitoring"));
 
 const routes = [
   {
@@ -217,6 +220,18 @@ const routes = [
       {
         path: "customs-clearance",
         element: <CustomsClearance />,
+      },
+      {
+        path: "operational-planning",
+        element: <OperationalPlanning />,
+      },
+      {
+        path: "outbound-milestone-monitoring",
+        element: <OutboundMilestoneMonitoring />
+      },
+      {
+        path: "inbound-milestone-monitoring",
+        element: <InboundMilestoneMonitoring />,
       }
     ]
   },
