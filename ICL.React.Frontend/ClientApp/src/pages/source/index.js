@@ -64,7 +64,10 @@ const Source = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
+                    <NavLink to={`/source/warehousing`}>
                     Warehousing
+                      </NavLink>
+                    
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

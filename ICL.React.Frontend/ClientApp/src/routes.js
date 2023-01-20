@@ -61,6 +61,7 @@ const Plan = async(() => import("./pages/plan/index"));
 
 const Source = async(() => import("./pages/source/index"));
 const SourceProducts = async(() => import("./pages/source/SourceProducts"));
+const Warehousing = async(() => import("./pages/source/Warehousing"));
 
 const QuantificationReports = async(() => import("./pages/plan/QuantificationReports"));
 const Store = async(() => import("./pages/store/index"));
@@ -95,6 +96,9 @@ const AssignUserRole = async(() => import("./pages/MISAdministration/AssignUserR
 const Warehouse = async(() => import("./pages/enable/Warehouse"));
 const Transport = async(() => import("./pages/enable/Transport"));
 const Inventory = async(() => import("./pages/enable/Inventory"));
+const OperationalPlanning = async(() => import("./pages/plan/OperationalPlanning"));
+const OutboundMilestoneMonitoring = async(() => import("./pages/plan/OutboundMilestoneMonitoring"));
+const InboundMilestoneMonitoring = async(() => import("./pages/plan/InboundMilestoneMonitoring"));
 
 const routes = [
   {
@@ -220,6 +224,18 @@ const routes = [
       {
         path: "customs-clearance",
         element: <CustomsClearance />,
+      },
+      {
+        path: "operational-planning",
+        element: <OperationalPlanning />,
+      },
+      {
+        path: "outbound-milestone-monitoring",
+        element: <OutboundMilestoneMonitoring />
+      },
+      {
+        path: "inbound-milestone-monitoring",
+        element: <InboundMilestoneMonitoring />,
       }
     ]
   },
@@ -234,6 +250,10 @@ const routes = [
       {
         path: "products",
         element: <SourceProducts />,
+      },
+      {
+        path: "warehousing",
+        element: <Warehousing />,
       }
     ],
   },
