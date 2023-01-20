@@ -40,7 +40,7 @@ const GlobalFund = () => {
       <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
         <Grid item md={12} zeroMinWidth>
           <iframe title="GF_ Health Supply Chain Spot Checks Burundi" width="100%" height="100%"
-                  src="https://app.powerbi.com/view?r=eyJrIjoiMDQ0OTAwNTktZGFmNS00Y2ViLWE3Y2EtNmQzNDk2YTFkMTkwIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection841764d4523178b9c949"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiMDQ0OTAwNTktZGFmNS00Y2ViLWE3Y2EtNmQzNDk2YTFkMTkwIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSectionda2d72c1d04cd2e2bd3e"
                   frameBorder="0" allowFullScreen="true"></iframe>
         </Grid>
       </Grid>
