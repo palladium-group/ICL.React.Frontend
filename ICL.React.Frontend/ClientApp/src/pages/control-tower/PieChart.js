@@ -18,34 +18,68 @@ const ChartWrapper = styled.div`
 
 function PieChart (props) {
   //const data = [44, 55, 13];
-  const [data, setData]=useState([0,0,0])
+    const [data, setData] = useState([0, 0, 0]);
+    const [labels, setLables] = useState(['Successful', 'Pending', 'Failed'])
+    const [colors, setColors] = useState([])
+    const [options, setOptions] = useState(null)
+    useEffect(() => {
+        setLables(props.labels);
+        const colorRange = [];
+        props.labels.map(label =>{
+            ['Successful', 'Pending', 'Failed'].map((l,i)=>{
+                let range = ['#64A70B', '#E57200', '#BA0C2F'];
+                if(label === l ){
+                    colorRange.push(range[i])
+                }
+            })
+        })
 
-  const options = {
-    labels: ['Successful', 'Pending', 'Failed'],
-    fill: {
-      colors:['#64A70B', '#E57200', '#BA0C2F']
-    },
-    markers: {
-      colors:['#64A70B', '#E57200', '#BA0C2F']
-    },
-    dataLabels: {
-      enabled: true,
-    },
-    colors:['#64A70B', '#E57200', '#BA0C2F']
-  };
+        let tempColors=[[]]
+        props.labels.map((label,index) => {
+            colors.push(colorRange[index])
+        })
+        setColors(colorRange)
+        setOptions(
+            {
+                labels: props.labels,
+                fill: {
+                    colors: colors
+                },
+                markers: {
+                    colors: colors
+                },
+                dataLabels: {
+                    enabled: true,
+                },
+                colors: colors
+            }
+        )
+
+    },[])
+
+ 
   useEffect(() => {
       axios.get(`${apiRoutes.purchaseOrder}/statistics/${props.dataType}`)
         .then((response)=>{
+            let chartData=[];
           let success = 0;
           let failed=0;
           let pending = 0;
           response.data.map(row =>{
-            console.log(row)
             success = success + row.delivered;
             failed = failed+row.failed;
             pending = pending + row.pending;
           })
-          setData([success,pending,failed])
+            props.labels.map(label =>{
+                if(label === 'Successful'){
+                    chartData.push(success)
+                }else if(label === 'Pending'){
+                    chartData.push(pending)
+                }else if(label === 'Failed'){
+                    chartData.push(failed)
+                }
+            })
+            setData([...chartData])
         })
   },[]);
 
@@ -60,11 +94,13 @@ function PieChart (props) {
           Success percentages.
         </Typography>
 
-        <Spacer mb={6} />
+              <Spacer mb={6} />
+              {options != null &&
+                  <ChartWrapper>
+                      <Chart options={options} series={data} type="donut" height="350" />
+                  </ChartWrapper>
+              }
 
-        <ChartWrapper>
-          <Chart options={options} series={data} type="donut" height="350" />
-        </ChartWrapper>
       </CardContent>
     </Card>
   );
