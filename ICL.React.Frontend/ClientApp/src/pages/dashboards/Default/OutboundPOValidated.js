@@ -27,7 +27,7 @@ const Paper = styled(MuiPaper)(spacing);
 const theme = createTheme({
   palette: {
     secondary: {
-      main: "#8D6E97",
+      main: "#BA0C2F",
     },
   },
 });
@@ -147,7 +147,7 @@ const OutboundPOValidated = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/source")}
+              onClick={() => navigate("/plan")}
             >
               <ReplyIcon />
             </Button>

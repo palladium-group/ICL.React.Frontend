@@ -64,17 +64,29 @@ const allLinks = [
     ]
   },
   {
-    header: "Order Intake",
+    header: "Order Visibility",
     visible: true,
     links: [
       {
-        header: "Order Intake",
+        header: "Order Visibility",
+        display: "Inbound Visibility",
+        href: "/shipment/pos",
+        visible: true,
+      },
+      {
+        header: "Order Visibility",
+        display: "Order Fulfilment",
+        href: "/shipment/pos-validated",
+        visible: true,
+      },
+      {
+        header: "Order Visibility",
         display: "Orders Received (current)",
         href: "/customer-orders/pos",
         visible: true
       },
       {
-        header: "Order Intake",
+        header: "Order Visibility",
         display: "Orders Validated (current)",
         href: "/customer-orders/pos-validated",
         visible: true

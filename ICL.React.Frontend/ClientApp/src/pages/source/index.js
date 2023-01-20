@@ -116,18 +116,6 @@ const Source = () => {
                       Service Level Agreements
                       <Divider />
                     </Grid>
-                    <Grid item md={12}>
-                      <NavLink to={`/shipment/pos`}>
-                        Advanced Shipment Notice/ASN
-                      </NavLink>
-                      <Divider />
-                    </Grid>
-                    <Grid item md={12}>
-                      <NavLink to={`/shipment/pos-validated`}>
-                        Advanced Shipment Notice/ASN(Validated)
-                      </NavLink>
-                      <Divider />
-                    </Grid>
                   </Grid>
                 </Box>
               </CardContent>

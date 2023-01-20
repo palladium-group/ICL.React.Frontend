@@ -131,7 +131,7 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-            Digital Twin
+            <a href="https://pscm.kpmgarwin.com/" target="_blank" rel="noopener noreferrer">Digital Twin</a>
             <Divider />
           </Grid>
           <Grid item md={12}>
