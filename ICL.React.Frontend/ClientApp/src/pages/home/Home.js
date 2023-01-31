@@ -243,10 +243,10 @@ const YammerContent=()=> {
               <Divider />
               <Typography component="p">
                 <iframe
-                  name="embed-feed"
-                  title="Yammer"
-                  src="https://web.yammer.com/embed/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxMTU1MjgxOSJ9?header=false&footer=false&theme=light&includeFeedInformation=false"
-                  style={{ border: "0px", overflow: "hidden", width: "100%", height: "100%", minHeight: "400px" }}></iframe>
+                    name="embed-feed"
+                    title="Yammer"
+                    src="https://web.yammer.com/embed/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxMjU0NzQ4NjUxNTIifQ?header=false&footer=false&theme=light&includeFeedInformation=true"
+                    style={{ border: "0px", overflow: "hidden", width: "100%", height: "100%", minHeight: "400px" }}></iframe>
               </Typography>
             </CardContent>
           </CardActionArea>
