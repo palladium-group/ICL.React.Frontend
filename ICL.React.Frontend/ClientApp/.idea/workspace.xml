@@ -4,33 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ClientApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+    <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="update gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MISAdministration/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MISAdministration/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/deliver/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/deliver/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/enable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/plan/InsuranceMonitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/InsuranceMonitoring.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/plan/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/source/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/source/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-MIS.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-MIS.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-deliver.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-deliver.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-enable.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-enable.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-manage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-manage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-plan.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-plan.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-source.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-source.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-store.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-store.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/BuyInStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/BuyInStatus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/DistributionCostAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/DistributionCostAnalysis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/GlobalFund.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/GlobalFund.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/HqStartUpstatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/HqStartUpstatus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/IncrementalObligationManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/IncrementalObligationManagement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/KPIDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/KPIDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/LetterOfCredit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/LetterOfCredit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/RegionalOperationsTeam.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/RegionalOperationsTeam.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/SmallBusiness.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/SmallBusiness.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/StaffingLevelsCountries.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/StaffingLevelsCountries.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/StaffingLevelsHQ.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/StaffingLevelsHQ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/SurveyResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/SurveyResults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/TotalLandedCostsAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/TotalLandedCostsAnalysis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/WarehousingCostAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/WarehousingCostAnalysis.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +64,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "C:\\source\\palladium\\DIAS\\ICL\\ICL.React.Frontend\\ICL.React.Frontend\\ClientApp\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -95,8 +88,23 @@
       <workItem from="1674030282342" duration="2257000" />
       <workItem from="1674204673376" duration="4033000" />
       <workItem from="1675671953909" duration="11000" />
-      <workItem from="1675671980795" duration="6134000" />
+      <workItem from="1675671980795" duration="10840000" />
     </task>
+    <task id="LOCAL-00001" summary="update banners for ICL platform">
+      <created>1675679860470</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675679860470</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update gitignore">
+      <created>1675679885887</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675679885887</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,5 +120,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update banners for ICL platform" />
+    <MESSAGE value="update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
   </component>
 </project>
