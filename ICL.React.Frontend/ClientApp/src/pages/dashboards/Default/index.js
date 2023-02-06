@@ -1,6 +1,4 @@
 import React,{useState, useEffect} from "react";
-import axios from "axios";
-import AreaChart from '../../charts/ApexCharts';
 import ColumnChart from '../../control-tower/ColumnChart';
 import PieChart from '../../control-tower/PieChart';
 import Alert from '@mui/material/Alert';
@@ -13,29 +11,25 @@ import {
   Divider as MuiDivider,
   Typography as MuiTypography,
   Card as MuiCard,
-  CardContent as MuiCardContent,
   Paper as MuiPaper,
-  Breadcrumbs as MuiBreadcrumbs,
-  Button as MuiButton, CardContent, Button,
+  CardContent,
+  Button,
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import { spacing } from "@mui/system";
 import {DataGrid, GridToolbar} from "@mui/x-data-grid";
 import {useQuery} from "@tanstack/react-query";
 import {getPurchaseOrderWithParam} from "../../../api/purchase-orders";
 import {format} from "date-fns";
 import { Add as AddIcon } from "@mui/icons-material";
-import DoneIcon from '@mui/icons-material/Done';
-import CancelIcon from '@mui/icons-material/Cancel';
 import Pending from "@mui/icons-material/Pending";
 import {useNavigate} from "react-router-dom";
 
 const Divider = styled(MuiDivider)(spacing);
 const Typography = styled(MuiTypography)(spacing);
 const Card = styled(MuiCard)(spacing);
-// const CardContent = styled(MuiCardContent)(spacing);
 const Paper = styled(MuiPaper)(spacing);
-// const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
-// const Button = styled(MuiButton)(spacing);
 
 const IncomingOrdersData = (props) => {
   // fetch incoming orders
@@ -67,19 +61,6 @@ const IncomingOrdersData = (props) => {
         <div style={{ height: 400, width: "100%" }}>
           <DataGrid
             columns={[
-/*              {
-                field: "createDate",
-                headerName: "Created",
-                editable: false,
-                flex: 1,
-                valueFormatter: params => format(new Date(params?.value), 'dd-MMM-yyyy')
-              },
-              {
-                field: "processType",
-                headerName: "Process Type",
-                editable: false,
-                flex: 1
-              },*/
               {
                 field: "placeOfDelivery",
                 headerName: "Place Of Delivery",
@@ -142,6 +123,8 @@ const IncomingOrdersData = (props) => {
 
 function Default() {
   const navigate = useNavigate();
+  const theme = useTheme();
+  const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
   const[showPOForm, setShowPOForm] = useState(false);
   const[currentPO, setCurrentPO] = useState();
   const[alert, setAlert]=useState(false);
@@ -154,21 +137,22 @@ function Default() {
   }
 
   return (
-      <React.Fragment>
-        <Card>
-          <CardContent pb={1}>
-            <Button
-            mr={2}
-            variant="contained"
-            color="secondary"
-            onClick={() => navigate("/control-tower")}
-            >
-              <AddIcon /> Upload ASN
-            </Button>
-          </CardContent>
-        </Card>
-        <br />
-        {!showPOForm &&
+      <Grid container p={isLgUp ? 12 : 5}>
+        <Grid item md={12}>
+          <Card>
+            <CardContent pb={1}>
+              <Button
+                mr={2}
+                variant="contained"
+                color="secondary"
+                onClick={() => navigate("/control-tower")}
+              >
+                <AddIcon /> Upload ASN
+              </Button>
+            </CardContent>
+          </Card>
+          <br />
+          {!showPOForm &&
             <>
               <Helmet title="Incoming Orders" />
               <Grid justifyContent="space-between" container spacing={6}>
@@ -181,7 +165,7 @@ function Default() {
 
               <Divider my={6} />
               {alert &&
-                  <Alert severity="success" >{alertMessage}</Alert>
+                <Alert severity="success" >{alertMessage}</Alert>
               }
               <IncomingOrdersData setShowPOForm={setShowPOForm} setCurrentPO={setCurrentPO}  />
               <Grid container spacing={6} sx={{marginTop:'20px'}}>
@@ -194,18 +178,18 @@ function Default() {
                   <PieChart dataType='inbound'  labels={['Pending','Failed']}/>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                      <ColumnChart dataType='inbound'  labels={['Pending','Failed']}/>
+                  <ColumnChart dataType='inbound'  labels={['Pending','Failed']}/>
                 </Grid>
               </Grid>
             </>
 
 
-        }
-        {showPOForm &&
+          }
+          {showPOForm &&
             <PurchaseOrderForm params={currentPO} showAlert={showAlert} setAlertMessage={setAlertMessage} setShowPOForm={setShowPOForm}/>
-        }
-      </React.Fragment>
-
+          }
+        </Grid>
+      </Grid>
   );
 }
 

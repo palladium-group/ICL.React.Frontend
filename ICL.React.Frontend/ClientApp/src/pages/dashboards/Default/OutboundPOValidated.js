@@ -10,6 +10,8 @@ import {
   Card as MuiCard,
   Paper as MuiPaper, Button,
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import { spacing } from "@mui/system";
 import {DataGrid, GridToolbar} from "@mui/x-data-grid";
 import {useQuery} from "@tanstack/react-query";
@@ -24,7 +26,7 @@ const Typography = styled(MuiTypography)(spacing);
 const Card = styled(MuiCard)(spacing);
 const Paper = styled(MuiPaper)(spacing);
 
-const theme = createTheme({
+const themeCustom = createTheme({
   palette: {
     secondary: {
       main: "#BA0C2F",
@@ -62,19 +64,6 @@ const ASNValidatedData = () => {
         <div style={{ height: 400, width: "100%" }}>
           <DataGrid
             columns={[
-/*              {
-                field: "createDate",
-                headerName: "Created",
-                editable: false,
-                flex: 1,
-                valueFormatter: params => format(new Date(params?.value), 'dd-MMM-yyyy')
-              },
-              {
-                field: "processType",
-                headerName: "Process Type",
-                editable: false,
-                flex: 1
-              },*/
               {
                 field: "placeOfDelivery",
                 headerName: "Place Of Delivery",
@@ -137,46 +126,50 @@ const ASNValidatedData = () => {
 
 const OutboundPOValidated = () => {
   const navigate = useNavigate();
+  const theme = useTheme();
+  const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
   return (
-    <React.Fragment>
-      <Helmet title="Advanced Shipment Notice/ASN(Validated)" />
-      <Grid container spacing={6}>
-        <Grid item>
-          <ThemeProvider theme={theme}>
-            <Button
-              mr={2}
-              variant="contained"
-              color="secondary"
-              onClick={() => navigate("/plan")}
-            >
-              <ReplyIcon />
-            </Button>
-          </ThemeProvider>
+    <Grid container p={isLgUp ? 12 : 5}>
+      <Grid item md={12}>
+        <Helmet title="Advanced Shipment Notice/ASN(Validated)" />
+        <Grid container spacing={6}>
+          <Grid item>
+            <ThemeProvider theme={themeCustom}>
+              <Button
+                mr={2}
+                variant="contained"
+                color="secondary"
+                onClick={() => navigate("/plan")}
+              >
+                <ReplyIcon />
+              </Button>
+            </ThemeProvider>
+          </Grid>
+        </Grid>
+        <Grid justifyContent="space-between" container spacing={6} sx={{ marginTop: 2 }}>
+          <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
+            <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
+              Advanced Shipment Notice/ASN(Validated)
+            </Typography>
+          </Grid>
+        </Grid>
+        <Divider my={6} />
+        <ASNValidatedData  />
+        <Grid container spacing={6} sx={{marginTop:'20px'}}>
+          <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
+            <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
+              Middleware Messaging Statistics
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <PieChart dataType='inbound' labels={['Successful']} />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <ColumnChart dataType='inbound' labels={['Successful'] } />
+          </Grid>
         </Grid>
       </Grid>
-      <Grid justifyContent="space-between" container spacing={6} sx={{ marginTop: 2 }}>
-        <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
-          <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
-            Advanced Shipment Notice/ASN(Validated)
-          </Typography>
-        </Grid>
-      </Grid>
-      <Divider my={6} />
-      <ASNValidatedData  />
-      <Grid container spacing={6} sx={{marginTop:'20px'}}>
-        <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
-          <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
-            Middleware Messaging Statistics
-          </Typography>
-        </Grid>
-        <Grid item xs={12} md={6}>
-                  <PieChart dataType='inbound' labels={['Successful']} />
-        </Grid>
-        <Grid item xs={12} md={6}>
-                  <ColumnChart dataType='inbound' labels={['Successful'] } />
-        </Grid>
-      </Grid>
-    </React.Fragment>
+    </Grid>
   );
 };
 export default OutboundPOValidated;

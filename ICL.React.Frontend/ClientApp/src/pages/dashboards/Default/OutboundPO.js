@@ -15,6 +15,8 @@ import {
     CardContent,
     Button,
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import { spacing } from "@mui/system";
 import {DataGrid, GridToolbar} from "@mui/x-data-grid";
 import {useQuery} from "@tanstack/react-query";
@@ -30,7 +32,7 @@ const Typography = styled(MuiTypography)(spacing);
 const Card = styled(MuiCard)(spacing);
 const Paper = styled(MuiPaper)(spacing);
 
-const theme = createTheme({
+const themeCustom = createTheme({
     palette: {
         secondary: {
             main: "#BA0C2F",
@@ -143,6 +145,8 @@ const IncomingOrdersData = (props) => {
 
 function OutboundPO() {
     const navigate = useNavigate();
+    const theme = useTheme();
+    const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
     const[showPOForm, setShowPOForm] = useState(false);
     const[currentPO, setCurrentPO] = useState();
     const[alert, setAlert]=useState(false);
@@ -155,71 +159,73 @@ function OutboundPO() {
     }
 
     return (
-        <React.Fragment>
-            <Grid container spacing={6}>
-                <Grid item>
-                    <ThemeProvider theme={theme}>
+        <Grid container p={isLgUp ? 12 : 5}>
+            <Grid item md={12}>
+                <Grid container spacing={6}>
+                    <Grid item>
+                        <ThemeProvider theme={themeCustom}>
+                            <Button
+                              mr={2}
+                              variant="contained"
+                              color="secondary"
+                              onClick={() => navigate("/plan")}
+                            >
+                                <ReplyIcon />
+                            </Button>
+                        </ThemeProvider>
+                    </Grid>
+                </Grid>
+                <Card>
+                    <CardContent pb={1}>
                         <Button
                           mr={2}
                           variant="contained"
                           color="secondary"
-                          onClick={() => navigate("/plan")}
+                          onClick={() => navigate("/customer-order-upload")}
                         >
-                            <ReplyIcon />
+                            <AddIcon /> Upload Customer Orders
                         </Button>
-                    </ThemeProvider>
-                </Grid>
-            </Grid>
-            <Card>
-                <CardContent pb={1}>
-                    <Button
-                        mr={2}
-                        variant="contained"
-                        color="secondary"
-                        onClick={() => navigate("/customer-order-upload")}
-                    >
-                        <AddIcon /> Upload Customer Orders
-                    </Button>
-                </CardContent>
-            </Card>
-            <br />
-            {!showPOForm &&
-                <>
-                    <Helmet title="Customer Orders" />
-                    <Grid justifyContent="space-between" container spacing={6}>
-                        <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
-                            <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
-                                Customer Orders
-                            </Typography>
-                        </Grid>
-                    </Grid>
+                    </CardContent>
+                </Card>
+                <br />
+                {!showPOForm &&
+                  <>
+                      <Helmet title="Customer Orders" />
+                      <Grid justifyContent="space-between" container spacing={6}>
+                          <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
+                              <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
+                                  Customer Orders
+                              </Typography>
+                          </Grid>
+                      </Grid>
 
-                    <Divider my={6} />
-                    {alert &&
+                      <Divider my={6} />
+                      {alert &&
                         <Alert severity="success" >{alertMessage}</Alert>
-                    }
-                    <IncomingOrdersData setShowPOForm={setShowPOForm} setCurrentPO={setCurrentPO}  />
-                    <Grid container spacing={6} sx={{marginTop:'20px'}}>
-                        <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
-                            <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
-                                Middleware Messaging Statistics
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                        <PieChart dataType='outbound' labels={['Successful','Pending','Failed']} />
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                        <ColumnChart dataType='outbound' labels={['Successful','Pending','Failed']} />
-                        </Grid>
-                    </Grid>
-                </>
+                      }
+                      <IncomingOrdersData setShowPOForm={setShowPOForm} setCurrentPO={setCurrentPO}  />
+                      <Grid container spacing={6} sx={{marginTop:'20px'}}>
+                          <Grid item xs={12} md={12} style={{backgroundColor:'#05C3DE',marginLeft:'25px',marginBottom:'-20px'}}>
+                              <Typography variant="h2" sx={{color:'#fff',fontWeight:'bolder'}} gutterBottom>
+                                  Middleware Messaging Statistics
+                              </Typography>
+                          </Grid>
+                          <Grid item xs={12} md={6}>
+                              <PieChart dataType='outbound' labels={['Successful','Pending','Failed']} />
+                          </Grid>
+                          <Grid item xs={12} md={6}>
+                              <ColumnChart dataType='outbound' labels={['Successful','Pending','Failed']} />
+                          </Grid>
+                      </Grid>
+                  </>
 
 
-            }
-            {showPOForm &&
-                <PurchaseOrderForm params={currentPO} showAlert={showAlert} setAlertMessage={setAlertMessage} setShowPOForm={setShowPOForm}/>
-            }
-        </React.Fragment>
+                }
+                {showPOForm &&
+                  <PurchaseOrderForm params={currentPO} showAlert={showAlert} setAlertMessage={setAlertMessage} setShowPOForm={setShowPOForm}/>
+                }
+            </Grid>
+        </Grid>
 
     );
 }
