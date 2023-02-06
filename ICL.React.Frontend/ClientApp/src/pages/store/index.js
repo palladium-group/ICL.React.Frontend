@@ -7,6 +7,8 @@ import {
   Divider as MuiDivider,
   Grid, Paper, Typography,
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import {spacing} from "@mui/system";
 import FirstImg from "../../vendor/illustration-store.png";
 import {NavLink} from "react-router-dom";
@@ -17,6 +19,9 @@ const Divider = styled(MuiDivider)(spacing);
 const Spacer = styled.div(spacing);
 
 const Store = () => {
+  const theme = useTheme();
+  const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
+
   return (
     <React.Fragment>
       <Paper square={true} sx={{ width: "100%" }}>
@@ -25,9 +30,8 @@ const Store = () => {
           image={FirstImg}
         />
       </Paper>
-      <br />
-      <Grid container spacing={2} alignItems="stretch">
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+      <Grid container spacing={2} alignItems="stretch" p={isLgUp ? 12 : 5}>
+        <Grid item md={4}  xs={4} px={5}>
           <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
@@ -56,7 +60,7 @@ const Store = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+        <Grid item md={4}  xs={4} px={5}>
           <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
@@ -85,7 +89,7 @@ const Store = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+        <Grid item md={4}  xs={4} px={5}>
           <Paper square={true} sx={{ borderTop: 5, borderColor: "#FFB500" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
@@ -101,7 +105,9 @@ const Store = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                    Insurance Monitoring and Alerts
+                      <NavLink to={`/store/insurance-monitoring`}>
+                        Insurance Monitoring and Alerts
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>

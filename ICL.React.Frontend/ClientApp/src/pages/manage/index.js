@@ -8,6 +8,8 @@ import {
   Paper,
   Typography
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import styled from "@emotion/styled";
 import {spacing} from "@mui/system";
 // import { orange } from "@mui/material/colors";
@@ -20,6 +22,9 @@ const Divider = styled(MuiDivider)(spacing);
 const Spacer = styled.div(spacing);
 
 const Manage = () => {
+  const theme = useTheme();
+  const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
+
   return (
     <React.Fragment>
       <Paper square={true} sx={{ width: "100%" }}>
@@ -28,9 +33,8 @@ const Manage = () => {
           image={FirstImg}
         />
       </Paper>
-      <br />
-      <Grid container spacing={2} alignItems="stretch">
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} style={{display: 'flex'}}>
+      <Grid container spacing={2} alignItems="stretch" p={isLgUp ? 12 : 5}>
+        <Grid item md={4}  xs={4} px={5} style={{display: 'flex'}}>
           <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange" }} elevation={8}>
             <Card>
               <CardContent>
@@ -80,7 +84,7 @@ const Manage = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} style={{display: 'flex'}}>
+        <Grid item md={4}  xs={4} px={5} style={{display: 'flex'}}>
           <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange" }} elevation={8}>
             <Card>
               <CardContent>
@@ -124,7 +128,7 @@ const Manage = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}} style={{display: 'flex'}}>
+        <Grid item md={4}  xs={4} px={5} style={{display: 'flex'}}>
           <Paper square={true} sx={{ borderTop: 5,borderTopColor:"orange" }} elevation={8}>
             <Card>
               <CardContent>

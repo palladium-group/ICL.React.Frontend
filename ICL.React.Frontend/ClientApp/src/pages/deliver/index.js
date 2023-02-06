@@ -6,6 +6,8 @@ import {
   CardContent as MuiCardContent, CardMedia,
   Divider as MuiDivider, Grid, Paper, Typography,
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import {spacing} from "@mui/system";
 import FirstImg from "../../vendor/illustration-deliver.png";
 import {NavLink} from "react-router-dom";
@@ -16,6 +18,9 @@ const Divider = styled(MuiDivider)(spacing);
 const Spacer = styled.div(spacing);
 
 const Deliver = () => {
+  const theme = useTheme();
+  const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
+
   return (
     <React.Fragment>
       <Paper square={true} sx={{ width: "100%" }}>
@@ -24,9 +29,8 @@ const Deliver = () => {
           image={FirstImg}
         />
       </Paper>
-      <br />
-      <Grid container spacing={2} alignItems="stretch">
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+      <Grid container spacing={2} alignItems="stretch" p={isLgUp ? 12 : 5}>
+        <Grid item md={4}  xs={4} px={5}>
           <Paper square={true} sx={{ borderTop: 5, borderColor: "#64A70B" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
@@ -54,7 +58,7 @@ const Deliver = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+        <Grid item md={4}  xs={4} px={5}>
           <Paper square={true} sx={{ borderTop: 5, borderColor: "#64A70B" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>
@@ -66,11 +70,15 @@ const Deliver = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    Global Monitoring
+                      <a target="_blank" rel="noopener noreferrer" href="https://app.parsyl.com/report/shipments/v3/aa5dcfff-b494-4f63-9544-34b5f537d497">
+                        Global Monitoring
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                    Country Monitoring
+                      <a target="_blank" rel="noopener noreferrer" href="https://app.parsyl.com/report/shipments/v3/aa5dcfff-b494-4f63-9544-34b5f537d497">
+                        Country Monitoring
+                      </a>
                       <Divider />
                     </Grid>              
                  
@@ -80,7 +88,7 @@ const Deliver = () => {
             </Card>
           </Paper>
         </Grid>
-        <Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>
+        <Grid item md={4}  xs={4} px={5}>
           <Paper square={true} sx={{ borderTop: 5, borderColor: "#64A70B" }} style={{height:'100%'}} elevation={8}>
             <Card>
               <CardContent>

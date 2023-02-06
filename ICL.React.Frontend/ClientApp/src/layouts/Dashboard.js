@@ -3,8 +3,6 @@ import styled from "@emotion/styled";
 import { Outlet } from "react-router-dom";
 
 import { Box, CssBaseline, Paper as MuiPaper } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import { spacing } from "@mui/system";
 
 import GlobalStyle from "../components/GlobalStyle";
@@ -57,9 +55,6 @@ const Dashboard = ({ children }) => {
     setMobileOpen(!mobileOpen);
   };
 
-  const theme = useTheme();
-  const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
-
   return (
     <Root>
       <CssBaseline />
@@ -83,7 +78,7 @@ const Dashboard = ({ children }) => {
       </Drawer>
       <AppContent>
         <Navbar onDrawerToggle={handleDrawerToggle} />
-        <MainContent p={isLgUp ? 12 : 5}>
+        <MainContent>
           {children}
           <Outlet />
         </MainContent>

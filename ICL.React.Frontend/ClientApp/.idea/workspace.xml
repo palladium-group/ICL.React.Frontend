@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ClientApp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/CustomerOrdersValidated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/CustomerOrdersValidated.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPO.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPOValidated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPOValidated.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MISAdministration/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MISAdministration/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/deliver/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/deliver/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/enable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/InsuranceMonitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/InsuranceMonitoring.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/source/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/source/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-MIS.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-MIS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-deliver.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-deliver.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-enable.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-enable.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-manage.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-manage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-plan.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-plan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-source.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-source.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/illustration-store.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/illustration-store.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,19 +59,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gicha/OneDrive/Desktop/Dias/GHSC/Code/ICL.React.Frontend/ICL.React.Frontend/ClientApp/src/pages/control-tower&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/source/palladium/DIAS/ICL/ICL.React.Frontend/ICL.React.Frontend/ClientApp/src/vendor",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\source\\palladium\\DIAS\\ICL\\ICL.React.Frontend\\ICL.React.Frontend\\ClientApp\\node_modules\\prettier",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\source\palladium\DIAS\ICL\ICL.React.Frontend\ICL.React.Frontend\ClientApp\src\vendor" />
       <recent name="C:\Users\gicha\OneDrive\Desktop\Dias\GHSC\Code\ICL.React.Frontend\ICL.React.Frontend\ClientApp\src\pages\control-tower" />
     </key>
   </component>
@@ -64,6 +94,8 @@
       <workItem from="1673588369416" duration="6257000" />
       <workItem from="1674030282342" duration="2257000" />
       <workItem from="1674204673376" duration="4033000" />
+      <workItem from="1675671953909" duration="11000" />
+      <workItem from="1675671980795" duration="6134000" />
     </task>
     <servers />
   </component>
