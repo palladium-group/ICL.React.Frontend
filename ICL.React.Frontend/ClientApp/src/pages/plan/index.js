@@ -391,7 +391,8 @@ const Manage = () => {
     <React.Fragment>
       <Paper square={true} sx={{ width: "100%" }}>
         <CardMedia
-          sx={{ height: 220 }}
+          component="img"
+          sx={{ height: 220, objectFit: "contain" }}
           image={FirstImg}
         />
       </Paper>

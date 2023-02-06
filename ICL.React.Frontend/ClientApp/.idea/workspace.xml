@@ -4,25 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="update gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="update components to style them by spacing">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MISAdministration/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MISAdministration/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/BuyInStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/BuyInStatus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/DistributionCostAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/DistributionCostAnalysis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/GlobalFund.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/GlobalFund.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/HqStartUpstatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/HqStartUpstatus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/IncrementalObligationManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/IncrementalObligationManagement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/KPIDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/KPIDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/LetterOfCredit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/LetterOfCredit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/RegionalOperationsTeam.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/RegionalOperationsTeam.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/SmallBusiness.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/SmallBusiness.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/StaffingLevelsCountries.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/StaffingLevelsCountries.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/StaffingLevelsHQ.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/StaffingLevelsHQ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/SurveyResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/SurveyResults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/TotalLandedCostsAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/TotalLandedCostsAnalysis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/WarehousingCostAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/WarehousingCostAnalysis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/CustomerOrdersValidated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/CustomerOrdersValidated.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPO.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPOValidated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPOValidated.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/deliver/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/deliver/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/enable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/manage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/CustomsClearance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/CustomsClearance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/DeliveryPlanning.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/DeliveryPlanning.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/ForecastedOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/ForecastedOrders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/HistoricalOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/HistoricalOrders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/InboundInventoryMonitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/InboundInventoryMonitoring.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/InboundMilestoneMonitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/InboundMilestoneMonitoring.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/InsuranceMonitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/InsuranceMonitoring.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/InventoryOnHand.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/InventoryOnHand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/OperationalPlanning.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/OperationalPlanning.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/OutboundMilestoneMonitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/OutboundMilestoneMonitoring.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/PSAInboundProductMonitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/PSAInboundProductMonitoring.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/StockBalancing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/StockBalancing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/source/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/source/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +95,7 @@
       <workItem from="1674030282342" duration="2257000" />
       <workItem from="1674204673376" duration="4033000" />
       <workItem from="1675671953909" duration="11000" />
-      <workItem from="1675671980795" duration="10840000" />
+      <workItem from="1675671980795" duration="17499000" />
     </task>
     <task id="LOCAL-00001" summary="update banners for ICL platform">
       <created>1675679860470</created>
@@ -104,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675679885887</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update components to style them by spacing">
+      <created>1675684868244</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675684868244</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +138,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update banners for ICL platform" />
     <MESSAGE value="update gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
+    <MESSAGE value="update components to style them by spacing" />
+    <option name="LAST_COMMIT_MESSAGE" value="update components to style them by spacing" />
   </component>
 </project>
