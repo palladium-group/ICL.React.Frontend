@@ -3,7 +3,6 @@ import SecondImg from "../../../src/vendor/illustration-2.png";
 import ThirdImg from "../../../src/vendor/illustration-3.png";
 import {Box} from "@mui/material";
 import {MDBCarousel, MDBCarouselItem} from "mdb-react-ui-kit";
-import Home from "./Home";
 
 const BannerContent=()=> {
     return (

@@ -26,7 +26,7 @@ const MISAdministration = () => {
       <Paper square={true} sx={{ width: "100%" }}>
         <CardMedia
           component="img"
-          sx={{ height: 220, objectFit: "contain" }}
+          sx={{ height: 220 }}
           image={FirstImg}
         />
       </Paper>
