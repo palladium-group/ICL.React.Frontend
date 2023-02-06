@@ -2,12 +2,15 @@ import React from "react";
 import {
   Box,
   Card as MuiCard,
-  CardContent as MuiCardContent, CardMedia,
+  CardContent as MuiCardContent,
+  CardMedia,
   Divider as MuiDivider,
   Grid,
   Paper,
-  Typography
+  Typography,
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import styled from "@emotion/styled";
 import { spacing } from "@mui/system";
 // import { orange } from "@mui/material/colors";
@@ -198,8 +201,11 @@ const Spacer = styled.div(spacing);
 // };
 
 const PlanLinks = () => {
+  const theme = useTheme();
+  const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
+
   return (
-    <Grid container spacing={2} alignItems="stretch">
+    <Grid container spacing={2} alignItems="stretch" p={isLgUp ? 12 : 5}>
       <Grid item md={4} style={{display: 'flex'}}>
         <Paper square={true} sx={{ borderTop: 5, borderColor: "#BA0C2F" }} elevation={8}>
           <Card>
@@ -341,12 +347,6 @@ const PlanLinks = () => {
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    <NavLink to={`/plan/insurance-monitoring`}>
-                      Insurance Monitoring
-                    </NavLink>
-                    <Divider />
-                  </Grid>
-                  <Grid item md={12}>
                     <NavLink to={`/plan/stock-balancing`}>
                       Stock Balancing
                     </NavLink>
@@ -395,8 +395,6 @@ const Manage = () => {
           image={FirstImg}
         />
       </Paper>
-      <br />
-      {/*<AreaList/>*/}
       <PlanLinks />
     </React.Fragment>
   );

@@ -7,6 +7,8 @@ import {
   Divider as MuiDivider,
   Grid, Paper, Typography,
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import {spacing} from "@mui/system";
 import FirstImg from "../../vendor/illustration-source.png";
 import {NavLink} from "react-router-dom";
@@ -17,6 +19,9 @@ const Divider = styled(MuiDivider)(spacing);
 const Spacer = styled.div(spacing);
 
 const Source = () => {
+  const theme = useTheme();
+  const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
+
   return (
     <React.Fragment>
       <Paper square={true} sx={{ width: "100%" }}>
@@ -25,8 +30,7 @@ const Source = () => {
           image={FirstImg}
         />
       </Paper>
-      <br />
-      <Grid container spacing={2} alignItems="stretch">
+      <Grid container spacing={2} alignItems="stretch" p={isLgUp ? 12 : 5}>
         <Grid item md={4} style={{display: 'flex'}}>
           <Paper square={true} sx={{ borderTop: 5, borderColor: "#8D6E97" }} elevation={8}>
             <Card>

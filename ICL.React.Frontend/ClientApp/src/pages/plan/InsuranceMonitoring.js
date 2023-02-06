@@ -14,7 +14,7 @@ const Button = styled(MuiButton)(spacing);
 const theme = createTheme({
   palette: {
     secondary: {
-      main: "#BA0C2F",
+      main: "#FFB500",
     },
   },
 });
@@ -30,7 +30,7 @@ const InsuranceMonitoring = () => {
               mr={2}
               variant="contained"
               color="secondary"
-              onClick={() => navigate("/plan")}
+              onClick={() => navigate("/store")}
             >
               <ReplyIcon />
             </Button>

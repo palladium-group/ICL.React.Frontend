@@ -22,6 +22,8 @@ import {
   CardMedia,
   Stack, Chip
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import styled from "@emotion/styled";
 import {spacing} from "@mui/system";
 import {
@@ -430,6 +432,8 @@ const LeadershipContent=()=> {
 
 
 const Home = () => {
+  const theme = useTheme();
+  const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
 
   const [value, setValue] = React.useState('1');
   const handleChange = (event, newValue) => {
@@ -443,6 +447,8 @@ const Home = () => {
         <Grid item xs={12}>
           <BannerContent/>
         </Grid>
+      </Grid>
+      <Grid container spacing={2} p={isLgUp ? 12 : 5}>
         <Grid item xs={12}>
           <HeaderContent/>
         </Grid>

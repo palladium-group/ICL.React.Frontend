@@ -249,10 +249,6 @@ const routes = [
         element: <InventoryOnHand />,
       },
       {
-        path: "insurance-monitoring",
-        element: <InsuranceMonitoring />,
-      },
-      {
         path: "stock-balancing",
         element: <StockBalancing />,
       },
@@ -311,6 +307,10 @@ const routes = [
       {
         path: "inventory-analysis",
         element: <InventoryAnalysis />,
+      },
+      {
+        path: "insurance-monitoring",
+        element: <InsuranceMonitoring />,
       },
     ],
   },
