@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/src/pages/MISAdministration/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MISAdministration/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/deliver/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/deliver/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/enable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/HomeBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/HomeBanner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/manage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/plan/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/source/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/source/index.js" afterDir="false" />
@@ -79,7 +78,7 @@
       <workItem from="1674030282342" duration="2257000" />
       <workItem from="1674204673376" duration="4033000" />
       <workItem from="1675671953909" duration="11000" />
-      <workItem from="1675671980795" duration="18583000" />
+      <workItem from="1675671980795" duration="19747000" />
     </task>
     <task id="LOCAL-00001" summary="update banners for ICL platform">
       <created>1675679860470</created>
@@ -109,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675693064491</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="make image to fit on cardmedia">
+      <created>1675694200105</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675694200105</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

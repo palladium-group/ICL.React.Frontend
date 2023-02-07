@@ -26,7 +26,7 @@ const Deliver = () => {
       <Paper square={true} sx={{ width: "100%" }}>
         <CardMedia
           component="img"
-          sx={{ height: 220 }}
+          sx={{ height: 220, objectFit: "fill" }}
           image={FirstImg}
         />
       </Paper>
