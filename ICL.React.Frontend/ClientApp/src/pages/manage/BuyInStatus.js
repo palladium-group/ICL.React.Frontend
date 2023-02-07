@@ -23,7 +23,6 @@ const themeCustom = createTheme({
 
 const BuyInStatus = () => {
   const navigate = useNavigate();
-
   const theme = useTheme();
   const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
 
