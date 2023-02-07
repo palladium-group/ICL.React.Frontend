@@ -89,6 +89,14 @@ namespace ICL.React.Frontend.Controllers
                 if (((IDictionary<String, object>)booking).ContainsKey("BasicDetails"))
                 {
                     po.BookingNo = booking.BasicDetails.BookingNo;
+                    if (processType == "outbound" && !po.BookingNo.ToString().StartsWith("CO"))
+                    {
+                        return StatusCode(StatusCodes.Status400BadRequest, "Incorrect file uploaded. Ensure your Booking Number starts with CO.");
+                    }
+                    else if (processType == "inbound" && !po.BookingNo.ToString().StartsWith("ASN"))
+                    {
+                        return StatusCode(StatusCodes.Status400BadRequest, "Incorrect file uploaded. Ensure your Booking Number starts with ASN.");
+                    }
                     po.BookingDate = DateTime.ParseExact(booking.BasicDetails.BookingDate.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
                     if (((IDictionary<String, object>)booking.BasicDetails).ContainsKey("Movement"))
                     {

@@ -440,13 +440,13 @@ function PurchaseOrderForm(props) {
                     <Grid container spacing={2} justifyContent="right">
                         <Grid item xs={4}>
                             <Item>
-                                <Button variant="contained" startIcon={<ReplyAllIcon />} sx={{width:'150px',backgroundColor: '#BA0C2F'}} onClick={()=>props.setShowPOForm(false)}>Back</Button>
+                                <Button variant="contained" startIcon={<ReplyAllIcon />} sx={{ backgroundColor: '#BA0C2F' }} onClick={()=>props.setShowPOForm(false)}>Back</Button>
                             </Item>
                         </Grid>
                         {props.params.row.submitStatus != 'Submitted' &&
                             <Grid item xs={6}>
                                 <Item>
-                                    <Button onClick={()=>handleValidation()} variant="contained" endIcon={<SendIcon/>} sx={{width:'200px',backgroundColor: '#64A70B'}} >Validate & Submit</Button>
+                                    <Button onClick={()=>handleValidation()} variant="contained" endIcon={<SendIcon/>} sx={{ backgroundColor: '#64A70B' }} >Validate & Submit</Button>
                                 </Item>
                             </Grid>
                         }
@@ -470,7 +470,7 @@ function PurchaseOrderForm(props) {
                         <DialogTitle sx={{fontSize:24, color:'#BA0C2F',fontWeight:'bolder',backgroundColor:'#fff'}}>Plan Status</DialogTitle>
                         <DialogContent sx={{height:'100px',backgroundColor:'#fff'}}>
                             <DialogContentText sx={{fontSize:16, color:'#014d88',fontWeight:'bolder'}}>
-                                Your ASN Plan has passed the validation tests. You can now submit for processing.
+                                Your {props.params.row.processType === "Outbound" ? "Customer Order" : "ASN"} Plan has passed the validation tests. You can now submit for processing.
                             </DialogContentText>
                         </DialogContent>
                         <DialogActions sx={{backgroundColor:'#fff'}}>

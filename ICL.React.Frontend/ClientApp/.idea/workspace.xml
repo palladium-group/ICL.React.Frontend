@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="make image to fit on cardmedia">
+    <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="apply consistent layout to all pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboards/dwh/Outbound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/dwh/Outbound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/deliver/CommodityTracking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/deliver/CommodityTracking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/enable/CommodityTracker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/CommodityTracker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/enable/Deliver.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/Deliver.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/enable/Demand.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/Demand.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/enable/GreenHouseGasMonitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/GreenHouseGasMonitoring.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/enable/Inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/Inventory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/enable/Shipment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/Shipment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/enable/Transport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/Transport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/enable/Warehouse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/enable/Warehouse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/manage/BuyInStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/manage/BuyInStatus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/source/SourceProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/source/SourceProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/source/Warehousing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/source/Warehousing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/store/InventoryAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/store/InventoryAnalysis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/store/Parsyl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/store/Parsyl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/store/VendorScoreCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/store/VendorScoreCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/control-tower/PurchaseOrderForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/control-tower/PurchaseOrderForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +72,7 @@
       <workItem from="1674030282342" duration="2257000" />
       <workItem from="1674204673376" duration="4033000" />
       <workItem from="1675671953909" duration="11000" />
-      <workItem from="1675671980795" duration="22459000" />
+      <workItem from="1675671980795" duration="24774000" />
     </task>
     <task id="LOCAL-00001" summary="update banners for ICL platform">
       <created>1675679860470</created>
@@ -131,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675755451197</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="apply consistent layout to all pages">
+      <created>1675758218221</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675758218221</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +145,7 @@
     <MESSAGE value="update gitignore" />
     <MESSAGE value="update components to style them by spacing" />
     <MESSAGE value="make image to fit on cardmedia" />
-    <option name="LAST_COMMIT_MESSAGE" value="make image to fit on cardmedia" />
+    <MESSAGE value="apply consistent layout to all pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="apply consistent layout to all pages" />
   </component>
 </project>
