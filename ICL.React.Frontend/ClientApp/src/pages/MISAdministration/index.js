@@ -151,6 +151,31 @@ const MISAdministration = () => {
             </Card>
           </Paper>
         </Grid>
+
+        <Grid item md={4} xs={4} px={5} sx={{ marginTop: 10 }}>
+            <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} style={{ height: '100%' }} elevation={8}>
+                <Card>
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            Content Management
+                        </Typography>
+                        <Divider />
+                        <Spacer mb={4} />
+                        <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
+                            <Grid container spacing={6}>
+                                <Grid item md={12}>
+                                    <NavLink to={`/MISAdministration/content-registry`}>
+                                        Content administration
+                                    </NavLink>
+                                    <Divider />
+                                </Grid>
+                            </Grid>
+                        </Box>
+                    </CardContent>
+                </Card>
+            </Paper>
+        </Grid>
+
         {/*<Grid item md={4}  xs={4} px={5} sx={{marginTop:10}}>*/}
         {/*  <Paper square={true} sx={{ borderTop: 5, borderColor: "#4D4D4D" }} style={{height:'100%'}} elevation={8}>*/}
         {/*    <Card>*/}

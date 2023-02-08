@@ -106,6 +106,11 @@ const HistoricalOrders = async(() => import("./pages/plan/HistoricalOrders"));
 const DeliveryPlanning = async(() => import("./pages/plan/DeliveryPlanning"));
 const InboundInventoryMonitoring = async(() => import("./pages/plan/InboundInventoryMonitoring"));
 const ForecastedOrders = async(() => import("./pages/plan/ForecastedOrders"));
+const CMSContentRegistry = async(() => import("./pages/MISAdministration/CMSContentRegistry"));
+const CMSContentImpactCreate = async(() => import("./pages/MISAdministration/CMSContentImpact-create"));
+const CMSContentImpactList = async(() => import("./pages/MISAdministration/CMSContentImpact-list"));
+const CMSContentLeadershipCreate = async(() => import("./pages/MISAdministration/CMSContentLeadership-create"));
+const CMSContentLeadershipList = async(() => import("./pages/MISAdministration/CMSContentLeadership-list"));
 
 const routes = [
   {
@@ -397,7 +402,27 @@ const routes = [
       {
         path: "assign-user-role",
         element: <AssignUserRole />,
-      }
+      },
+      {
+        path: "content-registry",
+        element: <CMSContentRegistry />,
+      },
+      {
+        path: "content-impact-create",
+        element: <CMSContentImpactCreate />,
+      },
+      {
+        path: "content-impact-list",
+        element: <CMSContentImpactList />,
+      },
+      {
+        path: "content-leadership-create",
+        element: <CMSContentLeadershipCreate />,
+      },
+      {
+        path: "content-leadership-list",
+        element: <CMSContentLeadershipList />,
+      }          
     ],
   },
   {
