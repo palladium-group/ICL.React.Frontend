@@ -359,13 +359,13 @@ const PlanLinks = () => {
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    <NavLink to={`/plan/operational-planning`}>
+                    <NavLink to={`/plan/forecasted-orders`}>
                       Forecasted Orders
                     </NavLink>
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    <NavLink to={`/plan/operational-planning`}>
+                    <NavLink to={`/plan/supply-and-demand`}>
                       Supply and Demand Reconciliation
                     </NavLink>
                     <Divider />

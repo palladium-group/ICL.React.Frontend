@@ -106,6 +106,7 @@ const HistoricalOrders = async(() => import("./pages/plan/HistoricalOrders"));
 const DeliveryPlanning = async(() => import("./pages/plan/DeliveryPlanning"));
 const InboundInventoryMonitoring = async(() => import("./pages/plan/InboundInventoryMonitoring"));
 const ForecastedOrders = async(() => import("./pages/plan/ForecastedOrders"));
+const SupplyAndDemand = async(() => import("./pages/plan/SupplyAndDemand"));
 
 const routes = [
   {
@@ -267,8 +268,12 @@ const routes = [
       {
         path: "forecasted-orders",
         element: <ForecastedOrders />,
-      }
-    ]
+      },
+      {
+        path: "supply-and-demand",
+        element: <SupplyAndDemand />,
+      },
+    ],
   },
   {
     path: "/source",

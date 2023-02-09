@@ -21,7 +21,7 @@ const themeCustom = createTheme({
   },
 });
 
-const InboundInventoryMonitoring = () => {
+const SupplyAndDemand = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
@@ -46,7 +46,7 @@ const InboundInventoryMonitoring = () => {
         <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
           <Grid item md={12} zeroMinWidth>
             <iframe title="Report Section" width="100%" height="100%"
-                    src="https://app.powerbi.com/view?r=eyJrIjoiNzhhZjY0YzUtODBiYi00MTMwLThlMWEtMDc1YzY1ZTQ5YmU4IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiYTJiOWMxM2YtNDM5ZC00NDA3LWE2MjEtY2RlNTFjZGMwZTVjIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
                     frameBorder="0" allowFullScreen="true"></iframe>
           </Grid>
         </Grid>
@@ -54,4 +54,4 @@ const InboundInventoryMonitoring = () => {
     </Grid>
   );
 };
-export default InboundInventoryMonitoring;
+export default SupplyAndDemand;
