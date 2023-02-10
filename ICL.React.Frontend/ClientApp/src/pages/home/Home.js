@@ -30,6 +30,7 @@ import {
   MDBCarousel,
   MDBCarouselItem,
 } from 'mdb-react-ui-kit';
+import { useMutation, useQuery } from "@tanstack/react-query";
 import FirstImg from "../../../src/vendor/illustration-1.png";
 import SecondImg from "../../../src/vendor/illustration-2.png";
 import ThirdImg from "../../../src/vendor/illustration-3.png";
@@ -44,6 +45,9 @@ import TabPanel from '@mui/lab/TabPanel';
 import SearchIcon from '@mui/icons-material/Search';
 import {NavLink} from "react-router-dom";
 import async from "../../components/Async";
+import { getCMSContentImpactByName } from "../../api/cmscontent-impact";
+import { getCMSContentLeadershipByName } from "../../api/cmscontent-leadership";
+
 const BannerContent = async(() => import("./HomeBanner"));
 
 
@@ -57,7 +61,6 @@ const Avatar = styled(MuiAvatar)`
   height: 80px;
   width: 80px;
 `;
-
 
 const HeaderContent=()=> {
   return (
@@ -286,149 +289,6 @@ const QuickLinksContent=()=>{
       </Paper>
     </Box>)
 }
-const SuccessContent=()=> {
-  return (
-    <Box>
-      <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
-        <Card sx={{ display: 'flex' }}>
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Our Impact
-            </Typography>
-            <Divider />
-            <Spacer mb={4} />
-            <Box sx={{p:2}} border={1} borderColor="lightgrey">
-              <Card sx={{ display: 'flex' }}>
-                <CardMedia
-                  component="img"
-                  sx={{ width: 300 }}
-                  image={SuccessCovid}
-                />
-                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                  <CardContent sx={{ flex: '1 0 auto' }}>
-                    <Typography component="div" variant="h5">
-                      DHSC Framework
-                    </Typography>
-                    <Typography variant="body2" component="div">
-                      Our platform is one of a select few service providers supporting the UK Government’s short and long-term distribution of medical devices, consumables, reagents, and equipment across the country. The platform manages the storage of goods, provides a secure and user-friendly ordering system, and a means to collect payments in a UK primary care setting. Additionally, with ISO9000 certification for warehousing and 1so9001 for provision of customer-focused activities, the team can distribute medical devices and more to NHS centres, hospitals, and GP surgeries.
-                      We provide an adaptive and scalable approach to resource management and a solution that can flex in real time in response to the volume and pace of demand for goods.
-
-                    </Typography>
-                  </CardContent>
-                </Box>
-              </Card>
-            </Box>
-            <Box sx={{p:2}} border={1} borderColor="lightgrey">
-              <Card sx={{ display: 'flex' }}>
-                <CardMedia
-                  component="img"
-                  sx={{ width: 300 }}
-                  image={SuccessData}
-                />
-                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                  <CardContent sx={{ flex: '1 0 auto' }}>
-                    <Typography component="div" variant="h5">
-                      Global Fund
-                    </Typography>
-                    <Typography variant="body2" component="div">
-                      Across 22 countries and with data from 800 health facilities, we support The Global Fund to embed a culture of performance management in each country’s health supply chains. We routinely track indicators for on-shelf availability, on-time-in-full delivery, commodities stocked according to plan, and timeliness of facility’s reporting to the LMIS. Our analyses support health programs and the ability of supply chain actors to monitor needs, identify risks, and track trends in individual country logistics operations to help inform systems strengthening priorities.
-                      By supporting national program managers in monitoring the availability of essential health commodities and services at different points in the system, we have created an in-depth understanding of whether and how health facilities have adapted to the challenges of COVID-19.
-                    </Typography>
-                  </CardContent>
-                </Box>
-              </Card>
-            </Box>
-          </CardContent>
-        </Card>
-      </Paper>
-    </Box>)
-}
-const LeadershipContent=()=> {
-  return (
-    <Box>
-      <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
-        <Card sx={{ display: 'flex' }}>
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Leadership Profiles
-            </Typography>
-            <Divider />
-            <Spacer mb={4} />
-            <Grid container direction="row" alignItems="center" mb={2} spacing={12}>
-              <Grid item md={3}>
-                <Avatar alt="Dan Rhodes" src="/static/img/avatars/dan.png" />
-              </Grid>
-              <Grid item md={8} mx={3}>
-                <Grid container direction="column" alignItems="left" mb={2}>
-                  <NavLink to={`/dan-rhodes`}>
-                    <Grid item>
-                      <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Dan Rhodes</Typography>
-                    </Grid>
-                    <Grid item>
-                      <Typography sx={{ fontSize: 18 }}>Project Director</Typography>
-                    </Grid>
-                  </NavLink>
-                </Grid>
-              </Grid>
-              <Divider />
-            </Grid>
-            <Grid container direction="row" alignItems="center" mb={2} spacing={12}>
-              <Grid item md={3}>
-                <Avatar alt="Marilyn Noguera" src="/static/img/avatars/Marilyn.png" />
-              </Grid>
-              <Grid item md={8} mx={3}>
-                <NavLink to={`/marilyn-noguera`}>
-                  <Grid container direction="column" alignItems="left" mb={2}>
-                    <Grid item>
-                      <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Marilyn Noguera</Typography>
-                    </Grid>
-                    <Grid item>
-                      <Typography sx={{ fontSize: 18 }}>Deputy Project Director</Typography>
-                    </Grid>
-                  </Grid>
-                </NavLink>
-              </Grid>
-            </Grid>
-            <Grid container direction="row" alignItems="center" mb={2} spacing={12}>
-              <Grid item md={3}>
-                <Avatar alt="Jabu Nyenwa" src="/static/img/avatars/Jabu.png" />
-              </Grid>
-              <Grid item md={8} mx={3}>
-                <Grid container direction="column" alignItems="left" mb={2}>
-                  <NavLink to={`/jabu-nyenwa`}>
-                    <Grid item>
-                      <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Jabu Nyenwa</Typography>
-                    </Grid>
-                    <Grid item>
-                      <Typography sx={{ fontSize: 18 }}>Country Programs Director</Typography>
-                    </Grid>
-                  </NavLink>
-                </Grid>
-              </Grid>
-            </Grid>
-            <Grid container direction="row" alignItems="center" mb={2} spacing={12}>
-              <Grid item md={3}>
-                <Avatar alt="Sean Lockhead" src="/static/img/avatars/Sean.png" />
-              </Grid>
-              <Grid item md={8} mx={3}>
-                <Grid container direction="column" alignItems="left" mb={2}>
-                  <NavLink to={`/sean-lockhead`}>
-                    <Grid item>
-                      <Typography sx={{ fontWeight: 700, fontSize: 18 }}>Sean Lockhead</Typography>
-                    </Grid>
-                    <Grid item>
-                      <Typography sx={{ fontSize: 18 }}>Management, Information & Results Director</Typography>
-                    </Grid>
-                  </NavLink>
-                </Grid>
-              </Grid>
-            </Grid>
-          </CardContent>
-        </Card>
-      </Paper>
-    </Box>)
-}
-
 
 
 const Home = () => {
@@ -439,6 +299,62 @@ const Home = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const [rolID, setrolID] = React.useState('HQ.User');
+  const { data: dataImpactByRol, isLoading: isLoadingImpactByRol, isError: isErrorImpactByRol} =
+      useQuery([rolID, "getCMSContentImpactByName"], getCMSContentImpactByName, { refetchOnWindowFocus: false, enabled:true });
+  const { data: dataLeadershipByRol, isLoading: isLoadingLeadershipByRol, isError: isErrorLeadershipByRol} =
+      useQuery([rolID, "getCMSContentLeadershipByName"], getCMSContentLeadershipByName, { refetchOnWindowFocus: false, enabled:true}
+        );
+
+  const AddContentImpact = () => {
+    if (isLoadingImpactByRol) { return; }
+    if (dataImpactByRol && dataImpactByRol.data) {
+        return dataImpactByRol.data.map(element => (
+            <Box sx={{ p: 2 }} border={1} borderColor="lightgrey">
+                <Card sx={{ display: 'flex' }}>
+                    <CardMedia component="img" sx={{ width: 300 }} image={element.image} />
+                    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                        <CardContent sx={{ flex: '1 0 auto' }}>
+                            <Typography component="div" variant="h5">
+                                {element.title}
+                            </Typography>
+                            <Typography variant="body2" component="div">
+                                {element.description}
+                            </Typography>
+                        </CardContent>
+                    </Box>
+                </Card>
+            </Box>
+        ))
+    }
+  }; 
+  const AddContentLeadership = () => {
+      if (isLoadingLeadershipByRol) { return; }
+        if (dataLeadershipByRol && dataLeadershipByRol.data) {
+            return dataLeadershipByRol.data.map(element => (
+                <Grid container direction="row" alignItems="center" mb={2} spacing={12}>
+                    <Grid item md={3}>
+                        <Avatar alt="{element.name}" src={element.image} />
+                    </Grid>
+                    <Grid item md={8} mx={3}>
+                        <Grid container direction="column" alignItems="left" mb={2}>
+                            <NavLink to={element.name.replace(/\s/g, "-")}>
+                                <Grid item>
+                                    <Typography sx={{ fontWeight: 700, fontSize: 18 }}>{element.name}</Typography>
+                                </Grid>
+                                <Grid item>
+                                    <Typography sx={{ fontSize: 18 }}>{element.position}</Typography>
+                                </Grid>
+                            </NavLink>
+                        </Grid>
+                    </Grid>
+                    <Divider />
+                </Grid>
+            ))
+        }
+    }; 
+
 
   return (
     <React.Fragment>
@@ -465,10 +381,38 @@ const Home = () => {
         </Grid>
         <Grid container direction="row" alignItems="stretch" spacing={2}>
           <Grid item xs={8} sx={{ display: 'flex' }}>
-            <SuccessContent/>
+            <Box>
+                <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
+                    <Card sx={{ display: 'flex' }}>
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                Our Impact
+                            </Typography>
+                            <Divider />
+                            <Spacer mb={4} />
+                            {AddContentImpact()}
+                        </CardContent>
+                    </Card>
+                </Paper>
+            </Box>
           </Grid>
           <Grid item xs={4} sx={{ display: 'flex' }}>
-            <LeadershipContent/>
+
+            <Box>
+                <Paper square={true} sx={{ borderTop: 5 }} elevation={8}>
+                    <Card sx={{ display: 'flex' }}>
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                Leadership Profiles
+                            </Typography>
+                            <Divider />
+                            <Spacer mb={4} />
+                            {AddContentLeadership()}
+                        </CardContent>
+                    </Card>
+                </Paper>
+            </Box>
+
           </Grid>
         </Grid>
       </Grid>
