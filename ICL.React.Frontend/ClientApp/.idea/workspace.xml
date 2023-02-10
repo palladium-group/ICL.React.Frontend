@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="apply consistent layout to all pages">
+      <change afterPath="$PROJECT_DIR$/src/pages/plan/SupplyAndDemand.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/control-tower/PurchaseOrderForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/control-tower/PurchaseOrderForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/ForecastedOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/ForecastedOrders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/InboundInventoryMonitoring.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/InboundInventoryMonitoring.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plan/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plan/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,23 +39,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/source/palladium/DIAS/ICL/ICL.React.Frontend/ICL.React.Frontend/ClientApp/src/vendor",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\source\\palladium\\DIAS\\ICL\\ICL.React.Frontend\\ICL.React.Frontend\\ClientApp\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/source/palladium/DIAS/ICL/ICL.React.Frontend/ICL.React.Frontend/ClientApp/src/vendor&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\source\\palladium\\DIAS\\ICL\\ICL.React.Frontend\\ICL.React.Frontend\\ClientApp\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JavaScript&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\source\palladium\DIAS\ICL\ICL.React.Frontend\ICL.React.Frontend\ClientApp\src\vendor" />
@@ -72,7 +76,9 @@
       <workItem from="1674030282342" duration="2257000" />
       <workItem from="1674204673376" duration="4033000" />
       <workItem from="1675671953909" duration="11000" />
-      <workItem from="1675671980795" duration="24774000" />
+      <workItem from="1675671980795" duration="25533000" />
+      <workItem from="1675841051735" duration="620000" />
+      <workItem from="1675933012783" duration="3192000" />
     </task>
     <task id="LOCAL-00001" summary="update banners for ICL platform">
       <created>1675679860470</created>
