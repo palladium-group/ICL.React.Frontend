@@ -101,6 +101,7 @@ const OutboundMilestoneMonitoring = async(() => import("./pages/plan/OutboundMil
 const InboundMilestoneMonitoring = async(() => import("./pages/plan/InboundMilestoneMonitoring"));
 const InventoryOnHand = async(() => import("./pages/plan/InventoryOnHand"));
 const InsuranceMonitoring = async(() => import("./pages/plan/InsuranceMonitoring"));
+const InsuranceMonitoringAlert = async(() => import("./pages/store/InsuranceMonitoringAlert"));
 const StockBalancing = async(() => import("./pages/plan/StockBalancing"));
 const HistoricalOrders = async(() => import("./pages/plan/HistoricalOrders"));
 const DeliveryPlanning = async(() => import("./pages/plan/DeliveryPlanning"));
@@ -324,7 +325,7 @@ const routes = [
       },
       {
         path: "insurance-monitoring",
-        element: <InsuranceMonitoring />,
+        element: <InsuranceMonitoringAlert />,
       },
     ],
   },
