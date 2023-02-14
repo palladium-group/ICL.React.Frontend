@@ -127,7 +127,7 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-            <a href="https://app.parsyl.com/report/shipments/v3/aa5dcfff-b494-4f63-9544-34b5f537d497?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY3NTc2MjAsImlhdCI6MTY3NjMyNTYyMCwiaXNzIjoicGFyc3lsLWFwaSIsInVzZXJJZCI6IjRiOGIwZjAxLWZhNTAtNDY1Ni1hNTYxLWU0MDJlYTA2MjMxZCIsInJlc291cmNlSWQiOiJhYTVkY2ZmZi1iNDk0LTRmNjMtOTU0NC0zNGI1ZjUzN2Q0OTciLCJyZXNvdXJjZVR5cGUiOiJzaGlwbWVudCJ9.NP14JC4EH0gOTkhO4HAcvKUDGHx3gKq-KYJKPWZcTS4" target="_blank" rel="noopener noreferrer">Temperature Monitoring</a>
+            <a href="https://app.parsyl.com/report/assets?dataWindow=7&dataType=humidity&weeklyRate=false" target="_blank" rel="noopener noreferrer">Temperature Monitoring</a>
             <Divider />
           </Grid>
           <Grid item md={12}>
