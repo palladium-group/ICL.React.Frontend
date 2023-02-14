@@ -347,6 +347,12 @@ const PlanLinks = () => {
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
+                    <NavLink to={`/plan/insurance-monitoring`}>
+                      Insurance Monitoring and Alerts
+                    </NavLink>
+                    <Divider />
+                  </Grid>
+                  <Grid item md={12}>
                     <NavLink to={`/plan/stock-balancing`}>
                       Stock Balancing
                     </NavLink>
