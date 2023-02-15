@@ -64,30 +64,33 @@ const IncomingOrdersData = (props) => {
             <TableActions params={params} loadPO={props.setShowPOForm} setCurrentPO={props.setCurrentPO}/>
         )
     };
+    function getName() {
+        return `USAID`;
+    }
     return (
         <Card mb={6}>
             <Paper>
                 <div style={{ height: 400, width: "100%" }}>
                     <DataGrid
                         columns={[
-/*                            {
-                                field: "createDate",
-                                headerName: "Created",
-                                editable: false,
-                                flex: 1,
-                                valueFormatter: params => format(new Date(params?.value), 'dd-MMM-yyyy')
-                            },
-                            {
-                                field: "processType",
-                                headerName: "Process Type",
-                                editable: false,
-                                flex: 1
-                            },*/
                             {
                                 field: "placeOfDelivery",
                                 headerName: "Place Of Delivery",
                                 editable: false,
                                 flex: 1,
+                            },
+                            {
+                                field: "transportationMode",
+                                headerName: "Shipping Method",
+                                editable: false,
+                                flex: 1,
+                            },
+                            {
+                                field: 'createDate',
+                                headerName: 'Funding Source',
+                                editable: false,
+                                flex: 1,
+                                valueGetter: getName,
                             },
                             {
                                 field: "bookingNo",
