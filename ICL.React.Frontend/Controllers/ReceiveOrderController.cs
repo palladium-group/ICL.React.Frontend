@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using System.Dynamic;
 using System.Xml.Linq;
 using static Azure.Core.HttpHeader;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
 
 namespace ICL.React.Frontend.Controllers
 {
@@ -102,12 +103,36 @@ namespace ICL.React.Frontend.Controllers
                     {
                         po.PlaceOfReceipt = booking.BasicDetails.Movement.PlaceOfReceipt.Code;
                         po.PlaceOfDelivery = booking.BasicDetails.Movement.PlaceOfDelivery.Code;
+                        po.TransportationMode = booking.BasicDetails.Movement.TransportationMode;
                     }
                 }
                 po.AsnFile = asn.ToString();
                 if (((IDictionary<String, object>)booking).ContainsKey("Services"))
                 {
-                    po.ProcessType = booking.Services[0].ProcessType;
+                    foreach (var service in booking.Services)
+                    {
+                        var value = ((KeyValuePair<string, object>)service).Value;
+                        if (((IDictionary<String, object>)value).ContainsKey("ProcessType"))
+                        {
+                            dynamic expandoObject = JsonConvert.DeserializeObject<ExpandoObject>(JsonConvert.SerializeObject(value));
+                            foreach (var property in expandoObject)
+                            {
+                                if (property.Key == "ProcessType")
+                                {
+                                    po.ProcessType = property.Value;
+                                }
+                            }
+                            //var xx = ((KeyValuePair<String, object>)value).Value;
+                            //po.ProcessType = (string?)xx;
+                        }
+                        //foreach (var item in value)
+                        //{
+                        //    if (item != null && item == "ProcessType")
+                        //    {
+                        //        po.ProcessType = service.ProcessType;
+                        //    }
+                        //}
+                    }
                 }
                 po.DeliveryStatus = 0;
                 po.SubmitStatus = "Available";

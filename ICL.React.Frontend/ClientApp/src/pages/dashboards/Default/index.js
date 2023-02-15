@@ -55,6 +55,9 @@ const IncomingOrdersData = (props) => {
         <TableActions params={params} loadPO={props.setShowPOForm} setCurrentPO={props.setCurrentPO}/>
     )
   };
+  function getName() {
+    return `USAID`;
+  }
   return (
     <Card mb={6}>
       <Paper>
@@ -63,9 +66,22 @@ const IncomingOrdersData = (props) => {
             columns={[
               {
                 field: "placeOfDelivery",
-                headerName: "Place Of Delivery",
+                headerName: "Destination",
                 editable: false,
                 flex: 1,
+              },
+              {
+                field: "transportationMode",
+                headerName: "Shipping Method",
+                editable: false,
+                flex: 1,
+              },
+              {
+                field: 'createDate',
+                headerName: 'Funding Source',
+                editable: false,
+                flex: 1,
+                valueGetter: getName,
               },
               {
                 field: "bookingNo",

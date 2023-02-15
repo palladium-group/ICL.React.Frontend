@@ -21,10 +21,7 @@ const ChartWrapper = styled.div`
 function ColumnChart (props) {
   const [data,setData] = useState([]);
   const [dates, setDates] = useState([]);
-  const [colors, setColors] = useState([])
-    console.log('props')
-    console.log(props.dataType)
-    console.log('props')
+  const [colors, setColors] = useState([]);
 
   useEffect(() => {
     axios.get(`${apiRoutes.purchaseOrder}/statistics/${props.dataType}`)
@@ -74,23 +71,6 @@ function ColumnChart (props) {
           setDates(tempDates)
         })
   },[]);
-
-
-
-/*  const data = [
-    {
-      name: "Successful",
-      data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
-    },
-    {
-      name: "Pending",
-      data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
-    },
-    {
-      name: "Failed",
-      data: [1, 0, 3, 10, 5, 1, 1, 2, 1],
-    },
-  ];*/
 
   const options = {
     plotOptions: {

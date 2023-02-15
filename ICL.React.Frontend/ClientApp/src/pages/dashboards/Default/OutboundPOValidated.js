@@ -58,6 +58,9 @@ const ASNValidatedData = () => {
       <span>{params.row.scmid ? <a target="_blank" rel="noreferrer" href={uri}>View</a> : ""}</span>
     );
   };
+  function getName() {
+    return `USAID`;
+  }
   return (
     <Card mb={6}>
       <Paper>
@@ -69,6 +72,19 @@ const ASNValidatedData = () => {
                 headerName: "Place Of Delivery",
                 editable: false,
                 flex: 1,
+              },
+              {
+                field: "transportationMode",
+                headerName: "Shipping Method",
+                editable: false,
+                flex: 1,
+              },
+              {
+                field: 'createDate',
+                headerName: 'Funding Source',
+                editable: false,
+                flex: 1,
+                valueGetter: getName,
               },
               {
                 field: "bookingNo",
