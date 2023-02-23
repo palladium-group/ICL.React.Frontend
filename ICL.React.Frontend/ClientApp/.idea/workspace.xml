@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="Temperature monitoring parsyl">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="55b3bf94-1770-4ec7-94ec-d33437955d4d" name="Changes" comment="StaffingLevels Countries new form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/control-tower/ColumnChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/control-tower/ColumnChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/CustomerOrdersValidated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/CustomerOrdersValidated.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPO.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPO.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPOValidated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/OutboundPOValidated.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dashboards/Default/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/Default/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dashboards/products/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboards/products/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Controllers/ReceiveOrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Controllers/ReceiveOrderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entitites/PurchaseOrder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Entitites/PurchaseOrder.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +66,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\source\\palladium\\DIAS\\ICL\\ICL.React.Frontend\\ICL.React.Frontend\\ClientApp\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JavaScript&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\source\\palladium\\DIAS\\ICL\\ICL.React.Frontend\\ICL.React.Frontend\\ClientApp\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -96,7 +95,10 @@
       <workItem from="1675933012783" duration="5814000" />
       <workItem from="1676365908390" duration="2055000" />
       <workItem from="1676382626460" duration="140000" />
-      <workItem from="1676455881991" duration="885000" />
+      <workItem from="1676455881991" duration="1481000" />
+      <workItem from="1676620756249" duration="1788000" />
+      <workItem from="1676878313845" duration="9435000" />
+      <workItem from="1677056041564" duration="2003000" />
     </task>
     <task id="LOCAL-00001" summary="update banners for ICL platform">
       <created>1675679860470</created>
@@ -168,7 +170,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676370416386</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="StaffingLevelsHQ and SmallBusiness Utilization new forms">
+      <created>1676886128532</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676886128532</updated>
+    </task>
+    <task id="LOCAL-00012" summary="StaffingLevels Countries new form">
+      <created>1676890375387</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676890375387</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +221,8 @@
     <MESSAGE value="resolve errors for pages that were not loading" />
     <MESSAGE value="duplicate InsuranceMonitoring on plan" />
     <MESSAGE value="Temperature monitoring parsyl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temperature monitoring parsyl" />
+    <MESSAGE value="StaffingLevelsHQ and SmallBusiness Utilization new forms" />
+    <MESSAGE value="StaffingLevels Countries new form" />
+    <option name="LAST_COMMIT_MESSAGE" value="StaffingLevels Countries new form" />
   </component>
 </project>

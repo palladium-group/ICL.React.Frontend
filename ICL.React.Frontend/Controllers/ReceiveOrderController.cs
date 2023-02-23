@@ -122,16 +122,7 @@ namespace ICL.React.Frontend.Controllers
                                     po.ProcessType = property.Value;
                                 }
                             }
-                            //var xx = ((KeyValuePair<String, object>)value).Value;
-                            //po.ProcessType = (string?)xx;
                         }
-                        //foreach (var item in value)
-                        //{
-                        //    if (item != null && item == "ProcessType")
-                        //    {
-                        //        po.ProcessType = service.ProcessType;
-                        //    }
-                        //}
                     }
                 }
                 po.DeliveryStatus = 0;

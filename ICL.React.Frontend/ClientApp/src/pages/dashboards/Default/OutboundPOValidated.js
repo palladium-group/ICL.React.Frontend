@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import ColumnChart from '../../control-tower/ColumnChart';
 import PieChart from '../../control-tower/PieChart';
 import styled from "@emotion/styled";
@@ -35,7 +35,8 @@ const themeCustom = createTheme({
 });
 
 const ASNValidatedData = () => {
-// fetch incoming orders
+  const [pageSize, setPageSize] = useState(10);
+  // fetch incoming orders
   const { data, isLoading, isError } = useQuery(
     ["incomingOrders", "inbound", 1], getPurchaseOrderWithParam
   );
@@ -129,7 +130,8 @@ const ASNValidatedData = () => {
             ]}
             rows={isLoading || isError ? [] : data.data }
             rowsPerPageOptions={[5, 10, 25, 50]}
-            pageSize={10}
+            pageSize={pageSize}
+            onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
             components={{ Toolbar: GridToolbar }}
             density="compact"
             loading={isLoading}

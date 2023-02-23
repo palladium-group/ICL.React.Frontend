@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "@emotion/styled";
 import { Helmet } from "react-helmet-async";
 
@@ -30,6 +30,7 @@ const Paper = styled(MuiPaper)(spacing);
 // const Button = styled(MuiButton)(spacing);
 
 const IncomingOrdersData = () => {
+  const [pageSize, setPageSize] = useState(10);
   // fetch incoming orders
   const { data, isLoading, isError } = useQuery(
       ["incomingOrders", "inbound"], getPurchaseOrderWithParam
@@ -93,7 +94,8 @@ const IncomingOrdersData = () => {
             ]}
             rows={isLoading || isError ? [] : data.data }
             rowsPerPageOptions={[5, 10, 25, 50]}
-            pageSize={10}
+            pageSize={pageSize}
+            onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
             components={{ Toolbar: GridToolbar }}
             density="compact"
           />
