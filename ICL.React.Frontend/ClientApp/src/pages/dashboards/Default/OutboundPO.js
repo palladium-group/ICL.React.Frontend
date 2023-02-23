@@ -41,6 +41,7 @@ const themeCustom = createTheme({
 });
 
 const IncomingOrdersData = (props) => {
+    const [pageSize, setPageSize] = useState(10);
     // fetch incoming orders
     const { data, isLoading, isError } = useQuery(
         ["incomingOrders", 0], getCustomerOrders
@@ -135,7 +136,8 @@ const IncomingOrdersData = (props) => {
                         ]}
                         rows={isLoading || isError ? [] : data.data }
                         rowsPerPageOptions={[5, 10, 25, 50]}
-                        pageSize={10}
+                        pageSize={pageSize}
+                        onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
                         components={{ Toolbar: GridToolbar }}
                         density="compact"
                         loading={isLoading}
