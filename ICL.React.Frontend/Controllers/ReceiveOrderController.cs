@@ -101,9 +101,31 @@ namespace ICL.React.Frontend.Controllers
                     po.BookingDate = DateTime.ParseExact(booking.BasicDetails.BookingDate.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture);
                     if (((IDictionary<String, object>)booking.BasicDetails).ContainsKey("Movement"))
                     {
+                        var requestedShipmentDateString = string.Empty;
+                        var requestedArrivalDateString = string.Empty;
                         po.PlaceOfReceipt = booking.BasicDetails.Movement.PlaceOfReceipt.Code;
                         po.PlaceOfDelivery = booking.BasicDetails.Movement.PlaceOfDelivery.Code;
                         po.TransportationMode = booking.BasicDetails.Movement.TransportationMode;
+                        if (((IDictionary<String, object>)booking.BasicDetails.Movement).ContainsKey("RequestedShipmentDate"))
+                        {
+                            requestedShipmentDateString = booking.BasicDetails.Movement.RequestedShipmentDate.Date + " " + booking.BasicDetails.Movement.RequestedShipmentDate.Time;
+                        }
+
+                        if (((IDictionary<String, object>)booking.BasicDetails.Movement).ContainsKey("RequestedArrivalDate"))
+                        {
+                            requestedArrivalDateString = booking.BasicDetails.Movement.RequestedArrivalDate.Date + " " + booking.BasicDetails.Movement.RequestedArrivalDate.Time;
+                        }
+
+                        var requestedShipmentDate = DateTime.ParseExact(requestedShipmentDateString, "yyyyMMdd hhss", CultureInfo.InvariantCulture);
+                        var requestedArrivalDate = DateTime.ParseExact(requestedArrivalDateString, "yyyyMMdd hhss", CultureInfo.InvariantCulture);
+                        if (DateTime.Compare(requestedShipmentDate, po.BookingDate) < 0)
+                        {
+                            return StatusCode(StatusCodes.Status400BadRequest, "Booking Date should be earlier than Requested Shipment Date");
+                        }
+                        if (DateTime.Compare(requestedArrivalDate, requestedShipmentDate) < 0)
+                        {
+                            return StatusCode(StatusCodes.Status400BadRequest, "Requested Shipment Date should be earlier than Requested Arrival Date");
+                        }
                     }
                 }
                 po.AsnFile = asn.ToString();
