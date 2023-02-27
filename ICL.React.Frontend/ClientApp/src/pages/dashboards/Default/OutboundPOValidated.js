@@ -54,7 +54,8 @@ const ASNValidatedData = () => {
     }
   };
   const actionLink = (params) => {
-    const uri = params.row.id ? `https://opsuat.freightintime.com/Booking/home/viewbooking?itemid=${params.row.scmid}` : "";
+    console.log(params);
+    const uri = params.row.id ? `https://opsuat.freightintime.com/Warehouse/Home/ViewWarehouseJob?itemid=${params.row.shipmentid}` : "";
     return (
       <span>{params.row.scmid ? <a target="_blank" rel="noreferrer" href={uri}>View</a> : ""}</span>
     );

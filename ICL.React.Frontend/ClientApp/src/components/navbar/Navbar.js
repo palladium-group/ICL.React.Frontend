@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import NavbarNotificationsDropdown from "./NavbarNotificationsDropdown";
 import NavbarUserDropdown from "./NavbarUserDropdown";
+import {useNavigate} from "react-router-dom";
 
 const AppBar = styled(MuiAppBar)`
   background: ${(props) => props.theme.header.background};
@@ -66,7 +67,11 @@ const StyledChip = styled(
 }));
 
 const Navbar = ({ onDrawerToggle }) => {
-  // const { t } = useTranslation();
+  const navigate = useNavigate();
+  const handleReportIncident  = () => {
+    console.log(`clicked`);
+    navigate("/incident-management");
+  };
   return (
     <React.Fragment>
       <AppBar position="sticky" elevation={0}>
@@ -92,7 +97,7 @@ const Navbar = ({ onDrawerToggle }) => {
                     },
                   }}
                 >
-                  <StyledChip label="Report an Incident" component="a" href="https://palladiumgroup.sharepoint.com/SafetySecurity/SitePages/IncidentReporting.aspx" target="_blank" clickable />
+                  <StyledChip label="Report an Incident" onClick={handleReportIncident} />
                   <StyledChip label="HQ Office" component="a" href="#" clickable />
                   <StyledChip label="Country Offices" component="a" href="#" clickable />
                   <StyledChip label="Custom Reports" component="a" href="#" clickable />

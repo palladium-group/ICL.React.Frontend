@@ -20,6 +20,9 @@ import Page404 from "./pages/auth/Page404";
 import Page500 from "./pages/auth/Page500";
 import SurveyResults from "./pages/manage/SurveyResults";
 import RegionalOperationsTeam from "./pages/manage/RegionalOperationsTeam";
+import DeliverableSubmissions from "./pages/manage/DeliverableSubmissions";
+import AnnualSurvey from "./pages/manage/AnnualSurvey";
+import WorkPlanStatus from "./pages/manage/WorkPlanStatus";
 
 
 // Dashboard components
@@ -79,6 +82,7 @@ const ProfileJabuNyenwa = async(() => import("./pages/home/ProfileJabuNyenwa"));
 const ProfileSeanLockhead = async(() => import("./pages/home/ProfileSeanLockhead"));
 const ProfileMarilynNoguera = async(() => import("./pages/home/ProfileMarilynNoguera"));
 const MacroEyes = async(() => import("./pages/home/MacroEyes"));
+const IncidentManagement = async(() => import("./pages/home/IncidentManagement"));
 const MiddleWareStatus = async(() => import("./pages/MISAdministration/MiddleWareStatus"));
 const VendorScoreCard = async(() => import("./pages/store/VendorScoreCard"));
 const About = async(() => import("./pages/MISAdministration/About"));
@@ -146,6 +150,10 @@ const routes = [
       {
         path: "macro-eyes",
         element: <MacroEyes />,
+      },
+      {
+        path: "incident-management",
+        element: <IncidentManagement />,
       }
     ]
   },
@@ -217,6 +225,18 @@ const routes = [
         path: "small-business",
         element: <SmallBusiness />,
       },
+      {
+        path: "deliverable-submissions",
+        element: <DeliverableSubmissions />,
+      },
+      {
+        path: "annual-survey",
+        element: <AnnualSurvey />,
+      },
+      {
+        path: "work-plan-status",
+        element: <WorkPlanStatus />,
+      }
     ],
   },
   {
