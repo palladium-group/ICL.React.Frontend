@@ -103,7 +103,9 @@ const Manage = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      <a target={'_blank'} href={'https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119499777/Work+Plan+Status'}>Work Plan Status</a>
+                      <NavLink to={`/manage/work-plan-status`}>
+                        Work Plan Status
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
@@ -141,8 +143,9 @@ const Manage = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    <a href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26/group/70/create/271" target="_blank" rel="noopener noreferrer"> Annual Survey</a>
-                     
+                      <NavLink to={`/manage/annual-survey`}>
+                        Annual Survey
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
@@ -210,7 +213,9 @@ const Manage = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119794693/Deliverable+Submissions" target="_blank" rel="noopener noreferrer">Deliverable Submissions</a>
+                      <NavLink to={`/manage/deliverable-submissions`}>
+                        Deliverable Submissions
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

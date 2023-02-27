@@ -200,8 +200,6 @@ function Default() {
                 </Grid>
               </Grid>
             </>
-
-
           }
           {showPOForm &&
             <PurchaseOrderForm params={currentPO} showAlert={showAlert} setAlertMessage={setAlertMessage} setShowPOForm={setShowPOForm}/>

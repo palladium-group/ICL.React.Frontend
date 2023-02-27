@@ -44,10 +44,6 @@ import LastPageIcon from '@mui/icons-material/LastPage';
 import {apiRoutes} from "../../apiRoutes";
 import {useNavigate} from "react-router-dom";
 
-;
-
-
-
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -162,7 +158,6 @@ const useStylesFacebook = styled((theme) => ({
 
 
 function PurchaseOrderForm(props) {
-    console.log(props.params)
     const classes = useStylesFacebook();
     const[] = useState();
     const[products, setProducts] = useState(props.params.row.products);
