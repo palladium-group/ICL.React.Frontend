@@ -200,7 +200,9 @@ const Manage = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119532562/Salary+Approval+Requests" target="_blank" rel="noopener noreferrer">Salary Approval Requests</a>
+                      <NavLink to={`/manage/salary-approval-requests`}>
+                        Salary Approval Requests
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>                      
