@@ -205,9 +205,10 @@ const Manage = () => {
                       </NavLink>
                       <Divider />
                     </Grid>
-                    <Grid item md={12}>                      
-                      {/*<a href="" target="_blank" rel="noopener noreferrer"></a>*/}
-                      <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2119598121/Travel+Approval+Requests" target="_blank" rel="noopener noreferrer">Travel Approval Requests</a>
+                    <Grid item md={12}>
+                      <NavLink to={`/manage/travel-approval-requests`}>
+                        Travel Approval Requests
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

@@ -24,6 +24,7 @@ import DeliverableSubmissions from "./pages/manage/DeliverableSubmissions";
 import AnnualSurvey from "./pages/manage/AnnualSurvey";
 import WorkPlanStatus from "./pages/manage/WorkPlanStatus";
 import SalaryApprovalRequests from "./pages/manage/SalaryApprovalRequests";
+import TravelApprovalRequests from "./pages/manage/TravelApprovalRequests";
 
 
 // Dashboard components
@@ -242,6 +243,10 @@ const routes = [
         path: "salary-approval-requests",
         element: <SalaryApprovalRequests />,
       },
+      {
+        path: "travel-approval-requests",
+        element: <TravelApprovalRequests />,
+      }
     ],
   },
   {
