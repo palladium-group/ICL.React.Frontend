@@ -23,6 +23,7 @@ import RegionalOperationsTeam from "./pages/manage/RegionalOperationsTeam";
 import DeliverableSubmissions from "./pages/manage/DeliverableSubmissions";
 import AnnualSurvey from "./pages/manage/AnnualSurvey";
 import WorkPlanStatus from "./pages/manage/WorkPlanStatus";
+import SalaryApprovalRequests from "./pages/manage/SalaryApprovalRequests";
 
 
 // Dashboard components
@@ -236,7 +237,11 @@ const routes = [
       {
         path: "work-plan-status",
         element: <WorkPlanStatus />,
-      }
+      },
+      {
+        path: "salary-approval-requests",
+        element: <SalaryApprovalRequests />,
+      },
     ],
   },
   {

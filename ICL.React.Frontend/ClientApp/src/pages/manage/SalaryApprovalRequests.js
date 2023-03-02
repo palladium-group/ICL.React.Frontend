@@ -25,7 +25,7 @@ const themeCustom = createTheme({
   },
 });
 
-const IncidentManagement = () => {
+const SalaryApprovalRequests = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
@@ -50,8 +50,8 @@ const IncidentManagement = () => {
                 <Button
                   mr={2}
                   variant="contained"
-                  color="primary"
-                  onClick={() => navigate("/")}
+                  color="secondary"
+                  onClick={() => navigate("/manage")}
                 >
                   <ReplyIcon />
                 </Button>
@@ -78,15 +78,15 @@ const IncidentManagement = () => {
           <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
             <Grid item md={12} zeroMinWidth>
               <iframe title="Report Section" width="100%" height="100%"
-                      src="https://app.powerbi.com/view?r=eyJrIjoiZTE4Zjg4MjQtNTVjYi00ZjJhLTkzOWYtZjZhZWUxYTMwM2MxIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+                      src="https://app.powerbi.com/view?r=eyJrIjoiNmJhYTBlMmEtOTdjNi00ZmVjLTg2MjgtNjlmNTQ0ODkzZTMxIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
                       frameBorder="0" allowFullScreen="true"></iframe>
             </Grid>
           </Grid>
         </Grid>
         <Dialog open={open} onClose={handleClose}>
-          <DialogTitle>GHSC ICL Incident Management Reporting</DialogTitle>
+          <DialogTitle>GHSC ICL Salary Approval Request</DialogTitle>
           <DialogContent>
-            <iframe width="640px" height="480px" title="GHSC ICL Incident Management Reporting" src="https://forms.office.com/r/3kJPTAq4Li?embed=true" frameBorder="0"
+            <iframe width="640px" height="480px" title="GHSC ICL Salary Approval Request" src="https://forms.office.com/r/ScjmXVzEFL?embed=true" frameBorder="0"
                     marginWidth="0" marginHeight="0" style={{ border: "none", maxWidth: "100%", maxHeight: "100vh" }}
                     allowFullScreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
           </DialogContent>
@@ -98,4 +98,4 @@ const IncidentManagement = () => {
     </React.Fragment>
   );
 };
-export default IncidentManagement;
+export default SalaryApprovalRequests;
