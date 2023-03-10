@@ -173,8 +173,9 @@ const Manage = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    <a href="https://thepalladiumgroup.atlassian.net/wiki/spaces/GISS/pages/2117730305/Stakeholder+Register" target="_blank" rel="noopener noreferrer">Stakeholder Register</a>
-                      
+                      <NavLink to={`/manage/stakeholder-register`}>
+                        Stakeholder Register
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

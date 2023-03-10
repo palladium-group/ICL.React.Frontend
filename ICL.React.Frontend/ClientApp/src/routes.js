@@ -119,6 +119,8 @@ const CMSContentImpactCreate = async(() => import("./pages/MISAdministration/CMS
 const CMSContentImpactList = async(() => import("./pages/MISAdministration/CMSContentImpact-list"));
 const CMSContentLeadershipCreate = async(() => import("./pages/MISAdministration/CMSContentLeadership-create"));
 const CMSContentLeadershipList = async(() => import("./pages/MISAdministration/CMSContentLeadership-list"));
+const CustomsRequirements = async(() => import("./pages/plan/CustomsRequirements"));
+const StakeholderRegister = async(() => import("./pages/manage/StakeholderRegister"));
 
 const routes = [
   {
@@ -246,6 +248,10 @@ const routes = [
       {
         path: "travel-approval-requests",
         element: <TravelApprovalRequests />,
+      },
+      {
+        path: "stakeholder-register",
+        element: <StakeholderRegister />,
       }
     ],
   },
@@ -313,6 +319,10 @@ const routes = [
         path: "supply-and-demand",
         element: <SupplyAndDemand />,
       },
+      {
+        path: "custom-requirements",
+        element: <CustomsRequirements />,
+      }
     ],
   },
   {

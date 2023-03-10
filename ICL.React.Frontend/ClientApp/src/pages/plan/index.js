@@ -242,7 +242,9 @@ const PlanLinks = () => {
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    <a target="_blank" rel="noopener noreferrer" href="https://thepalladiumgroup.atlassian.net/servicedesk/customer/portal/26/group/70/create/272">Customs Requirements</a>
+                    <NavLink to={`/plan/custom-requirements`}>
+                      Customs Requirements
+                    </NavLink>
                     <Divider />
                   </Grid>
                 </Grid>
