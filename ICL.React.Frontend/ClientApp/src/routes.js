@@ -121,6 +121,7 @@ const CMSContentLeadershipCreate = async(() => import("./pages/MISAdministration
 const CMSContentLeadershipList = async(() => import("./pages/MISAdministration/CMSContentLeadership-list"));
 const CustomsRequirements = async(() => import("./pages/plan/CustomsRequirements"));
 const StakeholderRegister = async(() => import("./pages/manage/StakeholderRegister"));
+const ProofOfDelivery = async(() => import("./pages/deliver/ProofOfDelivery"));
 
 const routes = [
   {
@@ -381,6 +382,10 @@ const routes = [
         path: "commodity-tracking",
         element: <CommodityTracking />,
       },
+      {
+        path: "proof-of-delivery",
+        element: <ProofOfDelivery />,
+      }
     ],
   },
   {

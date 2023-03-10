@@ -101,7 +101,9 @@ const Deliver = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    Proof of Delivery Repository
+                      <NavLink to={`/deliver/proof-of-delivery`}>
+                        Proof of Delivery Repository
+                      </NavLink>
                       <Divider />
                     </Grid>                             
                  
