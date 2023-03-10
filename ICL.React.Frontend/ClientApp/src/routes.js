@@ -24,6 +24,7 @@ import DeliverableSubmissions from "./pages/manage/DeliverableSubmissions";
 import AnnualSurvey from "./pages/manage/AnnualSurvey";
 import WorkPlanStatus from "./pages/manage/WorkPlanStatus";
 import SalaryApprovalRequests from "./pages/manage/SalaryApprovalRequests";
+import TravelApprovalRequests from "./pages/manage/TravelApprovalRequests";
 
 
 // Dashboard components
@@ -118,6 +119,8 @@ const CMSContentImpactCreate = async(() => import("./pages/MISAdministration/CMS
 const CMSContentImpactList = async(() => import("./pages/MISAdministration/CMSContentImpact-list"));
 const CMSContentLeadershipCreate = async(() => import("./pages/MISAdministration/CMSContentLeadership-create"));
 const CMSContentLeadershipList = async(() => import("./pages/MISAdministration/CMSContentLeadership-list"));
+const CustomsRequirements = async(() => import("./pages/plan/CustomsRequirements"));
+const StakeholderRegister = async(() => import("./pages/manage/StakeholderRegister"));
 
 const routes = [
   {
@@ -242,6 +245,14 @@ const routes = [
         path: "salary-approval-requests",
         element: <SalaryApprovalRequests />,
       },
+      {
+        path: "travel-approval-requests",
+        element: <TravelApprovalRequests />,
+      },
+      {
+        path: "stakeholder-register",
+        element: <StakeholderRegister />,
+      }
     ],
   },
   {
@@ -308,6 +319,10 @@ const routes = [
         path: "supply-and-demand",
         element: <SupplyAndDemand />,
       },
+      {
+        path: "custom-requirements",
+        element: <CustomsRequirements />,
+      }
     ],
   },
   {
