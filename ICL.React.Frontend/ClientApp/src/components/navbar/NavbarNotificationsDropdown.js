@@ -82,7 +82,7 @@ function Demos() {
       <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
         <Grid container spacing={6}>
           <Grid item md={12}>
-            <a href="https://opsuat.freightintime.com/" target="_blank" rel="noopener noreferrer">
+            <a href={process.env.REACT_APP_SCM_URL} target="_blank" rel="noopener noreferrer">
             Warehousing & Distribution
             </a>
             <Divider />
