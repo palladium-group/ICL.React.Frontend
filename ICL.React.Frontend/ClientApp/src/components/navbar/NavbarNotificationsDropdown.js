@@ -115,7 +115,7 @@ function Demos() {
       <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
         <Grid container spacing={6}>
           <Grid item md={12}>
-            Risk Management
+            <a href="https://palladium.kb.eastus2.azure.elastic-cloud.com:9243" target="_blank" rel="noopener noreferrer">Risk Management</a>
             <Divider />
           </Grid>
           <Grid item md={12}>
