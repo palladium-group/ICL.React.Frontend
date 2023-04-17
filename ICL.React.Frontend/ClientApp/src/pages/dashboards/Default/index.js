@@ -13,10 +13,11 @@ import {
   Card as MuiCard,
   Paper as MuiPaper,
   CardContent,
-  Button,
+  Tooltip,
+  Button as MuiButton,
 } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
+import {createTheme, ThemeProvider, useTheme} from "@mui/material/styles";
 import { spacing } from "@mui/system";
 import {DataGrid, GridToolbar} from "@mui/x-data-grid";
 import {useQuery} from "@tanstack/react-query";
@@ -25,11 +26,21 @@ import {format} from "date-fns";
 import { Add as AddIcon } from "@mui/icons-material";
 import Pending from "@mui/icons-material/Pending";
 import {useNavigate} from "react-router-dom";
+import ReplyIcon from "@mui/icons-material/Reply";
 
 const Divider = styled(MuiDivider)(spacing);
 const Typography = styled(MuiTypography)(spacing);
 const Card = styled(MuiCard)(spacing);
 const Paper = styled(MuiPaper)(spacing);
+
+const Button = styled(MuiButton)(spacing);
+const themeCustom = createTheme({
+  palette: {
+    secondary: {
+      main: "#BA0C2F",
+    },
+  },
+});
 
 const IncomingOrdersData = (props) => {
   const [pageSize, setPageSize] = useState(10);
@@ -89,13 +100,23 @@ const IncomingOrdersData = (props) => {
                 headerName: "Booking No",
                 editable: false,
                 flex: 1,
+                renderCell: (params) => (
+                  <Tooltip title={params.value}>
+                    <span>{params.value}</span>
+                  </Tooltip>
+                ),
               },
               {
                 field: "bookingDate",
                 headerName: "Booking Date",
                 editable: false,
                 flex: 1,
-                valueFormatter: params => format(new Date(params?.value), 'dd-MMM-yyyy')
+                valueFormatter: params => format(new Date(params?.value), 'dd-MMM-yyyy'),
+                renderCell: (params) => (
+                  <Tooltip title={format(new Date(params?.value), 'dd-MMM-yyyy')}>
+                    <span>{format(new Date(params?.value), 'dd-MMM-yyyy')}</span>
+                  </Tooltip>
+                ),
               },
               {
                 field: "submitStatus",
@@ -111,6 +132,7 @@ const IncomingOrdersData = (props) => {
                 headerName: "Delivery Status",
                 editable: false,
                 flex: 1,
+                hide: true,
                 renderCell: (params) => {
                   return priorityFormater(params.value);
                 },
@@ -157,6 +179,21 @@ function Default() {
   return (
       <Grid container p={isLgUp ? 12 : 5}>
         <Grid item md={12}>
+          <Grid container spacing={6}>
+            <Grid item>
+              <ThemeProvider theme={themeCustom}>
+                <Button
+                  mr={2}
+                  variant="contained"
+                  color="secondary"
+                  onClick={() => navigate("/plan")}
+                >
+                  <ReplyIcon />
+                </Button>
+              </ThemeProvider>
+            </Grid>
+          </Grid>
+          <br />
           <Card>
             <CardContent pb={1}>
               <Button
