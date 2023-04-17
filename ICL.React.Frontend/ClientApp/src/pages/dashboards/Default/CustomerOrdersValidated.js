@@ -8,7 +8,7 @@ import {
   Divider as MuiDivider,
   Typography as MuiTypography,
   Card as MuiCard,
-  Paper as MuiPaper, Button,
+  Paper as MuiPaper, Button, Tooltip,
 } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
@@ -92,6 +92,11 @@ const CustomerOrdersValidatedData = (props) => {
                 headerName: "Booking No",
                 editable: false,
                 flex: 1,
+                renderCell: (params) => (
+                  <Tooltip title={params.value}>
+                    <span>{params.value}</span>
+                  </Tooltip>
+                ),
               },
               {
                 field: "bookingDate",
@@ -114,6 +119,7 @@ const CustomerOrdersValidatedData = (props) => {
                 headerName: "Delivery Status",
                 editable: false,
                 flex: 1,
+                hide: true,
                 renderCell: (params) => {
                   return priorityFormater(params.value);
                 },
