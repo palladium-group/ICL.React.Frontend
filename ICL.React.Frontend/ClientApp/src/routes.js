@@ -122,6 +122,7 @@ const CMSContentLeadershipList = async(() => import("./pages/MISAdministration/C
 const CustomsRequirements = async(() => import("./pages/plan/CustomsRequirements"));
 const StakeholderRegister = async(() => import("./pages/manage/StakeholderRegister"));
 const ProofOfDelivery = async(() => import("./pages/deliver/ProofOfDelivery"));
+const VendorRegistry = async(() => import("./pages/source/VendorRegistry"));
 
 const routes = [
   {
@@ -341,6 +342,10 @@ const routes = [
       {
         path: "warehousing",
         element: <Warehousing />,
+      },
+      {
+        path: "vendor-registry",
+        element: <VendorRegistry />,
       }
     ],
   },
