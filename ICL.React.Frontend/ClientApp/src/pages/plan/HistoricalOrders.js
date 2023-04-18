@@ -45,8 +45,8 @@ const HistoricalOrders = () => {
         <br />
         <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
           <Grid item md={12} zeroMinWidth>
-            <iframe title="6. Historical Orders - Historical Orders" width="100%" height="100%"
-                    src="https://app.powerbi.com/view?r=eyJrIjoiMDllNWJmNWItZGM3MS00NDQ3LWIxMmItYmY4Nzc0MDBkMTU2IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+            <iframe title="Report Section" width="100%" height="100%"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiNjE5NzE3MGEtNDZjMi00NTc0LWE4NmMtOWQ0MmI0OGM4MTBiIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
                     frameBorder="0" allowFullScreen="true"></iframe>
           </Grid>
         </Grid>
