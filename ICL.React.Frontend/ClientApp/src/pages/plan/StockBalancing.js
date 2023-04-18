@@ -45,8 +45,8 @@ const StockBalancing = () => {
         <br />
         <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
           <Grid item md={12} zeroMinWidth>
-            <iframe title="4. Facility Status Report - Facilities" width="100%" height="100%"
-                    src="https://app.powerbi.com/view?r=eyJrIjoiNGM4ZjFhNWQtZmRiNi00MjAyLWFjYjMtMzc3MTA3ZWVjNWQ3IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+            <iframe title="Report Section" width="100%" height="100%"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiN2NmZDFiYjItY2UyMi00MGUzLWJkYzQtYWI0N2E2OWY1NTBmIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
                     frameBorder="0" allowFullScreen="true"></iframe>
           </Grid>
         </Grid>

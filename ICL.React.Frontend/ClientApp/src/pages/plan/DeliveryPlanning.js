@@ -45,8 +45,9 @@ const DeliveryPlanning = () => {
         <br />
         <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
           <Grid item md={12} zeroMinWidth>
-            <iframe title="5. Transporter Status Report - Transportation Providers" width="100%" height="100%"
-                    src="https://app.powerbi.com/view?r=eyJrIjoiMmExMzkxNTQtNjI3Yi00NDI0LWFiNzctZjlhMzlmMWFiNGM1IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+            <iframe title="GHSC ICL Operational Planning_Transporter Providor Status Report - Transportation Providers"
+                    width="100%" height="100%"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiMmQ4ZDMzMmEtNjQ3Yi00MTEwLTkwZGYtM2VkMmE4ZjVkMjZhIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
                     frameBorder="0" allowFullScreen="true"></iframe>
           </Grid>
         </Grid>

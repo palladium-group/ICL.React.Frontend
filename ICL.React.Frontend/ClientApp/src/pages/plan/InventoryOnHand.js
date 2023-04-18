@@ -45,8 +45,8 @@ const InventoryOnHand = () => {
         <br />
         <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
           <Grid item md={12} zeroMinWidth>
-            <iframe title="2. Warehouse Status Report - Warehouses" width="100%" height="100%"
-                    src="https://app.powerbi.com/view?r=eyJrIjoiN2UwMTExMjAtZmIxNi00YzdkLWJlNDUtMmI0MjVkNjQwMjNiIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+            <iframe title="Report Section" width="100%" height="100%"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiNzRiODQwNDEtYjU4OC00MjJlLWE4ZDYtYjY3NjIyYjFiN2EyIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
                     frameBorder="0" allowFullScreen="true"></iframe>
           </Grid>
         </Grid>
