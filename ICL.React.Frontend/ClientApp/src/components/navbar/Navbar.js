@@ -98,8 +98,8 @@ const Navbar = ({ onDrawerToggle }) => {
                   }}
                 >
                   <StyledChip label="Report an Incident" onClick={handleReportIncident} />
-                  <StyledChip label="HQ Office" component="a" href="#" clickable />
-                  <StyledChip label="Country Offices" component="a" href="#" clickable />
+                  {/*<StyledChip label="HQ Office" component="a" href="#" clickable />*/}
+                  {/*<StyledChip label="Country Offices" component="a" href="#" clickable />*/}
                   <StyledChip label="Custom Reports" component="a" href="#" clickable />
                   <StyledChip label="Standard Reports" component="a" href="#" clickable />
                 </Box>

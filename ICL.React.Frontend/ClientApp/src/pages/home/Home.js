@@ -189,7 +189,7 @@ const EventContent=({value,handleChange})=>{
                           <CalendarMonthIcon/>
                         </ListItemIcon>
                         <ListItemButton>
-                          <ListItemText primary="Feb 6, 2023"></ListItemText>
+                          <ListItemText primary="May 6, 2023"></ListItemText>
                         </ListItemButton>
                       </ListItem>
                       <ListItem disablePadding>
@@ -202,7 +202,39 @@ const EventContent=({value,handleChange})=>{
                       </ListItem>
                     </List>
                   </TabPanel>
-                  <TabPanel value="2">No Events</TabPanel>
+                  <TabPanel value="2">
+                    <List>
+                      <ListItem disablePadding>
+                        <ListItemButton>
+                          <ListItemText primary="NextGen 3PL Workshop Group"></ListItemText>
+                        </ListItemButton>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <ListItemIcon>
+                          <PlaceIcon />
+                        </ListItemIcon>
+                        <ListItemButton>
+                          <ListItemText primary="Microsoft Teams"></ListItemText>
+                        </ListItemButton>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <ListItemIcon>
+                          <CalendarMonthIcon/>
+                        </ListItemIcon>
+                        <ListItemButton>
+                          <ListItemText primary="Feb 6, 2023"></ListItemText>
+                        </ListItemButton>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <ListItemIcon>
+                          <AccessTimeIcon/>
+                        </ListItemIcon>
+                        <ListItemButton>
+                          <ListItemText primary="1000 EST"></ListItemText>
+                        </ListItemButton>
+                      </ListItem>
+                    </List>
+                  </TabPanel>
                 </TabContext>
               </Box>
 
@@ -277,10 +309,7 @@ const QuickLinksContent=()=>{
               </Stack>
               <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
                 <Chip label="HR Portal" component="a" target="_blank" href="https://hrcompass.thepalladiumgroup.com/" clickable />
-                <Chip label="Learning Compass" component="a" target="_blank" href="https://palladium.blackboard.com/" clickable />
-              </Stack>
-              <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
-                <Chip label="Compliance" component="a" target="_blank" href="https://thepalladiumgroup-cp.deltekenterprise.com/cpweb/" clickable />
+                <Chip label="Learning" component="a" target="_blank" href="https://palladium.blackboard.com/" clickable />
                 <Chip label="Training" component="a" />
               </Stack>
             </CardContent>
