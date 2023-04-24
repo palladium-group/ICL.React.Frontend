@@ -46,7 +46,7 @@ const ForecastedOrders = () => {
         <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
           <Grid item md={12} zeroMinWidth>
             <iframe title="7. Forecasted Orders" width="100%" height="100%"
-                    src="https://shiny.scims.online/NextGen_ICL/"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiNjIxMmY0ZjItNTMyNC00OGRiLWIyMWMtODlmYzFjNzQ0YmVhIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
                     frameBorder="0" allowFullScreen="true"></iframe>
           </Grid>
         </Grid>
