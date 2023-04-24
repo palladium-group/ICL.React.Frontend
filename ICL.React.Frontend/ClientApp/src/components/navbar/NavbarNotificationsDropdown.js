@@ -94,9 +94,9 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-            <NavLink to={`/macro-eyes`}>
+            <a target="_blank" rel="noopener noreferrer" href="https://shiny.scims.online/NextGen_ICL/">
               Planning
-            </NavLink>
+            </a>
             <Divider />
           </Grid>
           <Grid item md={12}>
