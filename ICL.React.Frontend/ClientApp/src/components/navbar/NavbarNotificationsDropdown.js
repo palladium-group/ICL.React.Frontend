@@ -100,7 +100,9 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-          Third Party Monitoring
+            <a target="_blank" rel="noopener noreferrer" href="https://www.commcarehq.org">
+              Third Party Monitoring
+            </a>
             <Divider />
           </Grid>
         </Grid>

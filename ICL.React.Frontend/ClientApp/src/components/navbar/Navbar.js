@@ -68,9 +68,8 @@ const StyledChip = styled(
 
 const Navbar = ({ onDrawerToggle }) => {
   const navigate = useNavigate();
-  const handleReportIncident  = () => {
-    console.log(`clicked`);
-    navigate("/incident-management");
+  const handleStandardReports  = () => {
+    navigate("/standard-reports");
   };
   return (
     <React.Fragment>
@@ -97,11 +96,11 @@ const Navbar = ({ onDrawerToggle }) => {
                     },
                   }}
                 >
-                  <StyledChip label="Report an Incident" onClick={handleReportIncident} />
+                  <StyledChip label="Report an Incident" component="a" target="_blank" href="https://issuesandriskregistry.thepalladiumgroup.com/" clickable />
                   {/*<StyledChip label="HQ Office" component="a" href="#" clickable />*/}
                   {/*<StyledChip label="Country Offices" component="a" href="#" clickable />*/}
                   <StyledChip label="Custom Reports" component="a" href="#" clickable />
-                  <StyledChip label="Standard Reports" component="a" href="#" clickable />
+                  <StyledChip label="Standard Reports" component="a" onClick={handleStandardReports} clickable />
                 </Box>
               </ThemeProvider>
             </Grid>
