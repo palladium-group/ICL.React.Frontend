@@ -148,12 +148,12 @@ const Manage = () => {
                       </NavLink>
                       <Divider />
                     </Grid>
-                    <Grid item md={12}>
-                      <NavLink to={`/manage/survey-results`}>
-                        Survey Results
-                      </NavLink>
-                      <Divider />
-                    </Grid>
+                    {/*<Grid item md={12}>*/}
+                    {/*  <NavLink to={`/manage/survey-results`}>*/}
+                    {/*    Survey Results*/}
+                    {/*  </NavLink>*/}
+                    {/*  <Divider />*/}
+                    {/*</Grid>*/}
                   </Grid>
                 </Box>
               </CardContent>
