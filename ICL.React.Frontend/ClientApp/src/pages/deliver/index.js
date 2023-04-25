@@ -71,13 +71,13 @@ const Deliver = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      <a target="_blank" rel="noopener noreferrer" href="https://app.parsyl.com/report/shipments/v3/aa5dcfff-b494-4f63-9544-34b5f537d497">
+                      <a target="_blank" rel="noopener noreferrer" href="https://app.parsyl.com/report/shipments/v3/2b70022c-5915-4cc3-a42e-d1926c600b18?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODI4MjM5NDUsImlhdCI6MTY4MjM5MTk0NSwiaXNzIjoicGFyc3lsLWFwaSIsInVzZXJJZCI6Ijc1Mzc0OWM2LTQ0MTUtNDA1Zi1iYmMzLTBiMmU1NjljNDdlMyIsInJlc291cmNlSWQiOiIyYjcwMDIyYy01OTE1LTRjYzMtYTQyZS1kMTkyNmM2MDBiMTgiLCJyZXNvdXJjZVR5cGUiOiJzaGlwbWVudCJ9.jHq7nxab10el6GpM8ok35kw55jJr70kXc35CEZW0j2g">
                         Global Monitoring
                       </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      <a target="_blank" rel="noopener noreferrer" href="https://app.parsyl.com/report/shipments/v3/aa5dcfff-b494-4f63-9544-34b5f537d497">
+                      <a target="_blank" rel="noopener noreferrer" href="https://app.parsyl.com/report/shipments/v3/2b70022c-5915-4cc3-a42e-d1926c600b18?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODI4MjM5NDUsImlhdCI6MTY4MjM5MTk0NSwiaXNzIjoicGFyc3lsLWFwaSIsInVzZXJJZCI6Ijc1Mzc0OWM2LTQ0MTUtNDA1Zi1iYmMzLTBiMmU1NjljNDdlMyIsInJlc291cmNlSWQiOiIyYjcwMDIyYy01OTE1LTRjYzMtYTQyZS1kMTkyNmM2MDBiMTgiLCJyZXNvdXJjZVR5cGUiOiJzaGlwbWVudCJ9.jHq7nxab10el6GpM8ok35kw55jJr70kXc35CEZW0j2g">
                         Country Monitoring
                       </a>
                       <Divider />
