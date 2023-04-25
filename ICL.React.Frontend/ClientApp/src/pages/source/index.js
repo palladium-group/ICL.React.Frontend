@@ -86,7 +86,9 @@ const Source = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Network Design
+                      <NavLink to={`/source/network-design`}>
+                        Network Design
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>
@@ -113,19 +115,27 @@ const Source = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Underqualified Bidder Action Plans
+                      <a href="#">
+                        Underqualified Bidder Action Plans
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Request for Proposals(Annual)
+                      <a href="#">
+                        Request for Proposals(Annual)
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Request for Proposals(Spot Market)
+                      <a href="#">
+                        Request for Proposals(Spot Market)
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Service Level Agreements
+                      <a href="#">
+                        Service Level Agreements
+                      </a>
                       <Divider />
                     </Grid>
                   </Grid>

@@ -123,6 +123,7 @@ const CustomsRequirements = async(() => import("./pages/plan/CustomsRequirements
 const StakeholderRegister = async(() => import("./pages/manage/StakeholderRegister"));
 const ProofOfDelivery = async(() => import("./pages/deliver/ProofOfDelivery"));
 const VendorRegistry = async(() => import("./pages/source/VendorRegistry"));
+const NetworkDesign = async(() => import("./pages/source/NetworkDesign"));
 
 const routes = [
   {
@@ -346,7 +347,11 @@ const routes = [
       {
         path: "vendor-registry",
         element: <VendorRegistry />,
-      }
+      },
+      {
+        path: "network-design",
+        element: <NetworkDesign />,
+      },
     ],
   },
   {
