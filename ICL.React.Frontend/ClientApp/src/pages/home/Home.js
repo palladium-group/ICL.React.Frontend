@@ -304,8 +304,8 @@ const QuickLinksContent=()=>{
               <Divider />
               <Stack direction="row" spacing={2} sx={{ marginBottom: 2, marginTop: 2 }}>
                 <Chip label="Timesheet" component="a" target="_blank" href="https://thepalladiumgroup-cp.deltekenterprise.com/cpweb/" clickable />
-                <Chip label="Expense Reports" component="a" target="_blank" href="https://delegationofauthority.thepalladiumgroup.com/" clickable />
-                <Chip label="Travel Reports" component="a" target="_blank" href="https://delegationofauthority.thepalladiumgroup.com/" clickable />
+                <Chip label="Expense Reports" component="a" target="_blank" href="https://palladiumgroup.sharepoint.com/:x:/r/sites/GHSCTechnical/Shared%20Documents/General/GBL%20FN01%20SOP06%20TL04%20Travel%20Expense%20claim%20and%20travel%20advance%20form.v17.01.xlsx?d=w64c35d9dae31491da4dd377a88e62547&csf=1&web=1&e=Gad3Wr" clickable />
+                <Chip label="Travel Reports" component="a" target="_blank" href="https://palladiumgroup.sharepoint.com/:w:/r/sites/GHSCTechnical/Shared%20Documents/General/REV%2011162021%20Request%20for%20Business%20Travel%20Approval%20Form.docx?d=w183517974d4c4ac6beac66e44a71bc5f&csf=1&web=1&e=MKZKuc" clickable />
               </Stack>
               <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
                 <Chip label="HR Portal" component="a" target="_blank" href="https://hrcompass.thepalladiumgroup.com/" clickable />

@@ -46,7 +46,7 @@ const Parsyl = () => {
         <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
           <Grid item md={12} zeroMinWidth>
             <iframe title="Parsyl" width="100%" height="100%"
-                    src="https://app.parsyl.com/report/shipments/v3/aa5dcfff-b494-4f63-9544-34b5f537d497?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY3NTc2MjAsImlhdCI6MTY3NjMyNTYyMCwiaXNzIjoicGFyc3lsLWFwaSIsInVzZXJJZCI6IjRiOGIwZjAxLWZhNTAtNDY1Ni1hNTYxLWU0MDJlYTA2MjMxZCIsInJlc291cmNlSWQiOiJhYTVkY2ZmZi1iNDk0LTRmNjMtOTU0NC0zNGI1ZjUzN2Q0OTciLCJyZXNvdXJjZVR5cGUiOiJzaGlwbWVudCJ9.NP14JC4EH0gOTkhO4HAcvKUDGHx3gKq-KYJKPWZcTS4"
+                    src="https://app.parsyl.com/report/shipments/v3/2b70022c-5915-4cc3-a42e-d1926c600b18?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODI4MjM5NDUsImlhdCI6MTY4MjM5MTk0NSwiaXNzIjoicGFyc3lsLWFwaSIsInVzZXJJZCI6Ijc1Mzc0OWM2LTQ0MTUtNDA1Zi1iYmMzLTBiMmU1NjljNDdlMyIsInJlc291cmNlSWQiOiIyYjcwMDIyYy01OTE1LTRjYzMtYTQyZS1kMTkyNmM2MDBiMTgiLCJyZXNvdXJjZVR5cGUiOiJzaGlwbWVudCJ9.jHq7nxab10el6GpM8ok35kw55jJr70kXc35CEZW0j2g"
                     frameBorder="0" allowFullScreen="true"></iframe>
           </Grid>
         </Grid>
