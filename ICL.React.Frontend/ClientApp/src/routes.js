@@ -124,6 +124,7 @@ const StakeholderRegister = async(() => import("./pages/manage/StakeholderRegist
 const ProofOfDelivery = async(() => import("./pages/deliver/ProofOfDelivery"));
 const VendorRegistry = async(() => import("./pages/source/VendorRegistry"));
 const NetworkDesign = async(() => import("./pages/source/NetworkDesign"));
+const StandardReports = async(() => import("./pages/home/StandardReports"));
 
 const routes = [
   {
@@ -161,8 +162,12 @@ const routes = [
       {
         path: "incident-management",
         element: <IncidentManagement />,
-      }
-    ]
+      },
+      {
+        path: "standard-reports",
+        element: <StandardReports />,
+      },
+    ],
   },
   {
     path: "/manage",
