@@ -132,15 +132,21 @@ const Enable = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                      Incident Management
+                      <a href="#">
+                        Incident Management
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Risk Profiles
+                      <a href="#">
+                        Risk Profiles
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Risk Alerts
+                      <a href="#">
+                        Risk Alerts
+                      </a>
                       <Divider />
                     </Grid>
                   </Grid>
