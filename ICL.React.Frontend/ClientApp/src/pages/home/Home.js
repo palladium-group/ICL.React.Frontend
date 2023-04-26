@@ -309,8 +309,8 @@ const QuickLinksContent=()=>{
               </Stack>
               <Stack direction="row" spacing={2} sx={{ marginBottom: 2 }}>
                 <Chip label="HR Portal" component="a" target="_blank" href="https://hrcompass.thepalladiumgroup.com/" clickable />
-                <Chip label="Learning" component="a" target="_blank" href="https://palladium.blackboard.com/" clickable />
-                <Chip label="Training" component="a" />
+                <Chip label="Learning Compass" component="a" target="_blank" href="https://palladium.blackboard.com/" clickable />
+                {/*<Chip label="Training" component="a" />*/}
               </Stack>
             </CardContent>
           </CardActionArea>

@@ -125,6 +125,10 @@ const ProofOfDelivery = async(() => import("./pages/deliver/ProofOfDelivery"));
 const VendorRegistry = async(() => import("./pages/source/VendorRegistry"));
 const NetworkDesign = async(() => import("./pages/source/NetworkDesign"));
 const StandardReports = async(() => import("./pages/home/StandardReports"));
+const Distribution = async(()=> import("./pages/source/Distribution"));
+const GlobalMonitoring = async(() => import("./pages/enable/GlobalMonitoring"));
+const CountryMonitoring = async(() => import("./pages/enable/CountryMonitoring"));
+const FreightBillAudit = async(() => import("./pages/home/FreightBillAudit"));
 
 const routes = [
   {
@@ -166,6 +170,10 @@ const routes = [
       {
         path: "standard-reports",
         element: <StandardReports />,
+      },
+      {
+        path: "freight-bill-audit",
+        element: <FreightBillAudit />,
       },
     ],
   },
@@ -357,6 +365,10 @@ const routes = [
         path: "network-design",
         element: <NetworkDesign />,
       },
+      {
+        path: "distribution",
+        element: <Distribution />,
+      }
     ],
   },
   {
@@ -446,6 +458,14 @@ const routes = [
       {
         path: "inventory",
         element: <Inventory />,
+      },
+      {
+        path: "global-monitoring",
+        element: <GlobalMonitoring />,
+      },
+      {
+        path: "country-monitoring",
+        element: <CountryMonitoring />,
       },
     ],
   },

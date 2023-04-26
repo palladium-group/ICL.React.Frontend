@@ -20,7 +20,7 @@ const themeCustom = createTheme({
   },
 });
 
-const GreenHouseGasMonitoring = () => {
+const CountryMonitoring = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
@@ -44,8 +44,8 @@ const GreenHouseGasMonitoring = () => {
         <br />
         <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
           <Grid item md={12} zeroMinWidth>
-            <iframe title="GHG Monitoring" width="100%" height="100%"
-                    src="https://app.powerbi.com/view?r=eyJrIjoiNGNlNmFiMjktMzgzYi00ZTc4LWI2OWItZGQ3YTI0N2M4M2E5IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+            <iframe title="GHG Country Monitoring" width="100%" height="100%"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiYjNkNmI0NjYtYTcxOS00OTA0LTlmOTYtNTU3MTZhN2Y2MGQxIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
                     frameBorder="0" allowFullScreen="true"></iframe>
           </Grid>
         </Grid>
@@ -53,4 +53,4 @@ const GreenHouseGasMonitoring = () => {
     </Grid>
   );
 };
-export default GreenHouseGasMonitoring;
+export default CountryMonitoring;

@@ -3,24 +3,24 @@ import {Grid} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import styled from "@emotion/styled";
 import { spacing } from "@mui/system";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import {
   Button as MuiButton,
 } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import ReplyIcon from '@mui/icons-material/Reply';
+import {createTheme, ThemeProvider} from "@mui/material/styles";
 
 const Button = styled(MuiButton)(spacing);
 const themeCustom = createTheme({
   palette: {
     secondary: {
-      main: "#05C3DE",
+      main: "#8D6E97",
     },
   },
 });
 
-const GreenHouseGasMonitoring = () => {
+const Distribution = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
@@ -34,7 +34,7 @@ const GreenHouseGasMonitoring = () => {
                 mr={2}
                 variant="contained"
                 color="secondary"
-                onClick={() => navigate("/enable")}
+                onClick={() => navigate("/source")}
               >
                 <ReplyIcon />
               </Button>
@@ -44,8 +44,8 @@ const GreenHouseGasMonitoring = () => {
         <br />
         <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
           <Grid item md={12} zeroMinWidth>
-            <iframe title="GHG Monitoring" width="100%" height="100%"
-                    src="https://app.powerbi.com/view?r=eyJrIjoiNGNlNmFiMjktMzgzYi00ZTc4LWI2OWItZGQ3YTI0N2M4M2E5IiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+            <iframe title="Report Section" width="100%" height="100%"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiNGNiNDgxY2QtZWUzNy00NDAxLWJkOWQtMmI5Y2Y5OGIwMmFlIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
                     frameBorder="0" allowFullScreen="true"></iframe>
           </Grid>
         </Grid>
@@ -53,4 +53,4 @@ const GreenHouseGasMonitoring = () => {
     </Grid>
   );
 };
-export default GreenHouseGasMonitoring;
+export default Distribution;
