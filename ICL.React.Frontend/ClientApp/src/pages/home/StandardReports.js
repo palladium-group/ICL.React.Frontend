@@ -48,7 +48,7 @@ const StandardReports = () => {
           <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
             <Grid item md={12} zeroMinWidth>
               <iframe title="LIT ICL Dashboards" width="100%" height="100%"
-                      src="https://app.powerbi.com/reportEmbed?reportId=7619fe23-196f-412b-9224-23260fbbcd93&appId=5d9766a9-7d1a-4763-a15e-876e22bad733&autoAuth=true&ctid=e7942974-9738-4a4a-b646-2ab90f79db0f"
+                      src="https://app.powerbi.com/groups/me/apps/5d9766a9-7d1a-4763-a15e-876e22bad733/reports/b9950c78-0fc0-46fd-9e4d-d1778ed0a9fd/ReportSection?ctid=e7942974-9738-4a4a-b646-2ab90f79db0f"
                       frameBorder="0" allowFullScreen="true"></iframe>
             </Grid>
           </Grid>
