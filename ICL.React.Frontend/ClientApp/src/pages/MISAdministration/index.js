@@ -87,11 +87,15 @@ const MISAdministration = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Logic Apps
+                      <a href="#">
+                        Logic Apps
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Queues, Subscriptions, and Events
+                      <a href="#">
+                        Queues, Subscriptions, and Events
+                      </a>
                       <Divider />
                     </Grid>
                   </Grid>

@@ -110,13 +110,14 @@ const Manage = () => {
                     </Grid>
                     <Grid item md={12}>
                     <NavLink to={`/manage/kpi-dashboard`}>
-                    KPI Dashboard
+                      KPI Dashboard
                       </NavLink>
-                     
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      QASP Monitoring
+                      <NavLink to={`/manage/kpi-dashboard`}>
+                        QASP Monitoring
+                      </NavLink>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
@@ -165,7 +166,6 @@ const Manage = () => {
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  
                   Stakeholder Engagement
                 </Typography>
                 <Divider />

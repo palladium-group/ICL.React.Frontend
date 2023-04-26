@@ -206,7 +206,7 @@ const EventContent=({value,handleChange})=>{
                     <List>
                       <ListItem disablePadding>
                         <ListItemButton>
-                          <ListItemText primary="NextGen 3PL Workshop Group"></ListItemText>
+                          <ListItemText primary="NextGen 3PL Workshop"></ListItemText>
                         </ListItemButton>
                       </ListItem>
                       <ListItem disablePadding>

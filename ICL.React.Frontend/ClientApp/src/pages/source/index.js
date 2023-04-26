@@ -122,16 +122,16 @@ const Source = () => {
                     </Grid>
                     <Grid item md={12}>
                       <a href="#">
-                        Request for Proposals(Annual)
+                        Request for Proposals
                       </a>
                       <Divider />
                     </Grid>
-                    <Grid item md={12}>
-                      <a href="#">
-                        Request for Proposals(Spot Market)
-                      </a>
-                      <Divider />
-                    </Grid>
+                    {/*<Grid item md={12}>*/}
+                    {/*  <a href="#">*/}
+                    {/*    Request for Proposals(Spot Market)*/}
+                    {/*  </a>*/}
+                    {/*  <Divider />*/}
+                    {/*</Grid>*/}
                     <Grid item md={12}>
                       <a href="#">
                         Service Level Agreements
