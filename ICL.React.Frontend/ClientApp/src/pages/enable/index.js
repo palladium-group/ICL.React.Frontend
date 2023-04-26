@@ -43,7 +43,9 @@ const Enable = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    Network Monitoring
+                      <a href="#">
+                        Network Monitoring
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
@@ -105,13 +107,15 @@ const Enable = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                     
-                      Global Monitoring
-                   
+                      <NavLink to={`/enable/global-monitoring`}>
+                        Global Monitoring
+                      </NavLink>
                       <Divider />
                     </Grid>
-                    <Grid item md={12}>                      
-                      Country Monitoring                    
+                    <Grid item md={12}>
+                      <NavLink to={`/enable/country-monitoring`}>
+                        Country Monitoring
+                      </NavLink>
                       <Divider />
                     </Grid>
                   </Grid>

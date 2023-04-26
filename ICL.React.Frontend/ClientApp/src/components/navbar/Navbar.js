@@ -71,6 +71,9 @@ const Navbar = ({ onDrawerToggle }) => {
   const handleStandardReports  = () => {
     navigate("/standard-reports");
   };
+  const handleCustomReports = () => {
+    navigate("/incident-management");
+  };
   return (
     <React.Fragment>
       <AppBar position="sticky" elevation={0}>
@@ -99,7 +102,7 @@ const Navbar = ({ onDrawerToggle }) => {
                   <StyledChip label="Report an Incident" component="a" target="_blank" href="https://issuesandriskregistry.thepalladiumgroup.com/" clickable />
                   {/*<StyledChip label="HQ Office" component="a" href="#" clickable />*/}
                   {/*<StyledChip label="Country Offices" component="a" href="#" clickable />*/}
-                  <StyledChip label="Custom Reports" component="a" href="#" clickable />
+                  <StyledChip label="Custom Reports" component="a" onClick={handleCustomReports} clickable />
                   <StyledChip label="Standard Reports" component="a" onClick={handleStandardReports} clickable />
                 </Box>
               </ThemeProvider>

@@ -57,28 +57,28 @@ const IncidentManagement = () => {
                 </Button>
               </ThemeProvider>
             </Grid>
-            <Grid item md={2} sx={{ margin: 0 }}>
-              <Grid container direction="row-reverse">
-                <Grid item>
-                  <ThemeProvider theme={themeCustom}>
-                    <Button
-                      mr={2}
-                      variant="contained"
-                      color="primary"
-                      onClick={handleClickOpen}
-                    >
-                      <AddIcon />
-                    </Button>
-                  </ThemeProvider>
-                </Grid>
-              </Grid>
-            </Grid>
+            {/*<Grid item md={2} sx={{ margin: 0 }}>*/}
+            {/*  <Grid container direction="row-reverse">*/}
+            {/*    <Grid item>*/}
+            {/*      <ThemeProvider theme={themeCustom}>*/}
+            {/*        <Button*/}
+            {/*          mr={2}*/}
+            {/*          variant="contained"*/}
+            {/*          color="primary"*/}
+            {/*          onClick={handleClickOpen}*/}
+            {/*        >*/}
+            {/*          <AddIcon />*/}
+            {/*        </Button>*/}
+            {/*      </ThemeProvider>*/}
+            {/*    </Grid>*/}
+            {/*  </Grid>*/}
+            {/*</Grid>*/}
           </Grid>
           <br />
           <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
             <Grid item md={12} zeroMinWidth>
-              <iframe title="Report Section" width="100%" height="100%"
-                      src="https://app.powerbi.com/view?r=eyJrIjoiZTE4Zjg4MjQtNTVjYi00ZjJhLTkzOWYtZjZhZWUxYTMwM2MxIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9"
+              <iframe title="ICL Custom Reports" width="100%" height="100%"
+                      src="https://app.powerbi.com/view?r=eyJrIjoiYTRlZWJlMTQtYzM5YS00OTM1LTk3NWMtNmRhYWExNGM0YWYzIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection219f87e998dc237938e9"
                       frameBorder="0" allowFullScreen="true"></iframe>
             </Grid>
           </Grid>

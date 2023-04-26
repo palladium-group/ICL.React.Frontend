@@ -137,11 +137,15 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-            Freight Bill Audit
+            <NavLink to={`/freight-bill-audit`}>
+              Freight Bill Audit
+            </NavLink>
             <Divider />
           </Grid>
           <Grid item md={12}>
-            Custom Reporting
+            <NavLink to={`/incident-management`}>
+              Custom Reporting
+            </NavLink>
             <Divider />
           </Grid>
         </Grid>
