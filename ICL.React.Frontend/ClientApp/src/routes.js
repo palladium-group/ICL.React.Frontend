@@ -130,6 +130,7 @@ const GlobalMonitoring = async(() => import("./pages/enable/GlobalMonitoring"));
 const CountryMonitoring = async(() => import("./pages/enable/CountryMonitoring"));
 const FreightBillAudit = async(() => import("./pages/home/FreightBillAudit"));
 const QuarterlySupplyPlans = async(() => import("./pages/plan/QuarterlySupplyPlans"));
+const InsuranceRequirements = async(() => import("./pages/store/InsuranceRequirements"));
 
 const routes = [
   {
@@ -399,6 +400,10 @@ const routes = [
       {
         path: "insurance-monitoring",
         element: <InsuranceMonitoringAlert />,
+      },
+      {
+        path: "insurance-requirements",
+        element: <InsuranceRequirements />,
       },
     ],
   },
