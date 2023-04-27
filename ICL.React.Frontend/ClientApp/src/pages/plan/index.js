@@ -222,15 +222,15 @@ const PlanLinks = () => {
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    <a href="#">
+                    <NavLink to={`/plan/quarterly-supply-plans`}>
                       Quarterly Supply Plans
-                    </a>
+                    </NavLink>
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    <a href="#">
+                    <NavLink to={`/plan/quarterly-supply-plans`}>
                       Historical Distribution Orders
-                    </a>
+                    </NavLink>
                     <Divider />
                   </Grid>
                   <Grid item md={12}>

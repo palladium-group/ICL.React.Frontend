@@ -129,6 +129,7 @@ const Distribution = async(()=> import("./pages/source/Distribution"));
 const GlobalMonitoring = async(() => import("./pages/enable/GlobalMonitoring"));
 const CountryMonitoring = async(() => import("./pages/enable/CountryMonitoring"));
 const FreightBillAudit = async(() => import("./pages/home/FreightBillAudit"));
+const QuarterlySupplyPlans = async(() => import("./pages/plan/QuarterlySupplyPlans"));
 
 const routes = [
   {
@@ -338,6 +339,10 @@ const routes = [
       {
         path: "custom-requirements",
         element: <CustomsRequirements />,
+      },
+      {
+        path: "quarterly-supply-plans",
+        element: <QuarterlySupplyPlans />,
       }
     ],
   },
