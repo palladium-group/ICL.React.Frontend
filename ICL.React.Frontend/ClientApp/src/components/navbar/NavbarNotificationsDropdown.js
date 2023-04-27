@@ -125,7 +125,9 @@ function Demos() {
             <Divider />
           </Grid>
           <Grid item md={12}>
-            Greenhouse Gas Monitoring
+            <NavLink to={`/enable/green-house-gas-monitoring`}>
+              Greenhouse Gas Monitoring
+            </NavLink>
             <Divider />
           </Grid>
           <Grid item md={12}>
@@ -140,6 +142,12 @@ function Demos() {
             <NavLink to={`/freight-bill-audit`}>
               Freight Bill Audit
             </NavLink>
+            <Divider />
+          </Grid>
+          <Grid item md={12}>
+            <a href="#">
+              Cost Analytics
+            </a>
             <Divider />
           </Grid>
           <Grid item md={12}>

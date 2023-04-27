@@ -222,11 +222,15 @@ const PlanLinks = () => {
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    Quarterly Supply Plans
+                    <a href="#">
+                      Quarterly Supply Plans
+                    </a>
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
-                    Historical Distribution Orders
+                    <a href="#">
+                      Historical Distribution Orders
+                    </a>
                     <Divider />
                   </Grid>
                   <Grid item md={12}>
