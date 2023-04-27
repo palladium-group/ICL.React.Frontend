@@ -102,7 +102,9 @@ const Store = () => {
                 <Box px={4} my={3} sx={{ fontSize: 17, color: "#333333" }}>
                   <Grid container spacing={6}>
                     <Grid item md={12}>
-                    Insurance Requirements
+                      <a href="#">
+                        Insurance Requirements
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>

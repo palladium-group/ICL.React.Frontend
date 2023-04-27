@@ -130,15 +130,21 @@ const Deliver = () => {
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                    Vendor Self Inspection Reports
+                      <a href="#">
+                        Vendor Self Inspection Reports
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                    Annual Site Visit Reports
+                      <a href="#">
+                        Annual Site Visit Reports
+                      </a>
                       <Divider />
                     </Grid>
                     <Grid item md={12}>
-                      Quarterly Reviews
+                      <a href="#">
+                        Quarterly Reviews
+                      </a>
                       <Divider />
                     </Grid>
                   </Grid>
