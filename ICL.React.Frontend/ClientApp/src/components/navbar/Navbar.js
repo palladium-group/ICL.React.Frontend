@@ -74,6 +74,9 @@ const Navbar = ({ onDrawerToggle }) => {
   const handleCustomReports = () => {
     navigate("/incident-management");
   };
+  const handleHsotDashboards = () => {
+    navigate("/uk-hsot-dashboards");
+  };
   return (
     <React.Fragment>
       <AppBar position="sticky" elevation={0}>
@@ -104,6 +107,7 @@ const Navbar = ({ onDrawerToggle }) => {
                   {/*<StyledChip label="Country Offices" component="a" href="#" clickable />*/}
                   <StyledChip label="Custom Reports" component="a" onClick={handleCustomReports} clickable />
                   <StyledChip label="Standard Reports" component="a" onClick={handleStandardReports} clickable />
+                  <StyledChip label="UK HSOT Dashboards" component="a" onClick={handleHsotDashboards} clickable />
                 </Box>
               </ThemeProvider>
             </Grid>
