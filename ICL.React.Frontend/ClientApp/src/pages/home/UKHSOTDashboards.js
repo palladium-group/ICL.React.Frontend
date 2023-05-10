@@ -20,7 +20,7 @@ const themeCustom = createTheme({
   },
 });
 
-const StandardReports = () => {
+const UKHSOTDashboards = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
@@ -47,7 +47,7 @@ const StandardReports = () => {
           <Grid container justifyContent="center" spacing={1} alignItems="stretch" sx={{ minHeight: "800px" }}>
             <Grid item md={12} zeroMinWidth>
               <iframe title="Report Section" width="100%" height="100%"
-                      src="https://app.powerbi.com/view?r=eyJrIjoiMDhiNWY1YmEtZTRhYi00OWYwLThkMGMtZjIxMTIyNzhkZjMzIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSection41a072b839dc3a7bc861"
+                      src="https://app.powerbi.com/view?r=eyJrIjoiODc5NmE5ZjYtNTU1OC00NDhiLWExYjMtOTBjNmI4MjdkMjZlIiwidCI6ImU3OTQyOTc0LTk3MzgtNGE0YS1iNjQ2LTJhYjkwZjc5ZGIwZiIsImMiOjF9&pageName=ReportSectioneda3d7cc89e817a3a962"
                       frameBorder="0" allowFullScreen="true"></iframe>
             </Grid>
           </Grid>
@@ -56,4 +56,4 @@ const StandardReports = () => {
     </React.Fragment>
   );
 };
-export default StandardReports;
+export default UKHSOTDashboards;
