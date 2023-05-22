@@ -5,8 +5,12 @@ import {
   Grid,
   AppBar as MuiAppBar,
   IconButton as MuiIconButton,
-  Toolbar,
+  Toolbar, Typography,
 } from "@mui/material";
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Fade from '@mui/material/Fade';
 // import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
@@ -15,7 +19,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import NavbarNotificationsDropdown from "./NavbarNotificationsDropdown";
 import NavbarUserDropdown from "./NavbarUserDropdown";
-import {useNavigate} from "react-router-dom";
 
 const AppBar = styled(MuiAppBar)`
   background: ${(props) => props.theme.header.background};
@@ -29,59 +32,21 @@ const IconButton = styled(MuiIconButton)`
   }
 `;
 
-const outerTheme = createTheme({
-  typography: {
-    fontFamily: [
-      '"Helvetica Neue"',
-      'Manrope',
-      "Inter",
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Roboto",
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-    fontSize: 12,
-    fontWeight: 600,
-  },
-  palette: {
-    primary: {
-      main: "#000",
-    },
-  },
-});
-
-const options = {
-  shouldForwardProp: (prop) => prop !== 'bgcolor',
-};
-const StyledChip = styled(
-  Chip,
-  options,
-)(({ }) => ({
-  color: 'white',
-  backgroundColor: "#000",
-}));
-
 const Navbar = ({ onDrawerToggle }) => {
-  const navigate = useNavigate();
-  const handleStandardReports  = () => {
-    navigate("/standard-reports");
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
   };
-  const handleCustomReports = () => {
-    navigate("/incident-management");
+  const handleClose = () => {
+    setAnchorEl(null);
   };
-  const handleHsotDashboards = () => {
-    navigate("/uk-hsot-dashboards");
-  };
+
   return (
     <React.Fragment>
       <AppBar position="sticky" elevation={0}>
         <Toolbar>
-          <Grid container alignItems="center">
+          <Grid container alignItems="center" spacing={6}>
             <Grid item sx={{ display: { xs: "block", md: "none" } }}>
               <IconButton
                 color="inherit"
@@ -92,25 +57,66 @@ const Navbar = ({ onDrawerToggle }) => {
                 <MenuIcon />
               </IconButton>
             </Grid>
-            <Grid item sm={1}>&nbsp;</Grid>
             <Grid item>
-              <ThemeProvider theme={outerTheme}>
-                <Box
-                  sx={{
-                    '& > :not(style) + :not(style)': {
-                      ml: 4,
-                    },
-                  }}
-                >
-                  <StyledChip label="Report an Incident" component="a" target="_blank" href="https://issuesandriskregistry.thepalladiumgroup.com/" clickable />
-                  {/*<StyledChip label="HQ Office" component="a" href="#" clickable />*/}
-                  {/*<StyledChip label="Country Offices" component="a" href="#" clickable />*/}
-                  <StyledChip label="Custom Reports" component="a" onClick={handleCustomReports} clickable />
-                  <StyledChip label="Standard Reports" component="a" onClick={handleStandardReports} clickable />
-                  <StyledChip label="UK HSOT Dashboards" component="a" onClick={handleHsotDashboards} clickable />
-                </Box>
-              </ThemeProvider>
+              <Typography  variant="button" display="block" gutterBottom>Supply Chain Management</Typography>
             </Grid>
+            <Grid item>
+              <Typography  variant="button" display="block" gutterBottom>Enterprise Resources</Typography>
+            </Grid>
+            <Grid item>
+              <Button
+                id="fade-button"
+                aria-controls={open ? 'fade-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+                onClick={handleClick}
+              >
+                <Typography  variant="button" display="block" gutterBottom>
+                  Master Data Registry
+                </Typography>
+              </Button>
+              <Menu
+                id="fade-menu"
+                MenuListProps={{
+                  'aria-labelledby': 'fade-button',
+                }}
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                TransitionComponent={Fade}
+              >
+                <MenuItem onClick={handleClose}>Products</MenuItem>
+                <MenuItem onClick={handleClose}>Locations</MenuItem>
+                <MenuItem onClick={handleClose}>Stakeholders</MenuItem>
+                <MenuItem onClick={handleClose}>Transport</MenuItem>
+                <MenuItem onClick={handleClose}>Carriers</MenuItem>
+                <MenuItem onClick={handleClose}>Units Of Measure</MenuItem>
+                <MenuItem onClick={handleClose}>MDR Quality</MenuItem>
+                <MenuItem onClick={handleClose}>Governance</MenuItem>
+                <MenuItem onClick={handleClose}>Master Data Configuration</MenuItem>
+              </Menu>
+            </Grid>
+            <Grid item>
+              <Typography  variant="button" display="block" gutterBottom>Report/Analytics</Typography>
+            </Grid>
+            {/*<Grid item>*/}
+            {/*  <ThemeProvider theme={outerTheme}>*/}
+            {/*    <Box*/}
+            {/*      sx={{*/}
+            {/*        '& > :not(style) + :not(style)': {*/}
+            {/*          ml: 4,*/}
+            {/*        },*/}
+            {/*      }}*/}
+            {/*    >*/}
+            {/*      <StyledChip label="Report an Incident" component="a" target="_blank" href="https://issuesandriskregistry.thepalladiumgroup.com/" clickable />*/}
+            {/*      /!*<StyledChip label="HQ Office" component="a" href="#" clickable />*!/*/}
+            {/*      /!*<StyledChip label="Country Offices" component="a" href="#" clickable />*!/*/}
+            {/*      <StyledChip label="Custom Reports" component="a" onClick={handleCustomReports} clickable />*/}
+            {/*      <StyledChip label="Standard Reports" component="a" onClick={handleStandardReports} clickable />*/}
+            {/*      <StyledChip label="UK HSOT Dashboards" component="a" onClick={handleHsotDashboards} clickable />*/}
+            {/*    </Box>*/}
+            {/*  </ThemeProvider>*/}
+            {/*</Grid>*/}
             <Grid item xs />
             <Grid item>
               {/*<NavbarMessagesDropdown />*/}
