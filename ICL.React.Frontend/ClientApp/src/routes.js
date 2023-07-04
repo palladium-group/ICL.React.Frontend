@@ -126,6 +126,7 @@ const VendorRegistry = async(() => import("./pages/source/VendorRegistry"));
 const NetworkDesign = async(() => import("./pages/source/NetworkDesign"));
 const StandardReports = async(() => import("./pages/home/StandardReports"));
 const UKHSOTDashboards = async(() => import("./pages/home/UKHSOTDashboards"));
+const PathWaysDashboards = async(() => import("./pages/home/PathWaysDashboards"));
 const Distribution = async(()=> import("./pages/source/Distribution"));
 const GlobalMonitoring = async(() => import("./pages/enable/GlobalMonitoring"));
 const CountryMonitoring = async(() => import("./pages/enable/CountryMonitoring"));
@@ -181,6 +182,10 @@ const routes = [
       {
         path: "uk-hsot-dashboards",
         element: <UKHSOTDashboards />,
+      },
+      {
+        path: "path-ways-dashboards",
+        element: <PathWaysDashboards />,
       },
     ],
   },
